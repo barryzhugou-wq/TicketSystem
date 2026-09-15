@@ -1,0 +1,21 @@
+{
+  "name" : "处理记录所属工单",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单处理历史记录",
+  "sourceColumnRefName" : "工单ID",
+  "sourceNavigationName" : "工单",
+  "targetEntityName" : "工单",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "处理记录",
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单处理历史记录"
+  } ]
+}

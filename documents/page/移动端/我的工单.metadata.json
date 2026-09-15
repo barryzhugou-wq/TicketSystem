@@ -1,0 +1,203 @@
+{
+  "id" : "UX2RD4GY",
+  "name" : "我的工单",
+  "type" : "page",
+  "description" : "移动端我的工单：卡片列表、状态筛选与关键字搜索、分页加载",
+  "variables" : [ {
+    "id" : "FNP2H53C",
+    "name" : "关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "JKSIXK7D",
+    "name" : "工单状态筛选",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "全部"
+    }
+  }, {
+    "id" : "CJFVM17C",
+    "name" : "工单列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "QFPA1SKE",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "RUYN2JU5",
+    "name" : "当前条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "WDF2D3B6",
+    "name" : "列表状态",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ {
+    "id" : "FYXEDP2U",
+    "name" : "加载工单列表",
+    "description" : "按当前筛选条件加载我的工单列表（每次多取 10 条）",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "FNP2H53C", "JKSIXK7D", "CJFVM17C", "QFPA1SKE", "RUYN2JU5", "WDF2D3B6", "FYXEDP2U" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "FRWV6KZ0",
+    "name" : "页面加载",
+    "description" : "我的工单页面加载后拉取首屏工单列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "OKOPPMIM",
+    "elementName" : "刷新工单按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "J07E2YUK",
+    "name" : "刷新工单",
+    "description" : "手动刷新工单列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "DUUX0IWK",
+    "elementName" : "搜索工单按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "LC0CUMCW",
+    "name" : "搜索工单",
+    "description" : "按关键字与筛选条件重新加载工单列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "H5V39XWL",
+    "elementName" : "状态筛选单选组",
+    "pluginName" : "component-vant",
+    "type" : "radio-group",
+    "targetEvent" : "change",
+    "id" : "NEQZS8BD",
+    "name" : "状态筛选",
+    "description" : "切换状态筛选后重新加载工单列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "QZ1VJA1Y",
+    "elementName" : "工单列表",
+    "pluginName" : "component-vant",
+    "type" : "list",
+    "targetEvent" : "incrementalLoad",
+    "id" : "DGW4BOLX",
+    "name" : "加载更多",
+    "description" : "列表滚动到底部时加载更多工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "EJHBA8H1",
+    "elementName" : "工单卡片",
+    "pluginName" : "component-common",
+    "type" : "linear-layout",
+    "targetEvent" : "click",
+    "id" : "V9V609NV",
+    "name" : "打开工单详情",
+    "description" : "点击工单卡片进入工单详情",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "W8P8WDXP",
+    "elementName" : "重新加载按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "SELPIFJG",
+    "name" : "重新加载",
+    "description" : "加载失败后重新加载工单列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/m/my-tickets",
+  "masterPage" : "/移动端/工单母版",
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "工单优先级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单状态"
+  }, {
+    "documentType" : "masterPage",
+    "refKey" : "/移动端/工单母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/工单详情",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单列表"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单信息"
+  } ]
+}

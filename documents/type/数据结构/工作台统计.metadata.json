@@ -1,0 +1,32 @@
+{
+  "id" : "P4BXSE0O",
+  "name" : "工作台统计",
+  "kind" : "Structure",
+  "description" : "客服工作台的关键指标",
+  "properties" : [ {
+    "name" : "待审批数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "待处理数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "待确认数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "今日新增数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "逾期数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  } ]
+}

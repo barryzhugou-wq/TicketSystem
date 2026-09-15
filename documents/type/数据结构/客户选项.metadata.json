@@ -1,0 +1,17 @@
+{
+  "id" : "BN9RQQUU",
+  "name" : "客户选项",
+  "kind" : "Structure",
+  "description" : "选择客户时的候选客户",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "客户名称",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ]
+}

@@ -1,0 +1,542 @@
+{
+  "id" : "UA88C4X2",
+  "name" : "查询我的任务",
+  "description" : "查询当前用户的待办、已办、我发起的与抄送我的任务",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "Z8QMHZ7E",
+    "name" : "偏移量"
+  } ],
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "待办"
+    },
+    "id" : "OUFK8ICU",
+    "name" : "任务类型",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "DE01PTVZ",
+    "name" : "关键字",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    },
+    "id" : "A61HZW08",
+    "name" : "页码",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 20
+    },
+    "id" : "RULWTQYZ",
+    "name" : "每页条数",
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "待办任务"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "OX5CGA1S",
+    "name" : "待办列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "已办任务"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "NQAFK4RR",
+    "name" : "已办列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "发起任务"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "HJQMEXEC",
+    "name" : "发起列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "抄送任务"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "FID2GND5",
+    "name" : "抄送列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "ZIYVBXB0",
+    "name" : "总数量"
+  } ],
+  "enableTransaction" : false,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/处理工单", "/审批工单", "/提交工单", "/查看待办任务", "/查看本人工单" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "OMF84X2L",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "Q6S9IDM3",
+      "name" : "计算偏移量",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "T19UFED7",
+            "target" : {
+              "type" : "variable",
+              "variable" : "偏移量"
+            },
+            "value" : {
+              "type" : "expression",
+              "expression" : "If(Or(IsNull(页码), 页码 <= 1), 0, (页码 - 1) * If(IsNull(每页条数), 20, 每页条数))"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "HRR0EWO9",
+      "name" : "按任务类型分流",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "JQR9N1JD"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "任务类型"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 0
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : "已办"
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "BD1V7XLQ"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "UB4LYJZF"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "任务类型"
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 0
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : "我发起的"
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              }, {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "D4MCE39R"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "AAUIFQMM"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "任务类型"
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 0
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : "抄送"
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "EK3D2I3W",
+      "name" : "查询已办任务",
+      "pluginName" : "logic-process",
+      "identifier" : "task-query",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetMyCompletedTasks"
+        },
+        "search" : {
+          "type" : "expression",
+          "expression" : "关键字"
+        },
+        "limit" : {
+          "type" : "expression",
+          "expression" : "每页条数"
+        },
+        "offset" : {
+          "type" : "expression",
+          "expression" : "偏移量"
+        },
+        "returnMyCompletedTasks" : {
+          "type" : "variable",
+          "variable" : "已办列表"
+        },
+        "returnMyCompletedTasksTotal" : {
+          "type" : "variable",
+          "variable" : "总数量"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "YY2O1CAW",
+      "name" : "查询我发起的任务",
+      "pluginName" : "logic-process",
+      "identifier" : "task-query",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetMyInitiatedTasks"
+        },
+        "search" : {
+          "type" : "expression",
+          "expression" : "关键字"
+        },
+        "limit" : {
+          "type" : "expression",
+          "expression" : "每页条数"
+        },
+        "offset" : {
+          "type" : "expression",
+          "expression" : "偏移量"
+        },
+        "returnMyInitiatedTasks" : {
+          "type" : "variable",
+          "variable" : "发起列表"
+        },
+        "returnMyInitiatedTasksTotal" : {
+          "type" : "variable",
+          "variable" : "总数量"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 350
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "QAW95OW4",
+      "name" : "查询抄送我的任务",
+      "pluginName" : "logic-process",
+      "identifier" : "task-query",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetMyCCTasks"
+        },
+        "search" : {
+          "type" : "expression",
+          "expression" : "关键字"
+        },
+        "limit" : {
+          "type" : "expression",
+          "expression" : "每页条数"
+        },
+        "offset" : {
+          "type" : "expression",
+          "expression" : "偏移量"
+        },
+        "returnMyCCTasks" : {
+          "type" : "variable",
+          "variable" : "抄送列表"
+        },
+        "returnMyCCTasksTotal" : {
+          "type" : "variable",
+          "variable" : "总数量"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 450
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "S4XC4IUK",
+      "name" : "查询我的待办任务",
+      "pluginName" : "logic-process",
+      "identifier" : "task-query",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetMyPendingTasks"
+        },
+        "search" : {
+          "type" : "expression",
+          "expression" : "关键字"
+        },
+        "limit" : {
+          "type" : "expression",
+          "expression" : "每页条数"
+        },
+        "offset" : {
+          "type" : "expression",
+          "expression" : "偏移量"
+        },
+        "returnMyPendingTasks" : {
+          "type" : "variable",
+          "variable" : "待办列表"
+        },
+        "returnMyPendingTasksTotal" : {
+          "type" : "variable",
+          "variable" : "总数量"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 550
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "O5B701YU",
+      "sourceId" : "OMF84X2L",
+      "targetId" : "Q6S9IDM3",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "YAV6H13V",
+      "sourceId" : "Q6S9IDM3",
+      "targetId" : "HRR0EWO9",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "UPXT3OW0",
+      "sourceId" : "HRR0EWO9",
+      "targetId" : "EK3D2I3W",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "OC7TQ9B1",
+      "sourceId" : "HRR0EWO9",
+      "targetId" : "YY2O1CAW",
+      "sourceAnchorId" : "BD1V7XLQ",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "RKIK0LX0",
+      "sourceId" : "HRR0EWO9",
+      "targetId" : "QAW95OW4",
+      "sourceAnchorId" : "D4MCE39R",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "CZS6M4G7",
+      "sourceId" : "HRR0EWO9",
+      "targetId" : "S4XC4IUK",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  }
+}

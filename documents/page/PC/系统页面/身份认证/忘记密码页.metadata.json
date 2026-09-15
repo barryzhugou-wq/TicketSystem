@@ -1,0 +1,58 @@
+{
+  "id" : "N23ZVCTI",
+  "name" : "忘记密码页",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "KPQ2QRC1",
+    "name" : "userName",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "KPQ2QRC1" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "AC66T8CI",
+    "elementName" : "发送重置链接按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "GFOI9289",
+    "name" : "发送重置链接",
+    "description" : "",
+    "variables" : [ {
+      "id" : "AM46Q4K9",
+      "name" : "isFormValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/PC/系统页面/身份认证/忘记密码页",
+  "linkedPage" : "/移动端/系统页面/身份认证/忘记密码页",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/身份认证/忘记密码页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "发送密码重置链接"
+  } ]
+}

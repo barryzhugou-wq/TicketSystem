@@ -1,0 +1,571 @@
+{
+  "id" : "NMXFOAE5",
+  "name" : "工单审批页",
+  "type" : "page",
+  "description" : "移动端工单审批页：客服主管审批、客服处理与客户确认三种形态，操作与文本取自任务操作权限",
+  "variables" : [ {
+    "id" : "UOWXNTWU",
+    "name" : "任务ID",
+    "kind" : "parameter",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "WV5FJEKB",
+    "name" : "工单ID",
+    "kind" : "parameter",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "ZAR4KGLD",
+    "name" : "工单",
+    "kind" : "variable",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单详情"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "Y9DVYOFT",
+    "name" : "解析工单ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "ENA3ZPBB",
+    "name" : "操作权限",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "String"
+      }, {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "任务操作权限"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : { }
+    }
+  }, {
+    "id" : "HDD4NTEZ",
+    "name" : "任务信息",
+    "kind" : "variable",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "任务实例"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "U79X5SSD",
+    "name" : "处理记录",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单处理记录行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "YXZW7HCU",
+    "name" : "形态",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "L4ONVE44",
+    "name" : "主操作文本",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "提交"
+    }
+  }, {
+    "id" : "V6YQEDNM",
+    "name" : "主操作需备注",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "BYV46E97",
+    "name" : "驳回操作文本",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "驳回补充"
+    }
+  }, {
+    "id" : "MTRZ2ZOH",
+    "name" : "驳回需备注",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "WTYCENE8",
+    "name" : "处理人列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "成员选项"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "MFTJ7V81",
+    "name" : "处理人ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "UU5K0O1S",
+    "name" : "审批意见",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "XD2Y7ZV7",
+    "name" : "处理说明",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "DMQWIEO2",
+    "name" : "处理附件",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "附件输入"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "CQPX87BF",
+    "name" : "满意度评分",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Decimal"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 5
+    }
+  }, {
+    "id" : "U01P9KFS",
+    "name" : "评价内容",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "IZ18Y3WR",
+    "name" : "是否有效",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "OI0KXBHY",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "CKL4O5LZ",
+    "name" : "提交中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "GFQKR55K",
+    "name" : "操作成功",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "PXYPTJBR",
+    "name" : "操作提示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "JZ1G9QPU",
+    "name" : "转办弹窗可见",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "OTWZH3ZK",
+    "name" : "转办目标成员ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "RFP4NZEF",
+    "name" : "转办中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  } ],
+  "logics" : [ {
+    "id" : "QDV1C306",
+    "name" : "加载审批任务",
+    "description" : "按任务标识加载审批任务对应的工单、操作权限与形态",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "id" : "OBI5HZ58",
+    "name" : "发起转办",
+    "description" : "加载成员选项并打开转办弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "UOWXNTWU", "WV5FJEKB", "ZAR4KGLD", "Y9DVYOFT", "ENA3ZPBB", "HDD4NTEZ", "U79X5SSD", "YXZW7HCU", "L4ONVE44", "V6YQEDNM", "BYV46E97", "MTRZ2ZOH", "WTYCENE8", "MFTJ7V81", "UU5K0O1S", "XD2Y7ZV7", "DMQWIEO2", "CQPX87BF", "U01P9KFS", "IZ18Y3WR", "OI0KXBHY", "CKL4O5LZ", "GFQKR55K", "PXYPTJBR", "QDV1C306", "JZ1G9QPU", "OTWZH3ZK", "RFP4NZEF", "OBI5HZ58" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "EYJD8GGT",
+    "name" : "页面加载",
+    "description" : "审批页加载后按任务标识拉取工单与可执行操作",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "CSDLPPB3",
+    "elementName" : "审批通过按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "AR53HY8Y",
+    "name" : "审批通过",
+    "description" : "客服主管审批通过并分派处理人",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "XC38IX1V",
+    "elementName" : "驳回补充按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "IGTYEP56",
+    "name" : "驳回补充",
+    "description" : "客服主管驳回工单，退回提报人补充",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "J6MIUJAH",
+    "elementName" : "主管转办按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "W0OWEW65",
+    "name" : "主管打开转办",
+    "description" : "主管审批节点打开转办弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "R45SGLCM",
+    "elementName" : "提交处理结果按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "DNS0VVOP",
+    "name" : "提交处理结果",
+    "description" : "客服提交工单处理结果",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "UJRIVS9O",
+    "elementName" : "客服转办按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "OLKC2EY6",
+    "name" : "客服打开转办",
+    "description" : "客服处理节点打开转办弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "UWL3H2ZE",
+    "elementName" : "确认完成按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "IE3X4VL3",
+    "name" : "确认完成",
+    "description" : "客户确认工单处理结果",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "SWKL7MZG",
+    "elementName" : "不认可按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "SVLWVI43",
+    "name" : "不认可",
+    "description" : "客户不认可工单处理结果",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "Y0GESBDL",
+    "elementName" : "转办取消按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "ZFX8DF9J",
+    "name" : "关闭转办弹窗",
+    "description" : "取消转办并关闭弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "AWFLQJAJ",
+    "elementName" : "转办确认按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "EDRAFXVL",
+    "name" : "提交转办",
+    "description" : "把当前待办任务转办给所选处理人并刷新任务数据与操作权限",
+    "variables" : [ {
+      "id" : "NKOBN5RK",
+      "name" : "转办成功",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "E2L5SBFY",
+      "name" : "转办提示",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/m/ticket-approval",
+  "masterPage" : "/移动端/工单母版",
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "处理记录类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单优先级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单状态"
+  }, {
+    "documentType" : "masterPage",
+    "refKey" : "/移动端/工单母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/待办任务",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询成员选项"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询任务详情"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "客户确认工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "审批工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "提交处理结果"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "转办任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "附件输入"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单处理记录行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单详情"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "任务操作权限"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "任务实例"
+  } ]
+}

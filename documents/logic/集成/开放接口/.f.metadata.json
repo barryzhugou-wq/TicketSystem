@@ -1,0 +1,6 @@
+{
+  "id" : "open-api",
+  "name" : "开放接口",
+  "description" : "对外部系统提供Restful API服务",
+  "moduleType" : "server"
+}

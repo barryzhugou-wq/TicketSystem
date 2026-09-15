@@ -1,0 +1,28 @@
+{
+  "id" : "V5PDER3P",
+  "name" : "工单评价信息",
+  "kind" : "Structure",
+  "description" : "工单评价展示字段",
+  "properties" : [ {
+    "name" : "满意度评分",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "评价内容",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "评价时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "评价人",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员简要"
+    }
+  } ]
+}

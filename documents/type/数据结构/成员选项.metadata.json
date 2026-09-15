@@ -1,0 +1,17 @@
+{
+  "id" : "FQ35BPDF",
+  "name" : "成员选项",
+  "kind" : "Structure",
+  "description" : "选择处理人时的候选成员",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "姓名",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ]
+}

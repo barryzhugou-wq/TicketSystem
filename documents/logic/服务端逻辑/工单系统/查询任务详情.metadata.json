@@ -1,0 +1,177 @@
+{
+  "id" : "AOMVU38F",
+  "name" : "查询任务详情",
+  "description" : "按任务识别对应工单，返回工单详情、可执行操作与字段权限",
+  "moduleType" : "server",
+  "enableTransaction" : false,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "HOY9FUAW",
+    "name" : "任务ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "RCC2R4MJ",
+    "name" : "工单ID",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单详情"
+    },
+    "id" : "TLKB1K4X",
+    "name" : "详情结果"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "U14YRVE5",
+    "name" : "详情提示"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单归属"
+    },
+    "id" : "YG99OEOT",
+    "name" : "任务工单"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "KZMCSDCT",
+    "name" : "目标工单ID"
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "id" : "X3GAQUP4",
+    "name" : "详情是否存在"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单详情"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    },
+    "id" : "WCR65NCM",
+    "name" : "工单"
+  }, {
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "String"
+      }, {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "任务操作权限"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : { }
+    },
+    "id" : "WK4A90MZ",
+    "name" : "操作权限"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "表单字段权限"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "IJBCECSI",
+    "name" : "表单权限"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "任务实例"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    },
+    "id" : "XU3XCBIY",
+    "name" : "任务信息"
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "HEKCXXJL",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "C4WWMZLG",
+    "name" : "message"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "YGPKCB1N",
+    "name" : "解析工单ID"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看待办任务"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单详情"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "表单字段权限"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单归属"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单详情"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "任务操作权限"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "任务实例"
+  } ]
+}

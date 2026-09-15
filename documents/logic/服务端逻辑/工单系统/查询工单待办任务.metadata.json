@@ -1,0 +1,105 @@
+{
+  "id" : "QBKC0M4B",
+  "name" : "查询工单待办任务",
+  "description" : "按工单找出当前尚未处理的待办任务，供页面直达处理入口",
+  "moduleType" : "server",
+  "enableTransaction" : false,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "YM2B0NGS",
+    "name" : "工单ID",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单流程标识"
+    },
+    "id" : "TYQKD0JB",
+    "name" : "工单流程"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "任务实例"
+      } ]
+    },
+    "id" : "FVP50CTJ",
+    "name" : "未完成任务"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "L86PBJFY",
+    "name" : "任务ID"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "F44HL1F9",
+    "name" : "节点名称"
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "IG8MUTX1",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "ZJMAL22W",
+    "name" : "message"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单流程标识"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "任务实例"
+  } ]
+}

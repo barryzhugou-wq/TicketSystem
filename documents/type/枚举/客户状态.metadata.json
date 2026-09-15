@@ -1,0 +1,16 @@
+{
+  "id" : "ZFFW0GEN",
+  "name" : "客户状态",
+  "kind" : "Enum",
+  "description" : "客户服务状态",
+  "dataType" : {
+    "typeName" : "String"
+  },
+  "members" : [ {
+    "name" : "服务中",
+    "value" : "服务中"
+  }, {
+    "name" : "已停用",
+    "value" : "已停用"
+  } ]
+}

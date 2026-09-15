@@ -1,0 +1,144 @@
+{
+  "id" : "RWMQDNYC",
+  "name" : "注册并绑定页面",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "H8DLWO9O",
+    "name" : "code",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "Z42BL273",
+    "name" : "redirect",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "T83LFDX0",
+    "name" : "username",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "WUL4II42",
+    "name" : "fullname",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "Z1ADUZN6",
+    "name" : "email",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "F7E31QPP",
+    "name" : "phone",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "DBX4D2WB",
+    "name" : "password",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "XM9VOICK",
+    "name" : "confirmPassword",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "H8DLWO9O", "Z42BL273", "T83LFDX0", "WUL4II42", "Z1ADUZN6", "F7E31QPP", "DBX4D2WB", "XM9VOICK" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "KP3NIKGU",
+    "elementName" : "注册并绑定按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "HH88X5U4",
+    "name" : "单击",
+    "variables" : [ {
+      "id" : "CMTHMBY7",
+      "name" : "isFormValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "IZ86X8KH",
+      "name" : "createAndBindSuccess",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "W6727ENV",
+      "name" : "createAndBindErrorMessage",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/移动端/系统页面/三方登录/注册并绑定页面",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/身份认证/登录页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "创建并绑定用户"
+  } ]
+}

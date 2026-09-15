@@ -1,0 +1,87 @@
+{
+  "dataSourceName" : "默认数据源",
+  "tableName" : "成员信息",
+  "name" : "成员信息",
+  "description" : "客服团队通讯录，姓名、部门、角色等展示字段从平台账号同步",
+  "columns" : [ {
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : true,
+    "columnKind" : "physical",
+    "isAutoIncrement" : true
+  }, {
+    "columnName" : "平台账号ID",
+    "name" : "平台账号ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "姓名",
+    "name" : "姓名",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "登录名",
+    "name" : "登录名",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "所属部门",
+    "name" : "所属部门",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "角色名称",
+    "name" : "角色名称",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "账号状态",
+    "name" : "账号状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "账号状态"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "同步时间",
+    "name" : "同步时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "账号状态"
+  } ]
+}

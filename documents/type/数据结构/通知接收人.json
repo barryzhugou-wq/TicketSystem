@@ -1,0 +1,12 @@
+{
+  "id" : "PKI1FNX1",
+  "name" : "通知接收人",
+  "kind" : "Structure",
+  "description" : "批量生成站内消息时的接收人",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  } ]
+}

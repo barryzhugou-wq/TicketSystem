@@ -1,0 +1,12 @@
+# Phoenix 本地运行时数据（不回传仓库）
+server-data/
+database/*-shm
+database/*-wal
+.phoenix/local-services.json
+
+# 系统与编辑器产生的临时文件
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+*.tmp

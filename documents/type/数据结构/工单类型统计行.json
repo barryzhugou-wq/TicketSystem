@@ -1,0 +1,20 @@
+{
+  "id" : "KV4IPYEF",
+  "name" : "工单类型统计行",
+  "kind" : "Structure",
+  "description" : "按工单类型统计的数量",
+  "properties" : [ {
+    "name" : "类型名称",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单类型"
+    },
+    "description" : "工单类型"
+  }, {
+    "name" : "数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "数量"
+  } ]
+}

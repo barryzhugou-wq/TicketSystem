@@ -1,0 +1,104 @@
+{
+  "id" : "DEZPN4GX",
+  "name" : "拒绝设备授权",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ {
+    "id" : "GZ2WJ5XK",
+    "name" : "userCode",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "OAU41ALA",
+    "name" : "decisionResult",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "OAuth设备授权结果"
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/登录权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "EYAXRDPA",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "WI37WMP8",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 800,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "YUIX6JBP",
+      "name" : "OAuth设备授权管理",
+      "pluginName" : "logic-oauth-device",
+      "identifier" : "oauth-device-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Deny"
+        },
+        "userCodeBinding" : {
+          "type" : "expression",
+          "expression" : "userCode"
+        },
+        "contextOutput" : {
+          "type" : "literal",
+          "literal" : null
+        },
+        "resultOutput" : {
+          "type" : "variable",
+          "variable" : "decisionResult"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 440,
+          "y" : 200
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "EC2IW8PB",
+      "sourceId" : "EYAXRDPA",
+      "targetId" : "YUIX6JBP",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "JDL2A10Z",
+      "sourceId" : "YUIX6JBP",
+      "targetId" : "WI37WMP8",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

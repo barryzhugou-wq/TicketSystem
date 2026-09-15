@@ -1,0 +1,204 @@
+{
+  "id" : "R2TB2CHY",
+  "name" : "查询工单列表",
+  "description" : "按条件分页查询工单列表，并按调用者权限收窄数据范围",
+  "moduleType" : "server",
+  "enableTransaction" : false,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "全部"
+    },
+    "id" : "P0UK2ZGM",
+    "name" : "范围",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "PEOGJBCT",
+    "name" : "关键字",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "TMNTZNY1",
+    "name" : "工单状态",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "ZJE43B0N",
+    "name" : "工单类型",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "MNXO398R",
+    "name" : "优先级",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "XVAHBQJG",
+    "name" : "处理人ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "AK2P1CY2",
+    "name" : "客户ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "BRAHSB8B",
+    "name" : "开始时间",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "D4NG7XUS",
+    "name" : "结束时间",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    },
+    "id" : "ETZYC84C",
+    "name" : "页码",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 20
+    },
+    "id" : "KBEQVU63",
+    "name" : "每页条数",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "LLUJ4GBR",
+    "name" : "当前成员"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "FXW8GR0X",
+    "name" : "偏移量"
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "AF4J1CPF",
+    "name" : "可查看全部"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "VE10BH6A",
+    "name" : "有效范围"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单信息"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "UKC2AAOZ",
+    "name" : "工单列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "Q0VPAVSD",
+    "name" : "总数量"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单处理人"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单所属客户"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单提交人"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/客户档案"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/导出工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/维护客户档案"
+  }, {
+    "documentType" : "serverGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单信息"
+  } ]
+}

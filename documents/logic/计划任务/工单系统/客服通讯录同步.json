@@ -1,0 +1,993 @@
+{
+  "id" : "G8NTWPVG",
+  "name" : "客服通讯录同步",
+  "description" : "每小时把平台启用用户增量同步到本应用成员信息",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "FASHXMZT",
+    "name" : "当前时间"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "XGT7X9EE",
+    "name" : "平台用户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "NSEEAQ42",
+    "name" : "启用用户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "组织节点"
+      } ]
+    },
+    "id" : "K01CAFIO",
+    "name" : "组织列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "组织用户关系"
+      } ]
+    },
+    "id" : "SBHRSZOU",
+    "name" : "组织成员列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "Integer"
+      }, {
+        "typeName" : "String"
+      } ]
+    },
+    "id" : "YOYWNOF9",
+    "name" : "部门映射"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "成员同步行"
+      } ]
+    },
+    "id" : "SF4MZSTX",
+    "name" : "已有成员列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "Integer"
+      }, {
+        "typeName" : "String"
+      } ]
+    },
+    "id" : "H3IH9JT1",
+    "name" : "成员签名映射"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "V7JGQRRP",
+    "name" : "新增用户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "NFH3CQLP",
+    "name" : "更新用户列表"
+  } ],
+  "parameters" : [ ],
+  "returnValues" : [ ],
+  "enableTransaction" : false,
+  "allowClientAccess" : true,
+  "scheduleConfig" : {
+    "type" : "hourly",
+    "startTime" : "2026-09-15T04:07:19.000Z",
+    "hourly" : {
+      "interval" : 1,
+      "unit" : "hour"
+    }
+  },
+  "enabled" : true,
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "N5JACWUY",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "J9N2V9CG",
+      "name" : "获取当前时间",
+      "pluginName" : "logic-core",
+      "identifier" : "date-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "CurrentDateTime"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "当前时间"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "Y7M0F0Y1",
+      "name" : "读取平台用户",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetUsers"
+        },
+        "usersOutput" : {
+          "type" : "variable",
+          "variable" : "平台用户列表"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "X0N9IQT4",
+      "name" : "筛选启用用户",
+      "pluginName" : "logic-core",
+      "identifier" : "list-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Filter"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "平台用户列表"
+        },
+        "itemName" : {
+          "type" : "literal",
+          "literal" : "用户"
+        },
+        "condition" : {
+          "type" : "expression",
+          "expression" : "用户.是否启用"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "启用用户列表"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 350
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "DOASYDDA",
+      "name" : "读取组织树",
+      "pluginName" : "logic-user-management",
+      "identifier" : "organization-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetOrganizations"
+        },
+        "organizationsOutput" : {
+          "type" : "variable",
+          "variable" : "组织列表"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 450
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "N3WRTNKX",
+      "name" : "遍历组织",
+      "pluginName" : "logic-core",
+      "identifier" : "loop",
+      "content" : {
+        "source" : {
+          "type" : "variable",
+          "variable" : "组织列表"
+        },
+        "sourceType" : {
+          "type" : "literal",
+          "literal" : "list"
+        },
+        "indexParamName" : {
+          "type" : "literal",
+          "literal" : "组织序号"
+        },
+        "itemParamName" : {
+          "type" : "literal",
+          "literal" : "组织"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 550
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "TF2DHOK6",
+      "name" : "读取组织用户",
+      "pluginName" : "logic-user-management",
+      "identifier" : "organization-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetOrganizationUsers"
+        },
+        "organizationId" : {
+          "type" : "expression",
+          "expression" : "组织.ID"
+        },
+        "organizationUserType" : {
+          "type" : "literal",
+          "literal" : "ALL"
+        },
+        "usersOutput" : {
+          "type" : "variable",
+          "variable" : "组织成员列表"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 550
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "K3WG2P0B",
+      "name" : "读取已有成员",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "成员信息",
+            "tableAlias" : "成员信息",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "平台账号ID"
+            }, {
+              "columnRefName" : "姓名"
+            }, {
+              "columnRefName" : "登录名"
+            }, {
+              "columnRefName" : "所属部门"
+            }, {
+              "columnRefName" : "角色名称"
+            }, {
+              "columnRefName" : "账号状态"
+            } ]
+          },
+          "condition" : null,
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "成员同步行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "已有成员列表"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 790
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "UH536Z9O",
+      "name" : "遍历组织用户",
+      "pluginName" : "logic-core",
+      "identifier" : "loop",
+      "content" : {
+        "source" : {
+          "type" : "variable",
+          "variable" : "组织成员列表"
+        },
+        "sourceType" : {
+          "type" : "literal",
+          "literal" : "list"
+        },
+        "indexParamName" : {
+          "type" : "literal",
+          "literal" : "成员序号"
+        },
+        "itemParamName" : {
+          "type" : "literal",
+          "literal" : "组织成员"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 650
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "HLAKP04Y",
+      "name" : "建立成员签名映射",
+      "pluginName" : "logic-core",
+      "identifier" : "list-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "ToMap"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "已有成员列表"
+        },
+        "itemName" : {
+          "type" : "literal",
+          "literal" : "成员"
+        },
+        "keyCondition" : {
+          "type" : "expression",
+          "expression" : "成员.平台账号ID"
+        },
+        "valueCondition" : {
+          "type" : "expression",
+          "expression" : "If(IsNull(成员.姓名), \"\", 成员.姓名) & \"|\" & If(IsNull(成员.登录名), \"\", 成员.登录名) & \"|\" & If(IsNull(成员.所属部门), \"\", 成员.所属部门) & \"|\" & If(IsNull(成员.角色名称), \"\", 成员.角色名称) & \"|\" & If(IsNull(成员.账号状态), \"\", Enum.ItemToText(Enum.账号状态, 成员.账号状态))"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "成员签名映射"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 890
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "VDCLHJHU",
+      "name" : "登记成员部门",
+      "pluginName" : "logic-core",
+      "identifier" : "map-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Put"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "部门映射"
+        },
+        "value" : {
+          "type" : "expression",
+          "expression" : "If(Map.ContainsKey(部门映射, 组织成员.用户.ID), Map.Get(部门映射, 组织成员.用户.ID) & \"、\" & 组织.名称, 组织.名称)"
+        },
+        "key" : {
+          "type" : "expression",
+          "expression" : "组织成员.用户.ID"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1200,
+          "y" : 650
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "NIIXS852",
+      "name" : "筛选新增用户",
+      "pluginName" : "logic-core",
+      "identifier" : "list-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Filter"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "启用用户列表"
+        },
+        "itemName" : {
+          "type" : "literal",
+          "literal" : "用户"
+        },
+        "condition" : {
+          "type" : "expression",
+          "expression" : "Not(Map.ContainsKey(成员签名映射, 用户.ID))"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "新增用户列表"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 990
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "IQEJ6EN4",
+      "name" : "筛选变更用户",
+      "pluginName" : "logic-core",
+      "identifier" : "list-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Filter"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "启用用户列表"
+        },
+        "itemName" : {
+          "type" : "literal",
+          "literal" : "用户"
+        },
+        "condition" : {
+          "type" : "expression",
+          "expression" : "And(Map.ContainsKey(成员签名映射, 用户.ID), Not(Map.Get(成员签名映射, 用户.ID) = (If(IsNull(用户.全名), \"\", 用户.全名) & \"|\" & If(IsNull(用户.用户名), \"\", 用户.用户名) & \"|\" & If(Map.ContainsKey(部门映射, 用户.ID), If(IsNull(Map.Get(部门映射, 用户.ID)), \"\", Map.Get(部门映射, 用户.ID)), \"\") & \"|\" & If(List.IsNullOrEmpty(用户.角色列表), \"\", String.Join(用户.角色列表, \"、\")) & \"|启用\")))"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "更新用户列表"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 1090
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "X6V2DMDR",
+      "name" : "检查新增用户",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "FTSA1JWG"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "新增用户列表"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 19
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 1190
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "KUKM0DV2",
+      "name" : "写入新增成员",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-insert",
+      "content" : {
+        "mode" : "batch",
+        "entityRef" : {
+          "entityName" : "成员信息",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : {
+          "type" : "variable",
+          "variable" : "新增用户列表"
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "平台账号ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "item.ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "姓名"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(IsNull(item.全名), \"\", item.全名)"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "登录名"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(IsNull(item.用户名), \"\", item.用户名)"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "所属部门"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(Map.ContainsKey(部门映射, item.ID), If(IsNull(Map.Get(部门映射, item.ID)), \"\", Map.Get(部门映射, item.ID)), \"\")"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "角色名称"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(List.IsNullOrEmpty(item.角色列表), \"\", String.Join(item.角色列表, \"、\"))"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "账号状态"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "启用"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "同步时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "当前时间"
+          }
+        } ],
+        "returnTo" : null,
+        "returnCountTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 1290
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "P8RKUXQ2",
+      "name" : "检查变更用户",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "AS6TABCF"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "更新用户列表"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 19
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 1430
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "I8QIBHFK",
+      "name" : "更新成员信息",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-update",
+      "content" : {
+        "mode" : "batch",
+        "entityRef" : {
+          "entityName" : "成员信息",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : {
+          "type" : "variable",
+          "variable" : "更新用户列表"
+        },
+        "condition" : {
+          "conditionType" : 0,
+          "conditionItems" : [ {
+            "conditionType" : 2,
+            "conditionItems" : null,
+            "type" : 3,
+            "identifier" : "%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF.%E5%B9%B3%E5%8F%B0%E8%B4%A6%E5%8F%B7ID",
+            "operator" : 0,
+            "value" : {
+              "type" : 6,
+              "identifier" : "item.ID",
+              "name" : null
+            },
+            "nullValueStrategy" : 0
+          } ]
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "姓名"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(IsNull(item.全名), \"\", item.全名)"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "登录名"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(IsNull(item.用户名), \"\", item.用户名)"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "所属部门"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(Map.ContainsKey(部门映射, item.ID), If(IsNull(Map.Get(部门映射, item.ID)), \"\", Map.Get(部门映射, item.ID)), \"\")"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "角色名称"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "If(List.IsNullOrEmpty(item.角色列表), \"\", String.Join(item.角色列表, \"、\"))"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "账号状态"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "启用"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "同步时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "当前时间"
+          }
+        } ],
+        "returnTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 1530
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "O8GY9NUJ",
+      "sourceId" : "N5JACWUY",
+      "targetId" : "J9N2V9CG",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "CS6J4IP8",
+      "sourceId" : "J9N2V9CG",
+      "targetId" : "Y7M0F0Y1",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "YH0Z5F1L",
+      "sourceId" : "Y7M0F0Y1",
+      "targetId" : "X0N9IQT4",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "MR48XZV4",
+      "sourceId" : "X0N9IQT4",
+      "targetId" : "DOASYDDA",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "RVS2CNVF",
+      "sourceId" : "DOASYDDA",
+      "targetId" : "N3WRTNKX",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "NZ6J5EIZ",
+      "sourceId" : "N3WRTNKX",
+      "targetId" : "TF2DHOK6",
+      "sourceAnchorId" : "loop-body",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "L717ZUON",
+      "sourceId" : "TF2DHOK6",
+      "targetId" : "UH536Z9O",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "IF6QSZDF",
+      "sourceId" : "UH536Z9O",
+      "targetId" : "VDCLHJHU",
+      "sourceAnchorId" : "loop-body",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "LFY281SM",
+      "sourceId" : "N3WRTNKX",
+      "targetId" : "K3WG2P0B",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "LO8TA61F",
+      "sourceId" : "K3WG2P0B",
+      "targetId" : "HLAKP04Y",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "B7D5WWAT",
+      "sourceId" : "HLAKP04Y",
+      "targetId" : "NIIXS852",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "I5GJI6C2",
+      "sourceId" : "NIIXS852",
+      "targetId" : "IQEJ6EN4",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "MPR54O8W",
+      "sourceId" : "IQEJ6EN4",
+      "targetId" : "X6V2DMDR",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "P8333IVL",
+      "sourceId" : "X6V2DMDR",
+      "targetId" : "KUKM0DV2",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "E3J5YNUK",
+      "sourceId" : "X6V2DMDR",
+      "targetId" : "P8RKUXQ2",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "E2OI6PQG",
+      "sourceId" : "KUKM0DV2",
+      "targetId" : "P8RKUXQ2",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "VKKP9JM9",
+      "sourceId" : "P8RKUXQ2",
+      "targetId" : "I8QIBHFK",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  },
+  "type" : "scheduledTask"
+}

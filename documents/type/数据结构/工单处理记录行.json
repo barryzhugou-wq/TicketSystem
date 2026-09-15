@@ -1,0 +1,29 @@
+{
+  "id" : "CAUW1AD3",
+  "name" : "工单处理记录行",
+  "kind" : "Structure",
+  "description" : "工单处理记录展示字段",
+  "properties" : [ {
+    "name" : "记录类型",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "处理记录类型"
+    }
+  }, {
+    "name" : "处理内容",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "记录时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "记录人",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员简要"
+    }
+  } ]
+}

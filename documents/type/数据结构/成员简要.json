@@ -1,0 +1,27 @@
+{
+  "id" : "F3OEM9NA",
+  "name" : "成员简要",
+  "kind" : "Structure",
+  "description" : "客服团队成员展示字段",
+  "properties" : [ {
+    "name" : "姓名",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "登录名",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "所属部门",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "角色名称",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ]
+}

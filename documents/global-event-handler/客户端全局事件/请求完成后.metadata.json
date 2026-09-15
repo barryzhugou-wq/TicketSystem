@@ -1,0 +1,26 @@
+{
+  "id" : "UQQ5PO37",
+  "name" : "请求完成后",
+  "description" : "处理HTTP请求完成事件，包括错误处理和页面跳转",
+  "resourceType" : "globalEvent",
+  "scope" : "client",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/PC/系统页面/错误页面/403无权限页面",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/系统页面/错误页面/404未发现页面",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/系统页面/身份认证/登录页",
+    "weak" : true
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "服务响应"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "Http请求"
+  } ]
+}

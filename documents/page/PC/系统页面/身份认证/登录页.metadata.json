@@ -1,0 +1,116 @@
+{
+  "id" : "XT4A6LEO",
+  "name" : "登录页",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "SKAOPIWL",
+    "name" : "redirect",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "SK52WR47",
+    "name" : "userName",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "AEDOKROP",
+    "name" : "password",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "I4QDV1MS",
+    "name" : "rememberMe",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "SKAOPIWL", "SK52WR47", "AEDOKROP", "I4QDV1MS" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "E4FTAUQ3",
+    "elementName" : "登录按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "UGIXT4LL",
+    "name" : "单击",
+    "description" : "",
+    "variables" : [ {
+      "id" : "TSZ6S7KS",
+      "name" : "message",
+      "dataType" : {
+        "typeName" : "String"
+      },
+      "description" : ""
+    }, {
+      "id" : "KKHP5AU9",
+      "name" : "success",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    }, {
+      "id" : "X8WZD0WO",
+      "name" : "code",
+      "dataType" : {
+        "typeName" : "String"
+      },
+      "description" : ""
+    }, {
+      "id" : "NIKTB588",
+      "name" : "isValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/PC/系统页面/身份认证/登录页",
+  "linkedPage" : "/移动端/系统页面/身份认证/登录页",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/身份认证/登录页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/系统页面/身份认证/忘记密码页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "登录"
+  } ]
+}

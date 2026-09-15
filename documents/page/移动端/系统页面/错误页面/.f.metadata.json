@@ -1,0 +1,13 @@
+{
+  "id" : "EBNPN5XO",
+  "name" : "错误页面",
+  "type" : "folder",
+  "variables" : [ ],
+  "logics" : [ ],
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  }
+}

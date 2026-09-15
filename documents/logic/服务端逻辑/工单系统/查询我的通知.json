@@ -1,0 +1,756 @@
+{
+  "id" : "OWFDF8EP",
+  "name" : "查询我的通知",
+  "description" : "查询当前账号的站内消息",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "JLJCM36S",
+    "name" : "当前成员"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "EP370INB",
+    "name" : "偏移量"
+  } ],
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "ZB2Z7HM1",
+    "name" : "仅未读",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    },
+    "id" : "EW5TGDRL",
+    "name" : "页码",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 20
+    },
+    "id" : "T87F2B1H",
+    "name" : "每页条数",
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "通知行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "YEU2APND",
+    "name" : "通知列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "I9S12J5O",
+    "name" : "总数量"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "IH265W03",
+    "name" : "未读数量"
+  } ],
+  "enableTransaction" : false,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/处理工单", "/审批工单", "/查看全部工单", "/查看本人工单" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "U5BY8756",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "LTVKD690",
+      "name" : "查询当前成员",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "成员信息",
+            "tableAlias" : "成员信息",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "姓名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF.%E5%B9%B3%E5%8F%B0%E8%B4%A6%E5%8F%B7ID",
+              "operator" : 0,
+              "value" : {
+                "type" : 6,
+                "identifier" : "Server.currentUser.ID",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 1,
+          "typeMode" : "specific",
+          "specificType" : {
+            "declarativeTypeKind" : "Structure",
+            "typeName" : "成员选项"
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "当前成员"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "JKWDRUTP",
+      "name" : "检查成员记录",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "XWOK6ELB"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "当前成员"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 15
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "V53KXEMP",
+      "name" : "无成员记录返回空",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "O0GQ1IU7",
+            "target" : {
+              "type" : "variable",
+              "variable" : "通知列表"
+            },
+            "value" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }, {
+            "id" : "FLVGRICF",
+            "target" : {
+              "type" : "variable",
+              "variable" : "总数量"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : 0
+            }
+          }, {
+            "id" : "XB479IIM",
+            "target" : {
+              "type" : "variable",
+              "variable" : "未读数量"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : 0
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "MHPETKUG",
+      "name" : "统计未读消息",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单通知",
+            "tableAlias" : "工单通知",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95%E9%80%9A%E7%9F%A5.%E6%8E%A5%E6%94%B6%E4%BA%BAID",
+              "operator" : 0,
+              "value" : {
+                "type" : 6,
+                "identifier" : "当前成员.ID",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95%E9%80%9A%E7%9F%A5.%E6%98%AF%E5%90%A6%E5%B7%B2%E8%AF%BB",
+              "operator" : 24,
+              "value" : {
+                "type" : 1,
+                "identifier" : null,
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "auto",
+          "returnCountTo" : {
+            "type" : "variable",
+            "variable" : "未读数量"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 350
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "CH23NX9Z",
+      "name" : "计算偏移量",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "JA5FGPP3",
+            "target" : {
+              "type" : "variable",
+              "variable" : "偏移量"
+            },
+            "value" : {
+              "type" : "expression",
+              "expression" : "If(Or(IsNull(页码), 页码 <= 1), 0, (页码 - 1) * If(IsNull(每页条数), 20, 每页条数))"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 490
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "G9QR9649",
+      "name" : "按已读状态分流",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "X1W6K9B4"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "仅未读"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 23
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 590
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "WPH4N6MQ",
+      "name" : "查询未读消息",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单通知",
+            "tableAlias" : "工单通知",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "工单ID"
+            }, {
+              "columnRefName" : "通知标题"
+            }, {
+              "columnRefName" : "通知内容"
+            }, {
+              "columnRefName" : "是否已读"
+            }, {
+              "columnRefName" : "通知时间"
+            }, {
+              "columnRefName" : "工单",
+              "navigationConfig" : {
+                "sourceEntityName" : "工单通知",
+                "sourceNavColumnRefName" : "工单",
+                "relationName" : "通知所属工单",
+                "columns" : [ {
+                  "columnRefName" : "工单编号"
+                } ],
+                "condition" : null,
+                "orderBy" : null
+              }
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95%E9%80%9A%E7%9F%A5.%E6%8E%A5%E6%94%B6%E4%BA%BAID",
+              "operator" : 0,
+              "value" : {
+                "type" : 6,
+                "identifier" : "当前成员.ID",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95%E9%80%9A%E7%9F%A5.%E6%98%AF%E5%90%A6%E5%B7%B2%E8%AF%BB",
+              "operator" : 24,
+              "value" : {
+                "type" : 1,
+                "identifier" : null,
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : {
+            "identifiers" : [ {
+              "columnIdentifier" : {
+                "type" : 3,
+                "identifier" : "%E5%B7%A5%E5%8D%95%E9%80%9A%E7%9F%A5.%E9%80%9A%E7%9F%A5%E6%97%B6%E9%97%B4",
+                "name" : null
+              },
+              "orderIdentifier" : {
+                "type" : 6,
+                "identifier" : "Enum.排序方式.降序",
+                "name" : null
+              }
+            } ]
+          },
+          "pagination" : {
+            "limit" : {
+              "type" : "expression",
+              "expression" : "每页条数"
+            },
+            "offset" : {
+              "type" : "expression",
+              "expression" : "偏移量"
+            }
+          },
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "通知行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "通知列表"
+          },
+          "returnCountTo" : {
+            "type" : "variable",
+            "variable" : "总数量"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 590
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "ZNZILV94",
+      "name" : "查询全部消息",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单通知",
+            "tableAlias" : "工单通知",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "工单ID"
+            }, {
+              "columnRefName" : "通知标题"
+            }, {
+              "columnRefName" : "通知内容"
+            }, {
+              "columnRefName" : "是否已读"
+            }, {
+              "columnRefName" : "通知时间"
+            }, {
+              "columnRefName" : "工单",
+              "navigationConfig" : {
+                "sourceEntityName" : "工单通知",
+                "sourceNavColumnRefName" : "工单",
+                "relationName" : "通知所属工单",
+                "columns" : [ {
+                  "columnRefName" : "工单编号"
+                } ],
+                "condition" : null,
+                "orderBy" : null
+              }
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95%E9%80%9A%E7%9F%A5.%E6%8E%A5%E6%94%B6%E4%BA%BAID",
+              "operator" : 0,
+              "value" : {
+                "type" : 6,
+                "identifier" : "当前成员.ID",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : {
+            "identifiers" : [ {
+              "columnIdentifier" : {
+                "type" : 3,
+                "identifier" : "%E5%B7%A5%E5%8D%95%E9%80%9A%E7%9F%A5.%E9%80%9A%E7%9F%A5%E6%97%B6%E9%97%B4",
+                "name" : null
+              },
+              "orderIdentifier" : {
+                "type" : 6,
+                "identifier" : "Enum.排序方式.降序",
+                "name" : null
+              }
+            } ]
+          },
+          "pagination" : {
+            "limit" : {
+              "type" : "expression",
+              "expression" : "每页条数"
+            },
+            "offset" : {
+              "type" : "expression",
+              "expression" : "偏移量"
+            }
+          },
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "通知行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "通知列表"
+          },
+          "returnCountTo" : {
+            "type" : "variable",
+            "variable" : "总数量"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 690
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "D92WHKQH",
+      "sourceId" : "U5BY8756",
+      "targetId" : "LTVKD690",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "NWEXGG8P",
+      "sourceId" : "LTVKD690",
+      "targetId" : "JKWDRUTP",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "G4516I50",
+      "sourceId" : "JKWDRUTP",
+      "targetId" : "V53KXEMP",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "V7NDENE8",
+      "sourceId" : "JKWDRUTP",
+      "targetId" : "MHPETKUG",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "OM45NYM5",
+      "sourceId" : "MHPETKUG",
+      "targetId" : "CH23NX9Z",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "FHHTUNE7",
+      "sourceId" : "CH23NX9Z",
+      "targetId" : "G9QR9649",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "NI4NIXOX",
+      "sourceId" : "G9QR9649",
+      "targetId" : "WPH4N6MQ",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "UZPHLC10",
+      "sourceId" : "G9QR9649",
+      "targetId" : "ZNZILV94",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  }
+}

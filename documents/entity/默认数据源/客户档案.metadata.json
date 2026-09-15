@@ -1,0 +1,91 @@
+{
+  "dataSourceName" : "默认数据源",
+  "tableName" : "客户档案",
+  "name" : "客户档案",
+  "description" : "客户基本信息档案，由客服主管维护",
+  "columns" : [ {
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : true,
+    "columnKind" : "physical",
+    "isAutoIncrement" : true
+  }, {
+    "columnName" : "客户名称",
+    "name" : "客户名称",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "联系人",
+    "name" : "联系人",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "联系电话",
+    "name" : "联系电话",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "客户等级",
+    "name" : "客户等级",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户等级"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "所属区域",
+    "name" : "所属区域",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "服务状态",
+    "name" : "服务状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户状态"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "备注",
+    "name" : "备注",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "客户等级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "客户状态"
+  } ]
+}

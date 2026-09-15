@@ -1,0 +1,432 @@
+{
+  "id" : "K52H4RNP",
+  "name" : "修改密码",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ {
+    "id" : "G6ING1GX",
+    "name" : "targetUser",
+    "dataType" : {
+      "typeName" : "用户",
+      "declarativeTypeKind" : "Structure"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : null
+    }
+  } ],
+  "parameters" : [ {
+    "id" : "INNUF0TA",
+    "name" : "userName",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "XUQOC1F4",
+    "name" : "oldPassword",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "PTCOSQAT",
+    "name" : "newPassword",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "Z73W2U6U",
+    "name" : "message",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "W9JRJ5HF",
+    "name" : "success",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/登录权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "E4CSONS6",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "MP4PN924",
+      "name" : "判断用户名是否为空",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "N98JNKL7"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "literal" : "",
+                            "expression" : "userName"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 17
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 368,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "URV5WHY9",
+      "name" : "通过用户名获取用户详情",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetUserDetail"
+        },
+        "lookupType" : {
+          "type" : "literal",
+          "literal" : "UserName"
+        },
+        "userName" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "userName"
+        },
+        "userOutput" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "targetUser"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 615,
+          "y" : 327
+        }
+      }
+    }, {
+      "id" : "J8VZJ7O8",
+      "name" : "判断用户详情是否为空",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "JB6UL4PX"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "literal" : "",
+                            "expression" : "targetUser"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 15
+                          },
+                          "value" : {
+                            "type" : "literal"
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 871,
+          "y" : 327
+        }
+      }
+    }, {
+      "id" : "WNN7ZKJ2",
+      "name" : "返回修改密码失败",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "KQCS5YGW",
+            "value" : {
+              "type" : "literal",
+              "literal" : false
+            },
+            "target" : {
+              "type" : "variable",
+              "literal" : "",
+              "variable" : "success"
+            }
+          }, {
+            "id" : "Z5GDP9XB",
+            "value" : {
+              "type" : "literal",
+              "literal" : "用户名或旧密码错误"
+            },
+            "target" : {
+              "type" : "variable",
+              "literal" : "",
+              "variable" : "message"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1146,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "B4UC4KBP",
+      "name" : "通过用户名修改密码",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "ChangePassword"
+        },
+        "validatePassword" : {
+          "type" : "literal",
+          "literal" : true
+        },
+        "userId" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "targetUser.ID"
+        },
+        "oldPassword" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "oldPassword"
+        },
+        "newPassword" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "newPassword"
+        },
+        "message" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "message"
+        },
+        "success" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "success"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1146,
+          "y" : 348
+        }
+      }
+    }, {
+      "id" : "GEGCYA2W",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 1480,
+          "y" : 220
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "P68M7B3F",
+      "sourceId" : "E4CSONS6",
+      "targetId" : "MP4PN924",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "VV7EACPN",
+      "sourceId" : "MP4PN924",
+      "targetId" : "WNN7ZKJ2",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null
+    }, {
+      "id" : "YCC8J87M",
+      "sourceId" : "MP4PN924",
+      "targetId" : "URV5WHY9",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null
+    }, {
+      "id" : "ZNRPYS3E",
+      "sourceId" : "URV5WHY9",
+      "targetId" : "J8VZJ7O8",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "VQCEMU45",
+      "sourceId" : "J8VZJ7O8",
+      "targetId" : "WNN7ZKJ2",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null
+    }, {
+      "id" : "DN942JZY",
+      "sourceId" : "J8VZJ7O8",
+      "targetId" : "B4UC4KBP",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null
+    }, {
+      "id" : "N92E1P35",
+      "sourceId" : "B4UC4KBP",
+      "targetId" : "GEGCYA2W",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "Q53FLTAW",
+      "sourceId" : "WNN7ZKJ2",
+      "targetId" : "GEGCYA2W",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

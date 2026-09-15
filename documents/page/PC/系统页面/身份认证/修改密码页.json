@@ -1,0 +1,2935 @@
+{
+  "id" : "I12N5X66",
+  "name" : "修改密码页",
+  "type" : "page",
+  "rootElement" : {
+    "id" : "R4RVER4B",
+    "name" : "修改密码页根布局",
+    "type" : "linear-layout",
+    "pluginName" : "component-common",
+    "styles" : [ {
+      "pseudo" : "none",
+      "target" : "root",
+      "cssProperties" : [ {
+        "name" : "display",
+        "type" : "literal",
+        "literal" : "flex"
+      }, {
+        "name" : "columnGap",
+        "type" : "literal",
+        "literal" : "var(--small-spacing)"
+      }, {
+        "name" : "rowGap",
+        "type" : "literal",
+        "literal" : "var(--small-spacing)"
+      }, {
+        "name" : "position",
+        "type" : "literal",
+        "literal" : "relative"
+      }, {
+        "name" : "size",
+        "type" : "literal",
+        "literal" : {
+          "height" : "100%"
+        }
+      }, {
+        "name" : "flexDirection",
+        "type" : "literal",
+        "literal" : "row"
+      }, {
+        "name" : "justifyContent",
+        "type" : "literal",
+        "literal" : "center"
+      }, {
+        "name" : "alignItems",
+        "type" : "literal",
+        "literal" : "center"
+      }, {
+        "name" : "overflow",
+        "type" : "literal",
+        "literal" : "auto"
+      } ]
+    }, {
+      "pseudo" : "none",
+      "target" : "loadingPanel",
+      "cssProperties" : [ {
+        "name" : "backgroundColor",
+        "type" : "literal",
+        "literal" : "var(--color-page-background)"
+      } ]
+    } ],
+    "events" : [ ],
+    "properties" : [ {
+      "name" : "loading",
+      "type" : "literal",
+      "literal" : ""
+    }, {
+      "name" : "enableCustomLoading",
+      "type" : "literal",
+      "literal" : ""
+    } ],
+    "children" : [ {
+      "id" : "X5CAQ3F2",
+      "name" : "修改密码表单容器",
+      "type" : "linear-layout",
+      "pluginName" : "component-common",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "display",
+          "type" : "literal",
+          "literal" : "block"
+        }, {
+          "name" : "columnGap",
+          "type" : "literal",
+          "literal" : "var(--small-spacing)"
+        }, {
+          "name" : "rowGap",
+          "type" : "literal",
+          "literal" : "var(--small-spacing)"
+        }, {
+          "name" : "position",
+          "type" : "literal",
+          "literal" : "relative"
+        }, {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : {
+            "width" : "400px"
+          }
+        }, {
+          "name" : "border",
+          "type" : "literal",
+          "literal" : {
+            "top" : {
+              "width" : "0px",
+              "color" : "rgb(238, 238, 238)"
+            },
+            "right" : {
+              "width" : "0px",
+              "color" : "rgb(238, 238, 238)"
+            },
+            "bottom" : {
+              "width" : "0px",
+              "color" : "rgb(238, 238, 238)"
+            },
+            "left" : {
+              "width" : "0px",
+              "color" : "rgb(238, 238, 238)"
+            }
+          }
+        }, {
+          "name" : "borderRadius",
+          "type" : "literal",
+          "literal" : {
+            "topLeft" : "15px",
+            "topRight" : "15px",
+            "bottomRight" : "15px",
+            "bottomLeft" : "15px"
+          }
+        } ]
+      }, {
+        "pseudo" : "none",
+        "target" : "loadingPanel",
+        "cssProperties" : [ {
+          "name" : "backgroundColor",
+          "type" : "literal",
+          "literal" : "var(--color-page-background)"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "enableCustomLoading",
+        "type" : "literal",
+        "literal" : ""
+      } ],
+      "children" : [ {
+        "id" : "JE9XCR3A",
+        "name" : "修改密码标题区",
+        "type" : "linear-layout",
+        "pluginName" : "component-common",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "display",
+            "type" : "literal",
+            "literal" : "flex"
+          }, {
+            "name" : "columnGap",
+            "type" : "literal",
+            "literal" : "var(--small-spacing)"
+          }, {
+            "name" : "rowGap",
+            "type" : "literal",
+            "literal" : "12px"
+          }, {
+            "name" : "position",
+            "type" : "literal",
+            "literal" : "relative"
+          }, {
+            "name" : "margin",
+            "type" : "literal",
+            "literal" : {
+              "bottom" : "29px"
+            }
+          }, {
+            "name" : "flexDirection",
+            "type" : "literal",
+            "literal" : "column"
+          }, {
+            "name" : "justifyContent",
+            "type" : "literal",
+            "literal" : "flex-start"
+          }, {
+            "name" : "alignItems",
+            "type" : "literal",
+            "literal" : "center"
+          } ]
+        }, {
+          "pseudo" : "none",
+          "target" : "loadingPanel",
+          "cssProperties" : [ {
+            "name" : "backgroundColor",
+            "type" : "literal",
+            "literal" : "var(--color-page-background)"
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "enableCustomLoading",
+          "type" : "literal",
+          "literal" : ""
+        } ],
+        "children" : [ {
+          "id" : "CS73MEMG",
+          "name" : "修改密码Logo容器",
+          "type" : "linear-layout",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "display",
+              "type" : "literal",
+              "literal" : "flex"
+            }, {
+              "name" : "columnGap",
+              "type" : "literal",
+              "literal" : "var(--small-spacing)"
+            }, {
+              "name" : "rowGap",
+              "type" : "literal",
+              "literal" : "var(--small-spacing)"
+            }, {
+              "name" : "position",
+              "type" : "literal",
+              "literal" : "relative"
+            }, {
+              "name" : "size",
+              "type" : "literal",
+              "literal" : {
+                "width" : "40px",
+                "height" : "40px"
+              }
+            }, {
+              "name" : "flexDirection",
+              "type" : "literal",
+              "literal" : "row"
+            }, {
+              "name" : "justifyContent",
+              "type" : "literal",
+              "literal" : "center"
+            }, {
+              "name" : "alignItems",
+              "type" : "literal",
+              "literal" : "center"
+            }, {
+              "name" : "borderRadius",
+              "type" : "literal",
+              "literal" : {
+                "topLeft" : "100px",
+                "topRight" : "100px",
+                "bottomRight" : "100px",
+                "bottomLeft" : "100px"
+              }
+            }, {
+              "name" : "backgroundColor",
+              "type" : "literal",
+              "literal" : "var(--color-primary)"
+            } ]
+          }, {
+            "pseudo" : "none",
+            "target" : "loadingPanel",
+            "cssProperties" : [ {
+              "name" : "backgroundColor",
+              "type" : "literal",
+              "literal" : "var(--color-page-background)"
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "loading",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "enableCustomLoading",
+            "type" : "literal",
+            "literal" : ""
+          } ],
+          "children" : [ {
+            "id" : "YT4EJ48A",
+            "name" : "修改密码Logo文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "rgb(255, 255, 255)"
+              }, {
+                "name" : "textStyle",
+                "type" : "literal",
+                "literal" : {
+                  "bold" : true,
+                  "italic" : false,
+                  "underline" : false
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "logo"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "MFFZL5X2",
+          "name" : "修改密码标题说明容器",
+          "type" : "linear-layout",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "display",
+              "type" : "literal",
+              "literal" : "flex"
+            }, {
+              "name" : "columnGap",
+              "type" : "literal",
+              "literal" : "var(--small-spacing)"
+            }, {
+              "name" : "rowGap",
+              "type" : "literal",
+              "literal" : "8px"
+            }, {
+              "name" : "position",
+              "type" : "literal",
+              "literal" : "relative"
+            }, {
+              "name" : "flexDirection",
+              "type" : "literal",
+              "literal" : "column"
+            }, {
+              "name" : "justifyContent",
+              "type" : "literal",
+              "literal" : "flex-start"
+            }, {
+              "name" : "alignItems",
+              "type" : "literal",
+              "literal" : "center"
+            } ]
+          }, {
+            "pseudo" : "none",
+            "target" : "loadingPanel",
+            "cssProperties" : [ {
+              "name" : "backgroundColor",
+              "type" : "literal",
+              "literal" : "var(--color-page-background)"
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "loading",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "enableCustomLoading",
+            "type" : "literal",
+            "literal" : ""
+          } ],
+          "children" : [ {
+            "id" : "GA68CZHS",
+            "name" : "修改密码标题文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              }, {
+                "name" : "textAlign",
+                "type" : "literal",
+                "literal" : "center"
+              }, {
+                "name" : "fontSize",
+                "type" : "literal",
+                "literal" : "var(--font-size-h3)"
+              }, {
+                "name" : "textStyle",
+                "type" : "literal",
+                "literal" : {
+                  "bold" : true
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "修改密码"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          }, {
+            "id" : "KHT2NIDO",
+            "name" : "修改密码说明文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%",
+                  "width" : "100%"
+                }
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "rgb(163, 163, 163)"
+              }, {
+                "name" : "textAlign",
+                "type" : "literal",
+                "literal" : "center"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "请设置新的登录密码，以保护您的账号安全。"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "RAA45JMX",
+        "name" : "表单",
+        "type" : "form",
+        "pluginName" : "component-ant-design",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "overflow",
+            "type" : "literal",
+            "literal" : "auto"
+          }, {
+            "name" : "margin",
+            "type" : "literal",
+            "literal" : {
+              "bottom" : "var(--large-spacing)"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "layout",
+          "type" : "literal",
+          "literal" : "multi-column"
+        }, {
+          "name" : "columns",
+          "type" : "literal",
+          "literal" : 1
+        }, {
+          "name" : "wrap",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "customGap",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "rowGap",
+          "type" : "literal",
+          "literal" : 24
+        }, {
+          "name" : "columnGap",
+          "type" : "literal",
+          "literal" : 24
+        }, {
+          "name" : "labelLayout",
+          "type" : "literal",
+          "literal" : "vertical"
+        }, {
+          "name" : "labelDistance",
+          "type" : "literal",
+          "literal" : 8
+        }, {
+          "name" : "labelSize",
+          "type" : "literal",
+          "literal" : "auto"
+        }, {
+          "name" : "customLabelSize",
+          "type" : "literal",
+          "literal" : 14
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "right"
+        }, {
+          "name" : "labelWrap",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "colon",
+          "type" : "literal",
+          "literal" : true
+        } ],
+        "children" : [ {
+          "id" : "DJAJ45QB",
+          "name" : "旧密码表单项",
+          "type" : "form-item",
+          "pluginName" : "component-ant-design",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "required",
+            "type" : "literal",
+            "literal" : true
+          }, {
+            "name" : "tooltip",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "showExtraTip",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "colSpan",
+            "type" : "literal",
+            "literal" : 1
+          }, {
+            "name" : "showLabel",
+            "type" : "literal",
+            "literal" : "show"
+          }, {
+            "name" : "labelLayout",
+            "type" : "literal",
+            "literal" : "inherit"
+          }, {
+            "name" : "labelSize",
+            "type" : "literal",
+            "literal" : "middle"
+          }, {
+            "name" : "customLabelSize",
+            "type" : "literal",
+            "literal" : 100
+          }, {
+            "name" : "labelAlign",
+            "type" : "literal",
+            "literal" : "right"
+          } ],
+          "children" : [ {
+            "id" : "MQEDS887",
+            "name" : "旧密码标签插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "P7XULBS9",
+              "name" : "旧密码标签文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "旧密码"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "label"
+          }, {
+            "id" : "WM23ZI1L",
+            "name" : "旧密码内容插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "NIZK7BNC",
+              "name" : "旧密码输入框",
+              "type" : "input",
+              "pluginName" : "component-ant-design",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "maxWidth" : "100%",
+                    "height" : "40px"
+                  }
+                }, {
+                  "name" : "borderRadius",
+                  "type" : "literal",
+                  "literal" : {
+                    "topLeft" : "4px",
+                    "topRight" : "4px",
+                    "bottomRight" : "4px",
+                    "bottomLeft" : "4px"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "value",
+                "type" : "variable",
+                "variable" : "oldPassword"
+              }, {
+                "name" : "type",
+                "type" : "literal",
+                "literal" : "password"
+              }, {
+                "name" : "placeholder",
+                "type" : "literal",
+                "literal" : "请输入旧密码"
+              }, {
+                "name" : "maxLength",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "clearAsNull",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "dataValidation",
+                "type" : "literal",
+                "literal" : {
+                  "required" : {
+                    "type" : "literal",
+                    "literal" : true
+                  },
+                  "requiredErrorMessage" : {
+                    "type" : "literal",
+                    "literal" : "旧密码不能为空"
+                  }
+                }
+              }, {
+                "name" : "variant",
+                "type" : "literal",
+                "literal" : "outlined"
+              }, {
+                "name" : "showCount",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "status",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showPrefixIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showSuffixIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showAddonBefore",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showAddonAfter",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "addonBg",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "autoSize",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "rows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "minRows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "maxRows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "disabled",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "readonly",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "allowClear",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "loading",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "content"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "I8W7S90P",
+          "name" : "新密码表单项",
+          "type" : "form-item",
+          "pluginName" : "component-ant-design",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "required",
+            "type" : "literal",
+            "literal" : true
+          }, {
+            "name" : "tooltip",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "showExtraTip",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "colSpan",
+            "type" : "literal",
+            "literal" : 1
+          }, {
+            "name" : "showLabel",
+            "type" : "literal",
+            "literal" : "show"
+          }, {
+            "name" : "labelLayout",
+            "type" : "literal",
+            "literal" : "inherit"
+          }, {
+            "name" : "labelSize",
+            "type" : "literal",
+            "literal" : "middle"
+          }, {
+            "name" : "customLabelSize",
+            "type" : "literal",
+            "literal" : 100
+          }, {
+            "name" : "labelAlign",
+            "type" : "literal",
+            "literal" : "right"
+          } ],
+          "children" : [ {
+            "id" : "NDP5XLHS",
+            "name" : "新密码标签插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "FD2J8U3O",
+              "name" : "新密码标签文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "新密码"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "label"
+          }, {
+            "id" : "HKYF9N1U",
+            "name" : "新密码内容插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "O52NJZX4",
+              "name" : "新密码输入框",
+              "type" : "input",
+              "pluginName" : "component-ant-design",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "maxWidth" : "100%",
+                    "height" : "40px"
+                  }
+                }, {
+                  "name" : "borderRadius",
+                  "type" : "literal",
+                  "literal" : {
+                    "topLeft" : "4px",
+                    "topRight" : "4px",
+                    "bottomRight" : "4px",
+                    "bottomLeft" : "4px"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "value",
+                "type" : "variable",
+                "variable" : "newPassword"
+              }, {
+                "name" : "type",
+                "type" : "literal",
+                "literal" : "password"
+              }, {
+                "name" : "placeholder",
+                "type" : "literal",
+                "literal" : "请输入新密码"
+              }, {
+                "name" : "maxLength",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "clearAsNull",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "dataValidation",
+                "type" : "literal",
+                "literal" : {
+                  "required" : {
+                    "type" : "literal",
+                    "literal" : true
+                  },
+                  "requiredErrorMessage" : {
+                    "type" : "literal",
+                    "literal" : "新密码不能为空"
+                  },
+                  "validateType" : {
+                    "type" : "literal",
+                    "literal" : "regex"
+                  },
+                  "validateErrorMessage" : {
+                    "type" : "literal",
+                    "literal" : "密码长度必须在 6-100 字符之间"
+                  },
+                  "value1" : {
+                    "type" : "literal",
+                    "literal" : "^.{6,100}$"
+                  }
+                }
+              }, {
+                "name" : "variant",
+                "type" : "literal",
+                "literal" : "outlined"
+              }, {
+                "name" : "showCount",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "status",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showPrefixIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showSuffixIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showAddonBefore",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showAddonAfter",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "addonBg",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "autoSize",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "rows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "minRows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "maxRows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "disabled",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "readonly",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "allowClear",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "loading",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "content"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "WYMWQB2E",
+          "name" : "确认密码表单项",
+          "type" : "form-item",
+          "pluginName" : "component-ant-design",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "required",
+            "type" : "literal",
+            "literal" : true
+          }, {
+            "name" : "tooltip",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "showExtraTip",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "colSpan",
+            "type" : "literal",
+            "literal" : 1
+          }, {
+            "name" : "showLabel",
+            "type" : "literal",
+            "literal" : "show"
+          }, {
+            "name" : "labelLayout",
+            "type" : "literal",
+            "literal" : "inherit"
+          }, {
+            "name" : "labelSize",
+            "type" : "literal",
+            "literal" : "middle"
+          }, {
+            "name" : "customLabelSize",
+            "type" : "literal",
+            "literal" : 100
+          }, {
+            "name" : "labelAlign",
+            "type" : "literal",
+            "literal" : "right"
+          } ],
+          "children" : [ {
+            "id" : "HNZLVG3A",
+            "name" : "确认密码标签插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "C6WX5OYH",
+              "name" : "确认密码标签文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "确认密码"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "label"
+          }, {
+            "id" : "V0ZH53FY",
+            "name" : "确认密码内容插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "C4GEYJTP",
+              "name" : "确认密码输入框",
+              "type" : "input",
+              "pluginName" : "component-ant-design",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "maxWidth" : "100%",
+                    "height" : "40px"
+                  }
+                }, {
+                  "name" : "borderRadius",
+                  "type" : "literal",
+                  "literal" : {
+                    "topLeft" : "4px",
+                    "topRight" : "4px",
+                    "bottomRight" : "4px",
+                    "bottomLeft" : "4px"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "value",
+                "type" : "variable",
+                "variable" : "confirmPassword"
+              }, {
+                "name" : "type",
+                "type" : "literal",
+                "literal" : "password"
+              }, {
+                "name" : "placeholder",
+                "type" : "literal",
+                "literal" : "请再次输入新密码"
+              }, {
+                "name" : "maxLength",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "clearAsNull",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "dataValidation",
+                "type" : "literal",
+                "literal" : {
+                  "required" : {
+                    "type" : "literal",
+                    "literal" : true
+                  },
+                  "requiredErrorMessage" : {
+                    "type" : "literal",
+                    "literal" : "确认密码不能为空"
+                  },
+                  "validateType" : {
+                    "type" : "literal",
+                    "literal" : "expression"
+                  },
+                  "validateErrorMessage" : {
+                    "type" : "literal",
+                    "literal" : "两次输入的密码不一致"
+                  },
+                  "value1" : {
+                    "type" : "expression",
+                    "expression" : "newPassword=confirmPassword"
+                  }
+                }
+              }, {
+                "name" : "variant",
+                "type" : "literal",
+                "literal" : "outlined"
+              }, {
+                "name" : "showCount",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "status",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showPrefixIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showSuffixIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showAddonBefore",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showAddonAfter",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "addonBg",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "autoSize",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "rows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "minRows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "maxRows",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "disabled",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "readonly",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "allowClear",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "loading",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "content"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "WSIO7HWQ",
+          "name" : "表单按钮项",
+          "type" : "form-item",
+          "pluginName" : "component-ant-design",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "required",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "tooltip",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "showExtraTip",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "colSpan",
+            "type" : "literal",
+            "literal" : 1
+          }, {
+            "name" : "showLabel",
+            "type" : "literal",
+            "literal" : "hide"
+          }, {
+            "name" : "labelLayout",
+            "type" : "literal",
+            "literal" : "inherit"
+          }, {
+            "name" : "labelSize",
+            "type" : "literal",
+            "literal" : "middle"
+          }, {
+            "name" : "customLabelSize",
+            "type" : "literal",
+            "literal" : 100
+          }, {
+            "name" : "labelAlign",
+            "type" : "literal",
+            "literal" : "right"
+          } ],
+          "children" : [ {
+            "id" : "A71MPQGQ",
+            "name" : "按钮标签插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "XYU46QOO",
+              "name" : "修改密码按钮标签文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "操作"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "label"
+          }, {
+            "id" : "NTO5HQ4C",
+            "name" : "按钮内容插槽",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "HPSIM6GR",
+              "name" : "修改密码按钮",
+              "type" : "button",
+              "pluginName" : "component-ant-design",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "height" : "40px"
+                  }
+                }, {
+                  "name" : "borderRadius",
+                  "type" : "literal",
+                  "literal" : {
+                    "topLeft" : "4px",
+                    "topRight" : "4px",
+                    "bottomRight" : "4px",
+                    "bottomLeft" : "4px"
+                  }
+                } ]
+              } ],
+              "events" : [ {
+                "id" : "S55RLMJ5",
+                "name" : "修改密码",
+                "description" : "",
+                "variables" : [ {
+                  "id" : "H3JT1G8M",
+                  "name" : "isFormValid",
+                  "dataType" : {
+                    "typeName" : "Boolean"
+                  },
+                  "description" : "",
+                  "defaultValue" : {
+                    "type" : "literal",
+                    "literal" : ""
+                  }
+                }, {
+                  "id" : "O0Q9NC3J",
+                  "name" : "loginSuccess",
+                  "dataType" : {
+                    "typeName" : "Boolean"
+                  },
+                  "description" : "",
+                  "defaultValue" : {
+                    "type" : "literal",
+                    "literal" : false
+                  }
+                }, {
+                  "id" : "IWXON4PP",
+                  "name" : "loginMessage",
+                  "dataType" : {
+                    "typeName" : "String"
+                  },
+                  "description" : "",
+                  "defaultValue" : {
+                    "type" : "literal",
+                    "literal" : ""
+                  }
+                } ],
+                "parameters" : [ ],
+                "returnValues" : [ ],
+                "diagram" : {
+                  "nodes" : [ {
+                    "id" : "J54DRAOI",
+                    "name" : "开始",
+                    "pluginName" : "",
+                    "identifier" : "",
+                    "attributes" : {
+                      "position" : {
+                        "x" : -140,
+                        "y" : 260
+                      }
+                    },
+                    "isStartPoint" : true
+                  }, {
+                    "id" : "UM6T10QH",
+                    "name" : "校验表单",
+                    "pluginName" : "logic-core",
+                    "identifier" : "call-logic",
+                    "content" : {
+                      "targetLogic" : {
+                        "type" : "literal",
+                        "literal" : {
+                          "itemType" : "externalLogic",
+                          "logicName" : "表单.validate"
+                        }
+                      },
+                      "parameters" : {
+                        "type" : "structure",
+                        "structure" : [ ]
+                      },
+                      "returnValues" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "isValid"
+                            },
+                            "variable" : {
+                              "type" : "variable",
+                              "variable" : "isFormValid"
+                            }
+                          }
+                        } ]
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 30,
+                        "y" : 260
+                      }
+                    }
+                  }, {
+                    "id" : "QK1EZKMW",
+                    "name" : "表单校验判断",
+                    "pluginName" : "logic-core",
+                    "identifier" : "condition",
+                    "content" : {
+                      "conditions" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "ifCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "if"
+                              },
+                              "conditions" : {
+                                "type" : "structure",
+                                "structure" : {
+                                  "conditionType" : {
+                                    "type" : "literal",
+                                    "literal" : 0
+                                  },
+                                  "conditionItems" : {
+                                    "type" : "structure",
+                                    "structure" : [ {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "VAVWB0T2"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "isFormValid"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 0
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : false
+                                        }
+                                      }
+                                    } ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "elseCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "else"
+                              }
+                            }
+                          },
+                          "elseIfCases" : {
+                            "type" : "structure",
+                            "structure" : [ ]
+                          }
+                        }
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 290,
+                        "y" : 260
+                      }
+                    }
+                  }, {
+                    "id" : "B6XK5KSF",
+                    "name" : "中止提交",
+                    "pluginName" : "logic-core",
+                    "identifier" : "return",
+                    "content" : { },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 552,
+                        "y" : 120
+                      }
+                    }
+                  }, {
+                    "id" : "RYEWE3PH",
+                    "name" : "调用修改密码逻辑",
+                    "pluginName" : "logic-core",
+                    "identifier" : "call-logic",
+                    "content" : {
+                      "targetLogic" : {
+                        "type" : "literal",
+                        "literal" : {
+                          "itemType" : "serverLogic",
+                          "logicName" : "修改密码"
+                        }
+                      },
+                      "parameters" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "userName"
+                            },
+                            "value" : {
+                              "type" : "expression",
+                              "expression" : "userName"
+                            }
+                          }
+                        }, {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "oldPassword"
+                            },
+                            "value" : {
+                              "type" : "expression",
+                              "expression" : "oldPassword"
+                            }
+                          }
+                        }, {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "newPassword"
+                            },
+                            "value" : {
+                              "type" : "expression",
+                              "expression" : "newPassword"
+                            }
+                          }
+                        } ]
+                      },
+                      "returnValues" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "message"
+                            },
+                            "variable" : {
+                              "type" : "variable",
+                              "variable" : "message"
+                            }
+                          }
+                        }, {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "success"
+                            },
+                            "variable" : {
+                              "type" : "variable",
+                              "variable" : "changeSuccess"
+                            }
+                          }
+                        } ]
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 552,
+                        "y" : 260
+                      }
+                    }
+                  }, {
+                    "id" : "WNVTYLFZ",
+                    "name" : "修改结果判断",
+                    "pluginName" : "logic-core",
+                    "identifier" : "condition",
+                    "content" : {
+                      "conditions" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "ifCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "if"
+                              },
+                              "conditions" : {
+                                "type" : "structure",
+                                "structure" : {
+                                  "conditionType" : {
+                                    "type" : "literal",
+                                    "literal" : 0
+                                  },
+                                  "conditionItems" : {
+                                    "type" : "structure",
+                                    "structure" : [ {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "O08YGE7M"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "changeSuccess"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 0
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : true
+                                        }
+                                      }
+                                    } ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "elseCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "else"
+                              }
+                            }
+                          },
+                          "elseIfCases" : {
+                            "type" : "structure",
+                            "structure" : [ ]
+                          }
+                        }
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 820,
+                        "y" : 260
+                      }
+                    }
+                  }, {
+                    "id" : "V34CXM2V",
+                    "name" : "调用登录逻辑",
+                    "pluginName" : "logic-core",
+                    "identifier" : "call-logic",
+                    "content" : {
+                      "targetLogic" : {
+                        "type" : "literal",
+                        "literal" : {
+                          "itemType" : "serverLogic",
+                          "logicName" : "登录"
+                        }
+                      },
+                      "parameters" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "userName"
+                            },
+                            "value" : {
+                              "type" : "expression",
+                              "expression" : "userName"
+                            }
+                          }
+                        }, {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "password"
+                            },
+                            "value" : {
+                              "type" : "expression",
+                              "expression" : "newPassword"
+                            }
+                          }
+                        }, {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "rememberMe"
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : false
+                            }
+                          }
+                        } ]
+                      },
+                      "returnValues" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "message"
+                            },
+                            "variable" : {
+                              "type" : "variable",
+                              "variable" : "loginMessage"
+                            }
+                          }
+                        }, {
+                          "type" : "structure",
+                          "structure" : {
+                            "name" : {
+                              "type" : "literal",
+                              "literal" : "success"
+                            },
+                            "variable" : {
+                              "type" : "variable",
+                              "variable" : "loginSuccess"
+                            }
+                          }
+                        } ]
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 1088,
+                        "y" : 160
+                      }
+                    }
+                  }, {
+                    "id" : "P0S4UJBI",
+                    "name" : "自动登录结果判断",
+                    "pluginName" : "logic-core",
+                    "identifier" : "condition",
+                    "content" : {
+                      "conditions" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "ifCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "if"
+                              },
+                              "conditions" : {
+                                "type" : "structure",
+                                "structure" : {
+                                  "conditionType" : {
+                                    "type" : "literal",
+                                    "literal" : 0
+                                  },
+                                  "conditionItems" : {
+                                    "type" : "structure",
+                                    "structure" : [ {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "KTKTPPQS"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "loginSuccess"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 0
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : true
+                                        }
+                                      }
+                                    } ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "elseCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "else"
+                              }
+                            }
+                          },
+                          "elseIfCases" : {
+                            "type" : "structure",
+                            "structure" : [ ]
+                          }
+                        }
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 1356,
+                        "y" : 160
+                      }
+                    }
+                  }, {
+                    "id" : "HA6J7C8L",
+                    "name" : "显示修改失败消息",
+                    "pluginName" : "component-ant-design",
+                    "identifier" : "message",
+                    "content" : {
+                      "content" : {
+                        "type" : "expression",
+                        "expression" : "message"
+                      },
+                      "type" : {
+                        "type" : "literal",
+                        "literal" : "error"
+                      },
+                      "duration" : {
+                        "type" : "literal",
+                        "literal" : 3
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 1088,
+                        "y" : 380
+                      }
+                    }
+                  }, {
+                    "id" : "AOEGWOLP",
+                    "name" : "显示自动登录失败消息",
+                    "pluginName" : "component-ant-design",
+                    "identifier" : "message",
+                    "content" : {
+                      "content" : {
+                        "type" : "expression",
+                        "expression" : "loginMessage"
+                      },
+                      "type" : {
+                        "type" : "literal",
+                        "literal" : "error"
+                      },
+                      "duration" : {
+                        "type" : "literal",
+                        "literal" : 3
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 1624,
+                        "y" : 320
+                      }
+                    }
+                  }, {
+                    "id" : "MUB25VZG",
+                    "name" : "显示修改成功消息",
+                    "pluginName" : "component-ant-design",
+                    "identifier" : "message",
+                    "content" : {
+                      "content" : {
+                        "type" : "literal",
+                        "literal" : "密码修改成功"
+                      },
+                      "type" : {
+                        "type" : "literal",
+                        "literal" : "success"
+                      },
+                      "duration" : {
+                        "type" : "literal",
+                        "literal" : 3
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 1624,
+                        "y" : 80
+                      }
+                    }
+                  }, {
+                    "id" : "D2IMNUZQ",
+                    "name" : "安全跳转地址判断",
+                    "pluginName" : "logic-core",
+                    "identifier" : "condition",
+                    "content" : {
+                      "conditions" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "ifCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "if"
+                              },
+                              "conditions" : {
+                                "type" : "structure",
+                                "structure" : {
+                                  "conditionType" : {
+                                    "type" : "literal",
+                                    "literal" : 0
+                                  },
+                                  "conditionItems" : {
+                                    "type" : "structure",
+                                    "structure" : [ {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "S32KFNQN"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "redirect"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 18
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : ""
+                                        }
+                                      }
+                                    }, {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "ZXZIA82G"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "redirect"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 6
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : "/"
+                                        }
+                                      }
+                                    }, {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "C5I7KUSU"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "redirect"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 7
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : "//"
+                                        }
+                                      }
+                                    }, {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "F9C5V0O5"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "redirect"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 11
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : "\\"
+                                        }
+                                      }
+                                    }, {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "GJOYQ2BP"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "redirect"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 11
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : "\n"
+                                        }
+                                      }
+                                    }, {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "U9X5RY7D"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "redirect"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 11
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : "\r"
+                                        }
+                                      }
+                                    }, {
+                                      "type" : "structure",
+                                      "structure" : {
+                                        "conditionType" : {
+                                          "type" : "literal",
+                                          "literal" : 2
+                                        },
+                                        "id" : {
+                                          "type" : "literal",
+                                          "literal" : "MDREPQVP"
+                                        },
+                                        "operand" : {
+                                          "type" : "expression",
+                                          "expression" : "redirect"
+                                        },
+                                        "operator" : {
+                                          "type" : "literal",
+                                          "literal" : 11
+                                        },
+                                        "value" : {
+                                          "type" : "literal",
+                                          "literal" : "\t"
+                                        }
+                                      }
+                                    } ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "elseCase" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "identifier" : {
+                                "type" : "literal",
+                                "literal" : "else"
+                              }
+                            }
+                          },
+                          "elseIfCases" : {
+                            "type" : "structure",
+                            "structure" : [ ]
+                          }
+                        }
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 1892,
+                        "y" : 80
+                      }
+                    }
+                  }, {
+                    "id" : "IXNRQDU1",
+                    "name" : "跳转回调地址",
+                    "pluginName" : "logic-ui-interaction",
+                    "identifier" : "destination",
+                    "content" : {
+                      "navigationType" : {
+                        "type" : "literal",
+                        "literal" : "internal"
+                      },
+                      "pageNavigation" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "page" : {
+                            "type" : "expression",
+                            "expression" : "redirect"
+                          },
+                          "params" : {
+                            "type" : "structure",
+                            "structure" : { }
+                          }
+                        }
+                      },
+                      "windowTarget" : {
+                        "type" : "literal",
+                        "literal" : "_self"
+                      },
+                      "href" : {
+                        "type" : "literal",
+                        "literal" : ""
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 2160,
+                        "y" : 20
+                      }
+                    }
+                  }, {
+                    "id" : "BDN8IBUX",
+                    "name" : "跳转首页",
+                    "pluginName" : "logic-ui-interaction",
+                    "identifier" : "destination",
+                    "content" : {
+                      "navigationType" : {
+                        "type" : "literal",
+                        "literal" : "internal"
+                      },
+                      "pageNavigation" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "page" : {
+                            "type" : "expression",
+                            "expression" : "\"/\""
+                          },
+                          "params" : {
+                            "type" : "structure",
+                            "structure" : { }
+                          }
+                        }
+                      },
+                      "windowTarget" : {
+                        "type" : "literal",
+                        "literal" : "_self"
+                      },
+                      "href" : {
+                        "type" : "literal",
+                        "literal" : ""
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 2160,
+                        "y" : 140
+                      }
+                    }
+                  }, {
+                    "id" : "WZ02WZTN",
+                    "name" : "跳转登录页",
+                    "pluginName" : "logic-ui-interaction",
+                    "identifier" : "destination",
+                    "content" : {
+                      "navigationType" : {
+                        "type" : "literal",
+                        "literal" : "internal"
+                      },
+                      "pageNavigation" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "page" : {
+                            "type" : "expression",
+                            "expression" : "\"/PC/系统页面/身份认证/登录页\""
+                          },
+                          "params" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "redirect" : {
+                                "type" : "expression",
+                                "expression" : "redirect"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "windowTarget" : {
+                        "type" : "literal",
+                        "literal" : "_self"
+                      },
+                      "href" : {
+                        "type" : "literal",
+                        "literal" : ""
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 1892,
+                        "y" : 320
+                      }
+                    }
+                  }, {
+                    "id" : "ZH19UXXF",
+                    "name" : "结束",
+                    "pluginName" : "logic-core",
+                    "identifier" : "return",
+                    "attributes" : {
+                      "position" : {
+                        "x" : 2428,
+                        "y" : 260
+                      }
+                    }
+                  } ],
+                  "edges" : [ {
+                    "id" : "TQ6OJXR0",
+                    "sourceId" : "J54DRAOI",
+                    "targetId" : "UM6T10QH",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "DF4UT8P1",
+                    "sourceId" : "UM6T10QH",
+                    "targetId" : "QK1EZKMW",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "AR874A87",
+                    "sourceId" : "QK1EZKMW",
+                    "targetId" : "B6XK5KSF",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "if",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "JDBV08SD",
+                    "sourceId" : "QK1EZKMW",
+                    "targetId" : "RYEWE3PH",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "else",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "MGUHRT9W",
+                    "sourceId" : "RYEWE3PH",
+                    "targetId" : "WNVTYLFZ",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "QVX5GU73",
+                    "sourceId" : "WNVTYLFZ",
+                    "targetId" : "V34CXM2V",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "if",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "KTM1YW4E",
+                    "sourceId" : "WNVTYLFZ",
+                    "targetId" : "HA6J7C8L",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "else",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "YI4X8GV9",
+                    "sourceId" : "V34CXM2V",
+                    "targetId" : "P0S4UJBI",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "CODG1S22",
+                    "sourceId" : "P0S4UJBI",
+                    "targetId" : "MUB25VZG",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "if",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "FLT2UZK3",
+                    "sourceId" : "HA6J7C8L",
+                    "targetId" : "ZH19UXXF",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "YJ8TGRQO",
+                    "sourceId" : "P0S4UJBI",
+                    "targetId" : "AOEGWOLP",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "else",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "VLZQNEGO",
+                    "sourceId" : "AOEGWOLP",
+                    "targetId" : "WZ02WZTN",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "TG4BKIDK",
+                    "sourceId" : "WZ02WZTN",
+                    "targetId" : "ZH19UXXF",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "BJEE8H6V",
+                    "sourceId" : "MUB25VZG",
+                    "targetId" : "D2IMNUZQ",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "ZYYHNHXC",
+                    "sourceId" : "D2IMNUZQ",
+                    "targetId" : "IXNRQDU1",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "if",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "ZNPOTO91",
+                    "sourceId" : "D2IMNUZQ",
+                    "targetId" : "BDN8IBUX",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : "else",
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "ZJG2HAL2",
+                    "sourceId" : "IXNRQDU1",
+                    "targetId" : "ZH19UXXF",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  }, {
+                    "id" : "C38FVSTG",
+                    "sourceId" : "BDN8IBUX",
+                    "targetId" : "ZH19UXXF",
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null
+                  } ]
+                },
+                "targetEvent" : "click"
+              } ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "确认修改"
+              }, {
+                "name" : "enableNavigation",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "navigationType",
+                "type" : "literal",
+                "literal" : "external"
+              }, {
+                "name" : "pageNavigation",
+                "type" : "structure",
+                "structure" : {
+                  "page" : {
+                    "type" : "expression",
+                    "expression" : "\"\""
+                  }
+                }
+              }, {
+                "name" : "href",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "target",
+                "type" : "literal",
+                "literal" : "_self"
+              }, {
+                "name" : "type",
+                "type" : "literal",
+                "literal" : "primary"
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "primary"
+              }, {
+                "name" : "variant",
+                "type" : "literal",
+                "literal" : "solid"
+              }, {
+                "name" : "shape",
+                "type" : "literal",
+                "literal" : "default"
+              }, {
+                "name" : "showIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "iconPlacement",
+                "type" : "literal",
+                "literal" : "start"
+              }, {
+                "name" : "autoInsertSpace",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "disabled",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "loading",
+                "type" : "expression",
+                "expression" : ""
+              }, {
+                "name" : "canSubmitOnEnter",
+                "type" : "literal",
+                "literal" : true
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "content"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : "true"
+        }
+      }, {
+        "id" : "U82CE30F",
+        "name" : "返回登录链接容器",
+        "type" : "linear-layout",
+        "pluginName" : "component-common",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "display",
+            "type" : "literal",
+            "literal" : "flex"
+          }, {
+            "name" : "columnGap",
+            "type" : "literal",
+            "literal" : "var(--small-spacing)"
+          }, {
+            "name" : "rowGap",
+            "type" : "literal",
+            "literal" : "var(--small-spacing)"
+          }, {
+            "name" : "position",
+            "type" : "literal",
+            "literal" : "relative"
+          }, {
+            "name" : "justifyContent",
+            "type" : "literal",
+            "literal" : "center"
+          }, {
+            "name" : "alignItems",
+            "type" : "literal",
+            "literal" : "center"
+          } ]
+        }, {
+          "pseudo" : "none",
+          "target" : "loadingPanel",
+          "cssProperties" : [ {
+            "name" : "backgroundColor",
+            "type" : "literal",
+            "literal" : "var(--color-page-background)"
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "enableCustomLoading",
+          "type" : "literal",
+          "literal" : ""
+        } ],
+        "children" : [ {
+          "id" : "CHOQ3GA4",
+          "name" : "返回登录链接",
+          "type" : "hyperlink",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "text",
+            "type" : "literal",
+            "literal" : "返回登录"
+          }, {
+            "name" : "enableNavigation",
+            "type" : "literal",
+            "literal" : true
+          }, {
+            "name" : "navigationType",
+            "type" : "literal",
+            "literal" : "internal"
+          }, {
+            "name" : "pageNavigation",
+            "type" : "structure",
+            "structure" : {
+              "page" : {
+                "type" : "expression",
+                "expression" : "\"/PC/系统页面/身份认证/登录页\""
+              }
+            }
+          }, {
+            "name" : "href",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "isDownloadLink",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "downloadFileName",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "target",
+            "type" : "literal",
+            "literal" : "_self"
+          }, {
+            "name" : "color",
+            "type" : "literal",
+            "literal" : "default"
+          }, {
+            "name" : "showIcon",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "iconPosition",
+            "type" : "literal",
+            "literal" : "start"
+          }, {
+            "name" : "wrapping",
+            "type" : "literal",
+            "literal" : "normal"
+          }, {
+            "name" : "ellipsis",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "hoverEffect",
+            "type" : "literal",
+            "literal" : "underline"
+          } ],
+          "children" : [ ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    } ],
+    "description" : "",
+    "visible" : {
+      "type" : "expression",
+      "expression" : ""
+    }
+  },
+  "variables" : [ {
+    "id" : "M46HLKM3",
+    "name" : "userName",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "MQIEUL3X",
+    "name" : "redirect",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "I0Z4ASLE",
+    "name" : "oldPassword",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "ARSDJMJ5",
+    "name" : "newPassword",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "FYKAE00X",
+    "name" : "confirmPassword",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "Z1GBA6TM",
+    "name" : "changeSuccess",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : ""
+  }, {
+    "id" : "GGGS9IW0",
+    "name" : "message",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "events" : [ ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "M46HLKM3", "MQIEUL3X", "I0Z4ASLE", "ARSDJMJ5", "FYKAE00X", "Z1GBA6TM", "GGGS9IW0" ],
+    "groups" : [ ]
+  },
+  "description" : "",
+  "externalCssFiles" : [ ],
+  "externalJsFiles" : [ ],
+  "url" : "/PC/系统页面/身份认证/修改密码页",
+  "platform" : "pc",
+  "permissions" : {
+    "page" : {
+      "access" : [ "/匿名权限组" ]
+    },
+    "components" : { }
+  },
+  "linkedPage" : "/移动端/系统页面/身份认证/修改密码页"
+}

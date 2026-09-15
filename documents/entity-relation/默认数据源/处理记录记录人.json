@@ -1,0 +1,11 @@
+{
+  "name" : "处理记录记录人",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单处理历史记录",
+  "sourceColumnRefName" : "记录人ID",
+  "sourceNavigationName" : "记录人",
+  "targetEntityName" : "成员信息",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "填写的处理记录"
+}

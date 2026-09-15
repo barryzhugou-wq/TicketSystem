@@ -1,0 +1,224 @@
+{
+  "id" : "HVI5D47E",
+  "name" : "我的消息",
+  "type" : "page",
+  "description" : "移动端我的消息：站内通知列表、全部与未读切换、标记已读并进入工单详情",
+  "variables" : [ {
+    "id" : "Q2UG8VUK",
+    "name" : "范围筛选",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "全部"
+    }
+  }, {
+    "id" : "E01SGDZR",
+    "name" : "仅未读",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "BTORQ87T",
+    "name" : "通知列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "通知行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "OLRR3RYS",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "EWDILKTA",
+    "name" : "未读数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "OUKF2T8Z",
+    "name" : "当前条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "VR1ZKUAG",
+    "name" : "列表状态",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "X9366JMS",
+    "name" : "标记成功",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "XFVDGHW5",
+    "name" : "标记提示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ {
+    "id" : "G3Q6EU4P",
+    "name" : "加载通知",
+    "description" : "按当前范围加载我的通知列表（每次多取 10 条）",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "Q2UG8VUK", "E01SGDZR", "BTORQ87T", "OLRR3RYS", "EWDILKTA", "OUKF2T8Z", "VR1ZKUAG", "X9366JMS", "XFVDGHW5", "G3Q6EU4P" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "QT3G58BF",
+    "name" : "页面加载",
+    "description" : "我的消息页面加载后拉取首屏通知",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "IJHO05PL",
+    "elementName" : "刷新消息按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "SJVFZTJJ",
+    "name" : "刷新消息",
+    "description" : "手动刷新通知列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "DMY6OMS5",
+    "elementName" : "范围筛选单选组",
+    "pluginName" : "component-vant",
+    "type" : "radio-group",
+    "targetEvent" : "change",
+    "id" : "MSHSM8BJ",
+    "name" : "切换范围",
+    "description" : "切换全部与未读范围后重新加载通知",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "J5PUL3EU",
+    "elementName" : "通知列表",
+    "pluginName" : "component-vant",
+    "type" : "list",
+    "targetEvent" : "incrementalLoad",
+    "id" : "P61266QD",
+    "name" : "加载更多",
+    "description" : "消息列表滚动到底部时加载更多通知",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "BK7A7YGG",
+    "elementName" : "通知卡片",
+    "pluginName" : "component-common",
+    "type" : "linear-layout",
+    "targetEvent" : "click",
+    "id" : "H2KHUZFQ",
+    "name" : "打开通知",
+    "description" : "点击消息卡片后标记已读并跳转对应工单详情",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "WKRJ7OCA",
+    "elementName" : "重新加载按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "T4RWPJ5U",
+    "name" : "重新加载",
+    "description" : "加载失败后重新加载通知列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/m/my-messages",
+  "masterPage" : "/移动端/工单母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/移动端/工单母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/工单详情",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "标记通知已读"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询我的通知"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "通知行"
+  } ]
+}

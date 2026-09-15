@@ -1,0 +1,104 @@
+{
+  "id" : "WJQ85C0K",
+  "name" : "重置密码页",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "RS5KUGE3",
+    "name" : "token",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "KNO49G3Q",
+    "name" : "newPassword",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "PN44PHKU",
+    "name" : "confirmPassword",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "VH6BZY08",
+    "name" : "resetSuccess",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : ""
+  }, {
+    "id" : "SDML866U",
+    "name" : "message",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "RS5KUGE3", "KNO49G3Q", "PN44PHKU", "VH6BZY08", "SDML866U" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "FIBA7H1Q",
+    "elementName" : "重置密码按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "H5SPEO1F",
+    "name" : "重置密码",
+    "description" : "",
+    "variables" : [ {
+      "id" : "CI9OHSNY",
+      "name" : "isFormValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/PC/系统页面/身份认证/重置密码页",
+  "linkedPage" : "/移动端/系统页面/身份认证/重置密码页",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/身份认证/重置密码页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "重置密码"
+  } ]
+}

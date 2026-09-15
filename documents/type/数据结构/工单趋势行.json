@@ -1,0 +1,17 @@
+{
+  "id" : "JPHAMB4E",
+  "name" : "工单趋势行",
+  "kind" : "Structure",
+  "description" : "按日期统计的工单数量",
+  "properties" : [ {
+    "name" : "统计日期",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  } ]
+}

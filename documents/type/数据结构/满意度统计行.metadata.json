@@ -1,0 +1,17 @@
+{
+  "id" : "BTMCCFEW",
+  "name" : "满意度统计行",
+  "kind" : "Structure",
+  "description" : "按评分统计的工单数量",
+  "properties" : [ {
+    "name" : "满意度评分",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "评价数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  } ]
+}

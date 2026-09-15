@@ -1,0 +1,11 @@
+{
+  "name" : "附件所属工单",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单附件",
+  "sourceColumnRefName" : "工单ID",
+  "sourceNavigationName" : "工单",
+  "targetEntityName" : "工单",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "附件"
+}

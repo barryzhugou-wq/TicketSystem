@@ -1,0 +1,260 @@
+{
+  "id" : "TDOQ0N39",
+  "name" : "工单提交页",
+  "type" : "page",
+  "description" : "移动端工单提交页：选择客户并填写工单信息后提交",
+  "variables" : [ {
+    "id" : "KWQULCPS",
+    "name" : "客户列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "PZ1CI5CS",
+    "name" : "客户总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "CG7UW0H6",
+    "name" : "客户关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "LUJFZZC3",
+    "name" : "客户ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "JL43B7GT",
+    "name" : "工单类型",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "Q2EINRV7",
+    "name" : "优先级",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "WGAVIF96",
+    "name" : "标题",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "POVH1FIM",
+    "name" : "问题描述",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "GHAAATDO",
+    "name" : "期望完成时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "SKCLT3O8",
+    "name" : "附件列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "附件输入"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "HZ1D54JC",
+    "name" : "提交中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "TWRG3YGV",
+    "name" : "新工单ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "HTQ9KG4P",
+    "name" : "新工单编号",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "KWQULCPS", "PZ1CI5CS", "CG7UW0H6", "LUJFZZC3", "JL43B7GT", "Q2EINRV7", "WGAVIF96", "POVH1FIM", "GHAAATDO", "SKCLT3O8", "HZ1D54JC", "TWRG3YGV", "HTQ9KG4P" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "UQBD836P",
+    "name" : "页面加载",
+    "description" : "提交页加载后拉取可选客户列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "VVYIVNG6",
+    "elementName" : "搜索客户按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "BSDQ6I60",
+    "name" : "搜索客户",
+    "description" : "按关键字重新查询客户列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "QDJR9LRX",
+    "elementName" : "提交工单按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "MOV6VLHD",
+    "name" : "提交工单",
+    "description" : "校验提交表单并提交工单",
+    "variables" : [ {
+      "id" : "ZOXRK9XW",
+      "name" : "isValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "VLQ115XG",
+      "name" : "errorMessage",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    }, {
+      "id" : "K4870I2B",
+      "name" : "success",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "IYLUHQK9",
+      "name" : "message",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/m/ticket-submit",
+  "masterPage" : "/移动端/工单母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/移动端/工单母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/我的工单",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询客户列表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "提交工单"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "附件输入"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "客户信息"
+  } ]
+}

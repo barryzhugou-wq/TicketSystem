@@ -1,0 +1,50 @@
+{
+  "id" : "DY5SVZ0D",
+  "name" : "绑定用户",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "id" : "YWWSOWQT",
+    "name" : "code",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "RL5AVQ36",
+    "name" : "username",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "F0XUAZAL",
+    "name" : "password",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "variables" : [ ],
+  "returnValues" : [ {
+    "id" : "DIAS07I8",
+    "name" : "bindSuccess",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "id" : "QCE87VAM",
+    "name" : "bindErrorMessage",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  } ]
+}

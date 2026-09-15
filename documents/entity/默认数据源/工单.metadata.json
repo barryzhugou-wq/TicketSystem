@@ -1,0 +1,243 @@
+{
+  "dataSourceName" : "默认数据源",
+  "tableName" : "工单",
+  "name" : "工单",
+  "description" : "客户服务工单主表",
+  "columns" : [ {
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : true,
+    "columnKind" : "physical",
+    "isAutoIncrement" : true
+  }, {
+    "columnName" : "工单编号",
+    "name" : "工单编号",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "标题",
+    "name" : "标题",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "工单类型",
+    "name" : "工单类型",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单类型"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "优先级",
+    "name" : "优先级",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单优先级"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "工单状态",
+    "name" : "工单状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单状态"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "来源渠道",
+    "name" : "来源渠道",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单来源"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "问题描述",
+    "name" : "问题描述",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "期望完成时间",
+    "name" : "期望完成时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "客户ID",
+    "name" : "客户ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "提交人ID",
+    "name" : "提交人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "处理人ID",
+    "name" : "处理人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "是否逾期",
+    "name" : "是否逾期",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "审批意见",
+    "name" : "审批意见",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "提交时间",
+    "name" : "提交时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "受理时间",
+    "name" : "受理时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "完成时间",
+    "name" : "完成时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "关闭时间",
+    "name" : "关闭时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "流程实例ID",
+    "name" : "流程实例ID",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "客户是否认可",
+    "name" : "客户是否认可",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "处理结果",
+    "name" : "处理结果",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "处理天数",
+    "name" : "处理天数",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "formula",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "处理人用户名",
+    "name" : "处理人用户名",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "提交日序",
+    "name" : "提交日序",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "formula",
+    "isAutoIncrement" : false
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单来源"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单优先级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单状态"
+  } ]
+}

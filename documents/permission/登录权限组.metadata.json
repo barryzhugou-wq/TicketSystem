@@ -1,0 +1,7 @@
+{
+  "id" : "SZP39ONR",
+  "name" : "登录权限组",
+  "description" : "面向登录用户的权限组。新建资源会默认绑定到该权限组。",
+  "isDefault" : true,
+  "roleIds" : [ -3 ]
+}

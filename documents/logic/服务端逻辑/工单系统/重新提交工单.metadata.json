@@ -1,0 +1,118 @@
+{
+  "id" : "VVNR8QBS",
+  "name" : "重新提交工单",
+  "description" : "被驳回的工单由提报人补充信息后重新提交，再次进入主管审批",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "AALGHLPZ",
+    "name" : "工单ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "IBLCN87D",
+    "name" : "问题描述",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "H2YO1J2R",
+    "name" : "期望完成时间",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单归属"
+    },
+    "id" : "ZVJ1FSFT",
+    "name" : "工单信息"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "KJHSR7RA",
+    "name" : "流程实例号"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "通知接收人"
+      } ]
+    },
+    "id" : "GXOXK8SU",
+    "name" : "主管成员"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "E6YA47Y3",
+    "name" : "当前成员"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "K32AVOIR",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "IJQUW5L5",
+    "name" : "message"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单处理历史记录"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单通知"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "process",
+    "refKey" : "客户服务工单处理流程"
+  }, {
+    "documentType" : "serverGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单归属"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "通知接收人"
+  } ]
+}

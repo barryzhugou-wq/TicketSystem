@@ -1,0 +1,56 @@
+{
+  "id" : "NEFSKVU6",
+  "name" : "客户信息",
+  "kind" : "Structure",
+  "description" : "客户档案完整字段",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "客户名称",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "联系人",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "联系电话",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "客户等级",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户等级"
+    }
+  }, {
+    "name" : "所属区域",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "服务状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户状态"
+    }
+  }, {
+    "name" : "备注",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "客户等级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "客户状态"
+  } ]
+}

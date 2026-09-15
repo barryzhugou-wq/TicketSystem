@@ -1,0 +1,138 @@
+{
+  "id" : "GTEX2Y91",
+  "name" : "查询工单详情",
+  "description" : "查询单个工单的完整详情，包含处理记录、附件与评价，并校验查看范围",
+  "moduleType" : "server",
+  "enableTransaction" : false,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "LF59UVIX",
+    "name" : "工单ID",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "YD6HKPQ0",
+    "name" : "当前成员"
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "EQWYY02C",
+    "name" : "可查看全部"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单详情"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    },
+    "id" : "NXGU3NG7",
+    "name" : "工单"
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "CKI0MZIG",
+    "name" : "是否存在"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "HJ58L9VT",
+    "name" : "message"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/处理记录记录人"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/处理记录所属工单"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/附件上传人"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/附件所属工单"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单处理人"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单评价人"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单所属客户"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单提交人"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/评价所属工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单处理历史记录"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单附件"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单评价"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/客户档案"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "serverGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单详情"
+  } ]
+}

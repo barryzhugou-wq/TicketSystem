@@ -1,0 +1,107 @@
+{
+  "id" : "WTUEYX8Y",
+  "name" : "审批工单",
+  "description" : "客服主管审批工单：通过后分派处理人，驳回则退回提报人补充",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "DLHY26DD",
+    "name" : "工单ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "G7G9WOLS",
+    "name" : "任务ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "id" : "E0SPEK42",
+    "name" : "是否通过",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "VV5TYF84",
+    "name" : "审批意见",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "UYXZI4GJ",
+    "name" : "处理人ID",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员简要"
+    },
+    "id" : "LWJ7Q4LT",
+    "name" : "处理人信息"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "STIW3SOK",
+    "name" : "当前成员"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "DPAHI2NC",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "OI8IDBNL",
+    "name" : "message"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单处理历史记录"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "serverGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员简要"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "id" : "K6B5GMKO",
+  "name" : "提交工单",
+  "description" : "提交新工单并上传相关附件",
+  "roleIds" : [ 1, 2, 3, 4 ]
+}

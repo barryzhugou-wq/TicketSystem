@@ -1,0 +1,142 @@
+{
+  "type" : "entityModel",
+  "name" : "客户档案",
+  "tableName" : "客户档案",
+  "dataSourceName" : "默认数据源",
+  "description" : "客户基本信息档案，由客服主管维护",
+  "columns" : [ {
+    "type" : "entityColumnModel",
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : true,
+    "isPrimaryKey" : true,
+    "isUnique" : true,
+    "isAutoIncrement" : true,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "客户名称",
+    "name" : "客户名称",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 200,
+    "isRequired" : true,
+    "isPrimaryKey" : false,
+    "isUnique" : true,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "联系人",
+    "name" : "联系人",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 120,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "联系电话",
+    "name" : "联系电话",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 140,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "客户等级",
+    "name" : "客户等级",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户等级"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 110,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "所属区域",
+    "name" : "所属区域",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 140,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "服务状态",
+    "name" : "服务状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户状态"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 110,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "备注",
+    "name" : "备注",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  } ],
+  "indexes" : [ {
+    "indexName" : "PRIMARY",
+    "isUnique" : true,
+    "isPrimary" : true,
+    "isUnEditable" : true,
+    "description" : "主键索引",
+    "indexColumns" : [ {
+      "columnRefName" : "ID",
+      "order" : "ASC"
+    } ]
+  } ],
+  "columnExtensionLoaded" : true
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "附件上传人",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单附件",
+  "sourceColumnRefName" : "上传人ID",
+  "sourceNavigationName" : "上传人",
+  "targetEntityName" : "成员信息",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "上传的附件"
+}

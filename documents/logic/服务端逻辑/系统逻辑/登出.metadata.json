@@ -1,0 +1,17 @@
+{
+  "id" : "TLB3QH5N",
+  "name" : "登出",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ ],
+  "variables" : [ ],
+  "returnValues" : [ ],
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  } ]
+}

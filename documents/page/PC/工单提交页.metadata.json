@@ -1,0 +1,330 @@
+{
+  "id" : "TKF2HPGX",
+  "name" : "工单提交页",
+  "type" : "page",
+  "description" : "提交客户服务工单",
+  "variables" : [ {
+    "id" : "HNL1G9AC",
+    "name" : "客户ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  }, {
+    "id" : "EAJNOBTW",
+    "name" : "客户检索关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "PWFCX9K6",
+    "name" : "客户列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "YMTYNFIA",
+    "name" : "选中客户列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "HEL2DJL3",
+    "name" : "工单类型",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "B0585NVJ",
+    "name" : "优先级",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "DPTTEOX6",
+    "name" : "来源渠道",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "PC端"
+    }
+  }, {
+    "id" : "IGQBZ29J",
+    "name" : "标题",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "UZA3Y5QY",
+    "name" : "问题描述",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "L264T3D2",
+    "name" : "期望完成时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "TQZ07OL2",
+    "name" : "附件列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "附件输入"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "VE8GQ8UX",
+    "name" : "提交中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "WUAF52VY",
+    "name" : "提交成功",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "TT2GOW8M",
+    "name" : "提交提示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "PVYQ0SBU",
+    "name" : "生成工单ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  }, {
+    "id" : "MG2FY5HA",
+    "name" : "生成工单编号",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "Q28TV3UA",
+    "name" : "客户加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  } ],
+  "logics" : [ {
+    "id" : "R4YZYYK7",
+    "name" : "加载客户选项",
+    "description" : "按检索关键字查询客户选项",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "id" : "XU8BXO59",
+    "name" : "刷新选中客户信息",
+    "description" : "按所选客户筛选客户信息，用于带出联系人与客户等级",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "HNL1G9AC", "EAJNOBTW", "PWFCX9K6", "YMTYNFIA", "HEL2DJL3", "B0585NVJ", "DPTTEOX6", "IGQBZ29J", "UZA3Y5QY", "L264T3D2", "TQZ07OL2", "VE8GQ8UX", "WUAF52VY", "TT2GOW8M", "PVYQ0SBU", "MG2FY5HA", "R4YZYYK7", "XU8BXO59", "Q28TV3UA" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "XNYBLZ34",
+    "name" : "页面加载",
+    "description" : "进入页面时加载客户选项",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "AR2R07BH",
+    "elementName" : "继续提交按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "MO69G4QZ",
+    "name" : "继续提交新工单",
+    "description" : "返回表单并清空上一张工单的内容",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "R5EUIALP",
+    "elementName" : "客户选择",
+    "pluginName" : "component-ant-design",
+    "type" : "select",
+    "targetEvent" : "change",
+    "id" : "W9G4NXY9",
+    "name" : "带出客户信息",
+    "description" : "选择客户后带出联系人、电话与等级",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "X6L5WQ4J",
+    "elementName" : "查询客户按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "T1RXVZRB",
+    "name" : "查询客户选项",
+    "description" : "点击加载按钮按关键字重新查询客户选项",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "DOTQ94W5",
+    "elementName" : "重置按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "VJOEA8TI",
+    "name" : "重置表单",
+    "description" : "清空工单表单内容",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "HVT1PCEJ",
+    "elementName" : "提交按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "YSDS2PHF",
+    "name" : "提交工单",
+    "description" : "校验工单必填项后提交工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/ticket-submit",
+  "title" : "提交工单",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "客户等级"
+  }, {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单详情页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询客户列表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "提交工单"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "附件输入"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "客户信息"
+  } ]
+}

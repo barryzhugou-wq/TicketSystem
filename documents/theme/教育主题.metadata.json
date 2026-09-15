@@ -1,0 +1,8 @@
+{
+  "name" : "教育主题",
+  "builtInName" : "education",
+  "iconPrimaryColor" : "#722ED1",
+  "minIdeVersion" : "1.0",
+  "ideVersion" : "1.0",
+  "order" : 2
+}

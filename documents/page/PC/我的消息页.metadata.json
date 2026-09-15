@@ -1,0 +1,224 @@
+{
+  "id" : "YZDX18C8",
+  "name" : "我的消息页",
+  "type" : "page",
+  "description" : "我的消息：查看站内消息并打开对应工单",
+  "variables" : [ {
+    "id" : "Y1601W26",
+    "name" : "消息范围",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "全部"
+    }
+  }, {
+    "id" : "SSXJFQXM",
+    "name" : "页码",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    }
+  }, {
+    "id" : "R1I3HLNF",
+    "name" : "每页条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 10
+    }
+  }, {
+    "id" : "MSM9ACX4",
+    "name" : "通知列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "通知行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "AYSV6ZDG",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "T94WMVX4",
+    "name" : "未读数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "EUUGXBN7",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "HF75KLVQ",
+    "name" : "当前通知ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  }, {
+    "id" : "LF7IGR97",
+    "name" : "当前工单ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ {
+    "id" : "YBUOLZZ0",
+    "name" : "加载消息列表",
+    "description" : "按未读范围分页查询站内消息",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "id" : "F73SXZSY",
+    "name" : "标记已读并跳转",
+    "description" : "把选中的消息标记为已读并跳转到对应工单详情",
+    "variables" : [ {
+      "id" : "CDT3J8K6",
+      "name" : "标记成功",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "Y3AAN79B",
+      "name" : "标记提示",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "Y1601W26", "SSXJFQXM", "R1I3HLNF", "MSM9ACX4", "AYSV6ZDG", "T94WMVX4", "EUUGXBN7", "HF75KLVQ", "LF7IGR97", "YBUOLZZ0", "F73SXZSY" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "T44GXHLE",
+    "name" : "页面加载",
+    "description" : "进入页面时加载消息列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "BZGB5PY5",
+    "elementName" : "消息范围选择",
+    "pluginName" : "component-ant-design",
+    "type" : "radio-group",
+    "targetEvent" : "change",
+    "id" : "GX98UYJE",
+    "name" : "切换消息范围",
+    "description" : "切换全部与未读范围后重新加载消息",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "H574FCAG",
+    "elementName" : "刷新按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "ZV8JWLZQ",
+    "name" : "刷新消息",
+    "description" : "按当前范围刷新消息列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "S6BCHDZ6",
+    "elementName" : "消息表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "rowClick",
+    "id" : "B3RTXNZF",
+    "name" : "打开消息",
+    "description" : "记录所选消息并标记已读后打开关联工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "S6BCHDZ6",
+    "elementName" : "消息表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "D47K3NPK",
+    "name" : "切换消息分页",
+    "description" : "消息列表翻页后重新加载消息",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/my-messages",
+  "title" : "我的消息",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单详情页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "标记通知已读"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询我的通知"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "通知行"
+  } ]
+}

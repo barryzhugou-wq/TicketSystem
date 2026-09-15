@@ -1,0 +1,16 @@
+{
+  "projectType" : "Normal",
+  "appName" : "工单系统",
+  "ideVersion" : "1.0.0",
+  "branchName" : null,
+  "repoUrl" : null,
+  "page" : {
+    "defaultStartupPage" : "/PC/工单工作台"
+  },
+  "login" : {
+    "oauth2DevicePageId" : "/PC/系统页面/语义模型/设备授权页"
+  },
+  "designer-data" : {
+    "dataSyncBehavior" : "always"
+  }
+}

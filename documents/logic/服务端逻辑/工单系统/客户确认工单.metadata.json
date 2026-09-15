@@ -1,0 +1,113 @@
+{
+  "id" : "VMGGRDVI",
+  "name" : "客户确认工单",
+  "description" : "提报人确认工单处理结果：认可则归档关闭，不认可则退回处理人重新处理",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "A9HPFR1V",
+    "name" : "工单ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "S8ZSS5SD",
+    "name" : "任务ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "id" : "B8LRXF9W",
+    "name" : "是否认可",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "BR83NBMP",
+    "name" : "满意度评分",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "UCG99FKQ",
+    "name" : "评价内容",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "GB4EBOL8",
+    "name" : "当前成员"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单归属"
+    },
+    "id" : "TQG8CEFE",
+    "name" : "工单信息"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "QI1EMVI7",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "WVWNLISA",
+    "name" : "message"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单处理历史记录"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单评价"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "serverGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单归属"
+  } ]
+}

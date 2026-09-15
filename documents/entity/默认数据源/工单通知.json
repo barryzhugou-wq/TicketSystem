@@ -1,0 +1,126 @@
+{
+  "type" : "entityModel",
+  "name" : "工单通知",
+  "tableName" : "工单通知",
+  "dataSourceName" : "默认数据源",
+  "description" : "工单流转过程中的站内消息",
+  "columns" : [ {
+    "type" : "entityColumnModel",
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : true,
+    "isPrimaryKey" : true,
+    "isUnique" : true,
+    "isAutoIncrement" : true,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "接收人ID",
+    "name" : "接收人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "工单ID",
+    "name" : "工单ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "通知标题",
+    "name" : "通知标题",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 200,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "通知内容",
+    "name" : "通知内容",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "是否已读",
+    "name" : "是否已读",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 16,
+    "width" : 100,
+    "defaultValue" : 0,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "通知时间",
+    "name" : "通知时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : 2014,
+    "width" : 170,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  } ],
+  "indexes" : [ {
+    "indexName" : "PRIMARY",
+    "isUnique" : true,
+    "isPrimary" : true,
+    "isUnEditable" : true,
+    "description" : "主键索引",
+    "indexColumns" : [ {
+      "columnRefName" : "ID",
+      "order" : "ASC"
+    } ]
+  } ],
+  "columnExtensionLoaded" : true
+}

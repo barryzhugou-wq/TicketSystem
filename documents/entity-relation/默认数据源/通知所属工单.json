@@ -1,0 +1,11 @@
+{
+  "name" : "通知所属工单",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单通知",
+  "sourceColumnRefName" : "工单ID",
+  "sourceNavigationName" : "工单",
+  "targetEntityName" : "工单",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "通知"
+}

@@ -1,0 +1,520 @@
+{
+  "id" : "LRHD31XE",
+  "name" : "发送密码重置链接",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ {
+    "id" : "UAIWB2ES",
+    "name" : "resetLink",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "GB3C5TS5",
+    "name" : "message",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "D04C4NZM",
+    "name" : "success",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "RXL3DZR2",
+    "name" : "user",
+    "dataType" : {
+      "typeName" : "用户",
+      "declarativeTypeKind" : "Structure"
+    }
+  } ],
+  "parameters" : [ {
+    "id" : "S9NIQRCG",
+    "name" : "userName",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/匿名权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "WZWAO2LX",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : -103.7938117980957,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "IJBKDPTT",
+      "name" : "隐藏异常",
+      "pluginName" : "logic-core",
+      "identifier" : "try-catch-finally",
+      "content" : {
+        "exceptionType" : {
+          "type" : "literal",
+          "literal" : "exceptionType"
+        },
+        "exceptionMessage" : {
+          "type" : "literal",
+          "literal" : "exceptionMessage"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 194,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "SA9EIL6S",
+      "name" : "用户管理",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GenerateResetLink"
+        },
+        "userNameBinding" : {
+          "type" : "expression",
+          "expression" : "userName"
+        },
+        "resetPage" : {
+          "type" : "literal",
+          "literal" : "/PC/系统页面/身份认证/重置密码页"
+        },
+        "expiresInMinutesBinding" : {
+          "type" : "literal",
+          "literal" : 15
+        },
+        "resetLink" : {
+          "type" : "variable",
+          "variable" : "resetLink"
+        },
+        "user" : {
+          "type" : "variable",
+          "variable" : "user"
+        },
+        "message" : {
+          "type" : "variable",
+          "variable" : "message"
+        },
+        "success" : {
+          "type" : "variable",
+          "variable" : "success"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 721,
+          "y" : 275
+        }
+      }
+    }, {
+      "id" : "UZYYWI6E",
+      "name" : "判断重置链接数据是否可用",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "J0R470CY"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "success"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 0
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : true
+                          }
+                        }
+                      }, {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "W2WOS2Q8"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "user"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 16
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      }, {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "EGQH7S23"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "resetLink"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 18
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 953,
+          "y" : 275
+        }
+      }
+    }, {
+      "id" : "IABKP054",
+      "name" : "判断用户是否有邮箱",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "RXJC4ELH"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "user.邮箱"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 18
+                          },
+                          "value" : {
+                            "type" : "literal"
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1218,
+          "y" : 246
+        }
+      },
+      "logicId" : "LRHD31XE"
+    }, {
+      "id" : "YAT9DNDN",
+      "name" : "发送邮件",
+      "pluginName" : "logic-notification",
+      "identifier" : "send-email",
+      "content" : {
+        "senderName" : {
+          "type" : "literal",
+          "literal" : "密码重置服务"
+        },
+        "recipientAddresses" : {
+          "type" : "expression",
+          "expression" : "user.邮箱"
+        },
+        "subject" : {
+          "type" : "literal",
+          "literal" : "重置密码链接"
+        },
+        "priority" : {
+          "type" : "literal",
+          "literal" : 3
+        },
+        "emailBody" : {
+          "type" : "expression",
+          "expression" : "\"<div style='margin:0;padding:24px;background:#f3f6fb;font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Arial,&quot;Microsoft YaHei&quot;,sans-serif;color:#172033;'>\" & \"<div style='max-width:700px;margin:0 auto;background:#ffffff;border:1px solid #dde3ee;border-radius:14px;overflow:hidden;'>\" & \"<div style='background:#141e33;padding:36px 40px 34px;'>\" & \"<div style='font-size:16px;font-weight:700;color:#9eb4e8;margin-bottom:10px;'>账号安全</div>\" & \"<div style='font-size:32px;line-height:1.25;font-weight:800;color:#ffffff;'>重置你的密码</div>\" & \"</div>\" & \"<div style='padding:40px;'>\" & \"<p style='margin:0 0 28px;font-size:18px;line-height:1.8;color:#172033;'>你好，\" & user.用户名 & \"：</p>\" & \"<p style='margin:0 0 30px;font-size:17px;line-height:1.8;color:#445066;'>我们收到了你的密码重置请求。请点击下方按钮设置一个新密码。</p>\" & \"<p style='margin:0 0 34px;'><a href='\" & resetLink & \"' style='display:inline-block;background:#3864f4;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;border-radius:9px;padding:14px 28px;'>重置密码</a></p>\" & \"<div style='margin:0 0 30px;padding:22px 24px;border:1px solid #dbe2ec;border-radius:9px;background:#f8fafc;font-size:16px;line-height:1.7;color:#566276;'>该链接将在 15 分钟后失效。如果这不是你本人发起的请求，可以忽略这封邮件。</div>\" & \"<p style='margin:0 0 14px;font-size:15px;line-height:1.8;color:#667085;'>如果按钮无法打开，请复制下面的链接到浏览器访问：</p>\" & \"<p style='margin:0;font-size:15px;line-height:1.7;word-break:break-all;'><a href='\" & resetLink & \"' style='color:#2f56d9;text-decoration:underline;'>\" & resetLink & \"</a></p>\" & \"</div>\" & \"</div>\" & \"</div>\""
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1494,
+          "y" : 275
+        }
+      }
+    }, {
+      "id" : "L03USCSS",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 1882,
+          "y" : 180
+        }
+      }
+    }, {
+      "id" : "BBY9RHI7",
+      "name" : "用户管理1",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetUserDetail"
+        },
+        "validatePassword" : {
+          "type" : "literal",
+          "literal" : false
+        },
+        "success" : {
+          "type" : "variable",
+          "variable" : ""
+        },
+        "message" : {
+          "type" : "variable",
+          "variable" : ""
+        },
+        "code" : {
+          "type" : "variable",
+          "variable" : ""
+        },
+        "userNameBinding" : {
+          "type" : "expression",
+          "expression" : "userName"
+        },
+        "lookupType" : {
+          "type" : "literal",
+          "literal" : "UserName"
+        },
+        "userName" : {
+          "type" : "expression",
+          "expression" : "userName"
+        },
+        "userOutput" : {
+          "type" : "variable",
+          "variable" : "user"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 457.99681091308594,
+          "y" : 275
+        }
+      },
+      "logicId" : "LRHD31XE"
+    } ],
+    "edges" : [ {
+      "id" : "ZDV5XGHH",
+      "sourceId" : "WZWAO2LX",
+      "sourceAnchorId" : null,
+      "targetId" : "IJBKDPTT",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "R9RZ2PMO",
+      "sourceId" : "IJBKDPTT",
+      "sourceAnchorId" : "Try",
+      "targetId" : "BBY9RHI7",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "LQRDOWNR",
+      "sourceId" : "IJBKDPTT",
+      "sourceAnchorId" : null,
+      "targetId" : "L03USCSS",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "AJAR5AYS",
+      "sourceId" : "SA9EIL6S",
+      "sourceAnchorId" : null,
+      "targetId" : "UZYYWI6E",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "FTA3TNVL",
+      "sourceId" : "UZYYWI6E",
+      "sourceAnchorId" : "if",
+      "targetId" : "IABKP054",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "ZRQQDH7N",
+      "sourceId" : "UZYYWI6E",
+      "sourceAnchorId" : "else",
+      "targetId" : "L03USCSS",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "RCJOULTQ",
+      "sourceId" : "IABKP054",
+      "sourceAnchorId" : "if",
+      "targetId" : "YAT9DNDN",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "BQG0R1QR",
+      "sourceId" : "IABKP054",
+      "sourceAnchorId" : "else",
+      "targetId" : "L03USCSS",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "Y6H729J4",
+      "sourceId" : "YAT9DNDN",
+      "sourceAnchorId" : null,
+      "targetId" : "L03USCSS",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "H262JOJM",
+      "sourceId" : "BBY9RHI7",
+      "sourceAnchorId" : null,
+      "targetId" : "SA9EIL6S",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  }
+}

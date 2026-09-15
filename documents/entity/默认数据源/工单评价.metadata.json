@@ -1,0 +1,65 @@
+{
+  "dataSourceName" : "默认数据源",
+  "tableName" : "工单评价",
+  "name" : "工单评价",
+  "description" : "客户对工单处理结果的满意度评价",
+  "columns" : [ {
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : true,
+    "columnKind" : "physical",
+    "isAutoIncrement" : true
+  }, {
+    "columnName" : "工单ID",
+    "name" : "工单ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "满意度评分",
+    "name" : "满意度评分",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "评价内容",
+    "name" : "评价内容",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "评价人ID",
+    "name" : "评价人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "评价时间",
+    "name" : "评价时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  } ]
+}

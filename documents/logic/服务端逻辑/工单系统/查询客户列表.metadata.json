@@ -1,0 +1,101 @@
+{
+  "id" : "CM8EUX6X",
+  "name" : "查询客户列表",
+  "description" : "按关键字分页查询客户档案列表",
+  "moduleType" : "server",
+  "enableTransaction" : false,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "RP8DJQG0",
+    "name" : "关键字",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    },
+    "id" : "PYKQFRKV",
+    "name" : "页码",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 20
+    },
+    "id" : "WQFDFBPT",
+    "name" : "每页条数",
+    "isRequired" : false
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "R21VLAA9",
+    "name" : "偏移量"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "L7FM4JT8",
+    "name" : "客户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "ULL6R8C6",
+    "name" : "总数量"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/客户档案"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/维护客户档案"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "客户信息"
+  } ]
+}

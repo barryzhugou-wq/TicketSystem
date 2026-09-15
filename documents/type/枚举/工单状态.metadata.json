@@ -1,0 +1,31 @@
+{
+  "id" : "HZYI9G0T",
+  "name" : "工单状态",
+  "kind" : "Enum",
+  "description" : "工单当前处理状态",
+  "dataType" : {
+    "typeName" : "String"
+  },
+  "members" : [ {
+    "name" : "待审批",
+    "value" : "待审批"
+  }, {
+    "name" : "处理中",
+    "value" : "处理中"
+  }, {
+    "name" : "待客户确认",
+    "value" : "待客户确认"
+  }, {
+    "name" : "已完成",
+    "value" : "已完成"
+  }, {
+    "name" : "已关闭",
+    "value" : "已关闭"
+  }, {
+    "name" : "已驳回",
+    "value" : "已驳回"
+  }, {
+    "name" : "已取消",
+    "value" : "已取消"
+  } ]
+}

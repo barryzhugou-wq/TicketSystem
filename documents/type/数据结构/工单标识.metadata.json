@@ -1,0 +1,17 @@
+{
+  "id" : "AI3O8TC7",
+  "name" : "工单标识",
+  "kind" : "Structure",
+  "description" : "工单主键与编号",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "工单编号",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ]
+}

@@ -1,0 +1,68 @@
+{
+  "id" : "SVWM0EN6",
+  "name" : "登录",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "id" : "HF7PDQ8R",
+    "name" : "userName",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "FZD3VHTX",
+    "name" : "password",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "T8XNO83M",
+    "name" : "rememberMe",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "isRequired" : true
+  } ],
+  "variables" : [ ],
+  "returnValues" : [ {
+    "id" : "GWWTN6E8",
+    "name" : "message",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "YDB8B965",
+    "name" : "success",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "WKBX58GA",
+    "name" : "code",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  } ]
+}

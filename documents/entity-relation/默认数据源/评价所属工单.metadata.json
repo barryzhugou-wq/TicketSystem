@@ -1,0 +1,21 @@
+{
+  "name" : "评价所属工单",
+  "type" : "OneToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单评价",
+  "sourceColumnRefName" : "工单ID",
+  "sourceNavigationName" : "工单",
+  "targetEntityName" : "工单",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "评价",
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单评价"
+  } ]
+}

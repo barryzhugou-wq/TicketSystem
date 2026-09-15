@@ -1,0 +1,74 @@
+{
+  "id" : "JQWJXUVK",
+  "name" : "创建并绑定用户",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "id" : "PX3XE8Y4",
+    "name" : "code",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "U7FGJ692",
+    "name" : "username",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "DW3L58OT",
+    "name" : "fullname",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : false
+  }, {
+    "id" : "JUMIDRY3",
+    "name" : "password",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "UV9DGAVQ",
+    "name" : "email",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "I2IWKZKS",
+    "name" : "phone",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "variables" : [ ],
+  "returnValues" : [ {
+    "id" : "JDSZFDI4",
+    "name" : "createAndBindSuccess",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "id" : "R1JSLBZP",
+    "name" : "createAndBindErrorMessage",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "绑定用户"
+  } ]
+}

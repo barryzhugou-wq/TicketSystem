@@ -1,0 +1,28 @@
+{
+  "id" : "IQ43X9KQ",
+  "name" : "工单附件行",
+  "kind" : "Structure",
+  "description" : "工单附件展示字段",
+  "properties" : [ {
+    "name" : "文件名",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "文件地址",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "上传时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "上传人",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员简要"
+    }
+  } ]
+}

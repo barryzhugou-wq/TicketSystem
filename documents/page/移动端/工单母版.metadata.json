@@ -1,0 +1,86 @@
+{
+  "id" : "L52HT8D0",
+  "name" : "工单母版",
+  "type" : "masterPage",
+  "description" : "移动端工单系统母版：顶部标题栏、内容区与底部标签栏",
+  "variables" : [ {
+    "id" : "M24T7PAW",
+    "name" : "当前标签",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "底部标签栏当前选中项",
+    "isPublic" : true,
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "工作台"
+    }
+  }, {
+    "id" : "CVF38CW9",
+    "name" : "当前用户姓名",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "当前登录用户姓名",
+    "isPublic" : true,
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "Client.currentUser.全名"
+    }
+  }, {
+    "id" : "Y5P0EX6Z",
+    "name" : "当前用户ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "当前登录用户平台账号ID",
+    "isPublic" : true,
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "Client.currentUser.ID"
+    }
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "M24T7PAW", "CVF38CW9", "Y5P0EX6Z" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "HPUDLHH7",
+    "elementName" : "底部标签栏",
+    "pluginName" : "component-vant",
+    "type" : "radio-group",
+    "targetEvent" : "change",
+    "id" : "YV08QQTG",
+    "name" : "切换标签",
+    "description" : "底部标签栏切换后跳转到对应页面",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "$deps" : [ {
+    "documentType" : "clientGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/待办任务",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/工单工作台",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/我的工单",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/我的消息",
+    "weak" : true
+  } ]
+}

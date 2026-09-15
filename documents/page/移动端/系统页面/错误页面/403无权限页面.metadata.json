@@ -1,0 +1,22 @@
+{
+  "id" : "GKV4VRT3",
+  "name" : "403无权限页面",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "platform" : "mobile",
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "static-resource",
+    "refKey" : "内置资源/403.png"
+  } ]
+}

@@ -1,0 +1,72 @@
+{
+  "id" : "K52H4RNP",
+  "name" : "修改密码",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "id" : "INNUF0TA",
+    "name" : "userName",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "XUQOC1F4",
+    "name" : "oldPassword",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "PTCOSQAT",
+    "name" : "newPassword",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "id" : "G6ING1GX",
+    "name" : "targetUser",
+    "dataType" : {
+      "typeName" : "用户",
+      "declarativeTypeKind" : "Structure"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : null
+    }
+  } ],
+  "returnValues" : [ {
+    "id" : "Z73W2U6U",
+    "name" : "message",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "W9JRJ5HF",
+    "name" : "success",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "用户"
+  } ]
+}

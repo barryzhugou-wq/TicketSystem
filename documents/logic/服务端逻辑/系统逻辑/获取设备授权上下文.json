@@ -1,0 +1,104 @@
+{
+  "id" : "R811DD12",
+  "name" : "获取设备授权上下文",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ {
+    "id" : "ESDUGQ96",
+    "name" : "userCode",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "MVGR05HG",
+    "name" : "verificationContext",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "OAuth设备授权上下文"
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/登录权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "K0I9ZCFT",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "E0QWAW9Y",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 800,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "D1DGZ0KW",
+      "name" : "OAuth设备授权管理",
+      "pluginName" : "logic-oauth-device",
+      "identifier" : "oauth-device-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetVerificationContext"
+        },
+        "userCodeBinding" : {
+          "type" : "expression",
+          "expression" : "userCode"
+        },
+        "contextOutput" : {
+          "type" : "variable",
+          "variable" : "verificationContext"
+        },
+        "resultOutput" : {
+          "type" : "literal",
+          "literal" : null
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 440,
+          "y" : 200
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "NQ6143UL",
+      "sourceId" : "K0I9ZCFT",
+      "targetId" : "D1DGZ0KW",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "VF7VLEJW",
+      "sourceId" : "D1DGZ0KW",
+      "targetId" : "E0QWAW9Y",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

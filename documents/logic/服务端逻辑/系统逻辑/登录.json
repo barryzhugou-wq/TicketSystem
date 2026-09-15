@@ -1,0 +1,339 @@
+{
+  "id" : "SVWM0EN6",
+  "name" : "登录",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ {
+    "id" : "HF7PDQ8R",
+    "name" : "userName",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "FZD3VHTX",
+    "name" : "password",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "T8XNO83M",
+    "name" : "rememberMe",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "GWWTN6E8",
+    "name" : "message",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "YDB8B965",
+    "name" : "success",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "WKBX58GA",
+    "name" : "code",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/匿名权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "OEBSEN0O",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "ZPOUK5RE",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 948,
+          "y" : 335
+        }
+      }
+    }, {
+      "id" : "AQOAP40J",
+      "name" : "用户管理",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Login"
+        },
+        "validatePassword" : {
+          "type" : "literal",
+          "literal" : true
+        },
+        "userNameBinding" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "userName"
+        },
+        "passwordBinding" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "password"
+        },
+        "rememberMeBinding" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "rememberMe"
+        },
+        "message" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "message"
+        },
+        "success" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "success"
+        },
+        "code" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "code"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 648,
+          "y" : 335
+        }
+      }
+    }, {
+      "id" : "OE34RDI2",
+      "name" : "条件判断",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 1
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "NSRZL75B"
+                          },
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 17
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "literal" : "",
+                            "expression" : "userName"
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      }, {
+                        "type" : "structure",
+                        "structure" : {
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "IS9F5UI6"
+                          },
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 17
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "literal" : "",
+                            "expression" : "password"
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 360,
+          "y" : 173.3278316633784
+        }
+      }
+    }, {
+      "id" : "WR0L7ISG",
+      "name" : "赋值",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "DHWQ0HUO",
+            "value" : {
+              "type" : "literal",
+              "literal" : false
+            },
+            "target" : {
+              "type" : "variable",
+              "variable" : "success"
+            }
+          }, {
+            "id" : "YO09G1V9",
+            "value" : {
+              "type" : "literal",
+              "literal" : "用户名或密码不能为空"
+            },
+            "target" : {
+              "type" : "variable",
+              "variable" : "message"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 648,
+          "y" : 173.3278316633784
+        }
+      }
+    }, {
+      "id" : "OIPPKEE7",
+      "name" : "返回",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "content" : { },
+      "attributes" : {
+        "position" : {
+          "x" : 912,
+          "y" : 173.3278316633784
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "DQF6J828",
+      "sourceId" : "OEBSEN0O",
+      "targetId" : "OE34RDI2",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "G3PHJQ8C",
+      "sourceId" : "AQOAP40J",
+      "targetId" : "ZPOUK5RE",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "AGLXAF6E",
+      "sourceId" : "OE34RDI2",
+      "sourceAnchorId" : "if",
+      "targetId" : "WR0L7ISG",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "targetAnchorId" : null
+    }, {
+      "id" : "OFAIQUAC",
+      "sourceId" : "WR0L7ISG",
+      "targetId" : "OIPPKEE7",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "GMNV3SRG",
+      "sourceId" : "OE34RDI2",
+      "sourceAnchorId" : "else",
+      "targetId" : "AQOAP40J",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "targetAnchorId" : null
+    } ]
+  }
+}

@@ -1,0 +1,1060 @@
+{
+  "id" : "DBMCP2PX",
+  "name" : "提交处理结果",
+  "description" : "客服提交工单处理结果并通知提报人确认",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "T1OL4Y21",
+    "name" : "当前成员"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单归属"
+    },
+    "id" : "U91V39HU",
+    "name" : "工单信息"
+  } ],
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "KL4C8RAS",
+    "name" : "工单ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "GGD5QCNA",
+    "name" : "任务ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "YGTIXQHH",
+    "name" : "处理内容",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "附件输入"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "T5Q5G0TW",
+    "name" : "附件列表",
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "SD58P1MT",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "OUZNH2DG",
+    "name" : "message"
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/处理工单" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "X9H88YL3",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "KPCAGCSN",
+      "name" : "校验处理结果",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 1
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "OM1NWICJ"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "工单ID"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 15
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      }, {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "CQ4YEHNC"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "任务ID"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 17
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      }, {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "VLFMDBT2"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "处理内容"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 17
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "U4H2BYHS",
+      "name" : "处理结果校验失败",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "JOFVDSDH",
+            "target" : {
+              "type" : "variable",
+              "variable" : "success"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : false
+            }
+          }, {
+            "id" : "ZJR5VM00",
+            "target" : {
+              "type" : "variable",
+              "variable" : "message"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : "请填写处理说明后再提交"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "F52O49K7",
+      "name" : "初始化提交结果",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "RDQPFRWN",
+            "target" : {
+              "type" : "variable",
+              "variable" : "success"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : false
+            }
+          }, {
+            "id" : "N6M9HDZ0",
+            "target" : {
+              "type" : "variable",
+              "variable" : "message"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : "提交处理结果失败，请稍后重试"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "JT2NMMID",
+      "name" : "查询当前处理人",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "成员信息",
+            "tableAlias" : "成员信息",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "姓名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF.%E5%B9%B3%E5%8F%B0%E8%B4%A6%E5%8F%B7ID",
+              "operator" : 0,
+              "value" : {
+                "type" : 6,
+                "identifier" : "Server.currentUser.ID",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 1,
+          "typeMode" : "specific",
+          "specificType" : {
+            "declarativeTypeKind" : "Structure",
+            "typeName" : "成员选项"
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "当前成员"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 350
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "ZGEN5CRM",
+      "name" : "查询工单归属",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "工单编号"
+            }, {
+              "columnRefName" : "标题"
+            }, {
+              "columnRefName" : "工单状态"
+            }, {
+              "columnRefName" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+              "operator" : 0,
+              "value" : {
+                "type" : 6,
+                "identifier" : "工单ID",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 1,
+          "typeMode" : "specific",
+          "specificType" : {
+            "declarativeTypeKind" : "Structure",
+            "typeName" : "工单归属"
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "工单信息"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 450
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "ZDAXK0I3",
+      "name" : "登记待确认状态",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-update",
+      "content" : {
+        "mode" : "single",
+        "entityRef" : {
+          "entityName" : "工单",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : null,
+        "condition" : {
+          "conditionType" : 0,
+          "conditionItems" : [ {
+            "conditionType" : 2,
+            "conditionItems" : null,
+            "type" : 3,
+            "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+            "operator" : 0,
+            "value" : {
+              "type" : 6,
+              "identifier" : "工单ID",
+              "name" : null
+            },
+            "nullValueStrategy" : 0
+          } ]
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "工单状态"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "待客户确认"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "完成时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "Date.CurrentDateTime()"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "处理结果"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "处理内容"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "客户是否认可"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : false
+          }
+        } ],
+        "returnTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 550
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "LM0W7API",
+      "name" : "检查处理附件",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "UYJRLWWR"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "附件列表"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 20
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 650
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "E48K2J0I",
+      "name" : "保存处理附件",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-insert",
+      "content" : {
+        "mode" : "batch",
+        "entityRef" : {
+          "entityName" : "工单附件",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : {
+          "type" : "variable",
+          "variable" : "附件列表"
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "工单ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "工单ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "文件名"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "item.文件名"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "文件地址"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "item.文件地址"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "上传人ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "当前成员.ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "上传时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "Date.CurrentDateTime()"
+          }
+        } ],
+        "returnTo" : null,
+        "returnCountTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1200,
+          "y" : 650
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "PQNC577I",
+      "name" : "写入处理记录",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-insert",
+      "content" : {
+        "mode" : "single",
+        "entityRef" : {
+          "entityName" : "工单处理历史记录",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : null,
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "工单ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "工单ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "记录类型"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "处理"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "处理内容"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "处理内容"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "记录人ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "当前成员.ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "记录时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "Date.CurrentDateTime()"
+          }
+        } ],
+        "returnTo" : null,
+        "returnCountTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 790
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "T6XCAHYY",
+      "name" : "检查提报人",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "UHOWC57S"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "工单信息.提交人ID"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 16
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 890
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "TZ2XD506",
+      "name" : "通知提报人确认",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-insert",
+      "content" : {
+        "mode" : "single",
+        "entityRef" : {
+          "entityName" : "工单通知",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : null,
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "接收人ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "工单信息.提交人ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "工单ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "工单ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知标题"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "工单处理完成，请确认"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知内容"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "\"工单 \" & 工单信息.工单编号 & \" 已处理完成，请确认处理结果\""
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "是否已读"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : false
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "Date.CurrentDateTime()"
+          }
+        } ],
+        "returnTo" : null,
+        "returnCountTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 890
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "MY9OBMFF",
+      "name" : "提交处理任务",
+      "pluginName" : "logic-process",
+      "identifier" : "task-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Approve"
+        },
+        "taskId" : {
+          "type" : "expression",
+          "expression" : "任务ID"
+        },
+        "commentBinding" : {
+          "type" : "expression",
+          "expression" : "处理内容"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 1030
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "BONR80L5",
+      "name" : "提交处理成功",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "JEF3292B",
+            "target" : {
+              "type" : "variable",
+              "variable" : "success"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : true
+            }
+          }, {
+            "id" : "V9BFJHTZ",
+            "target" : {
+              "type" : "variable",
+              "variable" : "message"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : "处理结果已提交，等待客户确认"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 1130
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "I78HS6XE",
+      "sourceId" : "X9H88YL3",
+      "targetId" : "KPCAGCSN",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "LAEN7GZ1",
+      "sourceId" : "KPCAGCSN",
+      "targetId" : "U4H2BYHS",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "NWHBIC4S",
+      "sourceId" : "KPCAGCSN",
+      "targetId" : "F52O49K7",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "YAGO357Q",
+      "sourceId" : "F52O49K7",
+      "targetId" : "JT2NMMID",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "N4CZP6S5",
+      "sourceId" : "JT2NMMID",
+      "targetId" : "ZGEN5CRM",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "KHL0GB55",
+      "sourceId" : "ZGEN5CRM",
+      "targetId" : "ZDAXK0I3",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "DW1I0221",
+      "sourceId" : "ZDAXK0I3",
+      "targetId" : "LM0W7API",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "ZB1UZDEB",
+      "sourceId" : "LM0W7API",
+      "targetId" : "E48K2J0I",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "JN8N9PZS",
+      "sourceId" : "E48K2J0I",
+      "targetId" : "PQNC577I",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "T06VX1UO",
+      "sourceId" : "LM0W7API",
+      "targetId" : "PQNC577I",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "OI1DIWP3",
+      "sourceId" : "PQNC577I",
+      "targetId" : "T6XCAHYY",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "CN7ZB2PZ",
+      "sourceId" : "T6XCAHYY",
+      "targetId" : "TZ2XD506",
+      "sourceAnchorId" : "if",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "U1F9FVWJ",
+      "sourceId" : "TZ2XD506",
+      "targetId" : "MY9OBMFF",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "D91QHUFP",
+      "sourceId" : "T6XCAHYY",
+      "targetId" : "MY9OBMFF",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "ZMDL3019",
+      "sourceId" : "MY9OBMFF",
+      "targetId" : "BONR80L5",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  }
+}

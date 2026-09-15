@@ -1,0 +1,1357 @@
+{
+  "id" : "PIWY3MDZ",
+  "name" : "客户服务工单处理流程",
+  "processDefinitionKey" : "process_e39aa364-7dd1-4770-9c75-9fd4dde5649b",
+  "entityDataSourceName" : "默认数据源",
+  "entityName" : "工单",
+  "description" : "客户服务工单从提交、主管审批、客服处理到客户确认的完整流转",
+  "nodes" : [ {
+    "id" : "T7L5Q3DA",
+    "type" : "start",
+    "position" : {
+      "x" : 80,
+      "y" : 80
+    },
+    "data" : {
+      "name" : "提交工单",
+      "taskOperationPermissions" : [ {
+        "type" : "approve",
+        "displayText" : "提交",
+        "commentRequired" : false,
+        "enabled" : true
+      } ],
+      "dataPermissions" : [ {
+        "propertyRefName" : "ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单编号",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "标题",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单类型",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "优先级",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单状态",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "来源渠道",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "问题描述",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "期望完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "是否逾期",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "审批意见",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "受理时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "关闭时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "流程实例ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户是否认可",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理结果",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理天数",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人用户名",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交日序",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理记录",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录类型",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "处理内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "附件",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件名",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件地址",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "评价",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "满意度评分",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "通知",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "接收人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知标题",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "是否已读",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      } ]
+    }
+  }, {
+    "id" : "RPW21AV4",
+    "type" : "approvalTask",
+    "position" : {
+      "x" : 400,
+      "y" : 80
+    },
+    "data" : {
+      "name" : "客服主管审批",
+      "approvalPageReference" : {
+        "type" : "literal",
+        "literal" : "/PC/工单审批页"
+      },
+      "assignees" : [ {
+        "id" : "AI15O4MT",
+        "type" : "role",
+        "targets" : [ {
+          "source" : "static",
+          "roleName" : "客服主管"
+        } ]
+      } ],
+      "approvalStrategy" : {
+        "type" : "literal",
+        "literal" : "any"
+      },
+      "noAssigneeStrategy" : {
+        "type" : "toRole",
+        "targetRoleNames" : [ "客服专员" ]
+      },
+      "taskOperationPermissions" : [ {
+        "type" : "approve",
+        "displayText" : "审批通过",
+        "commentRequired" : false,
+        "enabled" : true
+      }, {
+        "type" : "reject",
+        "displayText" : "驳回补充",
+        "commentRequired" : true,
+        "enabled" : true
+      }, {
+        "type" : "reassign",
+        "displayText" : "转办",
+        "commentRequired" : false,
+        "enabled" : true
+      }, {
+        "type" : "delegate",
+        "displayText" : "委托",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "cancelDelegate",
+        "displayText" : "取消委托",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "addSign",
+        "displayText" : "加签",
+        "commentRequired" : false,
+        "enabled" : false
+      } ],
+      "dataPermissions" : [ {
+        "propertyRefName" : "ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单编号",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "标题",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单类型",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "优先级",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单状态",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "来源渠道",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "问题描述",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "期望完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "是否逾期",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "审批意见",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "受理时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "关闭时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "流程实例ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户是否认可",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理结果",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理天数",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人用户名",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交日序",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理记录",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录类型",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "处理内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "附件",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件名",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件地址",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "评价",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "满意度评分",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "通知",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "接收人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知标题",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "是否已读",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      } ]
+    }
+  }, {
+    "id" : "BITKA8FP",
+    "type" : "approvalTask",
+    "position" : {
+      "x" : 720,
+      "y" : 80
+    },
+    "data" : {
+      "name" : "客服处理",
+      "approvalPageReference" : {
+        "type" : "literal",
+        "literal" : "/PC/工单审批页"
+      },
+      "assignees" : [ {
+        "id" : "DDV4HHIW",
+        "type" : "user",
+        "targets" : [ {
+          "source" : "context",
+          "binding" : {
+            "source" : "entityField",
+            "contextRefKey" : "处理人用户名"
+          }
+        } ]
+      } ],
+      "approvalStrategy" : {
+        "type" : "literal",
+        "literal" : "any"
+      },
+      "noAssigneeStrategy" : {
+        "type" : "toRole",
+        "targetRoleNames" : [ "客服专员" ]
+      },
+      "taskOperationPermissions" : [ {
+        "type" : "approve",
+        "displayText" : "提交处理结果",
+        "commentRequired" : true,
+        "enabled" : true
+      }, {
+        "type" : "reject",
+        "displayText" : "拒绝",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "reassign",
+        "displayText" : "转办",
+        "commentRequired" : false,
+        "enabled" : true
+      }, {
+        "type" : "delegate",
+        "displayText" : "委托",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "cancelDelegate",
+        "displayText" : "取消委托",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "addSign",
+        "displayText" : "加签",
+        "commentRequired" : false,
+        "enabled" : false
+      } ],
+      "dataPermissions" : [ {
+        "propertyRefName" : "ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单编号",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "标题",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单类型",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "优先级",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单状态",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "来源渠道",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "问题描述",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "期望完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "是否逾期",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "审批意见",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "受理时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "关闭时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "流程实例ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户是否认可",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理结果",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理天数",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人用户名",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交日序",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理记录",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录类型",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "处理内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "附件",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件名",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件地址",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "评价",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "满意度评分",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "通知",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "接收人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知标题",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "是否已读",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      } ]
+    }
+  }, {
+    "id" : "PCYTO4ZA",
+    "type" : "approvalTask",
+    "position" : {
+      "x" : 1040,
+      "y" : 80
+    },
+    "data" : {
+      "name" : "客户确认",
+      "approvalPageReference" : {
+        "type" : "literal",
+        "literal" : "/PC/工单审批页"
+      },
+      "assignees" : [ {
+        "id" : "Y7TDBHZL",
+        "type" : "user",
+        "targets" : [ {
+          "source" : "context",
+          "binding" : {
+            "source" : "systemVariable",
+            "contextRefKey" : "processStarter.用户名"
+          }
+        } ]
+      } ],
+      "approvalStrategy" : {
+        "type" : "literal",
+        "literal" : "any"
+      },
+      "noAssigneeStrategy" : {
+        "type" : "autoApprove"
+      },
+      "taskOperationPermissions" : [ {
+        "type" : "approve",
+        "displayText" : "提交确认结果",
+        "commentRequired" : false,
+        "enabled" : true
+      }, {
+        "type" : "reject",
+        "displayText" : "拒绝",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "reassign",
+        "displayText" : "转派",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "delegate",
+        "displayText" : "委托",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "cancelDelegate",
+        "displayText" : "取消委托",
+        "commentRequired" : false,
+        "enabled" : false
+      }, {
+        "type" : "addSign",
+        "displayText" : "加签",
+        "commentRequired" : false,
+        "enabled" : false
+      } ],
+      "dataPermissions" : [ {
+        "propertyRefName" : "ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单编号",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "标题",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单类型",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "优先级",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "工单状态",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "来源渠道",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "问题描述",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "期望完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "是否逾期",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "审批意见",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "受理时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "完成时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "关闭时间",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "流程实例ID",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "客户是否认可",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理结果",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理天数",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理人用户名",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "提交日序",
+        "permission" : "Readonly",
+        "subPermissions" : [ ]
+      }, {
+        "propertyRefName" : "处理记录",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录类型",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "处理内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "记录时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "附件",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件名",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "文件地址",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "上传时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "评价",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "满意度评分",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "评价时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      }, {
+        "propertyRefName" : "通知",
+        "permission" : "Readonly",
+        "subPermissions" : [ {
+          "propertyRefName" : "ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "接收人ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "工单ID",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知标题",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知内容",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "是否已读",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        }, {
+          "propertyRefName" : "通知时间",
+          "permission" : "Readonly",
+          "subPermissions" : [ ]
+        } ]
+      } ]
+    }
+  }, {
+    "id" : "KEY734K1",
+    "type" : "exclusiveGateway",
+    "position" : {
+      "x" : 1360,
+      "y" : 80
+    },
+    "data" : {
+      "name" : "确认结果判断"
+    }
+  }, {
+    "id" : "MDDIJ0MV",
+    "type" : "logicTask",
+    "position" : {
+      "x" : 1512,
+      "y" : 80
+    },
+    "data" : {
+      "name" : "关闭工单"
+    }
+  }, {
+    "id" : "OMUC6JIK",
+    "type" : "end",
+    "position" : {
+      "x" : 1832,
+      "y" : 80
+    },
+    "data" : {
+      "name" : "工单关闭"
+    }
+  } ],
+  "edges" : [ {
+    "id" : "ZM8M3ZFF",
+    "source" : "T7L5Q3DA",
+    "target" : "RPW21AV4",
+    "sourceHandle" : "start-source",
+    "targetHandle" : "target-left",
+    "type" : "processEdge",
+    "data" : {
+      "flowKind" : "sequenceFlow"
+    }
+  }, {
+    "id" : "ZM4XCAHM",
+    "source" : "RPW21AV4",
+    "target" : "BITKA8FP",
+    "sourceHandle" : "source-right",
+    "targetHandle" : "target-left",
+    "type" : "processEdge",
+    "data" : {
+      "flowKind" : "sequenceFlow"
+    }
+  }, {
+    "id" : "MVRKCKZD",
+    "source" : "BITKA8FP",
+    "target" : "PCYTO4ZA",
+    "sourceHandle" : "source-right",
+    "targetHandle" : "target-left",
+    "type" : "processEdge",
+    "data" : {
+      "flowKind" : "sequenceFlow"
+    }
+  }, {
+    "id" : "VWDG7F9O",
+    "source" : "PCYTO4ZA",
+    "target" : "KEY734K1",
+    "sourceHandle" : "source-right",
+    "targetHandle" : "exclusive-target-left",
+    "type" : "processEdge",
+    "data" : {
+      "flowKind" : "sequenceFlow"
+    }
+  }, {
+    "id" : "IGWUJ3IL",
+    "source" : "KEY734K1",
+    "target" : "BITKA8FP",
+    "sourceHandle" : "exclusive-source-right",
+    "targetHandle" : "target-left",
+    "type" : "processEdge",
+    "data" : {
+      "flowKind" : "conditionalFlow",
+      "sortOrder" : 1,
+      "isDefaultFlow" : false,
+      "conditionMode" : "rule",
+      "condition" : {
+        "type" : "structure",
+        "structure" : {
+          "id" : {
+            "type" : "literal",
+            "literal" : "CMUMQ5W9"
+          },
+          "conditionType" : {
+            "type" : "literal",
+            "literal" : 2
+          },
+          "operand" : {
+            "type" : "expression",
+            "expression" : "ProcessEntity.客户是否认可"
+          },
+          "operator" : {
+            "type" : "literal",
+            "literal" : 24
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : null
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "UE2L8GE4",
+    "source" : "KEY734K1",
+    "target" : "MDDIJ0MV",
+    "sourceHandle" : "exclusive-source-right",
+    "targetHandle" : "target-left",
+    "type" : "processEdge",
+    "data" : {
+      "flowKind" : "conditionalFlow",
+      "sortOrder" : 2,
+      "isDefaultFlow" : true
+    }
+  }, {
+    "id" : "ZD9YXRF1",
+    "source" : "MDDIJ0MV",
+    "target" : "OMUC6JIK",
+    "sourceHandle" : "source-right",
+    "targetHandle" : "end-target",
+    "type" : "processEdge",
+    "data" : {
+      "flowKind" : "sequenceFlow"
+    }
+  } ],
+  "variables" : [ ],
+  "events" : [ ],
+  "nodeEvents" : [ ],
+  "logicNodes" : [ {
+    "id" : "BCI29VA3",
+    "name" : "关闭工单",
+    "nodeId" : "MDDIJ0MV",
+    "processId" : "PIWY3MDZ",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "diagram" : {
+      "nodes" : [ {
+        "id" : "Z8L3V9TM",
+        "name" : "开始",
+        "pluginName" : "",
+        "identifier" : "",
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 50
+          }
+        },
+        "isStartPoint" : true
+      }, {
+        "id" : "PJHBF19I",
+        "name" : "关闭工单",
+        "pluginName" : "logic-data-operation",
+        "identifier" : "data-update",
+        "content" : {
+          "mode" : "single",
+          "entityRef" : {
+            "entityName" : "工单",
+            "dataSourceName" : "默认数据源"
+          },
+          "variable" : null,
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+              "operator" : 0,
+              "value" : {
+                "type" : 6,
+                "identifier" : "ProcessEntity.ID",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "propertyMappers" : [ {
+            "target" : {
+              "type" : "literal",
+              "literal" : "工单状态"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : "已关闭"
+            }
+          }, {
+            "target" : {
+              "type" : "literal",
+              "literal" : "关闭时间"
+            },
+            "value" : {
+              "type" : "expression",
+              "expression" : "Date.CurrentDateTime()"
+            }
+          } ],
+          "returnTo" : null
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 150
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "GAD2A2TH",
+        "name" : "写入关闭记录",
+        "pluginName" : "logic-data-operation",
+        "identifier" : "data-insert",
+        "content" : {
+          "mode" : "single",
+          "entityRef" : {
+            "entityName" : "工单处理历史记录",
+            "dataSourceName" : "默认数据源"
+          },
+          "variable" : null,
+          "propertyMappers" : [ {
+            "target" : {
+              "type" : "literal",
+              "literal" : "工单ID"
+            },
+            "value" : {
+              "type" : "expression",
+              "expression" : "ProcessEntity.ID"
+            }
+          }, {
+            "target" : {
+              "type" : "literal",
+              "literal" : "记录类型"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : "确认"
+            }
+          }, {
+            "target" : {
+              "type" : "literal",
+              "literal" : "处理内容"
+            },
+            "value" : {
+              "type" : "literal",
+              "literal" : "客户确认处理结果，工单关闭"
+            }
+          }, {
+            "target" : {
+              "type" : "literal",
+              "literal" : "记录时间"
+            },
+            "value" : {
+              "type" : "expression",
+              "expression" : "Date.CurrentDateTime()"
+            }
+          } ],
+          "returnTo" : null,
+          "returnCountTo" : null
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 250
+          }
+        },
+        "isStartPoint" : false
+      } ],
+      "edges" : [ {
+        "id" : "DNBHZ948",
+        "sourceId" : "Z8L3V9TM",
+        "targetId" : "PJHBF19I",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "QU8Q9TJF",
+        "sourceId" : "PJHBF19I",
+        "targetId" : "GAD2A2TH",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      } ]
+    }
+  } ],
+  "assigneeLogics" : [ ],
+  "gatewayFlowLogics" : [ ]
+}

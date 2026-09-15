@@ -1,0 +1,146 @@
+{
+  "id" : "DY5SVZ0D",
+  "name" : "绑定用户",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ {
+    "id" : "YWWSOWQT",
+    "name" : "code",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "RL5AVQ36",
+    "name" : "username",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "F0XUAZAL",
+    "name" : "password",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "DIAS07I8",
+    "name" : "bindSuccess",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "id" : "QCE87VAM",
+    "name" : "bindErrorMessage",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/匿名权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "LCCGIDPB",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "Y7KREML8",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 820,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "H29TH31V",
+      "name" : "绑定用户",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "BindUser"
+        },
+        "success" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "bindSuccess"
+        },
+        "message" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "bindErrorMessage"
+        },
+        "usersOutput" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : ""
+        },
+        "totalOutput" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : ""
+        },
+        "bindCode" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "code"
+        },
+        "userName" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "username"
+        },
+        "password" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "password"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 400,
+          "y" : 200
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "Q25UZPHT",
+      "sourceId" : "LCCGIDPB",
+      "targetId" : "H29TH31V",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "HE094ZFK",
+      "sourceId" : "H29TH31V",
+      "targetId" : "Y7KREML8",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

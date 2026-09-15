@@ -1,0 +1,128 @@
+{
+  "id" : "TE13VDUM",
+  "name" : "重置密码",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ {
+    "id" : "B27C672B",
+    "name" : "token",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "LE44AWAV",
+    "name" : "password",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "D3JTKCL7",
+    "name" : "message",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "SESG3UAD",
+    "name" : "success",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/匿名权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "OUEHJ9TJ",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "NKF5Q7HD",
+      "name" : "用户管理",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "ResetPassword"
+        },
+        "tokenBinding" : {
+          "type" : "expression",
+          "expression" : "token"
+        },
+        "passwordBinding" : {
+          "type" : "expression",
+          "expression" : "password"
+        },
+        "message" : {
+          "type" : "variable",
+          "variable" : "message"
+        },
+        "success" : {
+          "type" : "variable",
+          "variable" : "success"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 380,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "GR3DTMQB",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 720,
+          "y" : 200
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "KWDNDV6O",
+      "sourceId" : "OUEHJ9TJ",
+      "targetId" : "NKF5Q7HD",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "J3DHBO64",
+      "sourceId" : "NKF5Q7HD",
+      "targetId" : "GR3DTMQB",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

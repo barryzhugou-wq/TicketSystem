@@ -1,0 +1,6 @@
+{
+  "id" : "XIUBBJUK",
+  "name" : "维护客户档案",
+  "description" : "新增与编辑客户档案信息",
+  "roleIds" : [ 1, 2 ]
+}

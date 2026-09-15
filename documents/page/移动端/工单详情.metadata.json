@@ -1,0 +1,443 @@
+{
+  "id" : "EYTLNDRU",
+  "name" : "工单详情",
+  "type" : "page",
+  "description" : "移动端工单详情：基本信息、处理进度、处理记录、附件、评价与客户确认、重新提交",
+  "variables" : [ {
+    "id" : "WU2L3S2Q",
+    "name" : "工单ID",
+    "kind" : "parameter",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "KJGC5ZIQ",
+    "name" : "任务ID",
+    "kind" : "parameter",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "DF5LJ0IM",
+    "name" : "工单",
+    "kind" : "variable",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单详情"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "TBVO4T0K",
+    "name" : "是否存在",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "LBL38PHS",
+    "name" : "提示信息",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "MIJHAPRB",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "TFV25A6O",
+    "name" : "提交中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "GX1JA9CS",
+    "name" : "处理记录",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单处理记录行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "CF1KP02K",
+    "name" : "附件列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单附件行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "UZV9HKGA",
+    "name" : "满意度评分",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Decimal"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 5
+    }
+  }, {
+    "id" : "QUAVQNQU",
+    "name" : "评价内容",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "OSKOEZ13",
+    "name" : "重新提交说明",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "N1P0WPJI",
+    "name" : "重新提交时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "DPMNNJG9",
+    "name" : "操作成功",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "UHM3YHZR",
+    "name" : "操作提示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "UG2CYVOF",
+    "name" : "待办任务ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "Z9R57JSI",
+    "name" : "待办节点名称",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "L42FQJ5W",
+    "name" : "是否有待办任务",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "L9HFO33S",
+    "name" : "待办提示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "G96OD0PD",
+    "name" : "取消弹窗可见",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "B00O80VD",
+    "name" : "取消原因",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ {
+    "id" : "HYUK4T6H",
+    "name" : "加载工单详情",
+    "description" : "加载工单详情并同步处理记录、附件、重新提交字段与当前待办任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "WU2L3S2Q", "KJGC5ZIQ", "DF5LJ0IM", "TBVO4T0K", "LBL38PHS", "MIJHAPRB", "TFV25A6O", "GX1JA9CS", "CF1KP02K", "UZV9HKGA", "QUAVQNQU", "OSKOEZ13", "N1P0WPJI", "DPMNNJG9", "UHM3YHZR", "HYUK4T6H", "UG2CYVOF", "Z9R57JSI", "L42FQJ5W", "L9HFO33S", "G96OD0PD", "B00O80VD" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "S6OH4W5Q",
+    "name" : "页面加载",
+    "description" : "工单详情页面加载后拉取工单详情",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "U6YTJGCP",
+    "elementName" : "确认完成按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "MDX0VKH8",
+    "name" : "确认完成",
+    "description" : "客户确认工单处理结果",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "BXQR6LXU",
+    "elementName" : "不认可按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "D4XTW5W4",
+    "name" : "不认可",
+    "description" : "客户不认可工单处理结果",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "XVW6I18E",
+    "elementName" : "重新提交按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "O0T7ATSD",
+    "name" : "重新提交",
+    "description" : "工单被驳回后补充问题描述并重新提交",
+    "variables" : [ {
+      "id" : "NSU3RMQT",
+      "name" : "isValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "CQAWZP4B",
+      "name" : "errorMessage",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "MAM43VNA",
+    "elementName" : "取消工单按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "G9BZ6KOU",
+    "name" : "打开取消弹窗",
+    "description" : "打开移动端取消工单弹窗并清空取消原因",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "EMWQPRZ2",
+    "elementName" : "关闭取消弹窗按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "X9EEIZ80",
+    "name" : "关闭取消弹窗",
+    "description" : "关闭移动端取消工单弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "CI30UI6N",
+    "elementName" : "确认取消工单按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "XSP1684S",
+    "name" : "提交取消工单",
+    "description" : "校验取消原因后调用取消工单逻辑，并刷新工单详情",
+    "variables" : [ {
+      "id" : "G303UEHL",
+      "name" : "isValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "ASXZ3DCL",
+      "name" : "errorMessage",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/m/ticket-detail",
+  "masterPage" : "/移动端/工单母版",
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "处理记录类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单来源"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单优先级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单状态"
+  }, {
+    "documentType" : "masterPage",
+    "refKey" : "/移动端/工单母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/工单审批页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/我的工单",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单待办任务"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单详情"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "客户确认工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "取消工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "重新提交工单"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单处理记录行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单附件行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单详情"
+  } ]
+}

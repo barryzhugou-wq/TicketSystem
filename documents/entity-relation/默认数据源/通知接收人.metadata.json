@@ -1,0 +1,21 @@
+{
+  "name" : "通知接收人",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单通知",
+  "sourceColumnRefName" : "接收人ID",
+  "sourceNavigationName" : "接收人",
+  "targetEntityName" : "成员信息",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "接收的通知",
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单通知"
+  } ]
+}

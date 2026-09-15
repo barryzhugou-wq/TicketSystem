@@ -1,0 +1,13 @@
+{
+  "id" : "GJK5WV70",
+  "name" : "身份认证",
+  "type" : "folder",
+  "variables" : [ ],
+  "logics" : [ ],
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  }
+}

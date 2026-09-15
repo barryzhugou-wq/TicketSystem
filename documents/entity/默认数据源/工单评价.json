@@ -1,0 +1,110 @@
+{
+  "type" : "entityModel",
+  "name" : "工单评价",
+  "tableName" : "工单评价",
+  "dataSourceName" : "默认数据源",
+  "description" : "客户对工单处理结果的满意度评价",
+  "columns" : [ {
+    "type" : "entityColumnModel",
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : true,
+    "isPrimaryKey" : true,
+    "isUnique" : true,
+    "isAutoIncrement" : true,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "工单ID",
+    "name" : "工单ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "满意度评分",
+    "name" : "满意度评分",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 120,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "评价内容",
+    "name" : "评价内容",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "评价人ID",
+    "name" : "评价人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "评价时间",
+    "name" : "评价时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : 2014,
+    "width" : 170,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  } ],
+  "indexes" : [ {
+    "indexName" : "PRIMARY",
+    "isUnique" : true,
+    "isPrimary" : true,
+    "isUnEditable" : true,
+    "description" : "主键索引",
+    "indexColumns" : [ {
+      "columnRefName" : "ID",
+      "order" : "ASC"
+    } ]
+  } ],
+  "columnExtensionLoaded" : true
+}

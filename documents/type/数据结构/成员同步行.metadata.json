@@ -1,0 +1,47 @@
+{
+  "id" : "PLKHNC1Z",
+  "name" : "成员同步行",
+  "kind" : "Structure",
+  "description" : "客服通讯录同步时读取已有成员记录",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "平台账号ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "姓名",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "登录名",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "所属部门",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "角色名称",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "账号状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "账号状态"
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "账号状态"
+  } ]
+}

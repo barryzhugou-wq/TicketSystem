@@ -1,0 +1,34 @@
+{
+  "id" : "R811DD12",
+  "name" : "获取设备授权上下文",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "id" : "ESDUGQ96",
+    "name" : "userCode",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "variables" : [ ],
+  "returnValues" : [ {
+    "id" : "MVGR05HG",
+    "name" : "verificationContext",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "OAuth设备授权上下文"
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "OAuth设备授权上下文"
+  } ]
+}

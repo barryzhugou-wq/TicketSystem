@@ -1,0 +1,11 @@
+{
+  "name" : "工单处理人",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单",
+  "sourceColumnRefName" : "处理人ID",
+  "sourceNavigationName" : "处理人",
+  "targetEntityName" : "成员信息",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "处理的工单"
+}

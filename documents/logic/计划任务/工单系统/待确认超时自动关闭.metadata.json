@@ -1,0 +1,64 @@
+{
+  "id" : "EGQ0W9G0",
+  "name" : "待确认超时自动关闭",
+  "description" : "每天把待客户确认超过 3 天的工单自动关闭并通知提交人",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "parameters" : [ ],
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "ALDZGMZP",
+    "name" : "当前时间"
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "UMCOESES",
+    "name" : "超时阈值"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单归属"
+      } ]
+    },
+    "id" : "OF10H5MN",
+    "name" : "超时工单列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单归属"
+      } ]
+    },
+    "id" : "C13IKHKF",
+    "name" : "待通知工单"
+  } ],
+  "returnValues" : [ ],
+  "scheduleConfig" : {
+    "type" : "daily",
+    "startTime" : "2026-09-15T04:07:19.000Z",
+    "daily" : {
+      "interval" : 1
+    }
+  },
+  "enabled" : true,
+  "type" : "scheduledTask",
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单通知"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单归属"
+  } ]
+}

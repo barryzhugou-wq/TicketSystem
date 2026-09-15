@@ -1,0 +1,34 @@
+{
+  "id" : "VG2LBOJM",
+  "name" : "客户简要",
+  "kind" : "Structure",
+  "description" : "客户信息展示字段",
+  "properties" : [ {
+    "name" : "客户名称",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "联系人",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "联系电话",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "客户等级",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户等级"
+    }
+  }, {
+    "name" : "服务状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "客户状态"
+    }
+  } ]
+}

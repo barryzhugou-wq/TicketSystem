@@ -1,0 +1,610 @@
+{
+  "id" : "EGQ0W9G0",
+  "name" : "待确认超时自动关闭",
+  "description" : "每天把待客户确认超过 3 天的工单自动关闭并通知提交人",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "ALDZGMZP",
+    "name" : "当前时间"
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "UMCOESES",
+    "name" : "超时阈值"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单归属"
+      } ]
+    },
+    "id" : "OF10H5MN",
+    "name" : "超时工单列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单归属"
+      } ]
+    },
+    "id" : "C13IKHKF",
+    "name" : "待通知工单"
+  } ],
+  "parameters" : [ ],
+  "returnValues" : [ ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "scheduleConfig" : {
+    "type" : "daily",
+    "startTime" : "2026-09-15T04:07:19.000Z",
+    "daily" : {
+      "interval" : 1
+    }
+  },
+  "enabled" : true,
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "C4DL5210",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "YGM4XFHY",
+      "name" : "获取当前时间",
+      "pluginName" : "logic-core",
+      "identifier" : "date-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "CurrentDateTime"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "当前时间"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "KXY92CVK",
+      "name" : "计算超时阈值",
+      "pluginName" : "logic-core",
+      "identifier" : "date-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Add"
+        },
+        "source1" : {
+          "type" : "expression",
+          "expression" : "当前时间"
+        },
+        "adjustmentValue" : {
+          "type" : "literal",
+          "literal" : -3
+        },
+        "dateTimeUnit" : {
+          "type" : "literal",
+          "literal" : "Day"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "超时阈值"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "OQYIVAQQ",
+      "name" : "查询超时待确认工单",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "工单编号"
+            }, {
+              "columnRefName" : "标题"
+            }, {
+              "columnRefName" : "工单状态"
+            }, {
+              "columnRefName" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E5%B7%A5%E5%8D%95%E7%8A%B6%E6%80%81",
+              "operator" : 0,
+              "value" : {
+                "type" : 1,
+                "identifier" : "待客户确认",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E5%AE%8C%E6%88%90%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "超时阈值",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "工单归属"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "超时工单列表"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 350
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "YRLT8KNG",
+      "name" : "检查超时工单",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "W7LE4M5S"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "超时工单列表"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 19
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 450
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "FB8MNJ48",
+      "name" : "筛选待通知工单",
+      "pluginName" : "logic-core",
+      "identifier" : "list-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Filter"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "超时工单列表"
+        },
+        "itemName" : {
+          "type" : "literal",
+          "literal" : "工单"
+        },
+        "condition" : {
+          "type" : "expression",
+          "expression" : "Not(IsNull(工单.提交人ID))"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "待通知工单"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 550
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "KNAA3YCO",
+      "name" : "批量自动关闭",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-update",
+      "content" : {
+        "mode" : "batch",
+        "entityRef" : {
+          "entityName" : "工单",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : {
+          "type" : "variable",
+          "variable" : "超时工单列表"
+        },
+        "condition" : {
+          "conditionType" : 0,
+          "conditionItems" : [ {
+            "conditionType" : 2,
+            "conditionItems" : null,
+            "type" : 3,
+            "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+            "operator" : 0,
+            "value" : {
+              "type" : 6,
+              "identifier" : "item.ID",
+              "name" : null
+            },
+            "nullValueStrategy" : 0
+          }, {
+            "conditionType" : 2,
+            "conditionItems" : null,
+            "type" : 3,
+            "identifier" : "%E5%B7%A5%E5%8D%95.%E5%B7%A5%E5%8D%95%E7%8A%B6%E6%80%81",
+            "operator" : 0,
+            "value" : {
+              "type" : 1,
+              "identifier" : "待客户确认",
+              "name" : null
+            },
+            "nullValueStrategy" : 0
+          } ]
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "工单状态"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "已关闭"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "关闭时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "当前时间"
+          }
+        } ],
+        "returnTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 650
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "P3Z983CV",
+      "name" : "检查待通知工单",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "X8ULFZ8B"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "待通知工单"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 19
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 750
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "LOM6LNNQ",
+      "name" : "写入自动关闭通知",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-insert",
+      "content" : {
+        "mode" : "batch",
+        "entityRef" : {
+          "entityName" : "工单通知",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : {
+          "type" : "variable",
+          "variable" : "待通知工单"
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "接收人ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "item.提交人ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "工单ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "item.ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知标题"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "工单已自动关闭"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知内容"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "\"工单 \" & item.工单编号 & \" 待客户确认已超过 3 天，系统已超时自动确认关闭：\" & item.标题"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "是否已读"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : false
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "当前时间"
+          }
+        } ],
+        "returnTo" : null,
+        "returnCountTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1200,
+          "y" : 850
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "AH7NXV83",
+      "sourceId" : "C4DL5210",
+      "targetId" : "YGM4XFHY",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "H0D0KTOA",
+      "sourceId" : "YGM4XFHY",
+      "targetId" : "KXY92CVK",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "Q96Q6OK2",
+      "sourceId" : "KXY92CVK",
+      "targetId" : "OQYIVAQQ",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "G5UGM1CI",
+      "sourceId" : "OQYIVAQQ",
+      "targetId" : "YRLT8KNG",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "B9B07NFO",
+      "sourceId" : "YRLT8KNG",
+      "targetId" : "FB8MNJ48",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "YB76C6UU",
+      "sourceId" : "FB8MNJ48",
+      "targetId" : "KNAA3YCO",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "XWM7R4YR",
+      "sourceId" : "KNAA3YCO",
+      "targetId" : "P3Z983CV",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "VEUS80I0",
+      "sourceId" : "P3Z983CV",
+      "targetId" : "LOM6LNNQ",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  },
+  "type" : "scheduledTask"
+}

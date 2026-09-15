@@ -1,0 +1,6 @@
+{
+  "id" : "open-api-auth-method",
+  "name" : "鉴权方式",
+  "description" : "鉴权方式",
+  "moduleType" : "server"
+}

@@ -1,0 +1,6 @@
+{
+  "id" : "NU1ABD4N",
+  "name" : "查看全部工单",
+  "description" : "查看客服团队的全部工单",
+  "roleIds" : [ 1, 2 ]
+}

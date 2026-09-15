@@ -1,0 +1,6 @@
+{
+  "id" : "QEPJASHO",
+  "name" : "处理工单",
+  "description" : "受理工单、回复客户并提交处理结果",
+  "roleIds" : [ 1, 2, 3 ]
+}

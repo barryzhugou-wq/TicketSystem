@@ -1,0 +1,126 @@
+{
+  "id" : "QOHYGH5R",
+  "name" : "设备授权页",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "W3N3XX73",
+    "name" : "user_code",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "RT9WC3UJ",
+    "name" : "manualUserCode",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "R5MJO9I8",
+    "name" : "verificationContext",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : null
+    },
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "OAuth设备授权上下文"
+    },
+    "description" : ""
+  }, {
+    "id" : "ZA17A6CJ",
+    "name" : "final_message",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "W3N3XX73", "RT9WC3UJ", "R5MJO9I8", "ZA17A6CJ" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "ARYBBRSW",
+    "name" : "页面加载前同步设备授权状态",
+    "description" : "",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "enter"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "AGW0SJUH",
+    "elementName" : "继续按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "BPXVCW18",
+    "name" : "继续",
+    "description" : "",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "QYV6HI63",
+    "elementName" : "拒绝授权按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "KSIAE954",
+    "name" : "拒绝设备授权",
+    "description" : "",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "C79JNFNL",
+    "elementName" : "允许授权按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "KOL7LJ5A",
+    "name" : "确认设备授权",
+    "description" : "",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/PC/系统页面/语义模型/设备授权页",
+  "$deps" : [ {
+    "documentType" : "clientGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "获取设备授权上下文"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "拒绝设备授权"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "确认设备授权"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "OAuth设备授权上下文"
+  } ]
+}

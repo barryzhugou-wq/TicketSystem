@@ -1,0 +1,21 @@
+{
+  "name" : "工单所属客户",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单",
+  "sourceColumnRefName" : "客户ID",
+  "sourceNavigationName" : "客户",
+  "targetEntityName" : "客户档案",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "关联工单",
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/客户档案"
+  } ]
+}

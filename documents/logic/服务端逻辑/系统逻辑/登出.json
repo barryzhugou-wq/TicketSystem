@@ -1,0 +1,86 @@
+{
+  "id" : "TLB3QH5N",
+  "name" : "登出",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ ],
+  "returnValues" : [ ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/登录权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "ZUBKJFT9",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "NNALN8HI",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 800,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "XFOCIWVU",
+      "name" : "用户管理",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Logout"
+        },
+        "success" : {
+          "type" : "literal",
+          "literal" : null
+        },
+        "message" : {
+          "type" : "literal",
+          "literal" : null
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 440,
+          "y" : 200
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "IFQ82FC0",
+      "sourceId" : "ZUBKJFT9",
+      "targetId" : "XFOCIWVU",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "GSY0DWS6",
+      "sourceId" : "XFOCIWVU",
+      "targetId" : "NNALN8HI",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

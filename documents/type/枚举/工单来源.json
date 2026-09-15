@@ -1,0 +1,22 @@
+{
+  "id" : "HESPGLUY",
+  "name" : "工单来源",
+  "kind" : "Enum",
+  "description" : "工单提交渠道",
+  "dataType" : {
+    "typeName" : "String"
+  },
+  "members" : [ {
+    "name" : "PC端",
+    "value" : "PC端"
+  }, {
+    "name" : "移动端",
+    "value" : "移动端"
+  }, {
+    "name" : "电话",
+    "value" : "电话"
+  }, {
+    "name" : "邮件",
+    "value" : "邮件"
+  } ]
+}

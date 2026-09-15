@@ -1,0 +1,19 @@
+{
+  "id" : "B93GX9MC",
+  "name" : "客户等级",
+  "kind" : "Enum",
+  "description" : "客户服务等级",
+  "dataType" : {
+    "typeName" : "String"
+  },
+  "members" : [ {
+    "name" : "VIP",
+    "value" : "VIP"
+  }, {
+    "name" : "重点",
+    "value" : "重点"
+  }, {
+    "name" : "普通",
+    "value" : "普通"
+  } ]
+}

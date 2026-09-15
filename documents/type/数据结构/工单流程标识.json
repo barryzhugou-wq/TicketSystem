@@ -1,0 +1,33 @@
+{
+  "id" : "OATT33IS",
+  "name" : "工单流程标识",
+  "kind" : "Structure",
+  "description" : "工单的流程实例与状态标识",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "流程实例ID",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "工单状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单状态"
+    }
+  }, {
+    "name" : "提交人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "处理人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  } ]
+}

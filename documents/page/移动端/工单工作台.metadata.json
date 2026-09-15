@@ -1,0 +1,170 @@
+{
+  "id" : "K58OJLQH",
+  "name" : "工单工作台",
+  "type" : "page",
+  "description" : "移动端工单工作台：我的指标、待办任务与提交工单入口",
+  "variables" : [ {
+    "id" : "BYMSVM73",
+    "name" : "待办任务数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "QB1S0S5R",
+    "name" : "待确认数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "EFMOTPEE",
+    "name" : "处理中数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "DI3NSNMY",
+    "name" : "待办列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "待办任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "I87BKUZP",
+    "name" : "工单列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "V6NC64MZ",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "BSETS7FH",
+    "name" : "错误信息",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ {
+    "id" : "W40VCZ90",
+    "name" : "加载工作台",
+    "description" : "加载移动端工作台的指标与待办任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "BYMSVM73", "QB1S0S5R", "EFMOTPEE", "DI3NSNMY", "I87BKUZP", "V6NC64MZ", "BSETS7FH", "W40VCZ90" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "UXU9SLSE",
+    "name" : "页面加载",
+    "description" : "工作台页面加载后拉取指标与待办数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "UZ81COTB",
+    "elementName" : "重新加载按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "TQ8NEBKP",
+    "name" : "重新加载",
+    "description" : "点击重新加载按钮后重新拉取工作台数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/m/workbench",
+  "masterPage" : "/移动端/工单母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/移动端/工单母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/待办任务",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/工单审批页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/工单提交页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单列表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询我的任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "待办任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单信息"
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "id" : "N3ZTY5UN",
+  "name" : "工单类型",
+  "kind" : "Enum",
+  "description" : "工单的业务分类",
+  "dataType" : {
+    "typeName" : "String"
+  },
+  "members" : [ {
+    "name" : "故障报修",
+    "value" : "故障报修"
+  }, {
+    "name" : "咨询",
+    "value" : "咨询"
+  }, {
+    "name" : "投诉",
+    "value" : "投诉"
+  }, {
+    "name" : "退换货",
+    "value" : "退换货"
+  }, {
+    "name" : "需求建议",
+    "value" : "需求建议"
+  } ]
+}

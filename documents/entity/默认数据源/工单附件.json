@@ -1,0 +1,110 @@
+{
+  "type" : "entityModel",
+  "name" : "工单附件",
+  "tableName" : "工单附件",
+  "dataSourceName" : "默认数据源",
+  "description" : "工单相关的截图与凭证文件",
+  "columns" : [ {
+    "type" : "entityColumnModel",
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : true,
+    "isPrimaryKey" : true,
+    "isUnique" : true,
+    "isAutoIncrement" : true,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "工单ID",
+    "name" : "工单ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "文件名",
+    "name" : "文件名",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 200,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "文件地址",
+    "name" : "文件地址",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "上传人ID",
+    "name" : "上传人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "上传时间",
+    "name" : "上传时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : 2014,
+    "width" : 170,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  } ],
+  "indexes" : [ {
+    "indexName" : "PRIMARY",
+    "isUnique" : true,
+    "isPrimary" : true,
+    "isUnEditable" : true,
+    "description" : "主键索引",
+    "indexColumns" : [ {
+      "columnRefName" : "ID",
+      "order" : "ASC"
+    } ]
+  } ],
+  "columnExtensionLoaded" : true
+}

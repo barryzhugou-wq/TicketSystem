@@ -1,0 +1,143 @@
+{
+  "id" : "I12N5X66",
+  "name" : "修改密码页",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "M46HLKM3",
+    "name" : "userName",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "MQIEUL3X",
+    "name" : "redirect",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "I0Z4ASLE",
+    "name" : "oldPassword",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "ARSDJMJ5",
+    "name" : "newPassword",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "FYKAE00X",
+    "name" : "confirmPassword",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "Z1GBA6TM",
+    "name" : "changeSuccess",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : ""
+  }, {
+    "id" : "GGGS9IW0",
+    "name" : "message",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "M46HLKM3", "MQIEUL3X", "I0Z4ASLE", "ARSDJMJ5", "FYKAE00X", "Z1GBA6TM", "GGGS9IW0" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "HPSIM6GR",
+    "elementName" : "修改密码按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "S55RLMJ5",
+    "name" : "修改密码",
+    "description" : "",
+    "variables" : [ {
+      "id" : "H3JT1G8M",
+      "name" : "isFormValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    }, {
+      "id" : "O0Q9NC3J",
+      "name" : "loginSuccess",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    }, {
+      "id" : "IWXON4PP",
+      "name" : "loginMessage",
+      "dataType" : {
+        "typeName" : "String"
+      },
+      "description" : ""
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/PC/系统页面/身份认证/修改密码页",
+  "linkedPage" : "/移动端/系统页面/身份认证/修改密码页",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/身份认证/修改密码页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "登录"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "修改密码"
+  } ]
+}

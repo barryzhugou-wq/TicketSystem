@@ -1,0 +1,13 @@
+{
+  "id" : "GMQ6V11N",
+  "name" : "移动端",
+  "type" : "folder",
+  "variables" : [ ],
+  "logics" : [ ],
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  }
+}

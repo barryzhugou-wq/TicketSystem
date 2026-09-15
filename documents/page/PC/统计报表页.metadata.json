@@ -1,0 +1,218 @@
+{
+  "id" : "ACRHY5EY",
+  "name" : "统计报表页",
+  "type" : "page",
+  "description" : "统计报表：工单趋势、类型/优先级分布、处理人工作量与满意度",
+  "variables" : [ {
+    "id" : "ECFATKXZ",
+    "name" : "开始时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "QDIRAQVG",
+    "name" : "结束时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "WCV48R2H",
+    "name" : "类型统计",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单类型统计行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "DBP91OUF",
+    "name" : "优先级统计",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "优先级统计行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "RBB2VE53",
+    "name" : "工作量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "处理人工作量行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "ZHNIH34O",
+    "name" : "满意度",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "满意度统计行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "MBXXWQF5",
+    "name" : "趋势",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单趋势行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "V65WANPJ",
+    "name" : "处理时长",
+    "kind" : "variable",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "处理时长统计"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "G0V0HQIA",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "G3URC6ND",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  } ],
+  "logics" : [ {
+    "id" : "GLQIAZ2Z",
+    "name" : "加载报表数据",
+    "description" : "按时间范围查询工单统计报表数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "ECFATKXZ", "QDIRAQVG", "WCV48R2H", "DBP91OUF", "RBB2VE53", "ZHNIH34O", "MBXXWQF5", "V65WANPJ", "G0V0HQIA", "G3URC6ND", "GLQIAZ2Z" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "KPNDEV1O",
+    "name" : "页面加载",
+    "description" : "默认按近 30 天加载统计报表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "SBM705QY",
+    "elementName" : "查询按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "QP8S1S77",
+    "name" : "查询报表",
+    "description" : "按所选时间范围重新查询报表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "KFFP6LB5",
+    "elementName" : "近30天按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "D9G13206",
+    "name" : "查询近30天报表",
+    "description" : "切换为近 30 天并重新查询报表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/ticket-report",
+  "title" : "统计报表",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看统计报表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单统计报表"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "处理人工作量行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "处理时长统计"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单类型统计行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单趋势行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "满意度统计行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "优先级统计行"
+  } ]
+}

@@ -1,0 +1,4166 @@
+{
+  "id" : "TDOQ0N39",
+  "name" : "工单提交页",
+  "rootElement" : {
+    "id" : "IUQL1T7A",
+    "name" : "提交页根布局",
+    "type" : "linear-layout",
+    "pluginName" : "component-common",
+    "styles" : [ {
+      "pseudo" : "none",
+      "target" : "root",
+      "cssProperties" : [ {
+        "name" : "display",
+        "type" : "literal",
+        "literal" : "flex"
+      }, {
+        "name" : "columnGap",
+        "type" : "literal",
+        "literal" : "var(--small-spacing)"
+      }, {
+        "name" : "rowGap",
+        "type" : "literal",
+        "literal" : "12px"
+      }, {
+        "name" : "position",
+        "type" : "literal",
+        "literal" : "relative"
+      }, {
+        "name" : "size",
+        "type" : "literal",
+        "literal" : {
+          "minHeight" : "100%"
+        }
+      }, {
+        "name" : "padding",
+        "type" : "literal",
+        "literal" : {
+          "top" : "12px",
+          "right" : "12px",
+          "bottom" : "12px",
+          "left" : "12px"
+        }
+      }, {
+        "name" : "flexDirection",
+        "type" : "literal",
+        "literal" : "column"
+      }, {
+        "name" : "backgroundColor",
+        "type" : "literal",
+        "literal" : "var(--color-page-background)"
+      }, {
+        "name" : "customStyle",
+        "type" : "literal",
+        "literal" : "box-sizing: border-box;"
+      } ]
+    } ],
+    "events" : [ ],
+    "properties" : [ {
+      "name" : "loading",
+      "type" : "literal",
+      "literal" : ""
+    }, {
+      "name" : "enableCustomLoading",
+      "type" : "literal",
+      "literal" : ""
+    } ],
+    "children" : [ {
+      "id" : "ENXPJNBN",
+      "name" : "提交页标题文本",
+      "type" : "text",
+      "pluginName" : "component-common",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : {
+            "maxWidth" : "100%"
+          }
+        }, {
+          "name" : "color",
+          "type" : "literal",
+          "literal" : "var(--color-text)"
+        }, {
+          "name" : "fontSize",
+          "type" : "literal",
+          "literal" : "18px"
+        }, {
+          "name" : "customStyle",
+          "type" : "literal",
+          "literal" : "font-weight: 600;"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "text",
+        "type" : "literal",
+        "literal" : "提交工单"
+      }, {
+        "name" : "format",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "wrapping",
+        "type" : "literal",
+        "literal" : "normal"
+      }, {
+        "name" : "ellipsis",
+        "type" : "literal",
+        "literal" : false
+      } ],
+      "children" : [ ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "J974AG5B",
+      "name" : "来源渠道单元格",
+      "type" : "cell",
+      "pluginName" : "component-vant",
+      "styles" : [ ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "clickable",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "arrowDirection",
+        "type" : "literal",
+        "literal" : "right"
+      }, {
+        "name" : "isLink",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "navigationType",
+        "type" : "literal",
+        "literal" : "external"
+      }, {
+        "name" : "target",
+        "type" : "literal",
+        "literal" : "_self"
+      }, {
+        "name" : "pageNavigation",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "href",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "showIconSlot",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "showTitleSlot",
+        "type" : "literal",
+        "literal" : true
+      }, {
+        "name" : "showLabelSlot",
+        "type" : "literal",
+        "literal" : true
+      }, {
+        "name" : "showDefaultSlot",
+        "type" : "literal",
+        "literal" : true
+      }, {
+        "name" : "verticalCenter",
+        "type" : "literal",
+        "literal" : false
+      } ],
+      "children" : [ {
+        "id" : "ZY0FCBW8",
+        "name" : "组件插槽",
+        "type" : "slot",
+        "pluginName" : "component-common",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ ],
+        "children" : [ {
+          "id" : "R5YMZCU5",
+          "name" : "来源渠道标题文本",
+          "type" : "text",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "size",
+              "type" : "literal",
+              "literal" : {
+                "maxWidth" : "100%"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "text",
+            "type" : "literal",
+            "literal" : "来源渠道"
+          }, {
+            "name" : "format",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "wrapping",
+            "type" : "literal",
+            "literal" : "normal"
+          }, {
+            "name" : "ellipsis",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        },
+        "slotTarget" : "title"
+      }, {
+        "id" : "TUBSA8JK",
+        "name" : "组件插槽1",
+        "type" : "slot",
+        "pluginName" : "component-common",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ ],
+        "children" : [ {
+          "id" : "BK9X1SRX",
+          "name" : "来源渠道值文本",
+          "type" : "text",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "size",
+              "type" : "literal",
+              "literal" : {
+                "maxWidth" : "100%"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "text",
+            "type" : "literal",
+            "literal" : "移动端"
+          }, {
+            "name" : "format",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "wrapping",
+            "type" : "literal",
+            "literal" : "normal"
+          }, {
+            "name" : "ellipsis",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        },
+        "slotTarget" : "label"
+      }, {
+        "id" : "RDLOHHTM",
+        "name" : "组件插槽2",
+        "type" : "slot",
+        "pluginName" : "component-common",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ ],
+        "children" : [ ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        },
+        "slotTarget" : "default"
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "PAIAGCTR",
+      "name" : "提交表单",
+      "type" : "form",
+      "pluginName" : "component-vant",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "overflow",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : {
+            "width" : "100%"
+          }
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "labelAlign",
+        "type" : "literal",
+        "literal" : "top"
+      }, {
+        "name" : "labelWidth",
+        "type" : "literal",
+        "literal" : "auto"
+      }, {
+        "name" : "colon",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "horizontalContentAlign",
+        "type" : "literal",
+        "literal" : "left"
+      }, {
+        "name" : "errorMessageAlign",
+        "type" : "literal",
+        "literal" : "left"
+      }, {
+        "name" : "validateFirst",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "showErrorMessage",
+        "type" : "literal",
+        "literal" : true
+      } ],
+      "children" : [ {
+        "id" : "DORDTMVY",
+        "name" : "客户搜索行",
+        "type" : "linear-layout",
+        "pluginName" : "component-common",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "display",
+            "type" : "literal",
+            "literal" : "flex"
+          }, {
+            "name" : "columnGap",
+            "type" : "literal",
+            "literal" : "8px"
+          }, {
+            "name" : "rowGap",
+            "type" : "literal",
+            "literal" : "var(--small-spacing)"
+          }, {
+            "name" : "position",
+            "type" : "literal",
+            "literal" : "relative"
+          }, {
+            "name" : "flexDirection",
+            "type" : "literal",
+            "literal" : "row"
+          }, {
+            "name" : "alignItems",
+            "type" : "literal",
+            "literal" : "flex-end"
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "enableCustomLoading",
+          "type" : "literal",
+          "literal" : ""
+        } ],
+        "children" : [ {
+          "id" : "CB58ORR0",
+          "name" : "客户关键字输入框",
+          "type" : "field",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "size",
+              "type" : "literal",
+              "literal" : {
+                "maxWidth" : "100%"
+              }
+            }, {
+              "name" : "customStyle",
+              "type" : "literal",
+              "literal" : "flex: 1 1 0%;"
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "variable",
+            "variable" : "客户关键字"
+          }, {
+            "name" : "type",
+            "type" : "literal",
+            "literal" : "text"
+          }, {
+            "name" : "placeholder",
+            "type" : "literal",
+            "literal" : "输入客户名称关键字"
+          }, {
+            "name" : "clearAsNull",
+            "type" : "literal",
+            "literal" : true
+          }, {
+            "name" : "dataValidation",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "showWordLimit",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "showPrefixIcon",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "showSuffixIcon",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "verticalCenter",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "autoHeight",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "rows",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "minRows",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "maxRows",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "showLabel",
+            "type" : "literal",
+            "literal" : "visible"
+          }, {
+            "name" : "required",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "labelAlign",
+            "type" : "literal",
+            "literal" : "inherit"
+          }, {
+            "name" : "errorMessageAlign",
+            "type" : "literal",
+            "literal" : "inherit"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "readonly",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "allowClear",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "maxLength",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "status",
+            "type" : "literal",
+            "literal" : "normal"
+          } ],
+          "children" : [ {
+            "id" : "QJK8FKP5",
+            "name" : "组件插槽3",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "AWM5AXQG",
+              "name" : "客户关键字标签文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "客户搜索"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "label"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "VVYIVNG6",
+          "name" : "搜索客户按钮",
+          "type" : "button",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "size",
+              "type" : "literal",
+              "literal" : {
+                "height" : "32px"
+              }
+            }, {
+              "name" : "fontSize",
+              "type" : "literal",
+              "literal" : "13px"
+            }, {
+              "name" : "customStyle",
+              "type" : "literal",
+              "literal" : "flex-shrink: 0;"
+            } ]
+          } ],
+          "events" : [ {
+            "id" : "BSDQ6I60",
+            "name" : "搜索客户",
+            "description" : "按关键字重新查询客户列表",
+            "moduleType" : "client",
+            "variables" : [ ],
+            "parameters" : [ ],
+            "returnValues" : [ ],
+            "diagram" : {
+              "nodes" : [ {
+                "id" : "P56NYCR1",
+                "name" : "开始",
+                "pluginName" : "",
+                "identifier" : "",
+                "attributes" : {
+                  "position" : {
+                    "x" : 300,
+                    "y" : 50
+                  }
+                },
+                "isStartPoint" : true
+              }, {
+                "id" : "RN2ONBZH",
+                "name" : "按关键字查询客户",
+                "pluginName" : "logic-core",
+                "identifier" : "call-logic",
+                "content" : {
+                  "targetLogic" : {
+                    "type" : "literal",
+                    "literal" : {
+                      "itemType" : "serverLogic",
+                      "logicName" : "查询客户列表"
+                    }
+                  },
+                  "parameters" : {
+                    "type" : "structure",
+                    "structure" : [ {
+                      "type" : "structure",
+                      "structure" : {
+                        "name" : {
+                          "type" : "literal",
+                          "literal" : "关键字"
+                        },
+                        "value" : {
+                          "type" : "expression",
+                          "expression" : "客户关键字"
+                        }
+                      }
+                    }, {
+                      "type" : "structure",
+                      "structure" : {
+                        "name" : {
+                          "type" : "literal",
+                          "literal" : "页码"
+                        },
+                        "value" : {
+                          "type" : "literal",
+                          "literal" : 1
+                        }
+                      }
+                    }, {
+                      "type" : "structure",
+                      "structure" : {
+                        "name" : {
+                          "type" : "literal",
+                          "literal" : "每页条数"
+                        },
+                        "value" : {
+                          "type" : "literal",
+                          "literal" : 50
+                        }
+                      }
+                    } ]
+                  },
+                  "returnValues" : {
+                    "type" : "structure",
+                    "structure" : [ {
+                      "type" : "structure",
+                      "structure" : {
+                        "name" : {
+                          "type" : "literal",
+                          "literal" : "客户列表"
+                        },
+                        "variable" : {
+                          "type" : "variable",
+                          "variable" : "客户列表"
+                        }
+                      }
+                    }, {
+                      "type" : "structure",
+                      "structure" : {
+                        "name" : {
+                          "type" : "literal",
+                          "literal" : "总数量"
+                        },
+                        "variable" : {
+                          "type" : "variable",
+                          "variable" : "客户总数量"
+                        }
+                      }
+                    } ]
+                  }
+                },
+                "attributes" : {
+                  "position" : {
+                    "x" : 300,
+                    "y" : 150
+                  }
+                },
+                "isStartPoint" : false
+              }, {
+                "id" : "E842IK32",
+                "name" : "客户查询结果",
+                "pluginName" : "logic-core",
+                "identifier" : "condition",
+                "content" : {
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "ifCase" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "identifier" : {
+                            "type" : "literal",
+                            "literal" : "if"
+                          },
+                          "conditions" : {
+                            "type" : "structure",
+                            "structure" : {
+                              "conditionType" : {
+                                "type" : "literal",
+                                "literal" : 0
+                              },
+                              "conditionItems" : {
+                                "type" : "structure",
+                                "structure" : [ {
+                                  "type" : "structure",
+                                  "structure" : {
+                                    "conditionType" : {
+                                      "type" : "literal",
+                                      "literal" : 2
+                                    },
+                                    "id" : {
+                                      "type" : "literal",
+                                      "literal" : "XWGU8KAF"
+                                    },
+                                    "operand" : {
+                                      "type" : "expression",
+                                      "expression" : "客户总数量"
+                                    },
+                                    "operator" : {
+                                      "type" : "literal",
+                                      "literal" : 0
+                                    },
+                                    "value" : {
+                                      "type" : "literal",
+                                      "literal" : 0
+                                    }
+                                  }
+                                } ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "elseCase" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "identifier" : {
+                            "type" : "literal",
+                            "literal" : "else"
+                          }
+                        }
+                      },
+                      "elseIfCases" : {
+                        "type" : "structure",
+                        "structure" : [ ]
+                      }
+                    }
+                  }
+                },
+                "attributes" : {
+                  "position" : {
+                    "x" : 300,
+                    "y" : 250
+                  }
+                },
+                "isStartPoint" : false
+              }, {
+                "id" : "YFZ2H0D3",
+                "name" : "提示无匹配客户",
+                "pluginName" : "component-vant",
+                "identifier" : "mobile-toast",
+                "content" : {
+                  "duration" : {
+                    "type" : "literal",
+                    "literal" : 2
+                  },
+                  "position" : {
+                    "type" : "literal",
+                    "literal" : "middle"
+                  },
+                  "forbidClick" : {
+                    "type" : "literal",
+                    "literal" : false
+                  },
+                  "message" : {
+                    "type" : "literal",
+                    "literal" : "未找到匹配的客户，请调整关键字"
+                  },
+                  "type" : {
+                    "type" : "literal",
+                    "literal" : "fail"
+                  }
+                },
+                "attributes" : {
+                  "position" : {
+                    "x" : 750,
+                    "y" : 250
+                  }
+                },
+                "isStartPoint" : false
+              } ],
+              "edges" : [ {
+                "id" : "YGC0NYS6",
+                "sourceId" : "P56NYCR1",
+                "targetId" : "RN2ONBZH",
+                "sourceAnchorId" : null,
+                "targetAnchorId" : null,
+                "sourcePosition" : "right",
+                "targetPosition" : "left"
+              }, {
+                "id" : "INOQQLUR",
+                "sourceId" : "RN2ONBZH",
+                "targetId" : "E842IK32",
+                "sourceAnchorId" : null,
+                "targetAnchorId" : null,
+                "sourcePosition" : "right",
+                "targetPosition" : "left"
+              }, {
+                "id" : "D2OZ8WKJ",
+                "sourceId" : "E842IK32",
+                "targetId" : "YFZ2H0D3",
+                "sourceAnchorId" : "if",
+                "targetAnchorId" : null,
+                "sourcePosition" : "right",
+                "targetPosition" : "left"
+              } ]
+            },
+            "targetEvent" : "click",
+            "icon" : {
+              "type" : {
+                "compare" : null
+              },
+              "key" : null,
+              "ref" : null,
+              "props" : {
+                "type" : "eventListener"
+              }
+            },
+            "scope" : {
+              "type" : "event",
+              "logicCallPath" : [ "页面事件" ],
+              "documentId" : "TDOQ0N39",
+              "platform" : "mobile",
+              "icon" : {
+                "type" : {
+                  "compare" : null
+                },
+                "key" : null,
+                "ref" : null,
+                "props" : {
+                  "type" : "eventListener"
+                }
+              },
+              "expressionCallScope" : [ {
+                "id" : "CurrentPage",
+                "name" : "CurrentPage"
+              } ],
+              "expressionCallPath" : [ "CurrentPage" ],
+              "recursion" : false
+            }
+          } ],
+          "properties" : [ {
+            "name" : "text",
+            "type" : "literal",
+            "literal" : "搜索"
+          }, {
+            "name" : "enableNavigation",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "navigationType",
+            "type" : "literal",
+            "literal" : "external"
+          }, {
+            "name" : "target",
+            "type" : "literal",
+            "literal" : "_self"
+          }, {
+            "name" : "pageNavigation",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "href",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "color",
+            "type" : "literal",
+            "literal" : "default"
+          }, {
+            "name" : "shape",
+            "type" : "literal",
+            "literal" : "default"
+          }, {
+            "name" : "variant",
+            "type" : "literal",
+            "literal" : "plain"
+          }, {
+            "name" : "showIcon",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "iconPlacement",
+            "type" : "literal",
+            "literal" : "left"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          }, {
+            "name" : "loading",
+            "type" : "expression"
+          }, {
+            "name" : "loadingType",
+            "type" : "literal",
+            "literal" : "circular"
+          } ],
+          "children" : [ ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "IFAQ5LKH",
+        "name" : "客户选择器",
+        "type" : "picker",
+        "pluginName" : "component-vant",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "datasource",
+          "type" : "variable",
+          "variable" : "客户列表"
+        }, {
+          "name" : "valueField",
+          "type" : "literal",
+          "literal" : "item.ID"
+        }, {
+          "name" : "textField",
+          "type" : "literal",
+          "literal" : "item.客户名称"
+        }, {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "客户ID"
+        }, {
+          "name" : "placeholder",
+          "type" : "literal",
+          "literal" : "请选择客户"
+        }, {
+          "name" : "showToolbar",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "toolbarPosition",
+          "type" : "literal",
+          "literal" : "top"
+        }, {
+          "name" : "optionHeight",
+          "type" : "literal",
+          "literal" : 44
+        }, {
+          "name" : "visibleOptionNum",
+          "type" : "literal",
+          "literal" : 6
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : {
+            "required" : {
+              "type" : "literal",
+              "literal" : true
+            },
+            "requiredErrorMessage" : {
+              "type" : "literal",
+              "literal" : "请选择客户"
+            }
+          }
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "readonly",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "swipeDuration",
+          "type" : "literal",
+          "literal" : 1
+        }, {
+          "name" : "confirmButtonText",
+          "type" : "literal",
+          "literal" : "确认"
+        }, {
+          "name" : "cancelButtonText",
+          "type" : "literal",
+          "literal" : "取消"
+        } ],
+        "children" : [ {
+          "id" : "I02ZJ1NV",
+          "name" : "组件插槽4",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "B5RJ21G0",
+            "name" : "客户选择标签文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "客户"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        }, {
+          "id" : "VHPIPKST",
+          "name" : "组件插槽5",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "XOYF0P5E",
+            "name" : "文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "请选择"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "title"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "DH9J5GWE",
+        "name" : "工单类型单选组",
+        "type" : "radio-group",
+        "pluginName" : "component-vant",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "datasource",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "valueField",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "工单类型"
+        }, {
+          "name" : "direction",
+          "type" : "literal",
+          "literal" : "horizontal"
+        }, {
+          "name" : "horizontalWrap",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "iconSize",
+          "type" : "literal",
+          "literal" : 20
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : {
+            "required" : {
+              "type" : "literal",
+              "literal" : true
+            },
+            "requiredErrorMessage" : {
+              "type" : "literal",
+              "literal" : "请选择工单类型"
+            }
+          }
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "horizontalContentAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        } ],
+        "children" : [ {
+          "id" : "W8UMHA9L",
+          "name" : "组件插槽6",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "DC0C9R76",
+            "name" : "工单类型标签文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "工单类型"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        }, {
+          "id" : "PFAE0W7N",
+          "name" : "工单类型选项-故障报修",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "故障报修"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "Z0HISFE7",
+            "name" : "组件插槽7",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "FJOJT8CF",
+              "name" : "工单类型选项文本-故障报修",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "故障报修"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "XWDJN371",
+          "name" : "工单类型选项-咨询",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "咨询"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "IR1V4OYV",
+            "name" : "组件插槽8",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "X6CRYJZ5",
+              "name" : "工单类型选项文本-咨询",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "咨询"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "ZK40OTSB",
+          "name" : "工单类型选项-投诉",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "投诉"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "ZTYM3WQF",
+            "name" : "组件插槽9",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "UVJBO4VN",
+              "name" : "工单类型选项文本-投诉",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "投诉"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "YLEHN5WY",
+          "name" : "工单类型选项-退换货",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "退换货"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "PD8L60E0",
+            "name" : "组件插槽10",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "NPZLOM0V",
+              "name" : "工单类型选项文本-退换货",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "退换货"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "R21WBSV7",
+          "name" : "工单类型选项-需求建议",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "需求建议"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "EHRT7OOW",
+            "name" : "组件插槽11",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "AIVMF2WY",
+              "name" : "工单类型选项文本-需求建议",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "需求建议"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "X5TUWE91",
+        "name" : "优先级单选组",
+        "type" : "radio-group",
+        "pluginName" : "component-vant",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "datasource",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "valueField",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "优先级"
+        }, {
+          "name" : "direction",
+          "type" : "literal",
+          "literal" : "horizontal"
+        }, {
+          "name" : "horizontalWrap",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "iconSize",
+          "type" : "literal",
+          "literal" : 20
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : {
+            "required" : {
+              "type" : "literal",
+              "literal" : true
+            },
+            "requiredErrorMessage" : {
+              "type" : "literal",
+              "literal" : "请选择优先级"
+            }
+          }
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "horizontalContentAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        } ],
+        "children" : [ {
+          "id" : "FKTCVZJD",
+          "name" : "组件插槽12",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "N1Y1O7F5",
+            "name" : "优先级标签文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "优先级"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        }, {
+          "id" : "P8E8RVXZ",
+          "name" : "优先级选项-紧急",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "紧急"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "Y3DFFI9V",
+            "name" : "组件插槽13",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "R1ULVIBH",
+              "name" : "优先级选项文本-紧急",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "紧急"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "AIOK29MO",
+          "name" : "优先级选项-高",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "高"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "VV3YOB5Z",
+            "name" : "组件插槽14",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "LZAB2OQB",
+              "name" : "优先级选项文本-高",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "高"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "ODOQ0UW0",
+          "name" : "优先级选项-中",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "中"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "HTA4OMHC",
+            "name" : "组件插槽15",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "F1Z2TVG1",
+              "name" : "优先级选项文本-中",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "中"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        }, {
+          "id" : "GC34GOEN",
+          "name" : "优先级选项-低",
+          "type" : "radio-group-item",
+          "pluginName" : "component-vant",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "right" : "8px"
+              }
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "value",
+            "type" : "literal",
+            "literal" : "低"
+          }, {
+            "name" : "disabled",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ {
+            "id" : "ABLA575Z",
+            "name" : "组件插槽16",
+            "type" : "slot",
+            "pluginName" : "component-common",
+            "styles" : [ ],
+            "events" : [ ],
+            "properties" : [ ],
+            "children" : [ {
+              "id" : "YUM29X3I",
+              "name" : "优先级选项文本-低",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "13px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "低"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            },
+            "slotTarget" : "text"
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "N6MVWKK3",
+        "name" : "标题输入框",
+        "type" : "field",
+        "pluginName" : "component-vant",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "maxWidth" : "100%"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "标题"
+        }, {
+          "name" : "type",
+          "type" : "literal",
+          "literal" : "text"
+        }, {
+          "name" : "placeholder",
+          "type" : "literal",
+          "literal" : "请输入工单标题"
+        }, {
+          "name" : "clearAsNull",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : {
+            "required" : {
+              "type" : "literal",
+              "literal" : true
+            },
+            "requiredErrorMessage" : {
+              "type" : "literal",
+              "literal" : "请输入工单标题"
+            }
+          }
+        }, {
+          "name" : "showWordLimit",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showPrefixIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showSuffixIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "autoHeight",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "rows",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "minRows",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "maxRows",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "readonly",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "allowClear",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "maxLength",
+          "type" : "literal",
+          "literal" : 100
+        }, {
+          "name" : "status",
+          "type" : "literal",
+          "literal" : "normal"
+        } ],
+        "children" : [ {
+          "id" : "XGXAN260",
+          "name" : "组件插槽17",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "X7BNFD5P",
+            "name" : "标题标签文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "标题"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "MPYUJ2ET",
+        "name" : "问题描述输入框",
+        "type" : "field",
+        "pluginName" : "component-vant",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "maxWidth" : "100%"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "问题描述"
+        }, {
+          "name" : "type",
+          "type" : "literal",
+          "literal" : "textarea"
+        }, {
+          "name" : "placeholder",
+          "type" : "literal",
+          "literal" : "请描述问题或需求"
+        }, {
+          "name" : "clearAsNull",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : {
+            "required" : {
+              "type" : "literal",
+              "literal" : true
+            },
+            "requiredErrorMessage" : {
+              "type" : "literal",
+              "literal" : "请填写问题描述"
+            }
+          }
+        }, {
+          "name" : "showWordLimit",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showPrefixIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showSuffixIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "autoHeight",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "rows",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "minRows",
+          "type" : "literal",
+          "literal" : 3
+        }, {
+          "name" : "maxRows",
+          "type" : "literal",
+          "literal" : 6
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "readonly",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "allowClear",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "maxLength",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "status",
+          "type" : "literal",
+          "literal" : "normal"
+        } ],
+        "children" : [ {
+          "id" : "B8CMIY78",
+          "name" : "组件插槽18",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "BA9CUIGN",
+            "name" : "问题描述标签文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "问题描述"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "TZGEPZS3",
+        "name" : "期望完成时间选择器",
+        "type" : "date-picker",
+        "pluginName" : "component-vant",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "picker",
+          "type" : "literal",
+          "literal" : "dateTime"
+        }, {
+          "name" : "isRangeSelect",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "dateColumnsType",
+          "type" : "literal",
+          "literal" : "date"
+        }, {
+          "name" : "timeColumnsType",
+          "type" : "literal",
+          "literal" : "hourMinute"
+        }, {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "期望完成时间"
+        }, {
+          "name" : "startValue",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "finishValue",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "minDate",
+          "type" : "literal",
+          "literal" : "2016-01-01"
+        }, {
+          "name" : "maxDate",
+          "type" : "literal",
+          "literal" : "2036-12-31"
+        }, {
+          "name" : "placeholder",
+          "type" : "literal",
+          "literal" : "请选择期望完成时间"
+        }, {
+          "name" : "startPlaceholder",
+          "type" : "literal",
+          "literal" : "请选择开始日期"
+        }, {
+          "name" : "finishPlaceholder",
+          "type" : "literal",
+          "literal" : "请选择结束日期"
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : {
+            "required" : {
+              "type" : "literal",
+              "literal" : true
+            },
+            "requiredErrorMessage" : {
+              "type" : "literal",
+              "literal" : "请选择期望完成时间"
+            }
+          }
+        }, {
+          "name" : "format",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "toolbarPosition",
+          "type" : "literal",
+          "literal" : "top"
+        }, {
+          "name" : "title",
+          "type" : "literal",
+          "literal" : "期望完成时间"
+        }, {
+          "name" : "confirmButtonText",
+          "type" : "literal",
+          "literal" : "确认"
+        }, {
+          "name" : "cancelButtonText",
+          "type" : "literal",
+          "literal" : "取消"
+        }, {
+          "name" : "optionHeight",
+          "type" : "literal",
+          "literal" : "44"
+        }, {
+          "name" : "visibleOptionNum",
+          "type" : "literal",
+          "literal" : "6"
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "readonly",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        } ],
+        "children" : [ {
+          "id" : "ASYDXQYE",
+          "name" : "组件插槽19",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "S9IX250E",
+            "name" : "期望完成时间标签文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "期望完成时间"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "PP0A7IRN",
+        "name" : "附件上传",
+        "type" : "uploader",
+        "pluginName" : "component-vant",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "width" : "100%",
+              "maxWidth" : "100%"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "valueType",
+          "type" : "literal",
+          "literal" : "fileObjectList"
+        }, {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "附件列表"
+        }, {
+          "name" : "nameField",
+          "type" : "literal",
+          "literal" : "item.文件名"
+        }, {
+          "name" : "urlField",
+          "type" : "literal",
+          "literal" : "item.文件地址"
+        }, {
+          "name" : "sizeField",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "typeField",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "accept",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "uploadFolder",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "maxCount",
+          "type" : "literal",
+          "literal" : 5
+        }, {
+          "name" : "maxSize",
+          "type" : "literal",
+          "literal" : "20MB"
+        }, {
+          "name" : "replaceWithNew",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "showUploadButton",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "previewSize",
+          "type" : "literal",
+          "literal" : "80px"
+        }, {
+          "name" : "imageFit",
+          "type" : "literal",
+          "literal" : "cover"
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "multiple",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "deletable",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "previewImage",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "reupload",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "readonly",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "visible"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "horizontalContentAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : ""
+        } ],
+        "children" : [ {
+          "id" : "VK2S6MRX",
+          "name" : "组件插槽20",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "ZFAQ739X",
+            "name" : "附件标签文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "附件"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "QDJR9LRX",
+      "name" : "提交工单按钮",
+      "type" : "button",
+      "pluginName" : "component-vant",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : {
+            "width" : "100%",
+            "height" : "44px"
+          }
+        }, {
+          "name" : "margin",
+          "type" : "literal",
+          "literal" : {
+            "top" : "4px"
+          }
+        }, {
+          "name" : "fontSize",
+          "type" : "literal",
+          "literal" : "15px"
+        } ]
+      } ],
+      "events" : [ {
+        "id" : "MOV6VLHD",
+        "name" : "提交工单",
+        "description" : "校验提交表单并提交工单",
+        "moduleType" : "client",
+        "variables" : [ {
+          "dataType" : {
+            "typeName" : "Boolean"
+          },
+          "id" : "ZOXRK9XW",
+          "name" : "isValid"
+        }, {
+          "dataType" : {
+            "typeName" : "String"
+          },
+          "id" : "VLQ115XG",
+          "name" : "errorMessage"
+        }, {
+          "dataType" : {
+            "typeName" : "Boolean"
+          },
+          "id" : "K4870I2B",
+          "name" : "success"
+        }, {
+          "dataType" : {
+            "typeName" : "String"
+          },
+          "id" : "IYLUHQK9",
+          "name" : "message"
+        } ],
+        "parameters" : [ ],
+        "returnValues" : [ ],
+        "diagram" : {
+          "nodes" : [ {
+            "id" : "TP776SFT",
+            "name" : "开始",
+            "pluginName" : "",
+            "identifier" : "",
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 50
+              }
+            },
+            "isStartPoint" : true
+          }, {
+            "id" : "SK5430ZM",
+            "name" : "标记提交中",
+            "pluginName" : "logic-core",
+            "identifier" : "assignment",
+            "content" : {
+              "assignmentDatas" : {
+                "type" : "literal",
+                "literal" : [ {
+                  "id" : "ENFMC6ON",
+                  "target" : {
+                    "type" : "variable",
+                    "variable" : "提交中"
+                  },
+                  "value" : {
+                    "type" : "literal",
+                    "literal" : true
+                  }
+                } ]
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 150
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "JTQZREE2",
+            "name" : "校验提交表单",
+            "pluginName" : "logic-core",
+            "identifier" : "call-logic",
+            "content" : {
+              "targetLogic" : {
+                "type" : "literal",
+                "literal" : {
+                  "itemType" : "externalLogic",
+                  "logicName" : "提交表单.validate"
+                }
+              },
+              "returnValues" : {
+                "type" : "structure",
+                "structure" : [ {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "isValid"
+                    },
+                    "variable" : {
+                      "type" : "variable",
+                      "variable" : "isValid"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "errorMessage"
+                    },
+                    "variable" : {
+                      "type" : "variable",
+                      "variable" : "errorMessage"
+                    }
+                  }
+                } ]
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 250
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "YO9LL7CU",
+            "name" : "表单校验结果",
+            "pluginName" : "logic-core",
+            "identifier" : "condition",
+            "content" : {
+              "conditions" : {
+                "type" : "structure",
+                "structure" : {
+                  "ifCase" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "identifier" : {
+                        "type" : "literal",
+                        "literal" : "if"
+                      },
+                      "conditions" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 0
+                          },
+                          "conditionItems" : {
+                            "type" : "structure",
+                            "structure" : [ {
+                              "type" : "structure",
+                              "structure" : {
+                                "conditionType" : {
+                                  "type" : "literal",
+                                  "literal" : 2
+                                },
+                                "id" : {
+                                  "type" : "literal",
+                                  "literal" : "Y7AEBDI2"
+                                },
+                                "operand" : {
+                                  "type" : "expression",
+                                  "expression" : "isValid"
+                                },
+                                "operator" : {
+                                  "type" : "literal",
+                                  "literal" : 0
+                                },
+                                "value" : {
+                                  "type" : "literal",
+                                  "literal" : false
+                                }
+                              }
+                            } ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "elseCase" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "identifier" : {
+                        "type" : "literal",
+                        "literal" : "else"
+                      }
+                    }
+                  },
+                  "elseIfCases" : {
+                    "type" : "structure",
+                    "structure" : [ ]
+                  }
+                }
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 350
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "MAX1QEKO",
+            "name" : "提示校验失败",
+            "pluginName" : "component-vant",
+            "identifier" : "mobile-toast",
+            "content" : {
+              "duration" : {
+                "type" : "literal",
+                "literal" : 2
+              },
+              "position" : {
+                "type" : "literal",
+                "literal" : "middle"
+              },
+              "forbidClick" : {
+                "type" : "literal",
+                "literal" : false
+              },
+              "message" : {
+                "type" : "expression",
+                "expression" : "If(String.IsNullOrEmpty(errorMessage), \"请完善必填信息\", errorMessage)"
+              },
+              "type" : {
+                "type" : "literal",
+                "literal" : "fail"
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 750,
+                "y" : 350
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "SY7LBUTK",
+            "name" : "提交工单",
+            "pluginName" : "logic-core",
+            "identifier" : "call-logic",
+            "content" : {
+              "targetLogic" : {
+                "type" : "literal",
+                "literal" : {
+                  "itemType" : "serverLogic",
+                  "logicName" : "提交工单"
+                }
+              },
+              "parameters" : {
+                "type" : "structure",
+                "structure" : [ {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "客户ID"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "客户ID"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "工单类型"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "工单类型"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "优先级"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "优先级"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "来源渠道"
+                    },
+                    "value" : {
+                      "type" : "literal",
+                      "literal" : "移动端"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "标题"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "标题"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "问题描述"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "问题描述"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "期望完成时间"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "期望完成时间"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "附件列表"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "附件列表"
+                    }
+                  }
+                } ]
+              },
+              "returnValues" : {
+                "type" : "structure",
+                "structure" : [ {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "success"
+                    },
+                    "variable" : {
+                      "type" : "variable",
+                      "variable" : "success"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "message"
+                    },
+                    "variable" : {
+                      "type" : "variable",
+                      "variable" : "message"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "工单ID"
+                    },
+                    "variable" : {
+                      "type" : "variable",
+                      "variable" : "新工单ID"
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "name" : {
+                      "type" : "literal",
+                      "literal" : "工单编号"
+                    },
+                    "variable" : {
+                      "type" : "variable",
+                      "variable" : "新工单编号"
+                    }
+                  }
+                } ]
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 750,
+                "y" : 450
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "KJZQSM3W",
+            "name" : "结束提交状态",
+            "pluginName" : "logic-core",
+            "identifier" : "assignment",
+            "content" : {
+              "assignmentDatas" : {
+                "type" : "literal",
+                "literal" : [ {
+                  "id" : "E4GF66OM",
+                  "target" : {
+                    "type" : "variable",
+                    "variable" : "提交中"
+                  },
+                  "value" : {
+                    "type" : "literal",
+                    "literal" : false
+                  }
+                } ]
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 790
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "BRBY459N",
+            "name" : "提交结果",
+            "pluginName" : "logic-core",
+            "identifier" : "condition",
+            "content" : {
+              "conditions" : {
+                "type" : "structure",
+                "structure" : {
+                  "ifCase" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "identifier" : {
+                        "type" : "literal",
+                        "literal" : "if"
+                      },
+                      "conditions" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 0
+                          },
+                          "conditionItems" : {
+                            "type" : "structure",
+                            "structure" : [ {
+                              "type" : "structure",
+                              "structure" : {
+                                "conditionType" : {
+                                  "type" : "literal",
+                                  "literal" : 2
+                                },
+                                "id" : {
+                                  "type" : "literal",
+                                  "literal" : "JVRCVTH5"
+                                },
+                                "operand" : {
+                                  "type" : "expression",
+                                  "expression" : "success"
+                                },
+                                "operator" : {
+                                  "type" : "literal",
+                                  "literal" : 0
+                                },
+                                "value" : {
+                                  "type" : "literal",
+                                  "literal" : true
+                                }
+                              }
+                            } ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "elseCase" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "identifier" : {
+                        "type" : "literal",
+                        "literal" : "else"
+                      }
+                    }
+                  },
+                  "elseIfCases" : {
+                    "type" : "structure",
+                    "structure" : [ ]
+                  }
+                }
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 750,
+                "y" : 550
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "SP6L9TXH",
+            "name" : "提示提交成功",
+            "pluginName" : "component-vant",
+            "identifier" : "mobile-toast",
+            "content" : {
+              "duration" : {
+                "type" : "literal",
+                "literal" : 2
+              },
+              "position" : {
+                "type" : "literal",
+                "literal" : "middle"
+              },
+              "forbidClick" : {
+                "type" : "literal",
+                "literal" : false
+              },
+              "message" : {
+                "type" : "expression",
+                "expression" : "\"提交成功，工单编号：\" & 新工单编号"
+              },
+              "type" : {
+                "type" : "literal",
+                "literal" : "success"
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 1200,
+                "y" : 550
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "NLSE2RPG",
+            "name" : "提示提交失败",
+            "pluginName" : "component-vant",
+            "identifier" : "mobile-toast",
+            "content" : {
+              "duration" : {
+                "type" : "literal",
+                "literal" : 2
+              },
+              "position" : {
+                "type" : "literal",
+                "literal" : "middle"
+              },
+              "forbidClick" : {
+                "type" : "literal",
+                "literal" : false
+              },
+              "message" : {
+                "type" : "expression",
+                "expression" : "If(String.IsNullOrEmpty(message), \"提交失败，请稍后重试\", message)"
+              },
+              "type" : {
+                "type" : "literal",
+                "literal" : "fail"
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 1200,
+                "y" : 650
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "A6MFXV41",
+            "name" : "跳转我的工单",
+            "pluginName" : "logic-ui-interaction",
+            "identifier" : "destination",
+            "content" : {
+              "windowTarget" : {
+                "type" : "literal",
+                "literal" : "_self"
+              },
+              "navigationType" : {
+                "type" : "literal",
+                "literal" : "internal"
+              },
+              "pageNavigation" : {
+                "type" : "structure",
+                "structure" : {
+                  "page" : {
+                    "type" : "literal",
+                    "literal" : "/移动端/我的工单"
+                  }
+                }
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 1200,
+                "y" : 650
+              }
+            },
+            "isStartPoint" : false
+          } ],
+          "edges" : [ {
+            "id" : "ZLKW8YZK",
+            "sourceId" : "TP776SFT",
+            "targetId" : "SK5430ZM",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "X77Z5HGP",
+            "sourceId" : "SK5430ZM",
+            "targetId" : "JTQZREE2",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "T0D8AESJ",
+            "sourceId" : "JTQZREE2",
+            "targetId" : "YO9LL7CU",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "NK6NOVJK",
+            "sourceId" : "YO9LL7CU",
+            "targetId" : "MAX1QEKO",
+            "sourceAnchorId" : "if",
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "IF34UAIH",
+            "sourceId" : "YO9LL7CU",
+            "targetId" : "SY7LBUTK",
+            "sourceAnchorId" : "else",
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "POMJZGSE",
+            "sourceId" : "SY7LBUTK",
+            "targetId" : "BRBY459N",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "QG9H96FF",
+            "sourceId" : "BRBY459N",
+            "targetId" : "SP6L9TXH",
+            "sourceAnchorId" : "if",
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "L9XUQ12S",
+            "sourceId" : "SP6L9TXH",
+            "targetId" : "A6MFXV41",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "IWOXB474",
+            "sourceId" : "BRBY459N",
+            "targetId" : "NLSE2RPG",
+            "sourceAnchorId" : "else",
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "DB2EKLTW",
+            "sourceId" : "MAX1QEKO",
+            "targetId" : "KJZQSM3W",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "ZCSP0826",
+            "sourceId" : "A6MFXV41",
+            "targetId" : "KJZQSM3W",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "QZ9XJJU1",
+            "sourceId" : "NLSE2RPG",
+            "targetId" : "KJZQSM3W",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          } ]
+        },
+        "targetEvent" : "click",
+        "icon" : {
+          "type" : {
+            "compare" : null
+          },
+          "key" : null,
+          "ref" : null,
+          "props" : {
+            "type" : "eventListener"
+          }
+        },
+        "scope" : {
+          "type" : "event",
+          "logicCallPath" : [ "页面事件" ],
+          "documentId" : "TDOQ0N39",
+          "platform" : "mobile",
+          "icon" : {
+            "type" : {
+              "compare" : null
+            },
+            "key" : null,
+            "ref" : null,
+            "props" : {
+              "type" : "eventListener"
+            }
+          },
+          "expressionCallScope" : [ {
+            "id" : "CurrentPage",
+            "name" : "CurrentPage"
+          } ],
+          "expressionCallPath" : [ "CurrentPage" ],
+          "recursion" : false
+        }
+      } ],
+      "properties" : [ {
+        "name" : "text",
+        "type" : "literal",
+        "literal" : "提交工单"
+      }, {
+        "name" : "enableNavigation",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "navigationType",
+        "type" : "literal",
+        "literal" : "external"
+      }, {
+        "name" : "target",
+        "type" : "literal",
+        "literal" : "_self"
+      }, {
+        "name" : "pageNavigation",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "href",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "color",
+        "type" : "literal",
+        "literal" : "primary"
+      }, {
+        "name" : "shape",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "variant",
+        "type" : "literal",
+        "literal" : "solid"
+      }, {
+        "name" : "showIcon",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "iconPlacement",
+        "type" : "literal",
+        "literal" : "left"
+      }, {
+        "name" : "disabled",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "loading",
+        "type" : "expression",
+        "expression" : "提交中"
+      }, {
+        "name" : "loadingType",
+        "type" : "literal",
+        "literal" : "circular"
+      } ],
+      "children" : [ ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    } ],
+    "description" : "",
+    "visible" : {
+      "type" : "expression",
+      "expression" : ""
+    }
+  },
+  "platform" : "mobile",
+  "variables" : [ {
+    "id" : "KWQULCPS",
+    "name" : "客户列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "PZ1CI5CS",
+    "name" : "客户总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "CG7UW0H6",
+    "name" : "客户关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "LUJFZZC3",
+    "name" : "客户ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "JL43B7GT",
+    "name" : "工单类型",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "Q2EINRV7",
+    "name" : "优先级",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "WGAVIF96",
+    "name" : "标题",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "POVH1FIM",
+    "name" : "问题描述",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "GHAAATDO",
+    "name" : "期望完成时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "SKCLT3O8",
+    "name" : "附件列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "附件输入"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "HZ1D54JC",
+    "name" : "提交中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "TWRG3YGV",
+    "name" : "新工单ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "HTQ9KG4P",
+    "name" : "新工单编号",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "events" : [ {
+    "id" : "UQBD836P",
+    "name" : "页面加载",
+    "description" : "提交页加载后拉取可选客户列表",
+    "moduleType" : "client",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "diagram" : {
+      "nodes" : [ {
+        "id" : "SEA4YRAP",
+        "name" : "开始",
+        "pluginName" : "",
+        "identifier" : "",
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 50
+          }
+        },
+        "isStartPoint" : true
+      }, {
+        "id" : "YQD9450G",
+        "name" : "加载客户列表",
+        "pluginName" : "logic-core",
+        "identifier" : "call-logic",
+        "content" : {
+          "targetLogic" : {
+            "type" : "literal",
+            "literal" : {
+              "itemType" : "serverLogic",
+              "logicName" : "查询客户列表"
+            }
+          },
+          "parameters" : {
+            "type" : "structure",
+            "structure" : [ {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "关键字"
+                },
+                "value" : {
+                  "type" : "expression",
+                  "expression" : "\"\""
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "页码"
+                },
+                "value" : {
+                  "type" : "literal",
+                  "literal" : 1
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "每页条数"
+                },
+                "value" : {
+                  "type" : "literal",
+                  "literal" : 50
+                }
+              }
+            } ]
+          },
+          "returnValues" : {
+            "type" : "structure",
+            "structure" : [ {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "客户列表"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "客户列表"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "总数量"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "客户总数量"
+                }
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 150
+          }
+        },
+        "isStartPoint" : false
+      } ],
+      "edges" : [ {
+        "id" : "V6OUILF4",
+        "sourceId" : "SEA4YRAP",
+        "targetId" : "YQD9450G",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      } ]
+    },
+    "targetEvent" : "entered",
+    "icon" : {
+      "type" : {
+        "compare" : null
+      },
+      "key" : null,
+      "ref" : null,
+      "props" : {
+        "type" : "eventListener"
+      }
+    },
+    "scope" : {
+      "type" : "event",
+      "logicCallPath" : [ "页面事件" ],
+      "documentId" : "TDOQ0N39",
+      "platform" : "mobile",
+      "icon" : {
+        "type" : {
+          "compare" : null
+        },
+        "key" : null,
+        "ref" : null,
+        "props" : {
+          "type" : "eventListener"
+        }
+      },
+      "expressionCallScope" : [ {
+        "id" : "CurrentPage",
+        "name" : "CurrentPage"
+      } ],
+      "expressionCallPath" : [ "CurrentPage" ],
+      "recursion" : false
+    }
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "KWQULCPS", "PZ1CI5CS", "CG7UW0H6", "LUJFZZC3", "JL43B7GT", "Q2EINRV7", "WGAVIF96", "POVH1FIM", "GHAAATDO", "SKCLT3O8", "HZ1D54JC", "TWRG3YGV", "HTQ9KG4P" ],
+    "groups" : [ ]
+  },
+  "description" : "移动端工单提交页：选择客户并填写工单信息后提交",
+  "externalCssFiles" : [ ],
+  "externalJsFiles" : [ ],
+  "type" : "page",
+  "url" : "/m/ticket-submit",
+  "permissions" : {
+    "page" : {
+      "access" : [ "/提交工单" ]
+    },
+    "components" : { }
+  },
+  "masterPage" : "/移动端/工单母版"
+}

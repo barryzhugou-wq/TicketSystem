@@ -1,0 +1,2434 @@
+{
+  "id" : "O3P0I8PC",
+  "name" : "待办任务",
+  "rootElement" : {
+    "id" : "AG959J0W",
+    "name" : "待办任务根布局",
+    "type" : "linear-layout",
+    "pluginName" : "component-common",
+    "styles" : [ {
+      "pseudo" : "none",
+      "target" : "root",
+      "cssProperties" : [ {
+        "name" : "display",
+        "type" : "literal",
+        "literal" : "flex"
+      }, {
+        "name" : "columnGap",
+        "type" : "literal",
+        "literal" : "var(--small-spacing)"
+      }, {
+        "name" : "rowGap",
+        "type" : "literal",
+        "literal" : "10px"
+      }, {
+        "name" : "position",
+        "type" : "literal",
+        "literal" : "relative"
+      }, {
+        "name" : "size",
+        "type" : "literal",
+        "literal" : {
+          "minHeight" : "100%"
+        }
+      }, {
+        "name" : "padding",
+        "type" : "literal",
+        "literal" : {
+          "top" : "12px",
+          "right" : "12px",
+          "bottom" : "12px",
+          "left" : "12px"
+        }
+      }, {
+        "name" : "flexDirection",
+        "type" : "literal",
+        "literal" : "column"
+      }, {
+        "name" : "backgroundColor",
+        "type" : "literal",
+        "literal" : "var(--color-page-background)"
+      }, {
+        "name" : "customStyle",
+        "type" : "literal",
+        "literal" : "box-sizing: border-box;"
+      } ]
+    } ],
+    "events" : [ ],
+    "properties" : [ {
+      "name" : "loading",
+      "type" : "literal",
+      "literal" : ""
+    }, {
+      "name" : "enableCustomLoading",
+      "type" : "literal",
+      "literal" : ""
+    } ],
+    "children" : [ {
+      "id" : "II96ZQQH",
+      "name" : "待办任务标题行",
+      "type" : "linear-layout",
+      "pluginName" : "component-common",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "display",
+          "type" : "literal",
+          "literal" : "flex"
+        }, {
+          "name" : "columnGap",
+          "type" : "literal",
+          "literal" : "var(--small-spacing)"
+        }, {
+          "name" : "rowGap",
+          "type" : "literal",
+          "literal" : "var(--small-spacing)"
+        }, {
+          "name" : "position",
+          "type" : "literal",
+          "literal" : "relative"
+        }, {
+          "name" : "flexDirection",
+          "type" : "literal",
+          "literal" : "row"
+        }, {
+          "name" : "justifyContent",
+          "type" : "literal",
+          "literal" : "space-between"
+        }, {
+          "name" : "alignItems",
+          "type" : "literal",
+          "literal" : "center"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "enableCustomLoading",
+        "type" : "literal",
+        "literal" : ""
+      } ],
+      "children" : [ {
+        "id" : "N3GEOHGX",
+        "name" : "待办任务标题文本",
+        "type" : "text",
+        "pluginName" : "component-common",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "maxWidth" : "100%"
+            }
+          }, {
+            "name" : "color",
+            "type" : "literal",
+            "literal" : "var(--color-text)"
+          }, {
+            "name" : "fontSize",
+            "type" : "literal",
+            "literal" : "18px"
+          }, {
+            "name" : "customStyle",
+            "type" : "literal",
+            "literal" : "font-weight: 600;"
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "text",
+          "type" : "literal",
+          "literal" : "我的待办"
+        }, {
+          "name" : "format",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "wrapping",
+          "type" : "literal",
+          "literal" : "normal"
+        }, {
+          "name" : "ellipsis",
+          "type" : "literal",
+          "literal" : false
+        } ],
+        "children" : [ ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "DOD64BNN",
+        "name" : "待办任务数量文本",
+        "type" : "text",
+        "pluginName" : "component-common",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "maxWidth" : "100%"
+            }
+          }, {
+            "name" : "color",
+            "type" : "literal",
+            "literal" : "rgb(140, 140, 140)"
+          }, {
+            "name" : "fontSize",
+            "type" : "literal",
+            "literal" : "12px"
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "text",
+          "type" : "expression",
+          "expression" : "\"共 \" & Convert.ToString(总数量) & \" 条\""
+        }, {
+          "name" : "format",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "wrapping",
+          "type" : "literal",
+          "literal" : "normal"
+        }, {
+          "name" : "ellipsis",
+          "type" : "literal",
+          "literal" : false
+        } ],
+        "children" : [ ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "Z7160CZ0",
+        "name" : "刷新待办按钮",
+        "type" : "button",
+        "pluginName" : "component-vant",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "height" : "30px"
+            }
+          }, {
+            "name" : "fontSize",
+            "type" : "literal",
+            "literal" : "13px"
+          } ]
+        } ],
+        "events" : [ {
+          "id" : "QQ9VNI98",
+          "name" : "刷新待办",
+          "description" : "手动刷新待办任务列表",
+          "moduleType" : "client",
+          "variables" : [ ],
+          "parameters" : [ ],
+          "returnValues" : [ ],
+          "diagram" : {
+            "nodes" : [ {
+              "id" : "ZEXDNGKL",
+              "name" : "开始",
+              "pluginName" : "",
+              "identifier" : "",
+              "attributes" : {
+                "position" : {
+                  "x" : 300,
+                  "y" : 50
+                }
+              },
+              "isStartPoint" : true
+            }, {
+              "id" : "E07RP5BN",
+              "name" : "重置待办分页",
+              "pluginName" : "logic-core",
+              "identifier" : "assignment",
+              "content" : {
+                "assignmentDatas" : {
+                  "type" : "literal",
+                  "literal" : [ {
+                    "id" : "MSSZPL98",
+                    "target" : {
+                      "type" : "variable",
+                      "variable" : "当前条数"
+                    },
+                    "value" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    }
+                  }, {
+                    "id" : "BCKYBQ3U",
+                    "target" : {
+                      "type" : "variable",
+                      "variable" : "列表状态"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "\"\""
+                    }
+                  } ]
+                }
+              },
+              "attributes" : {
+                "position" : {
+                  "x" : 300,
+                  "y" : 150
+                }
+              },
+              "isStartPoint" : false
+            }, {
+              "id" : "G8G9ZQUQ",
+              "name" : "加载待办任务",
+              "pluginName" : "logic-core",
+              "identifier" : "call-logic",
+              "content" : {
+                "targetLogic" : {
+                  "type" : "literal",
+                  "literal" : {
+                    "itemType" : "externalLogic",
+                    "logicName" : "加载待办任务"
+                  }
+                }
+              },
+              "attributes" : {
+                "position" : {
+                  "x" : 300,
+                  "y" : 250
+                }
+              },
+              "isStartPoint" : false
+            } ],
+            "edges" : [ {
+              "id" : "WMH2H1PS",
+              "sourceId" : "ZEXDNGKL",
+              "targetId" : "E07RP5BN",
+              "sourceAnchorId" : null,
+              "targetAnchorId" : null,
+              "sourcePosition" : "right",
+              "targetPosition" : "left"
+            }, {
+              "id" : "XIHMSMSF",
+              "sourceId" : "E07RP5BN",
+              "targetId" : "G8G9ZQUQ",
+              "sourceAnchorId" : null,
+              "targetAnchorId" : null,
+              "sourcePosition" : "right",
+              "targetPosition" : "left"
+            } ]
+          },
+          "targetEvent" : "click",
+          "icon" : {
+            "type" : {
+              "compare" : null
+            },
+            "key" : null,
+            "ref" : null,
+            "props" : {
+              "type" : "eventListener"
+            }
+          },
+          "scope" : {
+            "type" : "event",
+            "logicCallPath" : [ "页面事件" ],
+            "documentId" : "O3P0I8PC",
+            "platform" : "mobile",
+            "icon" : {
+              "type" : {
+                "compare" : null
+              },
+              "key" : null,
+              "ref" : null,
+              "props" : {
+                "type" : "eventListener"
+              }
+            },
+            "expressionCallScope" : [ {
+              "id" : "CurrentPage",
+              "name" : "CurrentPage"
+            } ],
+            "expressionCallPath" : [ "CurrentPage" ],
+            "recursion" : false
+          }
+        } ],
+        "properties" : [ {
+          "name" : "text",
+          "type" : "literal",
+          "literal" : "刷新"
+        }, {
+          "name" : "enableNavigation",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "navigationType",
+          "type" : "literal",
+          "literal" : "external"
+        }, {
+          "name" : "target",
+          "type" : "literal",
+          "literal" : "_self"
+        }, {
+          "name" : "pageNavigation",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "href",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "color",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "shape",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "variant",
+          "type" : "literal",
+          "literal" : "plain"
+        }, {
+          "name" : "showIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "iconPlacement",
+          "type" : "literal",
+          "literal" : "left"
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "expression"
+        }, {
+          "name" : "loadingType",
+          "type" : "literal",
+          "literal" : "circular"
+        } ],
+        "children" : [ ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "FFP90SQA",
+      "name" : "待办搜索行",
+      "type" : "linear-layout",
+      "pluginName" : "component-common",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "display",
+          "type" : "literal",
+          "literal" : "flex"
+        }, {
+          "name" : "columnGap",
+          "type" : "literal",
+          "literal" : "8px"
+        }, {
+          "name" : "rowGap",
+          "type" : "literal",
+          "literal" : "var(--small-spacing)"
+        }, {
+          "name" : "position",
+          "type" : "literal",
+          "literal" : "relative"
+        }, {
+          "name" : "flexDirection",
+          "type" : "literal",
+          "literal" : "row"
+        }, {
+          "name" : "alignItems",
+          "type" : "literal",
+          "literal" : "flex-end"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "enableCustomLoading",
+        "type" : "literal",
+        "literal" : ""
+      } ],
+      "children" : [ {
+        "id" : "RNEIUI1Z",
+        "name" : "待办关键字输入框",
+        "type" : "field",
+        "pluginName" : "component-vant",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "maxWidth" : "100%"
+            }
+          }, {
+            "name" : "customStyle",
+            "type" : "literal",
+            "literal" : "flex: 1 1 0%;"
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "value",
+          "type" : "variable",
+          "variable" : "关键字"
+        }, {
+          "name" : "type",
+          "type" : "literal",
+          "literal" : "text"
+        }, {
+          "name" : "placeholder",
+          "type" : "literal",
+          "literal" : "搜索任务标题"
+        }, {
+          "name" : "clearAsNull",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "dataValidation",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "showWordLimit",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showPrefixIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showSuffixIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "verticalCenter",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "autoHeight",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "rows",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "minRows",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "maxRows",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "showLabel",
+          "type" : "literal",
+          "literal" : "collapsed"
+        }, {
+          "name" : "required",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "labelAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "errorMessageAlign",
+          "type" : "literal",
+          "literal" : "inherit"
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "readonly",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "allowClear",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "maxLength",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "status",
+          "type" : "literal",
+          "literal" : "normal"
+        } ],
+        "children" : [ {
+          "id" : "HI0ENBZA",
+          "name" : "组件插槽",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "MKHPJMVM",
+            "name" : "文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "文本"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "label"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "YXED84B3",
+        "name" : "搜索待办按钮",
+        "type" : "button",
+        "pluginName" : "component-vant",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "height" : "32px"
+            }
+          }, {
+            "name" : "fontSize",
+            "type" : "literal",
+            "literal" : "13px"
+          }, {
+            "name" : "customStyle",
+            "type" : "literal",
+            "literal" : "flex-shrink: 0;"
+          } ]
+        } ],
+        "events" : [ {
+          "id" : "P6K6KK3Y",
+          "name" : "搜索待办",
+          "description" : "按关键字重新加载待办任务",
+          "moduleType" : "client",
+          "variables" : [ ],
+          "parameters" : [ ],
+          "returnValues" : [ ],
+          "diagram" : {
+            "nodes" : [ {
+              "id" : "O7T57CUZ",
+              "name" : "开始",
+              "pluginName" : "",
+              "identifier" : "",
+              "attributes" : {
+                "position" : {
+                  "x" : 300,
+                  "y" : 50
+                }
+              },
+              "isStartPoint" : true
+            }, {
+              "id" : "U21OY6PT",
+              "name" : "重置待办分页",
+              "pluginName" : "logic-core",
+              "identifier" : "assignment",
+              "content" : {
+                "assignmentDatas" : {
+                  "type" : "literal",
+                  "literal" : [ {
+                    "id" : "R37GAFJE",
+                    "target" : {
+                      "type" : "variable",
+                      "variable" : "当前条数"
+                    },
+                    "value" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    }
+                  }, {
+                    "id" : "VKY9QWX7",
+                    "target" : {
+                      "type" : "variable",
+                      "variable" : "列表状态"
+                    },
+                    "value" : {
+                      "type" : "expression",
+                      "expression" : "\"\""
+                    }
+                  } ]
+                }
+              },
+              "attributes" : {
+                "position" : {
+                  "x" : 300,
+                  "y" : 150
+                }
+              },
+              "isStartPoint" : false
+            }, {
+              "id" : "O8P53G4X",
+              "name" : "加载待办任务",
+              "pluginName" : "logic-core",
+              "identifier" : "call-logic",
+              "content" : {
+                "targetLogic" : {
+                  "type" : "literal",
+                  "literal" : {
+                    "itemType" : "externalLogic",
+                    "logicName" : "加载待办任务"
+                  }
+                }
+              },
+              "attributes" : {
+                "position" : {
+                  "x" : 300,
+                  "y" : 250
+                }
+              },
+              "isStartPoint" : false
+            } ],
+            "edges" : [ {
+              "id" : "U8YM20YU",
+              "sourceId" : "O7T57CUZ",
+              "targetId" : "U21OY6PT",
+              "sourceAnchorId" : null,
+              "targetAnchorId" : null,
+              "sourcePosition" : "right",
+              "targetPosition" : "left"
+            }, {
+              "id" : "SY9DDNUV",
+              "sourceId" : "U21OY6PT",
+              "targetId" : "O8P53G4X",
+              "sourceAnchorId" : null,
+              "targetAnchorId" : null,
+              "sourcePosition" : "right",
+              "targetPosition" : "left"
+            } ]
+          },
+          "targetEvent" : "click",
+          "icon" : {
+            "type" : {
+              "compare" : null
+            },
+            "key" : null,
+            "ref" : null,
+            "props" : {
+              "type" : "eventListener"
+            }
+          },
+          "scope" : {
+            "type" : "event",
+            "logicCallPath" : [ "页面事件" ],
+            "documentId" : "O3P0I8PC",
+            "platform" : "mobile",
+            "icon" : {
+              "type" : {
+                "compare" : null
+              },
+              "key" : null,
+              "ref" : null,
+              "props" : {
+                "type" : "eventListener"
+              }
+            },
+            "expressionCallScope" : [ {
+              "id" : "CurrentPage",
+              "name" : "CurrentPage"
+            } ],
+            "expressionCallPath" : [ "CurrentPage" ],
+            "recursion" : false
+          }
+        } ],
+        "properties" : [ {
+          "name" : "text",
+          "type" : "literal",
+          "literal" : "搜索"
+        }, {
+          "name" : "enableNavigation",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "navigationType",
+          "type" : "literal",
+          "literal" : "external"
+        }, {
+          "name" : "target",
+          "type" : "literal",
+          "literal" : "_self"
+        }, {
+          "name" : "pageNavigation",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "href",
+          "type" : "literal",
+          "literal" : ""
+        }, {
+          "name" : "color",
+          "type" : "literal",
+          "literal" : "primary"
+        }, {
+          "name" : "shape",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "variant",
+          "type" : "literal",
+          "literal" : "plain"
+        }, {
+          "name" : "showIcon",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "iconPlacement",
+          "type" : "literal",
+          "literal" : "left"
+        }, {
+          "name" : "disabled",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "expression"
+        }, {
+          "name" : "loadingType",
+          "type" : "literal",
+          "literal" : "circular"
+        } ],
+        "children" : [ ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "E6EHVW0A",
+      "name" : "待办列表",
+      "type" : "list",
+      "pluginName" : "component-vant",
+      "styles" : [ ],
+      "events" : [ {
+        "id" : "U3X8ZY9S",
+        "name" : "加载更多",
+        "description" : "待办列表滚动到底部时加载更多待办任务",
+        "moduleType" : "client",
+        "variables" : [ ],
+        "parameters" : [ ],
+        "returnValues" : [ ],
+        "diagram" : {
+          "nodes" : [ {
+            "id" : "RFJZ1EP9",
+            "name" : "开始",
+            "pluginName" : "",
+            "identifier" : "",
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 50
+              }
+            },
+            "isStartPoint" : true
+          }, {
+            "id" : "PZ339MFU",
+            "name" : "加载待办任务",
+            "pluginName" : "logic-core",
+            "identifier" : "call-logic",
+            "content" : {
+              "targetLogic" : {
+                "type" : "literal",
+                "literal" : {
+                  "itemType" : "externalLogic",
+                  "logicName" : "加载待办任务"
+                }
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 150
+              }
+            },
+            "isStartPoint" : false
+          } ],
+          "edges" : [ {
+            "id" : "J6RM7EF0",
+            "sourceId" : "RFJZ1EP9",
+            "targetId" : "PZ339MFU",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          } ]
+        },
+        "targetEvent" : "incrementalLoad",
+        "icon" : {
+          "type" : {
+            "compare" : null
+          },
+          "key" : null,
+          "ref" : null,
+          "props" : {
+            "type" : "eventListener"
+          }
+        },
+        "scope" : {
+          "type" : "event",
+          "logicCallPath" : [ "页面事件" ],
+          "documentId" : "O3P0I8PC",
+          "platform" : "mobile",
+          "icon" : {
+            "type" : {
+              "compare" : null
+            },
+            "key" : null,
+            "ref" : null,
+            "props" : {
+              "type" : "eventListener"
+            }
+          },
+          "expressionCallScope" : [ {
+            "id" : "CurrentPage",
+            "name" : "CurrentPage"
+          } ],
+          "expressionCallPath" : [ "CurrentPage" ],
+          "recursion" : false
+        }
+      } ],
+      "properties" : [ {
+        "name" : "datasource",
+        "type" : "variable",
+        "variable" : "待办列表"
+      }, {
+        "name" : "valueField",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "lazyLoad",
+        "type" : "literal",
+        "literal" : true
+      }, {
+        "name" : "state",
+        "type" : "variable",
+        "variable" : "列表状态"
+      }, {
+        "name" : "loadingText",
+        "type" : "literal",
+        "literal" : "加载中..."
+      }, {
+        "name" : "finishedText",
+        "type" : "literal",
+        "literal" : "没有更多了"
+      }, {
+        "name" : "errorText",
+        "type" : "literal",
+        "literal" : "加载失败，点击重试"
+      } ],
+      "children" : [ {
+        "id" : "YZUNXOK2",
+        "name" : "组件插槽1",
+        "type" : "slot",
+        "pluginName" : "component-common",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ ],
+        "children" : [ {
+          "id" : "AQ8CPVDQ",
+          "name" : "待办卡片",
+          "type" : "linear-layout",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "display",
+              "type" : "literal",
+              "literal" : "flex"
+            }, {
+              "name" : "columnGap",
+              "type" : "literal",
+              "literal" : "var(--small-spacing)"
+            }, {
+              "name" : "rowGap",
+              "type" : "literal",
+              "literal" : "6px"
+            }, {
+              "name" : "position",
+              "type" : "literal",
+              "literal" : "relative"
+            }, {
+              "name" : "margin",
+              "type" : "literal",
+              "literal" : {
+                "bottom" : "10px"
+              }
+            }, {
+              "name" : "padding",
+              "type" : "literal",
+              "literal" : {
+                "top" : "12px",
+                "right" : "12px",
+                "bottom" : "12px",
+                "left" : "12px"
+              }
+            }, {
+              "name" : "flexDirection",
+              "type" : "literal",
+              "literal" : "column"
+            }, {
+              "name" : "borderRadius",
+              "type" : "literal",
+              "literal" : {
+                "topLeft" : "8px",
+                "topRight" : "8px",
+                "bottomRight" : "8px",
+                "bottomLeft" : "8px"
+              }
+            }, {
+              "name" : "backgroundColor",
+              "type" : "literal",
+              "literal" : "rgb(247, 248, 250)"
+            }, {
+              "name" : "customStyle",
+              "type" : "literal",
+              "literal" : "box-sizing: border-box;\ncursor: pointer;"
+            } ]
+          } ],
+          "events" : [ {
+            "id" : "Y5NW65ZL",
+            "name" : "打开待办",
+            "description" : "点击待办卡片携带任务标识进入工单审批页",
+            "moduleType" : "client",
+            "variables" : [ ],
+            "parameters" : [ ],
+            "returnValues" : [ ],
+            "diagram" : {
+              "nodes" : [ {
+                "id" : "BLZ53L8J",
+                "name" : "开始",
+                "pluginName" : "",
+                "identifier" : "",
+                "attributes" : {
+                  "position" : {
+                    "x" : 300,
+                    "y" : 50
+                  }
+                },
+                "isStartPoint" : true
+              }, {
+                "id" : "WMFPHL30",
+                "name" : "打开工单审批页",
+                "pluginName" : "logic-ui-interaction",
+                "identifier" : "destination",
+                "content" : {
+                  "windowTarget" : {
+                    "type" : "literal",
+                    "literal" : "_self"
+                  },
+                  "navigationType" : {
+                    "type" : "literal",
+                    "literal" : "internal"
+                  },
+                  "pageNavigation" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "page" : {
+                        "type" : "literal",
+                        "literal" : "/移动端/工单审批页"
+                      },
+                      "params" : {
+                        "type" : "structure",
+                        "structure" : {
+                          "任务ID" : {
+                            "type" : "expression",
+                            "expression" : "current.item.ID"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "attributes" : {
+                  "position" : {
+                    "x" : 300,
+                    "y" : 150
+                  }
+                },
+                "isStartPoint" : false
+              } ],
+              "edges" : [ {
+                "id" : "CYOSLPQB",
+                "sourceId" : "BLZ53L8J",
+                "targetId" : "WMFPHL30",
+                "sourceAnchorId" : null,
+                "targetAnchorId" : null,
+                "sourcePosition" : "right",
+                "targetPosition" : "left"
+              } ]
+            },
+            "targetEvent" : "click",
+            "icon" : {
+              "type" : {
+                "compare" : null
+              },
+              "key" : null,
+              "ref" : null,
+              "props" : {
+                "type" : "eventListener"
+              }
+            },
+            "scope" : {
+              "type" : "event",
+              "logicCallPath" : [ "页面事件" ],
+              "documentId" : "O3P0I8PC",
+              "platform" : "mobile",
+              "icon" : {
+                "type" : {
+                  "compare" : null
+                },
+                "key" : null,
+                "ref" : null,
+                "props" : {
+                  "type" : "eventListener"
+                }
+              },
+              "expressionCallScope" : [ {
+                "id" : "CurrentPage",
+                "name" : "CurrentPage"
+              } ],
+              "expressionCallPath" : [ "CurrentPage" ],
+              "recursion" : false
+            }
+          } ],
+          "properties" : [ {
+            "name" : "loading",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "enableCustomLoading",
+            "type" : "literal",
+            "literal" : ""
+          } ],
+          "children" : [ {
+            "id" : "C8P2V89R",
+            "name" : "待办卡片标题文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "var(--color-text)"
+              }, {
+                "name" : "fontSize",
+                "type" : "literal",
+                "literal" : "15px"
+              }, {
+                "name" : "customStyle",
+                "type" : "literal",
+                "literal" : "font-weight: 600;"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "expression",
+              "expression" : "current.item.任务标题"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          }, {
+            "id" : "E6I58T9M",
+            "name" : "待办卡片流程文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "rgb(140, 140, 140)"
+              }, {
+                "name" : "fontSize",
+                "type" : "literal",
+                "literal" : "12px"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "expression",
+              "expression" : "\"流程：\" & current.item.流程定义标题"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          }, {
+            "id" : "BYSA4AUE",
+            "name" : "待办卡片节点文本",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "var(--color-primary)"
+              }, {
+                "name" : "fontSize",
+                "type" : "literal",
+                "literal" : "12px"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "expression",
+              "expression" : "\"当前节点：\" & IfError(List.First(current.item.当前节点列表).标题, \"\")"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          }, {
+            "id" : "VQPM1D8F",
+            "name" : "待办卡片底部行",
+            "type" : "linear-layout",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "display",
+                "type" : "literal",
+                "literal" : "flex"
+              }, {
+                "name" : "columnGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "rowGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "position",
+                "type" : "literal",
+                "literal" : "relative"
+              }, {
+                "name" : "flexDirection",
+                "type" : "literal",
+                "literal" : "row"
+              }, {
+                "name" : "justifyContent",
+                "type" : "literal",
+                "literal" : "space-between"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "loading",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "enableCustomLoading",
+              "type" : "literal",
+              "literal" : ""
+            } ],
+            "children" : [ {
+              "id" : "I1297M68",
+              "name" : "待办卡片发起人文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "color",
+                  "type" : "literal",
+                  "literal" : "rgb(191, 191, 191)"
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "12px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "expression",
+                "expression" : "\"发起人：\" & If(IsNull(current.item.发起人), \"\", current.item.发起人.全名)"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "A4VS6Y4W",
+              "name" : "待办卡片时间文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "color",
+                  "type" : "literal",
+                  "literal" : "rgb(191, 191, 191)"
+                }, {
+                  "name" : "fontSize",
+                  "type" : "literal",
+                  "literal" : "12px"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "expression",
+                "expression" : "FormatDateTime(current.item.发起时间, \"yyyy-MM-dd HH:mm\", \"\")"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        },
+        "slotTarget" : "default"
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "FCT9NXLQ",
+      "name" : "待办空数据文本",
+      "type" : "text",
+      "pluginName" : "component-common",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : {
+            "maxWidth" : "100%"
+          }
+        }, {
+          "name" : "padding",
+          "type" : "literal",
+          "literal" : {
+            "top" : "24px",
+            "right" : "0px",
+            "bottom" : "24px",
+            "left" : "0px"
+          }
+        }, {
+          "name" : "color",
+          "type" : "literal",
+          "literal" : "rgb(163, 163, 163)"
+        }, {
+          "name" : "fontSize",
+          "type" : "literal",
+          "literal" : "13px"
+        }, {
+          "name" : "textAlign",
+          "type" : "literal",
+          "literal" : "center"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "text",
+        "type" : "literal",
+        "literal" : "暂无待办任务"
+      }, {
+        "name" : "format",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "wrapping",
+        "type" : "literal",
+        "literal" : "normal"
+      }, {
+        "name" : "ellipsis",
+        "type" : "literal",
+        "literal" : false
+      } ],
+      "children" : [ ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : "And(List.IsNullOrEmpty(待办列表), Not(列表状态 = \"loading\"))"
+      }
+    }, {
+      "id" : "B9BEZ2AG",
+      "name" : "重新加载按钮",
+      "type" : "button",
+      "pluginName" : "component-vant",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : {
+            "height" : "34px"
+          }
+        }, {
+          "name" : "fontSize",
+          "type" : "literal",
+          "literal" : "13px"
+        } ]
+      } ],
+      "events" : [ {
+        "id" : "U617TEVJ",
+        "name" : "重新加载",
+        "description" : "加载失败后重新加载待办任务",
+        "moduleType" : "client",
+        "variables" : [ ],
+        "parameters" : [ ],
+        "returnValues" : [ ],
+        "diagram" : {
+          "nodes" : [ {
+            "id" : "DBTJYUGF",
+            "name" : "开始",
+            "pluginName" : "",
+            "identifier" : "",
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 50
+              }
+            },
+            "isStartPoint" : true
+          }, {
+            "id" : "Y1DFTU5C",
+            "name" : "重置待办分页",
+            "pluginName" : "logic-core",
+            "identifier" : "assignment",
+            "content" : {
+              "assignmentDatas" : {
+                "type" : "literal",
+                "literal" : [ {
+                  "id" : "XKOX5XBG",
+                  "target" : {
+                    "type" : "variable",
+                    "variable" : "当前条数"
+                  },
+                  "value" : {
+                    "type" : "literal",
+                    "literal" : 0
+                  }
+                }, {
+                  "id" : "XDEU7H9S",
+                  "target" : {
+                    "type" : "variable",
+                    "variable" : "列表状态"
+                  },
+                  "value" : {
+                    "type" : "expression",
+                    "expression" : "\"\""
+                  }
+                } ]
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 150
+              }
+            },
+            "isStartPoint" : false
+          }, {
+            "id" : "PEKK68OD",
+            "name" : "加载待办任务",
+            "pluginName" : "logic-core",
+            "identifier" : "call-logic",
+            "content" : {
+              "targetLogic" : {
+                "type" : "literal",
+                "literal" : {
+                  "itemType" : "externalLogic",
+                  "logicName" : "加载待办任务"
+                }
+              }
+            },
+            "attributes" : {
+              "position" : {
+                "x" : 300,
+                "y" : 250
+              }
+            },
+            "isStartPoint" : false
+          } ],
+          "edges" : [ {
+            "id" : "L1KXMWR8",
+            "sourceId" : "DBTJYUGF",
+            "targetId" : "Y1DFTU5C",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          }, {
+            "id" : "EXJA2LF2",
+            "sourceId" : "Y1DFTU5C",
+            "targetId" : "PEKK68OD",
+            "sourceAnchorId" : null,
+            "targetAnchorId" : null,
+            "sourcePosition" : "right",
+            "targetPosition" : "left"
+          } ]
+        },
+        "targetEvent" : "click",
+        "icon" : {
+          "type" : {
+            "compare" : null
+          },
+          "key" : null,
+          "ref" : null,
+          "props" : {
+            "type" : "eventListener"
+          }
+        },
+        "scope" : {
+          "type" : "event",
+          "logicCallPath" : [ "页面事件" ],
+          "documentId" : "O3P0I8PC",
+          "platform" : "mobile",
+          "icon" : {
+            "type" : {
+              "compare" : null
+            },
+            "key" : null,
+            "ref" : null,
+            "props" : {
+              "type" : "eventListener"
+            }
+          },
+          "expressionCallScope" : [ {
+            "id" : "CurrentPage",
+            "name" : "CurrentPage"
+          } ],
+          "expressionCallPath" : [ "CurrentPage" ],
+          "recursion" : false
+        }
+      } ],
+      "properties" : [ {
+        "name" : "text",
+        "type" : "literal",
+        "literal" : "重新加载"
+      }, {
+        "name" : "enableNavigation",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "navigationType",
+        "type" : "literal",
+        "literal" : "external"
+      }, {
+        "name" : "target",
+        "type" : "literal",
+        "literal" : "_self"
+      }, {
+        "name" : "pageNavigation",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "href",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "color",
+        "type" : "literal",
+        "literal" : "primary"
+      }, {
+        "name" : "shape",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "variant",
+        "type" : "literal",
+        "literal" : "plain"
+      }, {
+        "name" : "showIcon",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "iconPlacement",
+        "type" : "literal",
+        "literal" : "left"
+      }, {
+        "name" : "disabled",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "loading",
+        "type" : "expression"
+      }, {
+        "name" : "loadingType",
+        "type" : "literal",
+        "literal" : "circular"
+      } ],
+      "children" : [ ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : "列表状态 = \"error\""
+      }
+    } ],
+    "description" : "",
+    "visible" : {
+      "type" : "expression",
+      "expression" : ""
+    }
+  },
+  "platform" : "mobile",
+  "variables" : [ {
+    "id" : "REP11G5P",
+    "name" : "关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "A0CXCNUG",
+    "name" : "待办列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "待办任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "XXL2IJSS",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "BTOTZ925",
+    "name" : "当前条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "XZUA8QJ8",
+    "name" : "列表状态",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "events" : [ {
+    "id" : "O3NVNFRM",
+    "name" : "页面加载",
+    "description" : "待办任务页面加载后拉取首屏待办",
+    "moduleType" : "client",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "diagram" : {
+      "nodes" : [ {
+        "id" : "V2KZCC7X",
+        "name" : "开始",
+        "pluginName" : "",
+        "identifier" : "",
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 50
+          }
+        },
+        "isStartPoint" : true
+      }, {
+        "id" : "H5PY7JAI",
+        "name" : "加载待办任务",
+        "pluginName" : "logic-core",
+        "identifier" : "call-logic",
+        "content" : {
+          "targetLogic" : {
+            "type" : "literal",
+            "literal" : {
+              "itemType" : "externalLogic",
+              "logicName" : "加载待办任务"
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 150
+          }
+        },
+        "isStartPoint" : false
+      } ],
+      "edges" : [ {
+        "id" : "XTSKZFOC",
+        "sourceId" : "V2KZCC7X",
+        "targetId" : "H5PY7JAI",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      } ]
+    },
+    "targetEvent" : "entered",
+    "icon" : {
+      "type" : {
+        "compare" : null
+      },
+      "key" : null,
+      "ref" : null,
+      "props" : {
+        "type" : "eventListener"
+      }
+    },
+    "scope" : {
+      "type" : "event",
+      "logicCallPath" : [ "页面事件" ],
+      "documentId" : "O3P0I8PC",
+      "platform" : "mobile",
+      "icon" : {
+        "type" : {
+          "compare" : null
+        },
+        "key" : null,
+        "ref" : null,
+        "props" : {
+          "type" : "eventListener"
+        }
+      },
+      "expressionCallScope" : [ {
+        "id" : "CurrentPage",
+        "name" : "CurrentPage"
+      } ],
+      "expressionCallPath" : [ "CurrentPage" ],
+      "recursion" : false
+    }
+  } ],
+  "logics" : [ {
+    "id" : "FD9RFMMO",
+    "name" : "加载待办任务",
+    "description" : "加载我的待办任务列表（每次多取 10 条）",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "allowExpressionCall" : false,
+    "moduleType" : "client",
+    "diagram" : {
+      "nodes" : [ {
+        "id" : "KTOYX1HX",
+        "name" : "开始",
+        "pluginName" : "",
+        "identifier" : "",
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 50
+          }
+        },
+        "isStartPoint" : true
+      }, {
+        "id" : "R6NAYYWW",
+        "name" : "扩大待办查询条数",
+        "pluginName" : "logic-core",
+        "identifier" : "assignment",
+        "content" : {
+          "assignmentDatas" : {
+            "type" : "literal",
+            "literal" : [ {
+              "id" : "O11FRBO5",
+              "target" : {
+                "type" : "variable",
+                "variable" : "当前条数"
+              },
+              "value" : {
+                "type" : "expression",
+                "expression" : "当前条数 + 10"
+              }
+            }, {
+              "id" : "AGAA2MHB",
+              "target" : {
+                "type" : "variable",
+                "variable" : "列表状态"
+              },
+              "value" : {
+                "type" : "literal",
+                "literal" : "loading"
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 150
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "JRPL76QB",
+        "name" : "加载待办任务",
+        "pluginName" : "logic-core",
+        "identifier" : "try-catch-finally",
+        "content" : {
+          "tryCase" : {
+            "type" : "structure",
+            "structure" : {
+              "identifier" : {
+                "type" : "literal",
+                "literal" : "Try"
+              }
+            }
+          },
+          "catchCase" : {
+            "type" : "structure",
+            "structure" : {
+              "identifier" : {
+                "type" : "literal",
+                "literal" : "Catch"
+              }
+            }
+          },
+          "finallyCase" : {
+            "type" : "structure",
+            "structure" : {
+              "identifier" : {
+                "type" : "literal",
+                "literal" : "Finally"
+              }
+            }
+          },
+          "exceptionType" : {
+            "type" : "literal",
+            "literal" : "exceptionType"
+          },
+          "exceptionMessage" : {
+            "type" : "literal",
+            "literal" : "exceptionMessage"
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 250
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "RKQXGI55",
+        "name" : "查询我的待办任务",
+        "pluginName" : "logic-core",
+        "identifier" : "call-logic",
+        "content" : {
+          "targetLogic" : {
+            "type" : "literal",
+            "literal" : {
+              "itemType" : "serverLogic",
+              "logicName" : "查询我的任务"
+            }
+          },
+          "parameters" : {
+            "type" : "structure",
+            "structure" : [ {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "任务类型"
+                },
+                "value" : {
+                  "type" : "literal",
+                  "literal" : "待办"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "关键字"
+                },
+                "value" : {
+                  "type" : "expression",
+                  "expression" : "关键字"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "页码"
+                },
+                "value" : {
+                  "type" : "literal",
+                  "literal" : 1
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "每页条数"
+                },
+                "value" : {
+                  "type" : "expression",
+                  "expression" : "当前条数"
+                }
+              }
+            } ]
+          },
+          "returnValues" : {
+            "type" : "structure",
+            "structure" : [ {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "待办列表"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "待办列表"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "总数量"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "总数量"
+                }
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 750,
+            "y" : 250
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "JCSG6A4T",
+        "name" : "标记待办加载失败",
+        "pluginName" : "logic-core",
+        "identifier" : "assignment",
+        "content" : {
+          "assignmentDatas" : {
+            "type" : "literal",
+            "literal" : [ {
+              "id" : "FAFM3DDR",
+              "target" : {
+                "type" : "variable",
+                "variable" : "列表状态"
+              },
+              "value" : {
+                "type" : "literal",
+                "literal" : "error"
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 750,
+            "y" : 350
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "VHDCM58P",
+        "name" : "判断待办是否已加载完",
+        "pluginName" : "logic-core",
+        "identifier" : "condition",
+        "content" : {
+          "conditions" : {
+            "type" : "structure",
+            "structure" : {
+              "ifCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "if"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "PWMUKZJT"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "总数量"
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 5
+                            },
+                            "value" : {
+                              "type" : "expression",
+                              "expression" : "当前条数"
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              },
+              "elseCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "else"
+                  }
+                }
+              },
+              "elseIfCases" : {
+                "type" : "structure",
+                "structure" : [ ]
+              }
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 750,
+            "y" : 350
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "RRBTUPCZ",
+        "name" : "提示待办加载失败",
+        "pluginName" : "component-vant",
+        "identifier" : "mobile-toast",
+        "content" : {
+          "duration" : {
+            "type" : "literal",
+            "literal" : 2
+          },
+          "position" : {
+            "type" : "literal",
+            "literal" : "middle"
+          },
+          "forbidClick" : {
+            "type" : "literal",
+            "literal" : false
+          },
+          "message" : {
+            "type" : "literal",
+            "literal" : "待办任务加载失败，请重试"
+          },
+          "type" : {
+            "type" : "literal",
+            "literal" : "fail"
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 750,
+            "y" : 450
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "GGT6I45E",
+        "name" : "标记待办已全部加载",
+        "pluginName" : "logic-core",
+        "identifier" : "assignment",
+        "content" : {
+          "assignmentDatas" : {
+            "type" : "literal",
+            "literal" : [ {
+              "id" : "S6YO447F",
+              "target" : {
+                "type" : "variable",
+                "variable" : "列表状态"
+              },
+              "value" : {
+                "type" : "literal",
+                "literal" : "finished"
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1200,
+            "y" : 350
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "QGYA6PHU",
+        "name" : "标记待办可继续加载",
+        "pluginName" : "logic-core",
+        "identifier" : "assignment",
+        "content" : {
+          "assignmentDatas" : {
+            "type" : "literal",
+            "literal" : [ {
+              "id" : "BWDP51M7",
+              "target" : {
+                "type" : "variable",
+                "variable" : "列表状态"
+              },
+              "value" : {
+                "type" : "expression",
+                "expression" : "\"\""
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1200,
+            "y" : 450
+          }
+        },
+        "isStartPoint" : false
+      } ],
+      "edges" : [ {
+        "id" : "FHC18YDH",
+        "sourceId" : "KTOYX1HX",
+        "targetId" : "R6NAYYWW",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "GZHQAOIL",
+        "sourceId" : "R6NAYYWW",
+        "targetId" : "JRPL76QB",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "ETQK9ZHH",
+        "sourceId" : "JRPL76QB",
+        "targetId" : "RKQXGI55",
+        "sourceAnchorId" : "Try",
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "EPWPQWNY",
+        "sourceId" : "RKQXGI55",
+        "targetId" : "VHDCM58P",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "GFUL3FJJ",
+        "sourceId" : "VHDCM58P",
+        "targetId" : "GGT6I45E",
+        "sourceAnchorId" : "if",
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "B5VLB5IC",
+        "sourceId" : "VHDCM58P",
+        "targetId" : "QGYA6PHU",
+        "sourceAnchorId" : "else",
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "K7S4FRG3",
+        "sourceId" : "JRPL76QB",
+        "targetId" : "JCSG6A4T",
+        "sourceAnchorId" : "Catch",
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "BFGT9INF",
+        "sourceId" : "JCSG6A4T",
+        "targetId" : "RRBTUPCZ",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      } ]
+    },
+    "scope" : {
+      "type" : "page",
+      "documentId" : "O3P0I8PC",
+      "recursion" : true,
+      "logicCallPath" : [ "页面逻辑" ],
+      "expressionCallScope" : [ {
+        "id" : "CurrentPage",
+        "name" : "CurrentPage"
+      } ],
+      "expressionCallPath" : [ "CurrentPage" ],
+      "platform" : "mobile"
+    }
+  } ],
+  "subResourceTree" : {
+    "children" : [ "REP11G5P", "A0CXCNUG", "XXL2IJSS", "BTOTZ925", "XZUA8QJ8", "FD9RFMMO" ],
+    "groups" : [ ]
+  },
+  "description" : "移动端待办任务：我的待办任务列表与分页加载，点击进入工单审批页",
+  "externalCssFiles" : [ ],
+  "externalJsFiles" : [ ],
+  "type" : "page",
+  "url" : "/m/my-tasks",
+  "permissions" : {
+    "page" : {
+      "access" : [ "/查看待办任务" ]
+    },
+    "components" : { }
+  },
+  "masterPage" : "/移动端/工单母版"
+}

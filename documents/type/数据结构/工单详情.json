@@ -1,0 +1,148 @@
+{
+  "id" : "R3XRD51P",
+  "name" : "工单详情",
+  "kind" : "Structure",
+  "description" : "工单详情聚合字段",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "工单编号",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "标题",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "工单类型",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单类型"
+    }
+  }, {
+    "name" : "优先级",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单优先级"
+    }
+  }, {
+    "name" : "工单状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单状态"
+    }
+  }, {
+    "name" : "来源渠道",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单来源"
+    }
+  }, {
+    "name" : "问题描述",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "期望完成时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "是否逾期",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "name" : "提交时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "受理时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "完成时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "关闭时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    }
+  }, {
+    "name" : "审批意见",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "客户是否认可",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "name" : "客户ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "提交人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "处理人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "客户",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "客户简要"
+    }
+  }, {
+    "name" : "提交人",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员简要"
+    }
+  }, {
+    "name" : "处理人",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员简要"
+    }
+  }, {
+    "name" : "处理记录",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单处理记录行"
+      } ]
+    }
+  }, {
+    "name" : "附件",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单附件行"
+      } ]
+    }
+  }, {
+    "name" : "评价",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单评价信息"
+    }
+  } ]
+}

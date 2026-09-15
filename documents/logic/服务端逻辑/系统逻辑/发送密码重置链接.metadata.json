@@ -1,0 +1,67 @@
+{
+  "id" : "LRHD31XE",
+  "name" : "发送密码重置链接",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "id" : "S9NIQRCG",
+    "name" : "userName",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "id" : "UAIWB2ES",
+    "name" : "resetLink",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "GB3C5TS5",
+    "name" : "message",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : ""
+    }
+  }, {
+    "id" : "D04C4NZM",
+    "name" : "success",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "RXL3DZR2",
+    "name" : "user",
+    "dataType" : {
+      "typeName" : "用户",
+      "declarativeTypeKind" : "Structure"
+    }
+  } ],
+  "returnValues" : [ ],
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/PC/系统页面/身份认证/重置密码页"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "用户"
+  } ]
+}

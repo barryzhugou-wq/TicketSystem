@@ -1,0 +1,349 @@
+{
+  "id" : "T68SGMAI",
+  "name" : "工单列表页",
+  "type" : "page",
+  "description" : "工单列表：按范围与条件筛选、分页查看工单",
+  "variables" : [ {
+    "id" : "OQ7GSCP9",
+    "name" : "初始范围",
+    "kind" : "parameter",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "SXK6AACC",
+    "name" : "数据范围",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "我的"
+    }
+  }, {
+    "id" : "SS3WIXV8",
+    "name" : "关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "WLWYA795",
+    "name" : "工单状态",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "GYEQRRWB",
+    "name" : "工单类型",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "S9M1SUH3",
+    "name" : "优先级",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "YA3Z2UEX",
+    "name" : "处理人ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  }, {
+    "id" : "DDBBI1JR",
+    "name" : "客户ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  }, {
+    "id" : "WVMIGPGY",
+    "name" : "开始时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "YPAS57AN",
+    "name" : "结束时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "HGQ3L3RD",
+    "name" : "页码",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    }
+  }, {
+    "id" : "ZS1YQ8R6",
+    "name" : "每页条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 10
+    }
+  }, {
+    "id" : "SB0VPF88",
+    "name" : "工单列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "HIAUZSYT",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "P4UZQILX",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "FEOCN4DM",
+    "name" : "成员列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "成员选项"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "N1U4AQ5A",
+    "name" : "客户列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  } ],
+  "logics" : [ {
+    "id" : "RVPMX2E0",
+    "name" : "加载工单列表",
+    "description" : "按当前筛选条件查询工单列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "OQ7GSCP9", "SXK6AACC", "SS3WIXV8", "WLWYA795", "GYEQRRWB", "S9M1SUH3", "YA3Z2UEX", "DDBBI1JR", "WVMIGPGY", "YPAS57AN", "HGQ3L3RD", "ZS1YQ8R6", "SB0VPF88", "HIAUZSYT", "P4UZQILX", "FEOCN4DM", "N1U4AQ5A", "RVPMX2E0" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "DMSQO3GN",
+    "name" : "页面加载",
+    "description" : "进入页面时初始化筛选范围并加载基础数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "VQCKI8QH",
+    "elementName" : "范围选择",
+    "pluginName" : "component-ant-design",
+    "type" : "radio-group",
+    "targetEvent" : "change",
+    "id" : "AC0M2D9E",
+    "name" : "切换工单范围",
+    "description" : "切换查询范围后重新加载工单列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "GOSMP8Z5",
+    "elementName" : "关键字输入",
+    "pluginName" : "component-ant-design",
+    "type" : "input",
+    "targetEvent" : "pressEnter",
+    "id" : "EDJIBB75",
+    "name" : "关键字查询",
+    "description" : "回车触发按关键字查询",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "GI6Q1MP7",
+    "elementName" : "查询按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "AISHKBGS",
+    "name" : "查询工单",
+    "description" : "点击查询按钮按当前条件查询工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "X61SB704",
+    "elementName" : "重置按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "MRH64SFB",
+    "name" : "重置筛选条件",
+    "description" : "清空筛选条件并重新查询工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "FEG5SQLQ",
+    "elementName" : "工单表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "rowClick",
+    "id" : "BDP1JSXX",
+    "name" : "打开工单详情",
+    "description" : "点击工单行打开工单详情页",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "FEG5SQLQ",
+    "elementName" : "工单表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "P83QEKXN",
+    "name" : "切换分页",
+    "description" : "表格翻页后按新页码重新加载工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/ticket-list",
+  "title" : "工单列表",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "工单类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单优先级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单状态"
+  }, {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单详情页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询成员选项"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单列表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询客户列表"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单信息"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "客户信息"
+  } ]
+}

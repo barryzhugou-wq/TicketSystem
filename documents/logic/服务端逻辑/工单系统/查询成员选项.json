@@ -1,0 +1,130 @@
+{
+  "id" : "QU7BF4FF",
+  "name" : "查询成员选项",
+  "description" : "查询可用于分派工单的客服团队成员",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "成员选项"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "WG3LCUYB",
+    "name" : "成员列表"
+  } ],
+  "enableTransaction" : false,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/处理工单", "/审批工单", "/提交工单", "/查看全部工单", "/维护客户档案" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "DN9X6Q0D",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "VQU8ZSNU",
+      "name" : "查询启用成员",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "成员信息",
+            "tableAlias" : "成员信息",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "姓名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF.%E8%B4%A6%E5%8F%B7%E7%8A%B6%E6%80%81",
+              "operator" : 0,
+              "value" : {
+                "type" : 1,
+                "identifier" : "启用",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : {
+            "identifiers" : [ {
+              "columnIdentifier" : {
+                "type" : 3,
+                "identifier" : "%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF.%E5%A7%93%E5%90%8D",
+                "name" : null
+              },
+              "orderIdentifier" : {
+                "type" : 6,
+                "identifier" : "Enum.排序方式.升序",
+                "name" : null
+              }
+            } ]
+          },
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "成员选项"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "成员列表"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "WCZF4G7M",
+      "sourceId" : "DN9X6Q0D",
+      "targetId" : "VQU8ZSNU",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  }
+}

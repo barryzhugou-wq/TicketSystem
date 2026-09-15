@@ -1,0 +1,13 @@
+{
+  "id" : "VOFWB5HB",
+  "name" : "系统页面",
+  "type" : "folder",
+  "variables" : [ ],
+  "logics" : [ ],
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "plugins" : {
+    "designer-ai-assistant" : {
+      "project-preference" : {
+        "providerId" : "ceb85cdf-29ef-4df6-b5e9-908255ac850a",
+        "modelId" : "deepseek-v4-flash"
+      }
+    },
+    "designer-data" : {
+      "entitySettings" : {
+        "data" : {
+          "/默认数据源/客户档案" : {
+            "allowStructureModification" : true
+          },
+          "/默认数据源/成员信息" : {
+            "allowStructureModification" : true
+          },
+          "/默认数据源/工单" : {
+            "allowStructureModification" : true
+          },
+          "/默认数据源/工单处理记录" : {
+            "allowStructureModification" : true
+          },
+          "/默认数据源/工单附件" : {
+            "allowStructureModification" : true
+          },
+          "/默认数据源/工单评价" : {
+            "allowStructureModification" : true
+          },
+          "/默认数据源/工单通知" : {
+            "allowStructureModification" : true
+          }
+        }
+      }
+    },
+    "designer-logic" : {
+      "viewport" : {
+        "logic-flow:serverLogic:doc=serverLogic:%E6%A0%87%E8%AE%B0%E9%80%9A%E7%9F%A5%E5%B7%B2%E8%AF%BB:scope=-:ref=%E6%A0%87%E8%AE%B0%E9%80%9A%E7%9F%A5%E5%B7%B2%E8%AF%BB" : {
+          "state" : {
+            "controlMode" : 1,
+            "viewport" : {
+              "x" : -190,
+              "y" : -89,
+              "zoom" : 1
+            }
+          },
+          "version" : 0
+        },
+        "logic-flow:serverLogic:doc=serverLogic:%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%8D%95%E5%88%97%E8%A1%A8:scope=-:ref=%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%8D%95%E5%88%97%E8%A1%A8" : {
+          "state" : {
+            "controlMode" : 1,
+            "viewport" : {
+              "x" : -137,
+              "y" : -77,
+              "zoom" : 1
+            }
+          },
+          "version" : 0
+        },
+        "logic-flow:serverLogic:doc=serverLogic:%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%8D%95%E7%BB%9F%E8%AE%A1%E6%8A%A5%E8%A1%A8:scope=-:ref=%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%8D%95%E7%BB%9F%E8%AE%A1%E6%8A%A5%E8%A1%A8" : {
+          "state" : {
+            "controlMode" : 1,
+            "viewport" : {
+              "x" : -72,
+              "y" : -28,
+              "zoom" : 1
+            }
+          },
+          "version" : 0
+        }
+      }
+    }
+  },
+  "lastModified" : 1789451091072
+}

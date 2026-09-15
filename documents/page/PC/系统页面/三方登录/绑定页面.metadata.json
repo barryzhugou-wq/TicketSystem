@@ -1,0 +1,109 @@
+{
+  "id" : "O5TS3TMB",
+  "name" : "绑定页面",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "PXD8PMFB",
+    "name" : "code",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "X2I1I0NG",
+    "name" : "redirect",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "YZ2MVHFM",
+    "name" : "username",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "RK584LIY",
+    "name" : "password",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "PXD8PMFB", "X2I1I0NG", "YZ2MVHFM", "RK584LIY" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "EZ10R6HK",
+    "elementName" : "绑定按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "PNPYHXMA",
+    "name" : "单击",
+    "description" : "",
+    "variables" : [ {
+      "id" : "M4S8R8Q8",
+      "name" : "isFormValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    }, {
+      "id" : "TQCWKH6P",
+      "name" : "bindSuccess",
+      "dataType" : {
+        "typeName" : "Boolean"
+      },
+      "description" : ""
+    }, {
+      "id" : "PHS1LMG5",
+      "name" : "bindErrorMessage",
+      "dataType" : {
+        "typeName" : "String"
+      },
+      "description" : ""
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/PC/系统页面/三方登录/绑定页面",
+  "linkedPage" : "/移动端/系统页面/三方登录/绑定页面",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/三方登录/绑定页面",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/系统页面/三方登录/注册并绑定页面",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "绑定用户"
+  } ]
+}

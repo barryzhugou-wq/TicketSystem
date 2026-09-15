@@ -1,0 +1,367 @@
+{
+  "id" : "JQWJXUVK",
+  "name" : "创建并绑定用户",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ {
+    "id" : "PX3XE8Y4",
+    "name" : "code",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "U7FGJ692",
+    "name" : "username",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "DW3L58OT",
+    "name" : "fullname",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : false
+  }, {
+    "id" : "JUMIDRY3",
+    "name" : "password",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "UV9DGAVQ",
+    "name" : "email",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  }, {
+    "id" : "I2IWKZKS",
+    "name" : "phone",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "JDSZFDI4",
+    "name" : "createAndBindSuccess",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "id" : "R1JSLBZP",
+    "name" : "createAndBindErrorMessage",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/匿名权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "OHWR6IHQ",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "S5JY957J",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 980,
+          "y" : 130
+        }
+      }
+    }, {
+      "id" : "LJITQ5O4",
+      "name" : "创建用户",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "AddUser"
+        },
+        "userName" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "username"
+        },
+        "fullName" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "fullname"
+        },
+        "email" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "email"
+        },
+        "phone" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "phone"
+        },
+        "isEnabled" : {
+          "type" : "literal",
+          "literal" : true
+        },
+        "password" : {
+          "type" : "expression",
+          "literal" : "",
+          "expression" : "password"
+        },
+        "customProperties" : {
+          "type" : "structure",
+          "structure" : { }
+        },
+        "idOutput" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : ""
+        },
+        "success" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "createAndBindSuccess"
+        },
+        "message" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "createAndBindErrorMessage"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 360,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "VP0LZ06X",
+      "name" : "条件判断",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "U97ROV93"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "literal" : "",
+                            "expression" : "createAndBindSuccess"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 0
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : false
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 620,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "EJ51TRLN",
+      "name" : "调用绑定用户",
+      "pluginName" : "logic-core",
+      "identifier" : "call-logic",
+      "content" : {
+        "targetLogic" : {
+          "type" : "literal",
+          "literal" : {
+            "itemType" : "serverLogic",
+            "logicName" : "绑定用户"
+          }
+        },
+        "parameters" : {
+          "type" : "structure",
+          "structure" : [ {
+            "type" : "structure",
+            "structure" : {
+              "name" : {
+                "type" : "literal",
+                "literal" : "code"
+              },
+              "value" : {
+                "type" : "expression",
+                "literal" : "",
+                "expression" : "code"
+              }
+            }
+          }, {
+            "type" : "structure",
+            "structure" : {
+              "name" : {
+                "type" : "literal",
+                "literal" : "username"
+              },
+              "value" : {
+                "type" : "expression",
+                "literal" : "",
+                "expression" : "username"
+              }
+            }
+          }, {
+            "type" : "structure",
+            "structure" : {
+              "name" : {
+                "type" : "literal",
+                "literal" : "password"
+              },
+              "value" : {
+                "type" : "expression",
+                "literal" : "",
+                "expression" : "password"
+              }
+            }
+          } ]
+        },
+        "returnValues" : {
+          "type" : "structure",
+          "structure" : [ {
+            "type" : "structure",
+            "structure" : {
+              "name" : {
+                "type" : "literal",
+                "literal" : "bindSuccess"
+              },
+              "variable" : {
+                "type" : "variable",
+                "literal" : "",
+                "variable" : "createAndBindSuccess"
+              }
+            }
+          }, {
+            "type" : "structure",
+            "structure" : {
+              "name" : {
+                "type" : "literal",
+                "literal" : "bindErrorMessage"
+              },
+              "variable" : {
+                "type" : "variable",
+                "literal" : "",
+                "variable" : "createAndBindErrorMessage"
+              }
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 900,
+          "y" : 260
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "YONYR3CP",
+      "sourceId" : "OHWR6IHQ",
+      "targetId" : "LJITQ5O4",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "WEDDIGCP",
+      "sourceId" : "LJITQ5O4",
+      "targetId" : "VP0LZ06X",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "SPGUMF9U",
+      "sourceId" : "VP0LZ06X",
+      "sourceAnchorId" : "if",
+      "targetId" : "S5JY957J",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "targetAnchorId" : null
+    }, {
+      "id" : "T0ARMPAU",
+      "sourceId" : "VP0LZ06X",
+      "sourceAnchorId" : "else",
+      "targetId" : "EJ51TRLN",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "targetAnchorId" : null
+    } ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id" : "BKRI1J16",
+  "name" : "页面1",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "platform" : "pc",
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  } ]
+}

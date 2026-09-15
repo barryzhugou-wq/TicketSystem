@@ -1,0 +1,141 @@
+{
+  "type" : "entityModel",
+  "name" : "成员信息",
+  "tableName" : "成员信息",
+  "dataSourceName" : "默认数据源",
+  "description" : "客服团队通讯录，姓名、部门、角色等展示字段从平台账号同步",
+  "columns" : [ {
+    "type" : "entityColumnModel",
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 100,
+    "isRequired" : true,
+    "isPrimaryKey" : true,
+    "isUnique" : true,
+    "isAutoIncrement" : true,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "平台账号ID",
+    "name" : "平台账号ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "dbType" : "INTEGER",
+    "jdbcType" : 4,
+    "width" : 160,
+    "isRequired" : true,
+    "isPrimaryKey" : false,
+    "isUnique" : true,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "姓名",
+    "name" : "姓名",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 120,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "登录名",
+    "name" : "登录名",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 140,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "所属部门",
+    "name" : "所属部门",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 160,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "角色名称",
+    "name" : "角色名称",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 160,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "账号状态",
+    "name" : "账号状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "账号状态"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : -1,
+    "width" : 110,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  }, {
+    "type" : "entityColumnModel",
+    "columnName" : "同步时间",
+    "name" : "同步时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "dbType" : "TEXT",
+    "jdbcType" : 2014,
+    "width" : 170,
+    "isRequired" : false,
+    "isPrimaryKey" : false,
+    "isUnique" : false,
+    "isAutoIncrement" : false,
+    "columnKind" : "physical"
+  } ],
+  "indexes" : [ {
+    "indexName" : "PRIMARY",
+    "isUnique" : true,
+    "isPrimary" : true,
+    "isUnEditable" : true,
+    "description" : "主键索引",
+    "indexColumns" : [ {
+      "columnRefName" : "ID",
+      "order" : "ASC"
+    } ]
+  } ],
+  "columnExtensionLoaded" : true
+}

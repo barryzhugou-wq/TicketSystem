@@ -1,0 +1,38 @@
+{
+  "name" : "默认数据源",
+  "userName" : null,
+  "password" : "",
+  "port" : null,
+  "databaseName" : null,
+  "extraJdbcUrl" : null,
+  "description" : null,
+  "type" : "sqlite",
+  "advancedConfig" : {
+    "poolPreparedStatements" : true,
+    "maxWait" : 3000,
+    "socketTimeout" : 0,
+    "maxActive" : 8,
+    "minIdle" : 0,
+    "initialSize" : 0,
+    "breakAfterAcquireFailure" : true,
+    "connectionErrorRetryAttempts" : 5,
+    "extensionProperties" : null
+  },
+  "capabilityConfig" : {
+    "autoSync" : true,
+    "notSupportUpdate" : true,
+    "notSupportDelete" : false,
+    "databaseIsolation" : true,
+    "supportExport" : true,
+    "supportPublishBackup" : true,
+    "hideInServerManager" : true,
+    "notSupportServerDatabaseConfig" : true,
+    "extra" : {
+      "isRelativePath" : true,
+      "fileName" : "app.phxdb",
+      "relativePath" : "database"
+    }
+  },
+  "pinned" : true,
+  "isPinned" : true
+}

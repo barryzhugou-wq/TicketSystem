@@ -1,0 +1,6 @@
+{
+  "id" : "scheduled-task",
+  "name" : "计划任务",
+  "description" : "定期自动执行的任务",
+  "moduleType" : "server"
+}

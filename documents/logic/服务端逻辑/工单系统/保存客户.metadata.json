@@ -1,0 +1,159 @@
+{
+  "id" : "P5OBL6VY",
+  "name" : "保存客户",
+  "description" : "新增或更新客户档案",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "HYETUKHV",
+    "name" : "ID",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "GF2VZUIB",
+    "name" : "客户名称",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "G2JOSYJX",
+    "name" : "联系人",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "FH555QFR",
+    "name" : "联系电话",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "EJJEVUNX",
+    "name" : "客户等级",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "JPM9U7TN",
+    "name" : "所属区域",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "VKWQG9H7",
+    "name" : "服务状态",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "MMI9AFGV",
+    "name" : "备注",
+    "isRequired" : false
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "SE6VGYL5",
+    "name" : "重复数量"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "客户选项"
+    },
+    "id" : "Z2F8F7X3",
+    "name" : "新建客户"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "VI4HQ4I4",
+    "name" : "排除ID"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "T6D5GLKT",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "W9QVAPP9",
+    "name" : "message"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "X8CSEK2K",
+    "name" : "客户ID"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/客户档案"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/维护客户档案"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "客户选项"
+  } ]
+}

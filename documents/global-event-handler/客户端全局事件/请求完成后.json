@@ -1,0 +1,1061 @@
+{
+  "id" : "UQQ5PO37",
+  "name" : "请求完成后",
+  "description" : "处理HTTP请求完成事件，包括错误处理和页面跳转",
+  "type" : "globalEvent",
+  "resourceType" : "globalEvent",
+  "sourceLogic" : {
+    "id" : "HNDY35VD",
+    "name" : "请求完成后",
+    "displayName" : "请求完成后",
+    "diagram" : {
+      "nodes" : [ {
+        "id" : "S6PN3WLB",
+        "name" : "开始",
+        "pluginName" : "",
+        "identifier" : "",
+        "attributes" : {
+          "position" : {
+            "x" : 2,
+            "y" : 405
+          }
+        },
+        "isStartPoint" : true
+      }, {
+        "id" : "C9UWGJLA",
+        "name" : "判断请求地址类型",
+        "pluginName" : "logic-core",
+        "identifier" : "condition",
+        "content" : {
+          "conditions" : {
+            "type" : "structure",
+            "structure" : {
+              "ifCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "if"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "KP660U5Q"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "request.请求URL",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 10
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : "/api/page/document?path=",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              },
+              "elseCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "else"
+                  }
+                }
+              },
+              "elseIfCases" : {
+                "type" : "structure",
+                "structure" : [ {
+                  "type" : "structure",
+                  "structure" : {
+                    "identifier" : {
+                      "type" : "literal",
+                      "literal" : "AZL36JO7"
+                    },
+                    "conditions" : {
+                      "type" : "structure",
+                      "structure" : {
+                        "conditionType" : {
+                          "type" : "literal",
+                          "literal" : 0
+                        },
+                        "conditionItems" : {
+                          "type" : "structure",
+                          "structure" : [ {
+                            "type" : "structure",
+                            "structure" : {
+                              "conditionType" : {
+                                "type" : "literal",
+                                "literal" : 2
+                              },
+                              "id" : {
+                                "type" : "literal",
+                                "literal" : "DE84SK16"
+                              },
+                              "operand" : {
+                                "type" : "expression",
+                                "expression" : "request.请求URL",
+                                "dataType" : {
+                                  "typeName" : "String"
+                                }
+                              },
+                              "operator" : {
+                                "type" : "literal",
+                                "literal" : 10
+                              },
+                              "value" : {
+                                "type" : "literal",
+                                "literal" : "/api/logic/server/",
+                                "dataType" : {
+                                  "typeName" : "String"
+                                }
+                              }
+                            }
+                          } ]
+                        }
+                      }
+                    }
+                  }
+                } ]
+              }
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 295,
+            "y" : 405
+          }
+        }
+      }, {
+        "id" : "D87YI116",
+        "name" : "判断忽略加载错误",
+        "pluginName" : "logic-core",
+        "identifier" : "condition",
+        "content" : {
+          "conditions" : {
+            "type" : "structure",
+            "structure" : {
+              "ifCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "if"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "F9YGLHAD"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "Map.Get(request.查询参数,\"ignoreLoadError\")",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 17
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : "",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              },
+              "elseCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "else"
+                  }
+                }
+              },
+              "elseIfCases" : {
+                "type" : "structure",
+                "structure" : [ ]
+              }
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 588,
+            "y" : 405
+          }
+        }
+      }, {
+        "id" : "DZA4AS5F",
+        "name" : "判断页面请求响应",
+        "pluginName" : "logic-core",
+        "identifier" : "condition",
+        "content" : {
+          "conditions" : {
+            "type" : "structure",
+            "structure" : {
+              "ifCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "if"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "PFVKXTQP"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "response.状态码",
+                              "dataType" : {
+                                "typeName" : "Integer"
+                              }
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 0
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : 401,
+                              "dataType" : {
+                                "typeName" : "Integer"
+                              }
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              },
+              "elseCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "else"
+                  }
+                }
+              },
+              "elseIfCases" : {
+                "type" : "structure",
+                "structure" : [ {
+                  "type" : "structure",
+                  "structure" : {
+                    "identifier" : {
+                      "type" : "literal",
+                      "literal" : "YJFTPD6M"
+                    },
+                    "conditions" : {
+                      "type" : "structure",
+                      "structure" : {
+                        "conditionType" : {
+                          "type" : "literal",
+                          "literal" : 0
+                        },
+                        "conditionItems" : {
+                          "type" : "structure",
+                          "structure" : [ {
+                            "type" : "structure",
+                            "structure" : {
+                              "conditionType" : {
+                                "type" : "literal",
+                                "literal" : 2
+                              },
+                              "id" : {
+                                "type" : "literal",
+                                "literal" : "Y5P2EI2W"
+                              },
+                              "operand" : {
+                                "type" : "expression",
+                                "expression" : "response.状态码",
+                                "dataType" : {
+                                  "typeName" : "Integer"
+                                }
+                              },
+                              "operator" : {
+                                "type" : "literal",
+                                "literal" : 0
+                              },
+                              "value" : {
+                                "type" : "literal",
+                                "literal" : 403,
+                                "dataType" : {
+                                  "typeName" : "Integer"
+                                }
+                              }
+                            }
+                          } ]
+                        }
+                      }
+                    }
+                  }
+                }, {
+                  "type" : "structure",
+                  "structure" : {
+                    "identifier" : {
+                      "type" : "literal",
+                      "literal" : "UPOXVXBP"
+                    },
+                    "conditions" : {
+                      "type" : "structure",
+                      "structure" : {
+                        "conditionType" : {
+                          "type" : "literal",
+                          "literal" : 0
+                        },
+                        "conditionItems" : {
+                          "type" : "structure",
+                          "structure" : [ {
+                            "type" : "structure",
+                            "structure" : {
+                              "conditionType" : {
+                                "type" : "literal",
+                                "literal" : 2
+                              },
+                              "id" : {
+                                "type" : "literal",
+                                "literal" : "B23E0JDV"
+                              },
+                              "operand" : {
+                                "type" : "expression",
+                                "expression" : "response.状态码",
+                                "dataType" : {
+                                  "typeName" : "Integer"
+                                }
+                              },
+                              "operator" : {
+                                "type" : "literal",
+                                "literal" : 0
+                              },
+                              "value" : {
+                                "type" : "literal",
+                                "literal" : 404,
+                                "dataType" : {
+                                  "typeName" : "Integer"
+                                }
+                              }
+                            }
+                          } ]
+                        }
+                      }
+                    }
+                  }
+                } ]
+              }
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 876,
+            "y" : 405
+          }
+        }
+      }, {
+        "id" : "Z2PWFPFB",
+        "name" : "判断登录跳转地址",
+        "pluginName" : "logic-core",
+        "identifier" : "condition",
+        "content" : {
+          "conditions" : {
+            "type" : "structure",
+            "structure" : {
+              "ifCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "if"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "Y9O5RYCD"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "String.IsNullOrEmpty(Map.Get(response.响应头,\"location\"))",
+                              "dataType" : {
+                                "typeName" : "Boolean"
+                              }
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 23
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : "",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              },
+              "elseCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "else"
+                  }
+                }
+              },
+              "elseIfCases" : {
+                "type" : "structure",
+                "structure" : [ ]
+              }
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1164,
+            "y" : 325
+          }
+        }
+      }, {
+        "id" : "RZAHIR06",
+        "name" : "判断逻辑请求响应",
+        "pluginName" : "logic-core",
+        "identifier" : "condition",
+        "content" : {
+          "conditions" : {
+            "type" : "structure",
+            "structure" : {
+              "ifCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "if"
+                  },
+                  "conditions" : {
+                    "type" : "structure",
+                    "structure" : {
+                      "conditionType" : {
+                        "type" : "literal",
+                        "literal" : 0
+                      },
+                      "conditionItems" : {
+                        "type" : "structure",
+                        "structure" : [ {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "CQESO4QN"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "request.请求URL",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 10
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : "/api/logic/server/execute",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            }
+                          }
+                        }, {
+                          "type" : "structure",
+                          "structure" : {
+                            "conditionType" : {
+                              "type" : "literal",
+                              "literal" : 2
+                            },
+                            "id" : {
+                              "type" : "literal",
+                              "literal" : "O2TKXJDU"
+                            },
+                            "operand" : {
+                              "type" : "expression",
+                              "expression" : "String.IsNullOrEmpty(Map.Get(response.响应头,\"location\"))",
+                              "dataType" : {
+                                "typeName" : "Boolean"
+                              }
+                            },
+                            "operator" : {
+                              "type" : "literal",
+                              "literal" : 24
+                            },
+                            "value" : {
+                              "type" : "literal",
+                              "literal" : "",
+                              "dataType" : {
+                                "typeName" : "String"
+                              }
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              },
+              "elseCase" : {
+                "type" : "structure",
+                "structure" : {
+                  "identifier" : {
+                    "type" : "literal",
+                    "literal" : "else"
+                  }
+                }
+              },
+              "elseIfCases" : {
+                "type" : "structure",
+                "structure" : [ {
+                  "type" : "structure",
+                  "structure" : {
+                    "identifier" : {
+                      "type" : "literal",
+                      "literal" : "WOEAA3FK"
+                    },
+                    "conditions" : {
+                      "type" : "structure",
+                      "structure" : {
+                        "conditionType" : {
+                          "type" : "literal",
+                          "literal" : 0
+                        },
+                        "conditionItems" : {
+                          "type" : "structure",
+                          "structure" : [ {
+                            "type" : "structure",
+                            "structure" : {
+                              "conditionType" : {
+                                "type" : "literal",
+                                "literal" : 2
+                              },
+                              "id" : {
+                                "type" : "literal",
+                                "literal" : "OTDPEAYF"
+                              },
+                              "operand" : {
+                                "type" : "expression",
+                                "expression" : "response.错误类型",
+                                "dataType" : {
+                                  "typeName" : "String"
+                                }
+                              },
+                              "operator" : {
+                                "type" : "literal",
+                                "literal" : 18
+                              },
+                              "value" : {
+                                "type" : "literal",
+                                "literal" : "",
+                                "dataType" : {
+                                  "typeName" : "String"
+                                }
+                              }
+                            }
+                          } ]
+                        }
+                      }
+                    }
+                  }
+                } ]
+              }
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 588,
+            "y" : 808
+          }
+        }
+      }, {
+        "id" : "LIEZVII0",
+        "name" : "导航到登录页",
+        "pluginName" : "logic-ui-interaction",
+        "identifier" : "destination",
+        "content" : {
+          "navigationType" : {
+            "type" : "literal",
+            "literal" : "internal"
+          },
+          "windowTarget" : {
+            "type" : "literal",
+            "literal" : "_self"
+          },
+          "pageNavigation" : {
+            "type" : "structure",
+            "structure" : {
+              "page" : {
+                "type" : "literal",
+                "literal" : "/PC/系统页面/身份认证/登录页"
+              },
+              "params" : {
+                "type" : "structure",
+                "structure" : {
+                  "redirect" : {
+                    "type" : "expression",
+                    "expression" : "Map.Get(request.查询参数,\"path\")"
+                  }
+                }
+              }
+            }
+          },
+          "href" : {
+            "type" : "literal",
+            "literal" : ""
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1452,
+            "y" : 360
+          }
+        }
+      }, {
+        "id" : "VYP4W9SB",
+        "name" : "跳转到目标页",
+        "pluginName" : "logic-ui-interaction",
+        "identifier" : "destination",
+        "content" : {
+          "navigationType" : {
+            "type" : "literal",
+            "literal" : "external"
+          },
+          "windowTarget" : {
+            "type" : "literal",
+            "literal" : "_self"
+          },
+          "pageNavigation" : {
+            "type" : "structure",
+            "structure" : {
+              "page" : {
+                "type" : "literal"
+              },
+              "params" : {
+                "type" : "structure",
+                "structure" : { }
+              }
+            }
+          },
+          "href" : {
+            "type" : "expression",
+            "expression" : "Map.Get(response.响应头,\"location\")&\"?redirectUri=\"&Map.Get(request.查询参数,\"path\")"
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1452,
+            "y" : 472
+          }
+        }
+      }, {
+        "id" : "H3RR4OSP",
+        "name" : "导航到未发现页",
+        "pluginName" : "logic-ui-interaction",
+        "identifier" : "destination",
+        "content" : {
+          "navigationType" : {
+            "type" : "literal",
+            "literal" : "internal"
+          },
+          "windowTarget" : {
+            "type" : "literal",
+            "literal" : "_self"
+          },
+          "pageNavigation" : {
+            "type" : "structure",
+            "structure" : {
+              "page" : {
+                "type" : "literal",
+                "literal" : "/PC/系统页面/错误页面/404未发现页面"
+              },
+              "params" : {
+                "type" : "structure",
+                "structure" : { }
+              }
+            }
+          },
+          "href" : {
+            "type" : "literal",
+            "literal" : ""
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1452,
+            "y" : 696
+          }
+        }
+      }, {
+        "id" : "MTCUZ3FB",
+        "name" : "导航到无权限页",
+        "pluginName" : "logic-ui-interaction",
+        "identifier" : "destination",
+        "content" : {
+          "navigationType" : {
+            "type" : "literal",
+            "literal" : "internal"
+          },
+          "windowTarget" : {
+            "type" : "literal",
+            "literal" : "_self"
+          },
+          "pageNavigation" : {
+            "type" : "structure",
+            "structure" : {
+              "page" : {
+                "type" : "literal",
+                "literal" : "/PC/系统页面/错误页面/403无权限页面"
+              },
+              "params" : {
+                "type" : "structure",
+                "structure" : { }
+              }
+            }
+          },
+          "href" : {
+            "type" : "literal",
+            "literal" : ""
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1452,
+            "y" : 584
+          }
+        }
+      }, {
+        "id" : "V3FSYZ6I",
+        "name" : "显示错误消息",
+        "pluginName" : "component-ant-design",
+        "identifier" : "message",
+        "content" : {
+          "content" : {
+            "type" : "expression",
+            "expression" : "If(String.IsNullOrEmpty(response.错误信息),\"操作失败\",response.错误信息)"
+          },
+          "type" : {
+            "type" : "literal",
+            "literal" : "error"
+          },
+          "duration" : {
+            "type" : "literal",
+            "literal" : 3
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1452,
+            "y" : 920
+          }
+        }
+      }, {
+        "id" : "CY3YGYFU",
+        "name" : "跳转到目标页1",
+        "pluginName" : "logic-ui-interaction",
+        "identifier" : "destination",
+        "content" : {
+          "navigationType" : {
+            "type" : "literal",
+            "literal" : "external"
+          },
+          "windowTarget" : {
+            "type" : "literal",
+            "literal" : "_self"
+          },
+          "pageNavigation" : {
+            "type" : "structure",
+            "structure" : {
+              "page" : {
+                "type" : "literal"
+              },
+              "params" : {
+                "type" : "structure",
+                "structure" : { }
+              }
+            }
+          },
+          "href" : {
+            "type" : "expression",
+            "expression" : "Map.Get(response.响应头,\"location\")"
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 1452,
+            "y" : 808
+          }
+        }
+      }, {
+        "id" : "AWZ7APY6",
+        "name" : "结束",
+        "pluginName" : "logic-core",
+        "identifier" : "return",
+        "attributes" : {
+          "position" : {
+            "x" : 1893,
+            "y" : 696
+          }
+        }
+      } ],
+      "edges" : [ {
+        "id" : "STV0UVAQ",
+        "sourceId" : "S6PN3WLB",
+        "targetId" : "C9UWGJLA",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null
+      }, {
+        "id" : "FKY0HIAO",
+        "sourceId" : "LIEZVII0",
+        "targetId" : "AWZ7APY6",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null
+      }, {
+        "id" : "T10P9TAA",
+        "sourceId" : "VYP4W9SB",
+        "targetId" : "AWZ7APY6",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null
+      }, {
+        "id" : "YWPOIIEN",
+        "sourceId" : "H3RR4OSP",
+        "targetId" : "AWZ7APY6",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null
+      }, {
+        "id" : "IUREXH1O",
+        "sourceId" : "MTCUZ3FB",
+        "targetId" : "AWZ7APY6",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null
+      }, {
+        "id" : "OES3D9P2",
+        "sourceId" : "V3FSYZ6I",
+        "targetId" : "AWZ7APY6",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null
+      }, {
+        "id" : "HVTUJMRG",
+        "sourceId" : "CY3YGYFU",
+        "targetId" : "AWZ7APY6",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null
+      }, {
+        "id" : "D4SRD4ZQ",
+        "sourceId" : "C9UWGJLA",
+        "targetId" : "D87YI116",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "if",
+        "targetAnchorId" : null
+      }, {
+        "id" : "Z5WGVY1Q",
+        "sourceId" : "C9UWGJLA",
+        "targetId" : "RZAHIR06",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "AZL36JO7",
+        "targetAnchorId" : null
+      }, {
+        "id" : "O0WVRNCF",
+        "sourceId" : "D87YI116",
+        "targetId" : "DZA4AS5F",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "if",
+        "targetAnchorId" : null
+      }, {
+        "id" : "NJ2JD818",
+        "sourceId" : "DZA4AS5F",
+        "targetId" : "Z2PWFPFB",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "if",
+        "targetAnchorId" : null
+      }, {
+        "id" : "ELSA7TEC",
+        "sourceId" : "DZA4AS5F",
+        "targetId" : "MTCUZ3FB",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "YJFTPD6M",
+        "targetAnchorId" : null
+      }, {
+        "id" : "RXLAIDVJ",
+        "sourceId" : "DZA4AS5F",
+        "targetId" : "H3RR4OSP",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "UPOXVXBP",
+        "targetAnchorId" : null
+      }, {
+        "id" : "TRYFC7CE",
+        "sourceId" : "Z2PWFPFB",
+        "targetId" : "LIEZVII0",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "if",
+        "targetAnchorId" : null
+      }, {
+        "id" : "HVKYKI8B",
+        "sourceId" : "Z2PWFPFB",
+        "targetId" : "VYP4W9SB",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "else",
+        "targetAnchorId" : null
+      }, {
+        "id" : "JY5IZ9VE",
+        "sourceId" : "RZAHIR06",
+        "targetId" : "CY3YGYFU",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "if",
+        "targetAnchorId" : null
+      }, {
+        "id" : "TRC4MXM3",
+        "sourceId" : "RZAHIR06",
+        "targetId" : "V3FSYZ6I",
+        "sourcePosition" : "right",
+        "targetPosition" : "left",
+        "sourceAnchorId" : "WOEAA3FK",
+        "targetAnchorId" : null
+      } ]
+    },
+    "variables" : [ ],
+    "parameters" : [ {
+      "id" : "TEWEM69S",
+      "name" : "request",
+      "dataType" : {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "Http请求"
+      },
+      "description" : "HTTP请求信息"
+    }, {
+      "id" : "MUGNSNSZ",
+      "name" : "response",
+      "dataType" : {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "服务响应"
+      },
+      "description" : "HTTP响应信息"
+    } ],
+    "returnValues" : [ ]
+  }
+}

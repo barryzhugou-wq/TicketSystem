@@ -1,0 +1,6 @@
+{
+  "id" : "client",
+  "name" : "客户端逻辑",
+  "description" : "运行在客户端浏览器上的逻辑",
+  "moduleType" : "client"
+}

@@ -1,0 +1,339 @@
+{
+  "id" : "UOTD43PC",
+  "name" : "待办任务中心",
+  "type" : "page",
+  "description" : "待办任务中心：查看待办、已办、发起与抄送任务并打开处理",
+  "variables" : [ {
+    "id" : "VFEULN5O",
+    "name" : "任务类型",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : "待办"
+    }
+  }, {
+    "id" : "PX3Y2ZBH",
+    "name" : "关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "TH2YXX1X",
+    "name" : "页码",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    }
+  }, {
+    "id" : "C4KKWAV7",
+    "name" : "每页条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 10
+    }
+  }, {
+    "id" : "DH1JC0UV",
+    "name" : "待办列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "待办任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "F4HSET8J",
+    "name" : "已办列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "已办任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "EADPWLKD",
+    "name" : "发起列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "发起任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "WA3N7AEB",
+    "name" : "抄送列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "抄送任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "SK1PJWGD",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "X5KJGKT3",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  } ],
+  "logics" : [ {
+    "id" : "TGBBZZ8R",
+    "name" : "加载任务列表",
+    "description" : "按任务类型与关键字查询本人相关任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "VFEULN5O", "PX3Y2ZBH", "TH2YXX1X", "C4KKWAV7", "DH1JC0UV", "F4HSET8J", "EADPWLKD", "WA3N7AEB", "SK1PJWGD", "X5KJGKT3", "TGBBZZ8R" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "RU849XET",
+    "name" : "页面加载",
+    "description" : "进入页面时加载我的待办任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "RFF7PLNV",
+    "elementName" : "关键字输入",
+    "pluginName" : "component-ant-design",
+    "type" : "input",
+    "targetEvent" : "pressEnter",
+    "id" : "Z2EHB93K",
+    "name" : "关键字查询",
+    "description" : "回车按关键字查询任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "XM4D4S3J",
+    "elementName" : "查询按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "WKI6VOVF",
+    "name" : "查询任务",
+    "description" : "点击查询按钮查询任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "VHOG8U37",
+    "elementName" : "重置按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "MW8MVJWK",
+    "name" : "重置查询条件",
+    "description" : "清空任务检索条件并重新加载",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "KOXA08R4",
+    "elementName" : "任务选项卡",
+    "pluginName" : "component-ant-design",
+    "type" : "tabs",
+    "targetEvent" : "change",
+    "id" : "G3Q03ECF",
+    "name" : "切换任务类型",
+    "description" : "切换任务选项卡后重新加载任务列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "IUM1U8CX",
+    "elementName" : "待办任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "rowClick",
+    "id" : "KWG6CJXM",
+    "name" : "打开待办任务",
+    "description" : "携带任务标识打开工单审批页",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "IUM1U8CX",
+    "elementName" : "待办任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "EHJS5VOT",
+    "name" : "切换待办分页",
+    "description" : "任务列表翻页后重新加载任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "E6ZSUOG4",
+    "elementName" : "已办任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "rowClick",
+    "id" : "WMXCW8WX",
+    "name" : "打开已办任务",
+    "description" : "携带任务标识打开工单审批页",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "E6ZSUOG4",
+    "elementName" : "已办任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "TJK5HXEW",
+    "name" : "切换已办分页",
+    "description" : "任务列表翻页后重新加载任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "XZJRUIPK",
+    "elementName" : "发起任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "rowClick",
+    "id" : "E7RF0RHA",
+    "name" : "打开发起任务",
+    "description" : "携带任务标识打开工单审批页",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "XZJRUIPK",
+    "elementName" : "发起任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "R8AZHCO6",
+    "name" : "切换发起分页",
+    "description" : "任务列表翻页后重新加载任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "D8KY5A2A",
+    "elementName" : "抄送任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "rowClick",
+    "id" : "Y7OLSNNU",
+    "name" : "打开抄送任务",
+    "description" : "携带任务标识打开工单审批页",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "D8KY5A2A",
+    "elementName" : "抄送任务表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "UV4ABUUR",
+    "name" : "切换抄送分页",
+    "description" : "任务列表翻页后重新加载任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/task-center",
+  "title" : "待办任务中心",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单审批页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看待办任务"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询我的任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "抄送任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "待办任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "发起任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "已办任务"
+  } ]
+}

@@ -1,0 +1,566 @@
+{
+  "id" : "MND2RCUX",
+  "name" : "逾期工单扫描",
+  "description" : "每小时扫描超期未完成工单，标记逾期并通知处理人",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "BBB985S4",
+    "name" : "当前时间"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单归属"
+      } ]
+    },
+    "id" : "F3UOLS61",
+    "name" : "逾期工单列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单归属"
+      } ]
+    },
+    "id" : "RAAU99CT",
+    "name" : "待通知工单"
+  } ],
+  "parameters" : [ ],
+  "returnValues" : [ ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "scheduleConfig" : {
+    "type" : "hourly",
+    "startTime" : "2026-09-15T04:07:19.000Z",
+    "hourly" : {
+      "interval" : 1,
+      "unit" : "hour"
+    }
+  },
+  "enabled" : true,
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "XCBONWXM",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "EK89R5WS",
+      "name" : "获取当前时间",
+      "pluginName" : "logic-core",
+      "identifier" : "date-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "CurrentDateTime"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "当前时间"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "A66PQNUB",
+      "name" : "查询逾期工单",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "工单编号"
+            }, {
+              "columnRefName" : "标题"
+            }, {
+              "columnRefName" : "工单状态"
+            }, {
+              "columnRefName" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%9C%9F%E6%9C%9B%E5%AE%8C%E6%88%90%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "当前时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%98%AF%E5%90%A6%E9%80%BE%E6%9C%9F",
+              "operator" : 24,
+              "value" : {
+                "type" : 1,
+                "identifier" : null,
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E5%B7%A5%E5%8D%95%E7%8A%B6%E6%80%81",
+              "operator" : 12,
+              "value" : {
+                "type" : 1,
+                "identifier" : "[\"待审批\",\"处理中\",\"待客户确认\"]",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "工单归属"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "逾期工单列表"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "J9GKSH8K",
+      "name" : "检查逾期工单",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "C4N1MIVB"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "逾期工单列表"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 19
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 350
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "SOZB680X",
+      "name" : "筛选待通知工单",
+      "pluginName" : "logic-core",
+      "identifier" : "list-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Filter"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "逾期工单列表"
+        },
+        "itemName" : {
+          "type" : "literal",
+          "literal" : "工单"
+        },
+        "condition" : {
+          "type" : "expression",
+          "expression" : "Not(IsNull(工单.处理人ID))"
+        },
+        "returnValue" : {
+          "type" : "variable",
+          "variable" : "待通知工单"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 450
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "V0AGFEAC",
+      "name" : "批量标记逾期",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-update",
+      "content" : {
+        "mode" : "batch",
+        "entityRef" : {
+          "entityName" : "工单",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : {
+          "type" : "variable",
+          "variable" : "逾期工单列表"
+        },
+        "condition" : {
+          "conditionType" : 0,
+          "conditionItems" : [ {
+            "conditionType" : 2,
+            "conditionItems" : null,
+            "type" : 3,
+            "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+            "operator" : 0,
+            "value" : {
+              "type" : 6,
+              "identifier" : "item.ID",
+              "name" : null
+            },
+            "nullValueStrategy" : 0
+          }, {
+            "conditionType" : 2,
+            "conditionItems" : null,
+            "type" : 3,
+            "identifier" : "%E5%B7%A5%E5%8D%95.%E6%98%AF%E5%90%A6%E9%80%BE%E6%9C%9F",
+            "operator" : 24,
+            "value" : {
+              "type" : 1,
+              "identifier" : null,
+              "name" : null
+            },
+            "nullValueStrategy" : 0
+          } ]
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "是否逾期"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : true
+          }
+        } ],
+        "returnTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 550
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "QH2LYG58",
+      "name" : "检查待通知工单",
+      "pluginName" : "logic-core",
+      "identifier" : "condition",
+      "content" : {
+        "conditions" : {
+          "type" : "structure",
+          "structure" : {
+            "ifCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "if"
+                },
+                "conditions" : {
+                  "type" : "structure",
+                  "structure" : {
+                    "conditionType" : {
+                      "type" : "literal",
+                      "literal" : 0
+                    },
+                    "conditionItems" : {
+                      "type" : "structure",
+                      "structure" : [ {
+                        "type" : "structure",
+                        "structure" : {
+                          "conditionType" : {
+                            "type" : "literal",
+                            "literal" : 2
+                          },
+                          "id" : {
+                            "type" : "literal",
+                            "literal" : "IB1CRYAE"
+                          },
+                          "operand" : {
+                            "type" : "expression",
+                            "expression" : "待通知工单"
+                          },
+                          "operator" : {
+                            "type" : "literal",
+                            "literal" : 19
+                          },
+                          "value" : {
+                            "type" : "literal",
+                            "literal" : ""
+                          }
+                        }
+                      } ]
+                    }
+                  }
+                }
+              }
+            },
+            "elseCase" : {
+              "type" : "structure",
+              "structure" : {
+                "identifier" : {
+                  "type" : "literal",
+                  "literal" : "else"
+                }
+              }
+            },
+            "elseIfCases" : {
+              "type" : "structure",
+              "structure" : [ ]
+            }
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 750,
+          "y" : 650
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "ZKODNTUN",
+      "name" : "写入逾期通知",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-insert",
+      "content" : {
+        "mode" : "batch",
+        "entityRef" : {
+          "entityName" : "工单通知",
+          "dataSourceName" : "默认数据源"
+        },
+        "variable" : {
+          "type" : "variable",
+          "variable" : "待通知工单"
+        },
+        "propertyMappers" : [ {
+          "target" : {
+            "type" : "literal",
+            "literal" : "接收人ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "item.处理人ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "工单ID"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "item.ID"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知标题"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : "工单已逾期"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知内容"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "\"工单 \" & item.工单编号 & \" 已逾期，请尽快处理：\" & item.标题"
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "是否已读"
+          },
+          "value" : {
+            "type" : "literal",
+            "literal" : false
+          }
+        }, {
+          "target" : {
+            "type" : "literal",
+            "literal" : "通知时间"
+          },
+          "value" : {
+            "type" : "expression",
+            "expression" : "当前时间"
+          }
+        } ],
+        "returnTo" : null,
+        "returnCountTo" : null
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 1200,
+          "y" : 750
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "HWL3SQBA",
+      "sourceId" : "XCBONWXM",
+      "targetId" : "EK89R5WS",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "E13JDW6O",
+      "sourceId" : "EK89R5WS",
+      "targetId" : "A66PQNUB",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "KQTQTE20",
+      "sourceId" : "A66PQNUB",
+      "targetId" : "J9GKSH8K",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "N7WHRC9A",
+      "sourceId" : "J9GKSH8K",
+      "targetId" : "SOZB680X",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "M6RS7CTD",
+      "sourceId" : "SOZB680X",
+      "targetId" : "V0AGFEAC",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "OSA3BBU3",
+      "sourceId" : "V0AGFEAC",
+      "targetId" : "QH2LYG58",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "AA157MPS",
+      "sourceId" : "QH2LYG58",
+      "targetId" : "ZKODNTUN",
+      "sourceAnchorId" : "else",
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  },
+  "type" : "scheduledTask"
+}

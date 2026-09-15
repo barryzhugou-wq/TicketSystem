@@ -1,0 +1,100 @@
+{
+  "id" : "P391EPL7",
+  "name" : "绑定页面",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "X3BWDLFN",
+    "name" : "code",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "PCYKOPFN",
+    "name" : "redirect",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "VBSXAXQ4",
+    "name" : "username",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "MAOF757Z",
+    "name" : "password",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "X3BWDLFN", "PCYKOPFN", "VBSXAXQ4", "MAOF757Z" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "MR7LPGV3",
+    "elementName" : "绑定按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "XOAB43AV",
+    "name" : "单击",
+    "variables" : [ {
+      "id" : "GBRY5SPD",
+      "name" : "isFormValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "CUD1PDFH",
+      "name" : "bindSuccess",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "ZJVPY2PI",
+      "name" : "bindErrorMessage",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/移动端/系统页面/三方登录/绑定页面",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/三方登录/注册并绑定页面",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "绑定用户"
+  } ]
+}

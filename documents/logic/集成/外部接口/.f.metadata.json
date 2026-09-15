@@ -1,0 +1,6 @@
+{
+  "id" : "external-api",
+  "name" : "外部接口",
+  "description" : "集成外部三方Restful API",
+  "moduleType" : "server"
+}

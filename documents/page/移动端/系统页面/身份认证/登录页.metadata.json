@@ -1,0 +1,113 @@
+{
+  "id" : "HTWPG10T",
+  "name" : "登录页",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ {
+    "id" : "AKS3C2VF",
+    "name" : "redirect",
+    "kind" : "parameter",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "GIX1SQWI",
+    "name" : "userName",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "S47F0216",
+    "name" : "password",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : ""
+  }, {
+    "id" : "RM05PSCR",
+    "name" : "rememberOptions",
+    "kind" : "variable",
+    "defaultValue" : {
+      "type" : "literal"
+    },
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "typeName" : "String"
+      } ]
+    },
+    "description" : ""
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "AKS3C2VF", "GIX1SQWI", "S47F0216", "RM05PSCR" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ {
+    "elementId" : "Y6YAL7X5",
+    "elementName" : "登录按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "FN1OP3CQ",
+    "name" : "单击",
+    "variables" : [ {
+      "id" : "CBE3BT7T",
+      "name" : "message",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    }, {
+      "id" : "TN33LAA8",
+      "name" : "success",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "Y798ROH1",
+      "name" : "code",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    }, {
+      "id" : "KKE6P8TD",
+      "name" : "isValid",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/移动端/系统页面/身份认证/登录页",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/身份认证/忘记密码页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/系统页面/身份认证/修改密码页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "登录"
+  } ]
+}

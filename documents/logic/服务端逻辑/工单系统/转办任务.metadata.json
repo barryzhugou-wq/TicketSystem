@@ -1,0 +1,93 @@
+{
+  "id" : "QPCGJFKT",
+  "name" : "转办任务",
+  "description" : "把当前待办任务转办给指定的客服成员，并同步工单处理人",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "UQQFUNKF",
+    "name" : "任务ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "I79XC0LJ",
+    "name" : "目标成员ID",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员简要"
+    },
+    "id" : "U8R2XY49",
+    "name" : "目标成员"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "任务实例"
+    },
+    "id" : "C77K070Z",
+    "name" : "任务信息"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单流程标识"
+    },
+    "id" : "F75BIA0Z",
+    "name" : "工单流程"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "FXDGI2WM",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "F9I4790A",
+    "name" : "message"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员简要"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单流程标识"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "任务实例"
+  } ]
+}

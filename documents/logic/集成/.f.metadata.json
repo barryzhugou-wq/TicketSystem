@@ -1,0 +1,6 @@
+{
+  "id" : "integration",
+  "name" : "集成",
+  "description" : "与外部系统集成的逻辑",
+  "moduleType" : "server"
+}

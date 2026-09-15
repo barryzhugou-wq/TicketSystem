@@ -1,0 +1,1184 @@
+{
+  "id" : "WJI24SN6",
+  "name" : "查询工单统计报表",
+  "description" : "按时间区间统计工单类型、优先级、处理人工作量、满意度、趋势与处理时长",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "处理时长统计"
+    },
+    "id" : "C94LKGNW",
+    "name" : "处理时长原始"
+  } ],
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "VOTIBB5N",
+    "name" : "开始时间",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "PI1VPHFC",
+    "name" : "结束时间",
+    "isRequired" : false
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单类型统计行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "DJP5LXIC",
+    "name" : "类型统计"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "优先级统计行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "Y0HP91I5",
+    "name" : "优先级统计"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "处理人工作量行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "K1BUJH25",
+    "name" : "工作量"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "满意度统计行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "X7UXIQZV",
+    "name" : "满意度"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单趋势行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "PABHLKAJ",
+    "name" : "趋势"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "处理时长统计"
+    },
+    "id" : "YLQZ02LQ",
+    "name" : "处理时长结构"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "B8R292M9",
+    "name" : "总数量"
+  } ],
+  "enableTransaction" : false,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/查看全部工单", "/查看统计报表" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "SHM4ODA0",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "YS4PC999",
+      "name" : "按工单类型统计",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID",
+              "columnAlias" : "ID"
+            }, {
+              "columnRefName" : "工单编号",
+              "columnAlias" : "工单编号"
+            }, {
+              "columnRefName" : "标题",
+              "columnAlias" : "标题"
+            }, {
+              "columnRefName" : "工单类型",
+              "columnAlias" : "工单类型"
+            }, {
+              "columnRefName" : "优先级",
+              "columnAlias" : "优先级"
+            }, {
+              "columnRefName" : "工单状态",
+              "columnAlias" : "工单状态"
+            }, {
+              "columnRefName" : "来源渠道",
+              "columnAlias" : "来源渠道"
+            }, {
+              "columnRefName" : "问题描述",
+              "columnAlias" : "问题描述"
+            }, {
+              "columnRefName" : "期望完成时间",
+              "columnAlias" : "期望完成时间"
+            }, {
+              "columnRefName" : "客户ID",
+              "columnAlias" : "客户ID"
+            }, {
+              "columnRefName" : "提交人ID",
+              "columnAlias" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID",
+              "columnAlias" : "处理人ID"
+            }, {
+              "columnRefName" : "是否逾期",
+              "columnAlias" : "是否逾期"
+            }, {
+              "columnRefName" : "审批意见",
+              "columnAlias" : "审批意见"
+            }, {
+              "columnRefName" : "提交时间",
+              "columnAlias" : "提交时间"
+            }, {
+              "columnRefName" : "受理时间",
+              "columnAlias" : "受理时间"
+            }, {
+              "columnRefName" : "完成时间",
+              "columnAlias" : "完成时间"
+            }, {
+              "columnRefName" : "关闭时间",
+              "columnAlias" : "关闭时间"
+            }, {
+              "columnRefName" : "流程实例ID",
+              "columnAlias" : "流程实例ID"
+            }, {
+              "columnRefName" : "客户是否认可",
+              "columnAlias" : "客户是否认可"
+            }, {
+              "columnRefName" : "处理结果",
+              "columnAlias" : "处理结果"
+            }, {
+              "columnRefName" : "处理人用户名",
+              "columnAlias" : "处理人用户名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 3,
+              "value" : {
+                "type" : 6,
+                "identifier" : "开始时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "结束时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : {
+            "groupByColumns" : [ {
+              "columnAlias" : "类型名称",
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E5%B7%A5%E5%8D%95%E7%B1%BB%E5%9E%8B",
+              "name" : null
+            } ],
+            "aggregatedColumns" : [ {
+              "columnAlias" : "数量",
+              "aggregationType" : 3,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+              "name" : null
+            } ],
+            "having" : null
+          },
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "工单类型统计行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "类型统计"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "NGDQ8XEY",
+      "name" : "按优先级统计",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID",
+              "columnAlias" : "ID"
+            }, {
+              "columnRefName" : "工单编号",
+              "columnAlias" : "工单编号"
+            }, {
+              "columnRefName" : "标题",
+              "columnAlias" : "标题"
+            }, {
+              "columnRefName" : "工单类型",
+              "columnAlias" : "工单类型"
+            }, {
+              "columnRefName" : "优先级",
+              "columnAlias" : "优先级"
+            }, {
+              "columnRefName" : "工单状态",
+              "columnAlias" : "工单状态"
+            }, {
+              "columnRefName" : "来源渠道",
+              "columnAlias" : "来源渠道"
+            }, {
+              "columnRefName" : "问题描述",
+              "columnAlias" : "问题描述"
+            }, {
+              "columnRefName" : "期望完成时间",
+              "columnAlias" : "期望完成时间"
+            }, {
+              "columnRefName" : "客户ID",
+              "columnAlias" : "客户ID"
+            }, {
+              "columnRefName" : "提交人ID",
+              "columnAlias" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID",
+              "columnAlias" : "处理人ID"
+            }, {
+              "columnRefName" : "是否逾期",
+              "columnAlias" : "是否逾期"
+            }, {
+              "columnRefName" : "审批意见",
+              "columnAlias" : "审批意见"
+            }, {
+              "columnRefName" : "提交时间",
+              "columnAlias" : "提交时间"
+            }, {
+              "columnRefName" : "受理时间",
+              "columnAlias" : "受理时间"
+            }, {
+              "columnRefName" : "完成时间",
+              "columnAlias" : "完成时间"
+            }, {
+              "columnRefName" : "关闭时间",
+              "columnAlias" : "关闭时间"
+            }, {
+              "columnRefName" : "流程实例ID",
+              "columnAlias" : "流程实例ID"
+            }, {
+              "columnRefName" : "客户是否认可",
+              "columnAlias" : "客户是否认可"
+            }, {
+              "columnRefName" : "处理结果",
+              "columnAlias" : "处理结果"
+            }, {
+              "columnRefName" : "处理人用户名",
+              "columnAlias" : "处理人用户名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 3,
+              "value" : {
+                "type" : 6,
+                "identifier" : "开始时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "结束时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : {
+            "groupByColumns" : [ {
+              "columnAlias" : "优先级名称",
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E4%BC%98%E5%85%88%E7%BA%A7",
+              "name" : null
+            } ],
+            "aggregatedColumns" : [ {
+              "columnAlias" : "数量",
+              "aggregationType" : 3,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+              "name" : null
+            } ],
+            "having" : null
+          },
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "优先级统计行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "优先级统计"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "R5OLQDBD",
+      "name" : "按处理人统计工作量",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID",
+              "columnAlias" : "ID"
+            }, {
+              "columnRefName" : "工单编号",
+              "columnAlias" : "工单编号"
+            }, {
+              "columnRefName" : "标题",
+              "columnAlias" : "标题"
+            }, {
+              "columnRefName" : "工单类型",
+              "columnAlias" : "工单类型"
+            }, {
+              "columnRefName" : "优先级",
+              "columnAlias" : "优先级"
+            }, {
+              "columnRefName" : "工单状态",
+              "columnAlias" : "工单状态"
+            }, {
+              "columnRefName" : "来源渠道",
+              "columnAlias" : "来源渠道"
+            }, {
+              "columnRefName" : "问题描述",
+              "columnAlias" : "问题描述"
+            }, {
+              "columnRefName" : "期望完成时间",
+              "columnAlias" : "期望完成时间"
+            }, {
+              "columnRefName" : "客户ID",
+              "columnAlias" : "客户ID"
+            }, {
+              "columnRefName" : "提交人ID",
+              "columnAlias" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID",
+              "columnAlias" : "处理人ID"
+            }, {
+              "columnRefName" : "是否逾期",
+              "columnAlias" : "是否逾期"
+            }, {
+              "columnRefName" : "审批意见",
+              "columnAlias" : "审批意见"
+            }, {
+              "columnRefName" : "提交时间",
+              "columnAlias" : "提交时间"
+            }, {
+              "columnRefName" : "受理时间",
+              "columnAlias" : "受理时间"
+            }, {
+              "columnRefName" : "完成时间",
+              "columnAlias" : "完成时间"
+            }, {
+              "columnRefName" : "关闭时间",
+              "columnAlias" : "关闭时间"
+            }, {
+              "columnRefName" : "流程实例ID",
+              "columnAlias" : "流程实例ID"
+            }, {
+              "columnRefName" : "客户是否认可",
+              "columnAlias" : "客户是否认可"
+            }, {
+              "columnRefName" : "处理结果",
+              "columnAlias" : "处理结果"
+            }, {
+              "columnRefName" : "处理人用户名",
+              "columnAlias" : "处理人用户名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 3,
+              "value" : {
+                "type" : 6,
+                "identifier" : "开始时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "结束时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E5%A4%84%E7%90%86%E4%BA%BAID",
+              "operator" : 16,
+              "value" : {
+                "type" : 1,
+                "identifier" : null,
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : {
+            "groupByColumns" : [ {
+              "columnAlias" : "处理人姓名",
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E5%A4%84%E7%90%86%E4%BA%BA.%E5%A7%93%E5%90%8D",
+              "name" : null
+            } ],
+            "aggregatedColumns" : [ {
+              "columnAlias" : "工单数量",
+              "aggregationType" : 3,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+              "name" : null
+            } ],
+            "having" : null
+          },
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "处理人工作量行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "工作量"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 350
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "HFRJR73A",
+      "name" : "按满意度评分统计",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单评价",
+            "tableAlias" : "工单评价",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID",
+              "columnAlias" : "ID"
+            }, {
+              "columnRefName" : "工单ID",
+              "columnAlias" : "工单ID"
+            }, {
+              "columnRefName" : "满意度评分",
+              "columnAlias" : "满意度评分"
+            }, {
+              "columnRefName" : "评价内容",
+              "columnAlias" : "评价内容"
+            }, {
+              "columnRefName" : "评价人ID",
+              "columnAlias" : "评价人ID"
+            }, {
+              "columnRefName" : "评价时间",
+              "columnAlias" : "评价时间"
+            } ]
+          },
+          "condition" : null,
+          "groupBy" : {
+            "groupByColumns" : [ {
+              "columnAlias" : "满意度评分",
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95%E8%AF%84%E4%BB%B7.%E6%BB%A1%E6%84%8F%E5%BA%A6%E8%AF%84%E5%88%86",
+              "name" : null
+            } ],
+            "aggregatedColumns" : [ {
+              "columnAlias" : "评价数量",
+              "aggregationType" : 3,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95%E8%AF%84%E4%BB%B7.ID",
+              "name" : null
+            } ],
+            "having" : null
+          },
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "满意度统计行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "满意度"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 450
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "C6X1QWMV",
+      "name" : "按提交日序统计趋势",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID",
+              "columnAlias" : "ID"
+            }, {
+              "columnRefName" : "工单编号",
+              "columnAlias" : "工单编号"
+            }, {
+              "columnRefName" : "标题",
+              "columnAlias" : "标题"
+            }, {
+              "columnRefName" : "工单类型",
+              "columnAlias" : "工单类型"
+            }, {
+              "columnRefName" : "优先级",
+              "columnAlias" : "优先级"
+            }, {
+              "columnRefName" : "工单状态",
+              "columnAlias" : "工单状态"
+            }, {
+              "columnRefName" : "来源渠道",
+              "columnAlias" : "来源渠道"
+            }, {
+              "columnRefName" : "问题描述",
+              "columnAlias" : "问题描述"
+            }, {
+              "columnRefName" : "期望完成时间",
+              "columnAlias" : "期望完成时间"
+            }, {
+              "columnRefName" : "客户ID",
+              "columnAlias" : "客户ID"
+            }, {
+              "columnRefName" : "提交人ID",
+              "columnAlias" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID",
+              "columnAlias" : "处理人ID"
+            }, {
+              "columnRefName" : "是否逾期",
+              "columnAlias" : "是否逾期"
+            }, {
+              "columnRefName" : "审批意见",
+              "columnAlias" : "审批意见"
+            }, {
+              "columnRefName" : "提交时间",
+              "columnAlias" : "提交时间"
+            }, {
+              "columnRefName" : "受理时间",
+              "columnAlias" : "受理时间"
+            }, {
+              "columnRefName" : "完成时间",
+              "columnAlias" : "完成时间"
+            }, {
+              "columnRefName" : "关闭时间",
+              "columnAlias" : "关闭时间"
+            }, {
+              "columnRefName" : "流程实例ID",
+              "columnAlias" : "流程实例ID"
+            }, {
+              "columnRefName" : "客户是否认可",
+              "columnAlias" : "客户是否认可"
+            }, {
+              "columnRefName" : "处理结果",
+              "columnAlias" : "处理结果"
+            }, {
+              "columnRefName" : "处理人用户名",
+              "columnAlias" : "处理人用户名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 3,
+              "value" : {
+                "type" : 6,
+                "identifier" : "开始时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "结束时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : {
+            "groupByColumns" : [ {
+              "columnAlias" : "统计日期",
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BA%8F",
+              "name" : null
+            } ],
+            "aggregatedColumns" : [ {
+              "columnAlias" : "数量",
+              "aggregationType" : 3,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.ID",
+              "name" : null
+            } ],
+            "having" : null
+          },
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "工单趋势行"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "趋势"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 550
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "YJ3HX0TP",
+      "name" : "趋势按日期升序",
+      "pluginName" : "logic-core",
+      "identifier" : "list-operation",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Sort"
+        },
+        "source" : {
+          "type" : "variable",
+          "variable" : "趋势"
+        },
+        "itemName" : {
+          "type" : "literal",
+          "literal" : "趋势行"
+        },
+        "sortConditions" : {
+          "type" : "structure",
+          "structure" : [ {
+            "type" : "structure",
+            "structure" : {
+              "id" : {
+                "type" : "literal",
+                "literal" : "QWZ47NWK"
+              },
+              "condition" : {
+                "type" : "expression",
+                "expression" : "趋势行.统计日期"
+              },
+              "order" : {
+                "type" : "literal",
+                "literal" : "asc"
+              }
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 650
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "YFWRMQ73",
+      "name" : "统计平均处理天数",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID",
+              "columnAlias" : "ID"
+            }, {
+              "columnRefName" : "工单编号",
+              "columnAlias" : "工单编号"
+            }, {
+              "columnRefName" : "标题",
+              "columnAlias" : "标题"
+            }, {
+              "columnRefName" : "工单类型",
+              "columnAlias" : "工单类型"
+            }, {
+              "columnRefName" : "优先级",
+              "columnAlias" : "优先级"
+            }, {
+              "columnRefName" : "工单状态",
+              "columnAlias" : "工单状态"
+            }, {
+              "columnRefName" : "来源渠道",
+              "columnAlias" : "来源渠道"
+            }, {
+              "columnRefName" : "问题描述",
+              "columnAlias" : "问题描述"
+            }, {
+              "columnRefName" : "期望完成时间",
+              "columnAlias" : "期望完成时间"
+            }, {
+              "columnRefName" : "客户ID",
+              "columnAlias" : "客户ID"
+            }, {
+              "columnRefName" : "提交人ID",
+              "columnAlias" : "提交人ID"
+            }, {
+              "columnRefName" : "处理人ID",
+              "columnAlias" : "处理人ID"
+            }, {
+              "columnRefName" : "是否逾期",
+              "columnAlias" : "是否逾期"
+            }, {
+              "columnRefName" : "审批意见",
+              "columnAlias" : "审批意见"
+            }, {
+              "columnRefName" : "提交时间",
+              "columnAlias" : "提交时间"
+            }, {
+              "columnRefName" : "受理时间",
+              "columnAlias" : "受理时间"
+            }, {
+              "columnRefName" : "完成时间",
+              "columnAlias" : "完成时间"
+            }, {
+              "columnRefName" : "关闭时间",
+              "columnAlias" : "关闭时间"
+            }, {
+              "columnRefName" : "流程实例ID",
+              "columnAlias" : "流程实例ID"
+            }, {
+              "columnRefName" : "客户是否认可",
+              "columnAlias" : "客户是否认可"
+            }, {
+              "columnRefName" : "处理结果",
+              "columnAlias" : "处理结果"
+            }, {
+              "columnRefName" : "处理人用户名",
+              "columnAlias" : "处理人用户名"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 3,
+              "value" : {
+                "type" : 6,
+                "identifier" : "开始时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "结束时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : {
+            "groupByColumns" : null,
+            "aggregatedColumns" : [ {
+              "columnAlias" : "平均处理天数",
+              "aggregationType" : 2,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E5%A4%84%E7%90%86%E5%A4%A9%E6%95%B0",
+              "name" : null
+            } ],
+            "having" : null
+          },
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 1,
+          "typeMode" : "specific",
+          "specificType" : {
+            "declarativeTypeKind" : "Structure",
+            "typeName" : "处理时长统计"
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "处理时长原始"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 750
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "FRLQPKH3",
+      "name" : "兜底处理时长",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "KRIZGLUJ",
+            "target" : {
+              "type" : "variable",
+              "variable" : "处理时长结构"
+            },
+            "value" : {
+              "type" : "structure",
+              "structure" : {
+                "平均处理天数" : {
+                  "type" : "expression",
+                  "expression" : "If(IsNull(处理时长原始), 0, IfError(处理时长原始.平均处理天数, 0))"
+                }
+              }
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 850
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "USVOHONG",
+      "name" : "统计区间工单总数",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "工单",
+            "tableAlias" : "工单",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 3,
+              "value" : {
+                "type" : 6,
+                "identifier" : "开始时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            }, {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%B7%A5%E5%8D%95.%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4",
+              "operator" : 4,
+              "value" : {
+                "type" : 6,
+                "identifier" : "结束时间",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : null,
+          "pagination" : null,
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "auto",
+          "returnCountTo" : {
+            "type" : "variable",
+            "variable" : "总数量"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 950
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "I2IBZQYU",
+      "sourceId" : "SHM4ODA0",
+      "targetId" : "YS4PC999",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "X4V34IUT",
+      "sourceId" : "YS4PC999",
+      "targetId" : "NGDQ8XEY",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "G9JIGQ8V",
+      "sourceId" : "NGDQ8XEY",
+      "targetId" : "R5OLQDBD",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "FQG9U9U9",
+      "sourceId" : "R5OLQDBD",
+      "targetId" : "HFRJR73A",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "Z3B30XJ0",
+      "sourceId" : "HFRJR73A",
+      "targetId" : "C6X1QWMV",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "GY937XM1",
+      "sourceId" : "C6X1QWMV",
+      "targetId" : "YJ3HX0TP",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "HVDB912A",
+      "sourceId" : "YJ3HX0TP",
+      "targetId" : "YFWRMQ73",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "NAK0PN8O",
+      "sourceId" : "YFWRMQ73",
+      "targetId" : "FRLQPKH3",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "WDHYZ3O3",
+      "sourceId" : "FRLQPKH3",
+      "targetId" : "USVOHONG",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  }
+}

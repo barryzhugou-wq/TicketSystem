@@ -1,0 +1,34 @@
+{
+  "id" : "EG6S3464",
+  "name" : "获取登录配置",
+  "description" : "",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ ],
+  "variables" : [ ],
+  "returnValues" : [ {
+    "id" : "BK3GOI2I",
+    "name" : "enableThirdPartyLogin",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "id" : "H6Y0BKCE",
+    "name" : "thirdPartyLoginConfig",
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "String"
+      }, {
+        "typeName" : "Any"
+      } ]
+    }
+  } ],
+  "$deps" : [ {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  } ]
+}

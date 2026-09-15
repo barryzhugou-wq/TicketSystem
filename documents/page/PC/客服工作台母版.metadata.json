@@ -1,0 +1,124 @@
+{
+  "id" : "P6XMS4VC",
+  "name" : "客服工作台母版",
+  "type" : "masterPage",
+  "description" : "客户服务工作台母版：顶部信息栏、左侧功能菜单与子页面内容区",
+  "variables" : [ {
+    "id" : "O3QVGECG",
+    "name" : "当前用户姓名",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "isPublic" : true,
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "Client.currentUser.全名"
+    }
+  }, {
+    "id" : "CAFS56PK",
+    "name" : "当前用户ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "isPublic" : true,
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "Client.currentUser.ID"
+    }
+  }, {
+    "id" : "H54ZNAB1",
+    "name" : "未读消息数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "isPublic" : true,
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  } ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ "O3QVGECG", "CAFS56PK", "H54ZNAB1" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "B8BZZ6Q6",
+    "name" : "页面加载",
+    "description" : "母版页加载时刷新当前账号的未读消息数量",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ ],
+  "platform" : "pc",
+  "$deps" : [ {
+    "documentType" : "clientGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/待办任务中心",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单工作台",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单列表页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单提交页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/客户档案页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/统计报表页",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/我的消息页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看待办任务"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看统计报表"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/维护客户档案"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询我的通知"
+  } ]
+}

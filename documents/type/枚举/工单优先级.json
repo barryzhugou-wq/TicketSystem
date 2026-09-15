@@ -1,0 +1,22 @@
+{
+  "id" : "U9UYHUQF",
+  "name" : "工单优先级",
+  "kind" : "Enum",
+  "description" : "工单紧急程度",
+  "dataType" : {
+    "typeName" : "String"
+  },
+  "members" : [ {
+    "name" : "紧急",
+    "value" : "紧急"
+  }, {
+    "name" : "高",
+    "value" : "高"
+  }, {
+    "name" : "中",
+    "value" : "中"
+  }, {
+    "name" : "低",
+    "value" : "低"
+  } ]
+}

@@ -1,0 +1,74 @@
+{
+  "dataSourceName" : "默认数据源",
+  "tableName" : "工单通知",
+  "name" : "工单通知",
+  "description" : "工单流转过程中的站内消息",
+  "columns" : [ {
+    "columnName" : "id",
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : true,
+    "columnKind" : "physical",
+    "isAutoIncrement" : true
+  }, {
+    "columnName" : "接收人ID",
+    "name" : "接收人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "工单ID",
+    "name" : "工单ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "通知标题",
+    "name" : "通知标题",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "通知内容",
+    "name" : "通知内容",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "是否已读",
+    "name" : "是否已读",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  }, {
+    "columnName" : "通知时间",
+    "name" : "通知时间",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "isPrimaryKey" : false,
+    "columnKind" : "physical",
+    "isAutoIncrement" : false
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  } ]
+}

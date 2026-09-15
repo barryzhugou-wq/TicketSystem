@@ -1,0 +1,12 @@
+{
+  "id" : "Y5PDRPTD",
+  "name" : "处理时长统计",
+  "kind" : "Structure",
+  "description" : "工单处理时长汇总",
+  "properties" : [ {
+    "name" : "平均处理天数",
+    "dataType" : {
+      "typeName" : "Decimal"
+    }
+  } ]
+}

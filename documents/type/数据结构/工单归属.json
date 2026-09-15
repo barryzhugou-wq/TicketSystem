@@ -1,0 +1,38 @@
+{
+  "id" : "QJQY14MQ",
+  "name" : "工单归属",
+  "kind" : "Structure",
+  "description" : "工单的编号、标题与相关人员",
+  "properties" : [ {
+    "name" : "ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "工单编号",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "标题",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "工单状态",
+    "dataType" : {
+      "declarativeTypeKind" : "Enum",
+      "typeName" : "工单状态"
+    }
+  }, {
+    "name" : "提交人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  }, {
+    "name" : "处理人ID",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  } ]
+}

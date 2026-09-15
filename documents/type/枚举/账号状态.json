@@ -1,0 +1,16 @@
+{
+  "id" : "L9YSLWBR",
+  "name" : "账号状态",
+  "kind" : "Enum",
+  "description" : "成员账号状态",
+  "dataType" : {
+    "typeName" : "String"
+  },
+  "members" : [ {
+    "name" : "启用",
+    "value" : "启用"
+  }, {
+    "name" : "停用",
+    "value" : "停用"
+  } ]
+}

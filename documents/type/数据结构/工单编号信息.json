@@ -1,0 +1,12 @@
+{
+  "id" : "UQXVYQ6R",
+  "name" : "工单编号信息",
+  "kind" : "Structure",
+  "description" : "工单编号引用字段",
+  "properties" : [ {
+    "name" : "工单编号",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  } ]
+}

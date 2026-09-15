@@ -1,0 +1,11 @@
+{
+  "name" : "工单评价人",
+  "type" : "ManyToOne",
+  "dataSourceName" : "默认数据源",
+  "sourceEntityName" : "工单评价",
+  "sourceColumnRefName" : "评价人ID",
+  "sourceNavigationName" : "评价人",
+  "targetEntityName" : "成员信息",
+  "targetColumnRefName" : "ID",
+  "targetNavigationName" : "提交的评价"
+}

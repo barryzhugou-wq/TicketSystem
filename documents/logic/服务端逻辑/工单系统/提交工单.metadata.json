@@ -1,0 +1,197 @@
+{
+  "id" : "C0QRW57X",
+  "name" : "提交工单",
+  "description" : "提交客户服务工单并自动发起审批流程",
+  "moduleType" : "server",
+  "enableTransaction" : true,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "XZ1VW02P",
+    "name" : "客户ID",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "CP8NTPL6",
+    "name" : "工单类型",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "TCZPOPRV",
+    "name" : "优先级",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "X09PG6ES",
+    "name" : "来源渠道",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "WZK7MMQN",
+    "name" : "标题",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "I55CYLD6",
+    "name" : "问题描述",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "G6LJ48GU",
+    "name" : "期望完成时间",
+    "isRequired" : true
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "附件输入"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "IMG7VZ8T",
+    "name" : "附件列表",
+    "isRequired" : true
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "成员选项"
+    },
+    "id" : "NAF2L2HA",
+    "name" : "当前成员"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "C7ZAUPSS",
+    "name" : "日期串"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "IHMTL2O2",
+    "name" : "今日数量"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "JIQDDWKU",
+    "name" : "生成编号"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单标识"
+    },
+    "id" : "QVOU1RM5",
+    "name" : "新建工单"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "BZWZI7NK",
+    "name" : "流程实例号"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "通知接收人"
+      } ]
+    },
+    "id" : "OCNDZ0QM",
+    "name" : "主管成员"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    },
+    "id" : "NALLJHQS",
+    "name" : "success"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "O3S2ABHG",
+    "name" : "message"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "U04GF9DI",
+    "name" : "工单ID"
+  }, {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "id" : "FIMJ43D8",
+    "name" : "工单编号"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单处理历史记录"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单附件"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单通知"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "process",
+    "refKey" : "客户服务工单处理流程"
+  }, {
+    "documentType" : "serverGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员选项"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "附件输入"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单标识"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "通知接收人"
+  } ]
+}

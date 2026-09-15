@@ -1,0 +1,6 @@
+{
+  "id" : "server-notification",
+  "name" : "服务端通知",
+  "description" : "由服务端发布、客户端订阅的通知定义",
+  "moduleType" : "server"
+}

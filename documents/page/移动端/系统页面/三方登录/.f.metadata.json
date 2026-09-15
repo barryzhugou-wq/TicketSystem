@@ -1,0 +1,13 @@
+{
+  "id" : "KK3ZP9P0",
+  "name" : "三方登录",
+  "type" : "folder",
+  "variables" : [ ],
+  "logics" : [ ],
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  }
+}

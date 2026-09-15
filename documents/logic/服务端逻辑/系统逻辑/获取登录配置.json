@@ -1,0 +1,105 @@
+{
+  "id" : "EG6S3464",
+  "name" : "获取登录配置",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ ],
+  "returnValues" : [ {
+    "id" : "BK3GOI2I",
+    "name" : "enableThirdPartyLogin",
+    "dataType" : {
+      "typeName" : "Boolean"
+    }
+  }, {
+    "id" : "H6Y0BKCE",
+    "name" : "thirdPartyLoginConfig",
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "String"
+      }, {
+        "typeName" : "Any"
+      } ]
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/匿名权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "DZQ8N1P7",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "RFIOYZHJ",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 800,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "POQE78UL",
+      "name" : "用户管理",
+      "pluginName" : "logic-user-management",
+      "identifier" : "user-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "GetLoginConfig"
+        },
+        "enableThirdPartyLogin" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "enableThirdPartyLogin"
+        },
+        "thirdPartyLoginConfig" : {
+          "type" : "variable",
+          "literal" : "",
+          "variable" : "thirdPartyLoginConfig"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 356,
+          "y" : 200
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "DR4HAQH0",
+      "sourceId" : "DZQ8N1P7",
+      "targetId" : "POQE78UL",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "AGI29AIB",
+      "sourceId" : "POQE78UL",
+      "targetId" : "RFIOYZHJ",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "id" : "PIJJDFXM",
+  "name" : "工单工作台",
+  "type" : "page",
+  "description" : "客服工作台：关键指标、我的待办任务与工单统计图表",
+  "variables" : [ {
+    "id" : "H03B4HWV",
+    "name" : "待审批数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "X13VCVE4",
+    "name" : "待处理数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "TRU1D21U",
+    "name" : "今日新增数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "O6NT589Q",
+    "name" : "逾期数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "F8RN0VS6",
+    "name" : "待办列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "待办任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "UA7XAJNZ",
+    "name" : "待办总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "JNR2N9T0",
+    "name" : "趋势数据",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单趋势行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "PPF4L6DC",
+    "name" : "类型统计数据",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单类型统计行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "JIRJZSFD",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "ESM04GMX",
+    "name" : "统计可见",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "OWXBGIOO",
+    "name" : "加载提示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ {
+    "id" : "RNOCC7QM",
+    "name" : "加载工作台数据",
+    "description" : "查询工作台关键指标、待办任务与统计图表数据，按权限决定是否查询统计报表",
+    "variables" : [ {
+      "id" : "IGSEEG5Y",
+      "name" : "今日开始",
+      "dataType" : {
+        "typeName" : "DateTime"
+      }
+    }, {
+      "id" : "QPFCLPZ9",
+      "name" : "今日结束",
+      "dataType" : {
+        "typeName" : "DateTime"
+      }
+    }, {
+      "id" : "BB5N6WWR",
+      "name" : "统计开始时间",
+      "dataType" : {
+        "typeName" : "DateTime"
+      }
+    }, {
+      "id" : "MEDD2HBT",
+      "name" : "统计结束时间",
+      "dataType" : {
+        "typeName" : "DateTime"
+      }
+    }, {
+      "id" : "Y7D1ZXX5",
+      "name" : "统计工单列表",
+      "dataType" : {
+        "typeName" : "List",
+        "genericTypes" : [ {
+          "declarativeTypeKind" : "Structure",
+          "typeName" : "工单信息"
+        } ]
+      }
+    }, {
+      "id" : "FOH74ZWC",
+      "name" : "统计列表总数",
+      "dataType" : {
+        "typeName" : "Integer"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "H03B4HWV", "X13VCVE4", "TRU1D21U", "O6NT589Q", "F8RN0VS6", "UA7XAJNZ", "JNR2N9T0", "PPF4L6DC", "JIRJZSFD", "RNOCC7QM", "ESM04GMX", "OWXBGIOO" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "CU41Y9JP",
+    "name" : "页面加载",
+    "description" : "进入页面时加载工作台数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "NI62VI9G",
+    "elementName" : "刷新按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "XTJ6ZVM6",
+    "name" : "刷新工作台",
+    "description" : "点击刷新按钮重新加载工作台数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "MHJI5NB0",
+    "elementName" : "待办表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "rowClick",
+    "id" : "S0QD6MNX",
+    "name" : "打开待办任务",
+    "description" : "携带任务标识打开工单审批页",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/ticket-workbench",
+  "title" : "工单工作台",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单审批页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看统计报表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单列表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单统计报表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询我的任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "待办任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单类型统计行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单趋势行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单信息"
+  } ]
+}

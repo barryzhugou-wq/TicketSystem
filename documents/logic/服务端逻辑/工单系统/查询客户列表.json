@@ -1,0 +1,240 @@
+{
+  "id" : "CM8EUX6X",
+  "name" : "查询客户列表",
+  "description" : "按关键字分页查询客户档案列表",
+  "moduleType" : "server",
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "id" : "R21VLAA9",
+    "name" : "偏移量"
+  } ],
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    },
+    "id" : "RP8DJQG0",
+    "name" : "关键字",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    },
+    "id" : "PYKQFRKV",
+    "name" : "页码",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 20
+    },
+    "id" : "WQFDFBPT",
+    "name" : "每页条数",
+    "isRequired" : false
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "L7FM4JT8",
+    "name" : "客户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "ULL6R8C6",
+    "name" : "总数量"
+  } ],
+  "enableTransaction" : false,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/处理工单", "/提交工单", "/查看全部工单", "/查看本人工单", "/维护客户档案" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "U8TTYPH6",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 50
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "ZZUG4P1W",
+      "name" : "计算偏移量",
+      "pluginName" : "logic-core",
+      "identifier" : "assignment",
+      "content" : {
+        "assignmentDatas" : {
+          "type" : "literal",
+          "literal" : [ {
+            "id" : "H5DJQFQP",
+            "target" : {
+              "type" : "variable",
+              "variable" : "偏移量"
+            },
+            "value" : {
+              "type" : "expression",
+              "expression" : "If(Or(IsNull(页码), 页码 <= 1), 0, (页码 - 1) * If(IsNull(每页条数), 20, 每页条数))"
+            }
+          } ]
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 150
+        }
+      },
+      "isStartPoint" : false
+    }, {
+      "id" : "SFEDBEZ8",
+      "name" : "查询客户列表",
+      "pluginName" : "logic-data-operation",
+      "identifier" : "data-query",
+      "content" : {
+        "model" : {
+          "table" : {
+            "entityName" : "客户档案",
+            "tableAlias" : "客户档案",
+            "dataSourceName" : "默认数据源",
+            "columns" : [ {
+              "columnRefName" : "ID"
+            }, {
+              "columnRefName" : "客户名称"
+            }, {
+              "columnRefName" : "联系人"
+            }, {
+              "columnRefName" : "联系电话"
+            }, {
+              "columnRefName" : "客户等级"
+            }, {
+              "columnRefName" : "所属区域"
+            }, {
+              "columnRefName" : "服务状态"
+            }, {
+              "columnRefName" : "备注"
+            } ]
+          },
+          "condition" : {
+            "conditionType" : 0,
+            "conditionItems" : [ {
+              "conditionType" : 2,
+              "conditionItems" : null,
+              "type" : 3,
+              "identifier" : "%E5%AE%A2%E6%88%B7%E6%A1%A3%E6%A1%88.%E5%AE%A2%E6%88%B7%E5%90%8D%E7%A7%B0",
+              "operator" : 10,
+              "value" : {
+                "type" : 6,
+                "identifier" : "If(String.IsNullOrEmpty(关键字), null, 关键字)",
+                "name" : null
+              },
+              "nullValueStrategy" : 0
+            } ]
+          },
+          "groupBy" : null,
+          "orderBy" : {
+            "identifiers" : [ {
+              "columnIdentifier" : {
+                "type" : 3,
+                "identifier" : "%E5%AE%A2%E6%88%B7%E6%A1%A3%E6%A1%88.ID",
+                "name" : null
+              },
+              "orderIdentifier" : {
+                "type" : 6,
+                "identifier" : "Enum.排序方式.降序",
+                "name" : null
+              }
+            } ]
+          },
+          "pagination" : {
+            "limit" : {
+              "type" : "expression",
+              "expression" : "If(IsNull(每页条数), 20, 每页条数)"
+            },
+            "offset" : {
+              "type" : "expression",
+              "expression" : "偏移量"
+            }
+          },
+          "extra" : null
+        },
+        "property" : {
+          "queryMode" : 0,
+          "typeMode" : "specific",
+          "specificType" : {
+            "typeName" : "List",
+            "genericTypes" : [ {
+              "declarativeTypeKind" : "Structure",
+              "typeName" : "客户信息"
+            } ]
+          },
+          "returnTo" : {
+            "type" : "variable",
+            "variable" : "客户列表"
+          },
+          "returnCountTo" : {
+            "type" : "variable",
+            "variable" : "总数量"
+          }
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 300,
+          "y" : 250
+        }
+      },
+      "isStartPoint" : false
+    } ],
+    "edges" : [ {
+      "id" : "EA824A22",
+      "sourceId" : "U8TTYPH6",
+      "targetId" : "ZZUG4P1W",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    }, {
+      "id" : "JYFTQ931",
+      "sourceId" : "ZZUG4P1W",
+      "targetId" : "SFEDBEZ8",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null,
+      "sourcePosition" : "right",
+      "targetPosition" : "left"
+    } ]
+  }
+}

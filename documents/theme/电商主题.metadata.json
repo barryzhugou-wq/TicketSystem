@@ -1,0 +1,8 @@
+{
+  "name" : "电商主题",
+  "builtInName" : "ecommerce",
+  "iconPrimaryColor" : "#E93E3E",
+  "minIdeVersion" : "1.0",
+  "ideVersion" : "1.0",
+  "order" : 3
+}

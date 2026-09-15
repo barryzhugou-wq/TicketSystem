@@ -1,0 +1,477 @@
+{
+  "id" : "RXVXTE3R",
+  "name" : "客户档案页",
+  "type" : "page",
+  "description" : "客户档案：维护客户信息并查看客户历史工单",
+  "variables" : [ {
+    "id" : "VUQ1CH6I",
+    "name" : "关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "XQ7M0V70",
+    "name" : "页码",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    }
+  }, {
+    "id" : "XG88UOBT",
+    "name" : "每页条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 10
+    }
+  }, {
+    "id" : "LQDTKLBL",
+    "name" : "客户列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "客户信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "R1VU12Q0",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "NCFOZPK6",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "NT5VCY0X",
+    "name" : "弹窗显示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "HJHOJ4NH",
+    "name" : "编辑客户ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  }, {
+    "id" : "KINVKH94",
+    "name" : "客户名称",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "ZPVFBWYB",
+    "name" : "联系人",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "C69R314X",
+    "name" : "联系电话",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "U4ZCOK5K",
+    "name" : "客户等级",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "V5B1I48J",
+    "name" : "所属区域",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "EGTL1JBR",
+    "name" : "服务状态",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "P7CKDS9M",
+    "name" : "备注",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "GRKWQJRC",
+    "name" : "保存中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "QZZA8YIS",
+    "name" : "历史工单弹窗",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "TSF61ZI7",
+    "name" : "历史客户名称",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "X8N0SZTP",
+    "name" : "历史页码",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 1
+    }
+  }, {
+    "id" : "VIDS0G8A",
+    "name" : "历史工单列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单信息"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "G95LEQZ8",
+    "name" : "历史工单总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "FB3R96QZ",
+    "name" : "历史加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  } ],
+  "logics" : [ {
+    "id" : "YAFPQM6L",
+    "name" : "加载客户列表",
+    "description" : "按关键字分页查询客户档案",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "id" : "NQZNMQ4D",
+    "name" : "加载历史工单",
+    "description" : "按客户标识分页查询该客户的历史工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "VUQ1CH6I", "XQ7M0V70", "XG88UOBT", "LQDTKLBL", "R1VU12Q0", "NCFOZPK6", "NT5VCY0X", "HJHOJ4NH", "KINVKH94", "ZPVFBWYB", "C69R314X", "U4ZCOK5K", "V5B1I48J", "EGTL1JBR", "P7CKDS9M", "GRKWQJRC", "QZZA8YIS", "TSF61ZI7", "X8N0SZTP", "VIDS0G8A", "G95LEQZ8", "FB3R96QZ", "YAFPQM6L", "NQZNMQ4D" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "YUQG40HP",
+    "name" : "页面加载",
+    "description" : "进入页面时加载客户档案列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "B0QZ6QI1",
+    "elementName" : "查询按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "F9N402FX",
+    "name" : "查询客户",
+    "description" : "按关键字查询客户",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "HAEPDBGT",
+    "elementName" : "重置按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "WWS55TDW",
+    "name" : "重置检索",
+    "description" : "清空客户检索条件并重新查询",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "G4MGXMKM",
+    "elementName" : "新增客户按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "GYVE37LQ",
+    "name" : "打开新增弹窗",
+    "description" : "打开新增客户弹窗并清空表单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "BDAE86G3",
+    "elementName" : "客户列表表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "BUAOCJF1",
+    "name" : "切换客户分页",
+    "description" : "客户列表翻页后重新查询",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "KY430MND",
+    "elementName" : "编辑客户链接",
+    "pluginName" : "component-common",
+    "type" : "hyperlink",
+    "targetEvent" : "click",
+    "id" : "EQHHW2PM",
+    "name" : "打开编辑弹窗",
+    "description" : "打开编辑弹窗并预填客户档案",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "EMXM46FM",
+    "elementName" : "历史工单链接",
+    "pluginName" : "component-common",
+    "type" : "hyperlink",
+    "targetEvent" : "click",
+    "id" : "B098DR0F",
+    "name" : "打开历史工单",
+    "description" : "打开客户历史工单弹窗并加载数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "KIGJPBZV",
+    "elementName" : "取消保存按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "A8K1FXRH",
+    "name" : "关闭客户弹窗",
+    "description" : "关闭客户档案弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "E9GZ8YEC",
+    "elementName" : "保存按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "F3C4DZI2",
+    "name" : "提交客户信息",
+    "description" : "校验客户名称后保存客户档案",
+    "variables" : [ {
+      "id" : "SZ69ZRTE",
+      "name" : "保存成功",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "VY3C5I3R",
+      "name" : "保存提示",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    }, {
+      "id" : "F9XISM1H",
+      "name" : "保存客户ID",
+      "dataType" : {
+        "typeName" : "Integer"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "PBX3C1GB",
+    "elementName" : "历史工单表格",
+    "pluginName" : "component-ant-design",
+    "type" : "table",
+    "targetEvent" : "pageChanged",
+    "id" : "B5VP8J81",
+    "name" : "切换历史分页",
+    "description" : "历史工单翻页后重新查询",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "XQHG0YDV",
+    "elementName" : "关闭历史按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "DQAT7QL7",
+    "name" : "关闭历史工单",
+    "description" : "关闭客户历史工单弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/customer-list",
+  "title" : "客户档案",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "EnumType",
+    "refKey" : "工单状态"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "客户等级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "客户状态"
+  }, {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/维护客户档案"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "保存客户"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单列表"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询客户列表"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单信息"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "客户信息"
+  } ]
+}

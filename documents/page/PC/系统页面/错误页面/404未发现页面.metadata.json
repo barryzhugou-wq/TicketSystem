@@ -1,0 +1,28 @@
+{
+  "id" : "DWDD9G5U",
+  "name" : "404未发现页面",
+  "type" : "page",
+  "description" : "",
+  "variables" : [ ],
+  "logics" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "platform" : "pc",
+  "url" : "/PC/系统页面/错误页面/404未发现页面",
+  "linkedPage" : "/移动端/系统页面/错误页面/404未发现页面",
+  "$deps" : [ {
+    "documentType" : "page",
+    "refKey" : "/移动端/系统页面/错误页面/404未发现页面",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/匿名权限组"
+  }, {
+    "documentType" : "static-resource",
+    "refKey" : "内置资源/404.png"
+  } ]
+}

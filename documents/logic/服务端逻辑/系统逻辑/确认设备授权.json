@@ -1,0 +1,104 @@
+{
+  "id" : "GDCJ3622",
+  "name" : "确认设备授权",
+  "description" : "",
+  "moduleType" : "server",
+  "variables" : [ ],
+  "parameters" : [ {
+    "id" : "QZGHLIUG",
+    "name" : "userCode",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "isRequired" : true
+  } ],
+  "returnValues" : [ {
+    "id" : "TMXY57QK",
+    "name" : "decisionResult",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "OAuth设备授权结果"
+    }
+  } ],
+  "enableTransaction" : true,
+  "allowClientAccess" : true,
+  "cacheTtlMinutes" : 0,
+  "allowExpressionCall" : false,
+  "permissions" : {
+    "logic" : {
+      "execute" : [ "/登录权限组" ]
+    }
+  },
+  "diagram" : {
+    "nodes" : [ {
+      "id" : "RCOJJAVL",
+      "name" : "开始",
+      "pluginName" : "",
+      "identifier" : "",
+      "attributes" : {
+        "position" : {
+          "x" : 80,
+          "y" : 200
+        }
+      },
+      "isStartPoint" : true
+    }, {
+      "id" : "RXBBNKAW",
+      "name" : "结束",
+      "pluginName" : "logic-core",
+      "identifier" : "return",
+      "attributes" : {
+        "position" : {
+          "x" : 800,
+          "y" : 200
+        }
+      }
+    }, {
+      "id" : "W24R6Z6O",
+      "name" : "OAuth设备授权管理",
+      "pluginName" : "logic-oauth-device",
+      "identifier" : "oauth-device-management",
+      "content" : {
+        "type" : {
+          "type" : "literal",
+          "literal" : "Authorize"
+        },
+        "userCodeBinding" : {
+          "type" : "expression",
+          "expression" : "userCode"
+        },
+        "contextOutput" : {
+          "type" : "literal",
+          "literal" : null
+        },
+        "resultOutput" : {
+          "type" : "variable",
+          "variable" : "decisionResult"
+        }
+      },
+      "attributes" : {
+        "position" : {
+          "x" : 440,
+          "y" : 200
+        }
+      }
+    } ],
+    "edges" : [ {
+      "id" : "G0SX91Q7",
+      "sourceId" : "RCOJJAVL",
+      "targetId" : "W24R6Z6O",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    }, {
+      "id" : "K6R2E24J",
+      "sourceId" : "W24R6Z6O",
+      "targetId" : "RXBBNKAW",
+      "sourcePosition" : "right",
+      "targetPosition" : "left",
+      "sourceAnchorId" : null,
+      "targetAnchorId" : null
+    } ]
+  }
+}

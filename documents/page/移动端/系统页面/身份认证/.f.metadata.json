@@ -1,0 +1,13 @@
+{
+  "id" : "VYQHEM1C",
+  "name" : "身份认证",
+  "type" : "folder",
+  "variables" : [ ],
+  "logics" : [ ],
+  "eventListeners" : [ ],
+  "elementEventListeners" : [ ],
+  "subResourceTree" : {
+    "children" : [ ],
+    "groups" : [ ]
+  }
+}

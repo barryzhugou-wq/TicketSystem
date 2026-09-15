@@ -1,0 +1,173 @@
+{
+  "id" : "O3P0I8PC",
+  "name" : "待办任务",
+  "type" : "page",
+  "description" : "移动端待办任务：我的待办任务列表与分页加载，点击进入工单审批页",
+  "variables" : [ {
+    "id" : "REP11G5P",
+    "name" : "关键字",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "A0CXCNUG",
+    "name" : "待办列表",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "待办任务"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "XXL2IJSS",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "BTOTZ925",
+    "name" : "当前条数",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "XZUA8QJ8",
+    "name" : "列表状态",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ {
+    "id" : "FD9RFMMO",
+    "name" : "加载待办任务",
+    "description" : "加载我的待办任务列表（每次多取 10 条）",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "REP11G5P", "A0CXCNUG", "XXL2IJSS", "BTOTZ925", "XZUA8QJ8", "FD9RFMMO" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "O3NVNFRM",
+    "name" : "页面加载",
+    "description" : "待办任务页面加载后拉取首屏待办",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "Z7160CZ0",
+    "elementName" : "刷新待办按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "QQ9VNI98",
+    "name" : "刷新待办",
+    "description" : "手动刷新待办任务列表",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "YXED84B3",
+    "elementName" : "搜索待办按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "P6K6KK3Y",
+    "name" : "搜索待办",
+    "description" : "按关键字重新加载待办任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "E6EHVW0A",
+    "elementName" : "待办列表",
+    "pluginName" : "component-vant",
+    "type" : "list",
+    "targetEvent" : "incrementalLoad",
+    "id" : "U3X8ZY9S",
+    "name" : "加载更多",
+    "description" : "待办列表滚动到底部时加载更多待办任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "AQ8CPVDQ",
+    "elementName" : "待办卡片",
+    "pluginName" : "component-common",
+    "type" : "linear-layout",
+    "targetEvent" : "click",
+    "id" : "Y5NW65ZL",
+    "name" : "打开待办",
+    "description" : "点击待办卡片携带任务标识进入工单审批页",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "B9BEZ2AG",
+    "elementName" : "重新加载按钮",
+    "pluginName" : "component-vant",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "U617TEVJ",
+    "name" : "重新加载",
+    "description" : "加载失败后重新加载待办任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "mobile",
+  "url" : "/m/my-tasks",
+  "masterPage" : "/移动端/工单母版",
+  "$deps" : [ {
+    "documentType" : "masterPage",
+    "refKey" : "/移动端/工单母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/移动端/工单审批页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看待办任务"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询我的任务"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "待办任务"
+  } ]
+}

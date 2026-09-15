@@ -1,0 +1,462 @@
+{
+  "id" : "OBZV7O0P",
+  "name" : "工单详情页",
+  "type" : "page",
+  "description" : "工单详情：基本信息、流转进度、处理记录、附件与客户评价",
+  "variables" : [ {
+    "id" : "EFMZ2ZTQ",
+    "name" : "工单ID",
+    "kind" : "parameter",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : ""
+  }, {
+    "id" : "DKK1LZ6S",
+    "name" : "任务ID",
+    "kind" : "parameter",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "GPGPNE5P",
+    "name" : "工单",
+    "kind" : "variable",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "工单详情"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "CMDGQ5U5",
+    "name" : "是否存在",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "NXBF8KFC",
+    "name" : "提示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "J62IU0N9",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "B7BYB6E0",
+    "name" : "补充说明",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "LYTI9XDB",
+    "name" : "期望完成时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "VTSRID88",
+    "name" : "重新提交弹窗",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "T4IKIYKP",
+    "name" : "预览附件地址",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "CSZC1HAA",
+    "name" : "预览抽屉显示",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "HYJBDGCT",
+    "name" : "待办任务ID",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "XI2TT1XC",
+    "name" : "待办节点名称",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  }, {
+    "id" : "IO5F8JN8",
+    "name" : "取消弹窗",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  }, {
+    "id" : "A3JQHLKM",
+    "name" : "取消原因",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "String"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "\"\""
+    }
+  } ],
+  "logics" : [ {
+    "id" : "NMXTTZCQ",
+    "name" : "加载工单详情",
+    "description" : "按工单标识查询工单完整详情",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "id" : "BHFL63KB",
+    "name" : "刷新待办任务",
+    "description" : "查询工单当前待办任务，供详情页直达处理入口",
+    "variables" : [ {
+      "id" : "MEOS6QT9",
+      "name" : "查询任务ID",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    }, {
+      "id" : "YLSOF7F5",
+      "name" : "查询节点名称",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    }, {
+      "id" : "QI0M5VJW",
+      "name" : "查询任务成功",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "O1QU8MBD",
+      "name" : "查询任务提示",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "subResourceTree" : {
+    "children" : [ "EFMZ2ZTQ", "DKK1LZ6S", "GPGPNE5P", "CMDGQ5U5", "NXBF8KFC", "J62IU0N9", "B7BYB6E0", "LYTI9XDB", "VTSRID88", "T4IKIYKP", "CSZC1HAA", "NMXTTZCQ", "HYJBDGCT", "XI2TT1XC", "BHFL63KB", "IO5F8JN8", "A3JQHLKM" ],
+    "groups" : [ ]
+  },
+  "eventListeners" : [ {
+    "id" : "PTHSW3FK",
+    "name" : "页面加载",
+    "description" : "进入页面时加载工单详情与待办任务入口",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "targetEvent" : "entered"
+  } ],
+  "elementEventListeners" : [ {
+    "elementId" : "MC7BC8XT",
+    "elementName" : "重新提交按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "SSMH4AH9",
+    "name" : "打开补充弹窗",
+    "description" : "打开补充信息弹窗并预填当前工单内容",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "WS0CIPFG",
+    "elementName" : "处理跟进按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "ZXQJMD9O",
+    "name" : "前往审批页",
+    "description" : "携带待办任务标识进入工单审批页处理工单",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "D5S2Q4Z7",
+    "elementName" : "客户确认按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "HE9OVWNS",
+    "name" : "前往确认任务",
+    "description" : "携带待办任务标识进入工单审批页完成客户确认",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "AQAG1NDP",
+    "elementName" : "前往待办按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "SK25TSN4",
+    "name" : "打开待办任务中心",
+    "description" : "前往待办任务中心打开待确认任务",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "J27MISM6",
+    "elementName" : "取消工单按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "NLX8T1B4",
+    "name" : "打开取消弹窗",
+    "description" : "打开取消工单弹窗并清空取消原因",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "M4LRW79C",
+    "elementName" : "附件预览链接",
+    "pluginName" : "component-common",
+    "type" : "hyperlink",
+    "targetEvent" : "click",
+    "id" : "ISXEES22",
+    "name" : "预览附件",
+    "description" : "打开附件预览抽屉",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "KT8LN83D",
+    "elementName" : "取消补充按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "H8K4CXNU",
+    "name" : "关闭补充弹窗",
+    "description" : "关闭补充信息弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "G6FM205M",
+    "elementName" : "提交补充按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "SP7RJ9EG",
+    "name" : "提交补充信息",
+    "description" : "校验补充内容并重新提交工单",
+    "variables" : [ {
+      "id" : "ENOQZXNQ",
+      "name" : "提交成功",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "A6AGGOCS",
+      "name" : "提交提示",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "FDT74OAY",
+    "elementName" : "预览抽屉",
+    "pluginName" : "component-ant-design",
+    "type" : "drawer",
+    "targetEvent" : "Closed",
+    "id" : "XC1UH2RT",
+    "name" : "关闭预览抽屉",
+    "description" : "关闭附件预览抽屉",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "RBQXRWH1",
+    "elementName" : "关闭取消弹窗按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "HL040F6U",
+    "name" : "关闭取消弹窗",
+    "description" : "关闭取消工单弹窗",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  }, {
+    "elementId" : "WIQ0RPEW",
+    "elementName" : "确认取消工单按钮",
+    "pluginName" : "component-ant-design",
+    "type" : "button",
+    "targetEvent" : "click",
+    "id" : "JK6H54P0",
+    "name" : "提交取消工单",
+    "description" : "校验取消原因后调用取消工单逻辑，并刷新工单详情",
+    "variables" : [ {
+      "id" : "KGETXA9R",
+      "name" : "取消成功",
+      "dataType" : {
+        "typeName" : "Boolean"
+      }
+    }, {
+      "id" : "KVZM34H8",
+      "name" : "取消结果提示",
+      "dataType" : {
+        "typeName" : "String"
+      }
+    } ],
+    "parameters" : [ ],
+    "returnValues" : [ ]
+  } ],
+  "platform" : "pc",
+  "url" : "/ticket-detail",
+  "title" : "工单详情",
+  "masterPage" : "/PC/客服工作台母版",
+  "$deps" : [ {
+    "documentType" : "clientGlobalVariable",
+    "refKey" : "currentUser"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "处理记录类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单来源"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单类型"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单优先级"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "工单状态"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "客户等级"
+  }, {
+    "documentType" : "masterPage",
+    "refKey" : "/PC/客服工作台母版"
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/待办任务中心",
+    "weak" : true
+  }, {
+    "documentType" : "page",
+    "refKey" : "/PC/工单审批页",
+    "weak" : true
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看本人工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看待办任务"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/处理工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/登录权限组"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/审批工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/提交工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单待办任务"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "查询工单详情"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "取消工单"
+  }, {
+    "documentType" : "serverLogic",
+    "refKey" : "重新提交工单"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单详情"
+  } ]
+}

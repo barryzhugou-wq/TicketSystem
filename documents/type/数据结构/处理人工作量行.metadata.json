@@ -1,0 +1,17 @@
+{
+  "id" : "WA7U4EE9",
+  "name" : "处理人工作量行",
+  "kind" : "Structure",
+  "description" : "按处理人统计的工单量",
+  "properties" : [ {
+    "name" : "处理人姓名",
+    "dataType" : {
+      "typeName" : "String"
+    }
+  }, {
+    "name" : "工单数量",
+    "dataType" : {
+      "typeName" : "Integer"
+    }
+  } ]
+}

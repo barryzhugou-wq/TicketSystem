@@ -1,0 +1,140 @@
+{
+  "id" : "G8NTWPVG",
+  "name" : "客服通讯录同步",
+  "description" : "每小时把平台启用用户增量同步到本应用成员信息",
+  "moduleType" : "server",
+  "enableTransaction" : false,
+  "parameters" : [ ],
+  "variables" : [ {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "FASHXMZT",
+    "name" : "当前时间"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "XGT7X9EE",
+    "name" : "平台用户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "NSEEAQ42",
+    "name" : "启用用户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "组织节点"
+      } ]
+    },
+    "id" : "K01CAFIO",
+    "name" : "组织列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "组织用户关系"
+      } ]
+    },
+    "id" : "SBHRSZOU",
+    "name" : "组织成员列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "Integer"
+      }, {
+        "typeName" : "String"
+      } ]
+    },
+    "id" : "YOYWNOF9",
+    "name" : "部门映射"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "成员同步行"
+      } ]
+    },
+    "id" : "SF4MZSTX",
+    "name" : "已有成员列表"
+  }, {
+    "dataType" : {
+      "typeName" : "Map",
+      "genericTypes" : [ {
+        "typeName" : "Integer"
+      }, {
+        "typeName" : "String"
+      } ]
+    },
+    "id" : "H3IH9JT1",
+    "name" : "成员签名映射"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "V7JGQRRP",
+    "name" : "新增用户列表"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "用户"
+      } ]
+    },
+    "id" : "NFH3CQLP",
+    "name" : "更新用户列表"
+  } ],
+  "returnValues" : [ ],
+  "scheduleConfig" : {
+    "type" : "hourly",
+    "startTime" : "2026-09-15T04:07:19.000Z",
+    "hourly" : {
+      "interval" : 1,
+      "unit" : "hour"
+    }
+  },
+  "enabled" : true,
+  "type" : "scheduledTask",
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "EnumType",
+    "refKey" : "账号状态"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "成员同步行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "用户"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "组织节点"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "组织用户关系"
+  } ]
+}

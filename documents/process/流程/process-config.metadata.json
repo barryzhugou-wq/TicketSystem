@@ -1,0 +1,8 @@
+{
+  "id" : "process-config",
+  "dataSourceName" : "默认数据源",
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  } ]
+}

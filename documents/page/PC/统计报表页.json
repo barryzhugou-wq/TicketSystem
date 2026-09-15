@@ -1,0 +1,3730 @@
+{
+  "id" : "ACRHY5EY",
+  "name" : "统计报表页",
+  "rootElement" : {
+    "id" : "LLMI0MFK",
+    "name" : "统计报表根布局",
+    "type" : "linear-layout",
+    "pluginName" : "component-common",
+    "styles" : [ {
+      "pseudo" : "none",
+      "target" : "root",
+      "cssProperties" : [ {
+        "name" : "display",
+        "type" : "literal",
+        "literal" : "flex"
+      }, {
+        "name" : "columnGap",
+        "type" : "literal",
+        "literal" : "var(--small-spacing)"
+      }, {
+        "name" : "rowGap",
+        "type" : "literal",
+        "literal" : "12px"
+      }, {
+        "name" : "position",
+        "type" : "literal",
+        "literal" : "relative"
+      }, {
+        "name" : "size",
+        "type" : "literal",
+        "literal" : {
+          "height" : "100%"
+        }
+      }, {
+        "name" : "padding",
+        "type" : "literal",
+        "literal" : {
+          "top" : "16px",
+          "right" : "16px",
+          "bottom" : "16px",
+          "left" : "16px"
+        }
+      }, {
+        "name" : "flexDirection",
+        "type" : "literal",
+        "literal" : "column"
+      }, {
+        "name" : "overflow",
+        "type" : "literal",
+        "literal" : "auto"
+      }, {
+        "name" : "backgroundColor",
+        "type" : "literal",
+        "literal" : "var(--color-page-background)"
+      } ]
+    } ],
+    "events" : [ ],
+    "properties" : [ {
+      "name" : "loading",
+      "type" : "literal",
+      "literal" : ""
+    }, {
+      "name" : "enableCustomLoading",
+      "type" : "literal",
+      "literal" : ""
+    } ],
+    "children" : [ {
+      "id" : "XXV7SUKF",
+      "name" : "报表筛选卡片",
+      "type" : "card",
+      "pluginName" : "component-ant-design",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "body",
+        "cssProperties" : [ {
+          "name" : "padding",
+          "type" : "literal",
+          "literal" : {
+            "top" : "12px",
+            "right" : "24px",
+            "bottom" : "12px",
+            "left" : "24px"
+          }
+        }, {
+          "name" : "overflow",
+          "type" : "literal",
+          "literal" : "auto"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "type",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "size",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "showTitle",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "showBorder",
+        "type" : "literal",
+        "literal" : true
+      }, {
+        "name" : "showDivider",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "hoverable",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : false
+      } ],
+      "children" : [ {
+        "id" : "S40MWU3S",
+        "name" : "组件插槽",
+        "type" : "slot",
+        "pluginName" : "component-common",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ ],
+        "children" : [ {
+          "id" : "Q8F0MI99",
+          "name" : "报表筛选区域",
+          "type" : "linear-layout",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "display",
+              "type" : "literal",
+              "literal" : "flex"
+            }, {
+              "name" : "columnGap",
+              "type" : "literal",
+              "literal" : "var(--small-spacing)"
+            }, {
+              "name" : "rowGap",
+              "type" : "literal",
+              "literal" : "var(--small-spacing)"
+            }, {
+              "name" : "position",
+              "type" : "literal",
+              "literal" : "relative"
+            }, {
+              "name" : "flexDirection",
+              "type" : "literal",
+              "literal" : "row"
+            }, {
+              "name" : "justifyContent",
+              "type" : "literal",
+              "literal" : "space-between"
+            }, {
+              "name" : "alignItems",
+              "type" : "literal",
+              "literal" : "center"
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "loading",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "enableCustomLoading",
+            "type" : "literal",
+            "literal" : ""
+          } ],
+          "children" : [ {
+            "id" : "PG7RPQM0",
+            "name" : "报表筛选操作区",
+            "type" : "linear-layout",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "display",
+                "type" : "literal",
+                "literal" : "flex"
+              }, {
+                "name" : "columnGap",
+                "type" : "literal",
+                "literal" : "12px"
+              }, {
+                "name" : "rowGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "position",
+                "type" : "literal",
+                "literal" : "relative"
+              }, {
+                "name" : "flexDirection",
+                "type" : "literal",
+                "literal" : "row"
+              }, {
+                "name" : "alignItems",
+                "type" : "literal",
+                "literal" : "center"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "loading",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "enableCustomLoading",
+              "type" : "literal",
+              "literal" : ""
+            } ],
+            "children" : [ {
+              "id" : "YS2GAIN5",
+              "name" : "报表时间范围标签",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "统计时间范围（按提交时间）"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "GSXLUDWP",
+              "name" : "报表时间范围选择",
+              "type" : "date-picker",
+              "pluginName" : "component-ant-design",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "picker",
+                "type" : "literal",
+                "literal" : "date"
+              }, {
+                "name" : "isRangeSelect",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "multiple",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "value",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "startValue",
+                "type" : "variable",
+                "variable" : "开始时间"
+              }, {
+                "name" : "finishValue",
+                "type" : "variable",
+                "variable" : "结束时间"
+              }, {
+                "name" : "minDate",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "maxDate",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "placeholder",
+                "type" : "literal",
+                "literal" : "请选择日期"
+              }, {
+                "name" : "startPlaceholder",
+                "type" : "literal",
+                "literal" : "开始日期"
+              }, {
+                "name" : "finishPlaceholder",
+                "type" : "literal",
+                "literal" : "结束日期"
+              }, {
+                "name" : "dataValidation",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "status",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showPrefix",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showSuffixIcon",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "variant",
+                "type" : "literal",
+                "literal" : "outlined"
+              }, {
+                "name" : "placement",
+                "type" : "literal",
+                "literal" : "bottomLeft"
+              }, {
+                "name" : "showNow",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "prevIcon",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "nextIcon",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "superPrevIcon",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "superNextIcon",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "needConfirm",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "disabled",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "inputReadOnly",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "preserveInvalidOnBlur",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "allowClear",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "allowStartEmpty",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "allowFinishEmpty",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "order",
+                "type" : "literal",
+                "literal" : true
+              } ],
+              "children" : [ {
+                "id" : "Y61JOCDD",
+                "name" : "组件插槽1",
+                "type" : "slot",
+                "pluginName" : "component-common",
+                "styles" : [ ],
+                "events" : [ ],
+                "properties" : [ ],
+                "children" : [ {
+                  "id" : "HFYXR6XD",
+                  "name" : "图标",
+                  "type" : "icon",
+                  "pluginName" : "component-common",
+                  "styles" : [ ],
+                  "events" : [ ],
+                  "properties" : [ {
+                    "name" : "icon",
+                    "type" : "literal",
+                    "literal" : "CalendarOutlined"
+                  }, {
+                    "name" : "layout",
+                    "type" : "literal",
+                    "literal" : "singleIcon"
+                  }, {
+                    "name" : "size",
+                    "type" : "literal",
+                    "literal" : 14
+                  } ],
+                  "children" : [ ],
+                  "description" : "",
+                  "visible" : {
+                    "type" : "expression",
+                    "expression" : ""
+                  }
+                } ],
+                "description" : "",
+                "visible" : {
+                  "type" : "expression",
+                  "expression" : ""
+                },
+                "slotTarget" : "suffixIcon"
+              } ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "SBM705QY",
+              "name" : "查询按钮",
+              "type" : "button",
+              "pluginName" : "component-ant-design",
+              "styles" : [ ],
+              "events" : [ {
+                "id" : "QP8S1S77",
+                "name" : "查询报表",
+                "description" : "按所选时间范围重新查询报表",
+                "moduleType" : "client",
+                "variables" : [ ],
+                "parameters" : [ ],
+                "returnValues" : [ ],
+                "diagram" : {
+                  "nodes" : [ {
+                    "id" : "R7NQHH1T",
+                    "name" : "开始",
+                    "pluginName" : "",
+                    "identifier" : "",
+                    "attributes" : {
+                      "position" : {
+                        "x" : 300,
+                        "y" : 50
+                      }
+                    },
+                    "isStartPoint" : true
+                  }, {
+                    "id" : "F9JD4DWA",
+                    "name" : "重新加载报表数据",
+                    "pluginName" : "logic-core",
+                    "identifier" : "call-logic",
+                    "content" : {
+                      "targetLogic" : {
+                        "type" : "literal",
+                        "literal" : {
+                          "itemType" : "externalLogic",
+                          "logicName" : "加载报表数据"
+                        }
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 300,
+                        "y" : 150
+                      }
+                    },
+                    "isStartPoint" : false
+                  } ],
+                  "edges" : [ {
+                    "id" : "PZCO3JKZ",
+                    "sourceId" : "R7NQHH1T",
+                    "targetId" : "F9JD4DWA",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null,
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left"
+                  } ]
+                },
+                "targetEvent" : "click",
+                "icon" : {
+                  "type" : {
+                    "compare" : null
+                  },
+                  "key" : null,
+                  "ref" : null,
+                  "props" : {
+                    "type" : "eventListener"
+                  }
+                },
+                "scope" : {
+                  "type" : "event",
+                  "logicCallPath" : [ "页面事件" ],
+                  "documentId" : "ACRHY5EY",
+                  "platform" : "pc",
+                  "icon" : {
+                    "type" : {
+                      "compare" : null
+                    },
+                    "key" : null,
+                    "ref" : null,
+                    "props" : {
+                      "type" : "eventListener"
+                    }
+                  },
+                  "expressionCallScope" : [ {
+                    "id" : "CurrentPage",
+                    "name" : "CurrentPage"
+                  } ],
+                  "expressionCallPath" : [ "CurrentPage" ],
+                  "recursion" : false
+                }
+              } ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "查询"
+              }, {
+                "name" : "enableNavigation",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "navigationType",
+                "type" : "literal",
+                "literal" : "external"
+              }, {
+                "name" : "target",
+                "type" : "literal",
+                "literal" : "_self"
+              }, {
+                "name" : "pageNavigation",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "href",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "type",
+                "type" : "literal",
+                "literal" : "primary"
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "primary"
+              }, {
+                "name" : "variant",
+                "type" : "literal",
+                "literal" : "solid"
+              }, {
+                "name" : "shape",
+                "type" : "literal",
+                "literal" : "default"
+              }, {
+                "name" : "showIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "iconPlacement",
+                "type" : "literal",
+                "literal" : "start"
+              }, {
+                "name" : "autoInsertSpace",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "disabled",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "loading",
+                "type" : "expression"
+              }, {
+                "name" : "canSubmitOnEnter",
+                "type" : "literal",
+                "literal" : true
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "KFFP6LB5",
+              "name" : "近30天按钮",
+              "type" : "button",
+              "pluginName" : "component-ant-design",
+              "styles" : [ ],
+              "events" : [ {
+                "id" : "D9G13206",
+                "name" : "查询近30天报表",
+                "description" : "切换为近 30 天并重新查询报表",
+                "moduleType" : "client",
+                "variables" : [ ],
+                "parameters" : [ ],
+                "returnValues" : [ ],
+                "diagram" : {
+                  "nodes" : [ {
+                    "id" : "OIZ845KB",
+                    "name" : "开始",
+                    "pluginName" : "",
+                    "identifier" : "",
+                    "attributes" : {
+                      "position" : {
+                        "x" : 300,
+                        "y" : 50
+                      }
+                    },
+                    "isStartPoint" : true
+                  }, {
+                    "id" : "BOV6LWP1",
+                    "name" : "重置为近30天",
+                    "pluginName" : "logic-core",
+                    "identifier" : "assignment",
+                    "content" : {
+                      "assignmentDatas" : {
+                        "type" : "literal",
+                        "literal" : [ {
+                          "id" : "B9N872WN",
+                          "target" : {
+                            "type" : "variable",
+                            "variable" : "开始时间"
+                          },
+                          "value" : {
+                            "type" : "expression",
+                            "expression" : "Date.Add(Date.CurrentDateTime(), -30, \"Day\")"
+                          }
+                        }, {
+                          "id" : "F7894JZE",
+                          "target" : {
+                            "type" : "variable",
+                            "variable" : "结束时间"
+                          },
+                          "value" : {
+                            "type" : "expression",
+                            "expression" : "Date.CurrentDateTime()"
+                          }
+                        } ]
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 300,
+                        "y" : 150
+                      }
+                    },
+                    "isStartPoint" : false
+                  }, {
+                    "id" : "MAY1ADK5",
+                    "name" : "重新加载报表数据",
+                    "pluginName" : "logic-core",
+                    "identifier" : "call-logic",
+                    "content" : {
+                      "targetLogic" : {
+                        "type" : "literal",
+                        "literal" : {
+                          "itemType" : "externalLogic",
+                          "logicName" : "加载报表数据"
+                        }
+                      }
+                    },
+                    "attributes" : {
+                      "position" : {
+                        "x" : 300,
+                        "y" : 250
+                      }
+                    },
+                    "isStartPoint" : false
+                  } ],
+                  "edges" : [ {
+                    "id" : "Y9GFEWFQ",
+                    "sourceId" : "OIZ845KB",
+                    "targetId" : "BOV6LWP1",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null,
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left"
+                  }, {
+                    "id" : "SUK4XDCG",
+                    "sourceId" : "BOV6LWP1",
+                    "targetId" : "MAY1ADK5",
+                    "sourceAnchorId" : null,
+                    "targetAnchorId" : null,
+                    "sourcePosition" : "right",
+                    "targetPosition" : "left"
+                  } ]
+                },
+                "targetEvent" : "click",
+                "icon" : {
+                  "type" : {
+                    "compare" : null
+                  },
+                  "key" : null,
+                  "ref" : null,
+                  "props" : {
+                    "type" : "eventListener"
+                  }
+                },
+                "scope" : {
+                  "type" : "event",
+                  "logicCallPath" : [ "页面事件" ],
+                  "documentId" : "ACRHY5EY",
+                  "platform" : "pc",
+                  "icon" : {
+                    "type" : {
+                      "compare" : null
+                    },
+                    "key" : null,
+                    "ref" : null,
+                    "props" : {
+                      "type" : "eventListener"
+                    }
+                  },
+                  "expressionCallScope" : [ {
+                    "id" : "CurrentPage",
+                    "name" : "CurrentPage"
+                  } ],
+                  "expressionCallPath" : [ "CurrentPage" ],
+                  "recursion" : false
+                }
+              } ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "近 30 天"
+              }, {
+                "name" : "enableNavigation",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "navigationType",
+                "type" : "literal",
+                "literal" : "external"
+              }, {
+                "name" : "target",
+                "type" : "literal",
+                "literal" : "_self"
+              }, {
+                "name" : "pageNavigation",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "href",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "type",
+                "type" : "literal",
+                "literal" : "default"
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : "primary"
+              }, {
+                "name" : "variant",
+                "type" : "literal",
+                "literal" : "solid"
+              }, {
+                "name" : "shape",
+                "type" : "literal",
+                "literal" : "default"
+              }, {
+                "name" : "showIcon",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "iconPlacement",
+                "type" : "literal",
+                "literal" : "start"
+              }, {
+                "name" : "autoInsertSpace",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "disabled",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "loading",
+                "type" : "expression"
+              }, {
+                "name" : "canSubmitOnEnter",
+                "type" : "literal",
+                "literal" : true
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          }, {
+            "id" : "BFX4OW5I",
+            "name" : "报表指标区域",
+            "type" : "linear-layout",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "display",
+                "type" : "literal",
+                "literal" : "flex"
+              }, {
+                "name" : "columnGap",
+                "type" : "literal",
+                "literal" : "24px"
+              }, {
+                "name" : "rowGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "position",
+                "type" : "literal",
+                "literal" : "relative"
+              }, {
+                "name" : "flexDirection",
+                "type" : "literal",
+                "literal" : "row"
+              }, {
+                "name" : "alignItems",
+                "type" : "literal",
+                "literal" : "center"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "loading",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "enableCustomLoading",
+              "type" : "literal",
+              "literal" : ""
+            } ],
+            "children" : [ {
+              "id" : "Y29SHFW1",
+              "name" : "报表总数量文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "expression",
+                "expression" : "\"工单总数：\" & Convert.ToString(总数量) & \" 单\""
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "WLEAWEB7",
+              "name" : "报表平均处理天数文本",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "expression",
+                "expression" : "\"平均处理天数：\" & FormatNumber(IfError(处理时长.平均处理天数, 0), \"0.00\", \"0\") & \" 天\""
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "G93YZCTN",
+              "name" : "报表加载提示",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "color",
+                  "type" : "literal",
+                  "literal" : "rgb(140, 140, 140)"
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "正在加载统计数据…"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : "加载中"
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        },
+        "slotTarget" : "content"
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "D7BOQR7K",
+      "name" : "报表说明卡片",
+      "type" : "card",
+      "pluginName" : "component-ant-design",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "body",
+        "cssProperties" : [ {
+          "name" : "padding",
+          "type" : "literal",
+          "literal" : {
+            "top" : "12px",
+            "right" : "24px",
+            "bottom" : "12px",
+            "left" : "24px"
+          }
+        }, {
+          "name" : "overflow",
+          "type" : "literal",
+          "literal" : "auto"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "type",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "size",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "showTitle",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "showBorder",
+        "type" : "literal",
+        "literal" : true
+      }, {
+        "name" : "showDivider",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "hoverable",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : false
+      } ],
+      "children" : [ {
+        "id" : "VA7MZFAT",
+        "name" : "组件插槽2",
+        "type" : "slot",
+        "pluginName" : "component-common",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ ],
+        "children" : [ {
+          "id" : "M4QE5NDB",
+          "name" : "报表口径说明文本",
+          "type" : "text",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "size",
+              "type" : "literal",
+              "literal" : {
+                "maxWidth" : "100%"
+              }
+            }, {
+              "name" : "color",
+              "type" : "literal",
+              "literal" : "rgb(140, 140, 140)"
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "text",
+            "type" : "literal",
+            "literal" : "趋势、类型、优先级与处理人工作量按所选时间范围（提交时间）统计；满意度分布按评分分组统计，不受时间范围限制。"
+          }, {
+            "name" : "format",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "wrapping",
+            "type" : "literal",
+            "literal" : "normal"
+          }, {
+            "name" : "ellipsis",
+            "type" : "literal",
+            "literal" : false
+          } ],
+          "children" : [ ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        },
+        "slotTarget" : "content"
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "L1LLJ6BN",
+      "name" : "趋势图表卡片",
+      "type" : "card",
+      "pluginName" : "component-ant-design",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "body",
+        "cssProperties" : [ {
+          "name" : "padding",
+          "type" : "literal",
+          "literal" : {
+            "top" : "12px",
+            "right" : "24px",
+            "bottom" : "12px",
+            "left" : "24px"
+          }
+        }, {
+          "name" : "overflow",
+          "type" : "literal",
+          "literal" : "auto"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "type",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "size",
+        "type" : "literal",
+        "literal" : "default"
+      }, {
+        "name" : "showTitle",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "showBorder",
+        "type" : "literal",
+        "literal" : true
+      }, {
+        "name" : "showDivider",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "hoverable",
+        "type" : "literal",
+        "literal" : false
+      }, {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : false
+      } ],
+      "children" : [ {
+        "id" : "WTNFGLOI",
+        "name" : "组件插槽3",
+        "type" : "slot",
+        "pluginName" : "component-common",
+        "styles" : [ ],
+        "events" : [ ],
+        "properties" : [ ],
+        "children" : [ {
+          "id" : "YEYMNXJD",
+          "name" : "趋势图表区",
+          "type" : "linear-layout",
+          "pluginName" : "component-common",
+          "styles" : [ {
+            "pseudo" : "none",
+            "target" : "root",
+            "cssProperties" : [ {
+              "name" : "display",
+              "type" : "literal",
+              "literal" : "flex"
+            }, {
+              "name" : "columnGap",
+              "type" : "literal",
+              "literal" : "var(--small-spacing)"
+            }, {
+              "name" : "rowGap",
+              "type" : "literal",
+              "literal" : "8px"
+            }, {
+              "name" : "position",
+              "type" : "literal",
+              "literal" : "relative"
+            }, {
+              "name" : "flexDirection",
+              "type" : "literal",
+              "literal" : "column"
+            } ]
+          } ],
+          "events" : [ ],
+          "properties" : [ {
+            "name" : "loading",
+            "type" : "literal",
+            "literal" : ""
+          }, {
+            "name" : "enableCustomLoading",
+            "type" : "literal",
+            "literal" : ""
+          } ],
+          "children" : [ {
+            "id" : "LAOL19ZQ",
+            "name" : "趋势图表标题",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              }, {
+                "name" : "textStyle",
+                "type" : "literal",
+                "literal" : {
+                  "bold" : true,
+                  "italic" : false,
+                  "underline" : false
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "工单量趋势（按提交日期）"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          }, {
+            "id" : "XPHCOAWR",
+            "name" : "趋势空数据提示",
+            "type" : "text",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "maxWidth" : "100%"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "text",
+              "type" : "literal",
+              "literal" : "所选时间范围内暂无工单数据"
+            }, {
+              "name" : "format",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "wrapping",
+              "type" : "literal",
+              "literal" : "normal"
+            }, {
+              "name" : "ellipsis",
+              "type" : "literal",
+              "literal" : false
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : "List.IsNullOrEmpty(趋势)"
+            }
+          }, {
+            "id" : "TZQ49Z5G",
+            "name" : "报表趋势折线图",
+            "type" : "echarts-line",
+            "pluginName" : "component-echarts",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "size",
+                "type" : "literal",
+                "literal" : {
+                  "width" : "100%",
+                  "height" : "320px"
+                }
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "datasource",
+              "type" : "variable",
+              "variable" : "趋势"
+            }, {
+              "name" : "categoryField",
+              "type" : "literal",
+              "literal" : "item.统计日期"
+            }, {
+              "name" : "valueFields",
+              "type" : "literal",
+              "literal" : [ "item.数量" ]
+            }, {
+              "name" : "seriesField",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "seriesNameMap",
+              "type" : "literal",
+              "literal" : [ ]
+            }, {
+              "name" : "chartType",
+              "type" : "literal",
+              "literal" : "area"
+            }, {
+              "name" : "color",
+              "type" : "literal",
+              "literal" : {
+                "type" : "preset",
+                "preset" : "default"
+              }
+            }, {
+              "name" : "useThemeTextColor",
+              "type" : "literal",
+              "literal" : false
+            }, {
+              "name" : "showTitle",
+              "type" : "literal",
+              "literal" : false
+            }, {
+              "name" : "titleText",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "titlePosition",
+              "type" : "literal",
+              "literal" : "top-center"
+            }, {
+              "name" : "titleOffsetX",
+              "type" : "literal",
+              "literal" : "0"
+            }, {
+              "name" : "titleOffsetY",
+              "type" : "literal",
+              "literal" : "0"
+            }, {
+              "name" : "showLegend",
+              "type" : "literal",
+              "literal" : false
+            }, {
+              "name" : "legendPosition",
+              "type" : "literal",
+              "literal" : "bottom-center"
+            }, {
+              "name" : "legendOrient",
+              "type" : "literal",
+              "literal" : "horizontal"
+            }, {
+              "name" : "legendOffsetX",
+              "type" : "literal",
+              "literal" : "0"
+            }, {
+              "name" : "legendOffsetY",
+              "type" : "literal",
+              "literal" : "15"
+            }, {
+              "name" : "showTooltip",
+              "type" : "literal",
+              "literal" : true
+            }, {
+              "name" : "gridTop",
+              "type" : "literal",
+              "literal" : 65
+            }, {
+              "name" : "gridBottom",
+              "type" : "literal",
+              "literal" : 80
+            }, {
+              "name" : "gridLeft",
+              "type" : "literal",
+              "literal" : "15%"
+            }, {
+              "name" : "gridRight",
+              "type" : "literal",
+              "literal" : "10%"
+            }, {
+              "name" : "gridContainLabel",
+              "type" : "literal",
+              "literal" : false
+            }, {
+              "name" : "smooth",
+              "type" : "literal",
+              "literal" : true
+            }, {
+              "name" : "step",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "lineWidth",
+              "type" : "literal",
+              "literal" : 2
+            }, {
+              "name" : "lineType",
+              "type" : "literal",
+              "literal" : "solid"
+            }, {
+              "name" : "showSymbol",
+              "type" : "literal",
+              "literal" : true
+            }, {
+              "name" : "symbolSize",
+              "type" : "literal",
+              "literal" : 4
+            }, {
+              "name" : "connectNulls",
+              "type" : "literal",
+              "literal" : false
+            }, {
+              "name" : "areaOpacity",
+              "type" : "literal",
+              "literal" : 0.7
+            }, {
+              "name" : "showLabel",
+              "type" : "literal",
+              "literal" : false
+            }, {
+              "name" : "labelPosition",
+              "type" : "literal",
+              "literal" : "top"
+            }, {
+              "name" : "xAxisName",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "showXAxisLabel",
+              "type" : "literal",
+              "literal" : true
+            }, {
+              "name" : "xAxisLabelRotate",
+              "type" : "literal",
+              "literal" : 0
+            }, {
+              "name" : "showDataZoom",
+              "type" : "literal",
+              "literal" : false
+            }, {
+              "name" : "dataZoomOffsetY",
+              "type" : "literal",
+              "literal" : "15"
+            }, {
+              "name" : "yAxisName",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "showYAxisLabel",
+              "type" : "literal",
+              "literal" : true
+            }, {
+              "name" : "yAxisLabelRotate",
+              "type" : "literal",
+              "literal" : 0
+            }, {
+              "name" : "customOptions",
+              "type" : "literal",
+              "literal" : "option = { xAxis: { axisLabel: { formatter: function (value) { var text = String(value); return text.length === 8 ? text.substring(4, 6) + \"-\" + text.substring(6, 8) : text; } } } };"
+            } ],
+            "children" : [ ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          }
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        },
+        "slotTarget" : "content"
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "OJM04N5Q",
+      "name" : "分布图表区域",
+      "type" : "linear-layout",
+      "pluginName" : "component-common",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "display",
+          "type" : "literal",
+          "literal" : "flex"
+        }, {
+          "name" : "columnGap",
+          "type" : "literal",
+          "literal" : "12px"
+        }, {
+          "name" : "rowGap",
+          "type" : "literal",
+          "literal" : "var(--small-spacing)"
+        }, {
+          "name" : "position",
+          "type" : "literal",
+          "literal" : "relative"
+        }, {
+          "name" : "flexDirection",
+          "type" : "literal",
+          "literal" : "row"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "enableCustomLoading",
+        "type" : "literal",
+        "literal" : ""
+      } ],
+      "children" : [ {
+        "id" : "RI9DVQMD",
+        "name" : "类型分布卡片",
+        "type" : "card",
+        "pluginName" : "component-ant-design",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "body",
+          "cssProperties" : [ {
+            "name" : "padding",
+            "type" : "literal",
+            "literal" : {
+              "top" : "12px",
+              "right" : "24px",
+              "bottom" : "12px",
+              "left" : "24px"
+            }
+          }, {
+            "name" : "overflow",
+            "type" : "literal",
+            "literal" : "auto"
+          } ]
+        }, {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "width" : "stretch"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "type",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "showTitle",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showBorder",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "showDivider",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "hoverable",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : false
+        } ],
+        "children" : [ {
+          "id" : "YRR9HZSC",
+          "name" : "组件插槽4",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "ZL9PMOUE",
+            "name" : "类型分布图表区",
+            "type" : "linear-layout",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "display",
+                "type" : "literal",
+                "literal" : "flex"
+              }, {
+                "name" : "columnGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "rowGap",
+                "type" : "literal",
+                "literal" : "8px"
+              }, {
+                "name" : "position",
+                "type" : "literal",
+                "literal" : "relative"
+              }, {
+                "name" : "flexDirection",
+                "type" : "literal",
+                "literal" : "column"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "loading",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "enableCustomLoading",
+              "type" : "literal",
+              "literal" : ""
+            } ],
+            "children" : [ {
+              "id" : "V7WZDSMD",
+              "name" : "类型分布标题",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "textStyle",
+                  "type" : "literal",
+                  "literal" : {
+                    "bold" : true,
+                    "italic" : false,
+                    "underline" : false
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "工单类型分布"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "TBEOHCDT",
+              "name" : "类型分布空数据提示",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "暂无类型统计数据"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : "List.IsNullOrEmpty(类型统计)"
+              }
+            }, {
+              "id" : "LP6MZ2E5",
+              "name" : "报表类型分布饼图",
+              "type" : "echarts-pie",
+              "pluginName" : "component-echarts",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "height" : "320px"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "datasource",
+                "type" : "variable",
+                "variable" : "类型统计"
+              }, {
+                "name" : "nameField",
+                "type" : "literal",
+                "literal" : "item.类型名称"
+              }, {
+                "name" : "valueField",
+                "type" : "literal",
+                "literal" : "item.数量"
+              }, {
+                "name" : "pieType",
+                "type" : "literal",
+                "literal" : "donut"
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : {
+                  "type" : "preset",
+                  "preset" : "default"
+                }
+              }, {
+                "name" : "useThemeTextColor",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "innerRadius",
+                "type" : "literal",
+                "literal" : "40%"
+              }, {
+                "name" : "labelPosition",
+                "type" : "literal",
+                "literal" : "outside"
+              }, {
+                "name" : "showPercentage",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "borderRadius",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "padAngle",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "showBorder",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "borderWidth",
+                "type" : "literal",
+                "literal" : 1
+              }, {
+                "name" : "borderColor",
+                "type" : "literal",
+                "literal" : "#ffffff"
+              }, {
+                "name" : "minAngle",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "showTitle",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "titleText",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "titlePosition",
+                "type" : "literal",
+                "literal" : "top-center"
+              }, {
+                "name" : "titleOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "titleOffsetY",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "showLegend",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "legendPosition",
+                "type" : "literal",
+                "literal" : "bottom-center"
+              }, {
+                "name" : "legendOrient",
+                "type" : "literal",
+                "literal" : "horizontal"
+              }, {
+                "name" : "legendOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "legendOffsetY",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "showTooltip",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "centerX",
+                "type" : "literal",
+                "literal" : "50%"
+              }, {
+                "name" : "centerY",
+                "type" : "literal",
+                "literal" : "50%"
+              }, {
+                "name" : "customOptions",
+                "type" : "literal",
+                "literal" : "option={}"
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "content"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "HX5KOPDW",
+        "name" : "优先级分布卡片",
+        "type" : "card",
+        "pluginName" : "component-ant-design",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "body",
+          "cssProperties" : [ {
+            "name" : "padding",
+            "type" : "literal",
+            "literal" : {
+              "top" : "12px",
+              "right" : "24px",
+              "bottom" : "12px",
+              "left" : "24px"
+            }
+          }, {
+            "name" : "overflow",
+            "type" : "literal",
+            "literal" : "auto"
+          } ]
+        }, {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "width" : "stretch"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "type",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "showTitle",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showBorder",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "showDivider",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "hoverable",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : false
+        } ],
+        "children" : [ {
+          "id" : "W9NIA2BW",
+          "name" : "组件插槽5",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "LF4E8CPB",
+            "name" : "优先级分布图表区",
+            "type" : "linear-layout",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "display",
+                "type" : "literal",
+                "literal" : "flex"
+              }, {
+                "name" : "columnGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "rowGap",
+                "type" : "literal",
+                "literal" : "8px"
+              }, {
+                "name" : "position",
+                "type" : "literal",
+                "literal" : "relative"
+              }, {
+                "name" : "flexDirection",
+                "type" : "literal",
+                "literal" : "column"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "loading",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "enableCustomLoading",
+              "type" : "literal",
+              "literal" : ""
+            } ],
+            "children" : [ {
+              "id" : "T5IT4D7T",
+              "name" : "优先级分布标题",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "textStyle",
+                  "type" : "literal",
+                  "literal" : {
+                    "bold" : true,
+                    "italic" : false,
+                    "underline" : false
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "工单优先级分布"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "U2W70JQV",
+              "name" : "优先级分布空数据提示",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "暂无优先级统计数据"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : "List.IsNullOrEmpty(优先级统计)"
+              }
+            }, {
+              "id" : "C5CVGL1V",
+              "name" : "报表优先级分布柱图",
+              "type" : "echarts-bar",
+              "pluginName" : "component-echarts",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "height" : "320px"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "datasource",
+                "type" : "variable",
+                "variable" : "优先级统计"
+              }, {
+                "name" : "categoryField",
+                "type" : "literal",
+                "literal" : "item.优先级名称"
+              }, {
+                "name" : "valueFields",
+                "type" : "literal",
+                "literal" : [ "item.数量" ]
+              }, {
+                "name" : "seriesField",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "seriesNameMap",
+                "type" : "literal",
+                "literal" : [ ]
+              }, {
+                "name" : "chartType",
+                "type" : "literal",
+                "literal" : "column"
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : {
+                  "type" : "preset",
+                  "preset" : "default"
+                }
+              }, {
+                "name" : "useThemeTextColor",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showTitle",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "titleText",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "titlePosition",
+                "type" : "literal",
+                "literal" : "top-center"
+              }, {
+                "name" : "titleOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "titleOffsetY",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "showLegend",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "legendPosition",
+                "type" : "literal",
+                "literal" : "bottom-center"
+              }, {
+                "name" : "legendOrient",
+                "type" : "literal",
+                "literal" : "horizontal"
+              }, {
+                "name" : "legendOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "legendOffsetY",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "showTooltip",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "gridTop",
+                "type" : "literal",
+                "literal" : 65
+              }, {
+                "name" : "gridBottom",
+                "type" : "literal",
+                "literal" : 80
+              }, {
+                "name" : "gridLeft",
+                "type" : "literal",
+                "literal" : "15%"
+              }, {
+                "name" : "gridRight",
+                "type" : "literal",
+                "literal" : "10%"
+              }, {
+                "name" : "gridContainLabel",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "xAxisName",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showXAxisLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "xAxisLabelRotate",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "showDataZoom",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "dataZoomOffsetX",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "dataZoomOffsetY",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "yAxisName",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showYAxisLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "yAxisLabelRotate",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "barWidth",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showBarLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "borderRadius",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "customOptions",
+                "type" : "literal",
+                "literal" : "option={}"
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "content"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    }, {
+      "id" : "S4ZEBCFK",
+      "name" : "工作量与满意度区域",
+      "type" : "linear-layout",
+      "pluginName" : "component-common",
+      "styles" : [ {
+        "pseudo" : "none",
+        "target" : "root",
+        "cssProperties" : [ {
+          "name" : "display",
+          "type" : "literal",
+          "literal" : "flex"
+        }, {
+          "name" : "columnGap",
+          "type" : "literal",
+          "literal" : "12px"
+        }, {
+          "name" : "rowGap",
+          "type" : "literal",
+          "literal" : "var(--small-spacing)"
+        }, {
+          "name" : "position",
+          "type" : "literal",
+          "literal" : "relative"
+        }, {
+          "name" : "flexDirection",
+          "type" : "literal",
+          "literal" : "row"
+        } ]
+      } ],
+      "events" : [ ],
+      "properties" : [ {
+        "name" : "loading",
+        "type" : "literal",
+        "literal" : ""
+      }, {
+        "name" : "enableCustomLoading",
+        "type" : "literal",
+        "literal" : ""
+      } ],
+      "children" : [ {
+        "id" : "PIM0I128",
+        "name" : "工作量图表卡片",
+        "type" : "card",
+        "pluginName" : "component-ant-design",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "body",
+          "cssProperties" : [ {
+            "name" : "padding",
+            "type" : "literal",
+            "literal" : {
+              "top" : "12px",
+              "right" : "24px",
+              "bottom" : "12px",
+              "left" : "24px"
+            }
+          }, {
+            "name" : "overflow",
+            "type" : "literal",
+            "literal" : "auto"
+          } ]
+        }, {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "width" : "stretch"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "type",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "showTitle",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showBorder",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "showDivider",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "hoverable",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : false
+        } ],
+        "children" : [ {
+          "id" : "RDXJN193",
+          "name" : "组件插槽6",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "YTPQNTEP",
+            "name" : "工作量图表区",
+            "type" : "linear-layout",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "display",
+                "type" : "literal",
+                "literal" : "flex"
+              }, {
+                "name" : "columnGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "rowGap",
+                "type" : "literal",
+                "literal" : "8px"
+              }, {
+                "name" : "position",
+                "type" : "literal",
+                "literal" : "relative"
+              }, {
+                "name" : "flexDirection",
+                "type" : "literal",
+                "literal" : "column"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "loading",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "enableCustomLoading",
+              "type" : "literal",
+              "literal" : ""
+            } ],
+            "children" : [ {
+              "id" : "LHYRUUNY",
+              "name" : "工作量图表标题",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "textStyle",
+                  "type" : "literal",
+                  "literal" : {
+                    "bold" : true,
+                    "italic" : false,
+                    "underline" : false
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "处理人工作量"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "XBBQF63A",
+              "name" : "工作量空数据提示",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "暂无处理人工作量数据"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : "List.IsNullOrEmpty(工作量)"
+              }
+            }, {
+              "id" : "Y0HYNYTJ",
+              "name" : "报表工作量柱图",
+              "type" : "echarts-bar",
+              "pluginName" : "component-echarts",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "height" : "320px"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "datasource",
+                "type" : "variable",
+                "variable" : "工作量"
+              }, {
+                "name" : "categoryField",
+                "type" : "literal",
+                "literal" : "item.处理人姓名"
+              }, {
+                "name" : "valueFields",
+                "type" : "literal",
+                "literal" : [ "item.工单数量" ]
+              }, {
+                "name" : "seriesField",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "seriesNameMap",
+                "type" : "literal",
+                "literal" : [ ]
+              }, {
+                "name" : "chartType",
+                "type" : "literal",
+                "literal" : "bar"
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : {
+                  "type" : "preset",
+                  "preset" : "default"
+                }
+              }, {
+                "name" : "useThemeTextColor",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showTitle",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "titleText",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "titlePosition",
+                "type" : "literal",
+                "literal" : "top-center"
+              }, {
+                "name" : "titleOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "titleOffsetY",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "showLegend",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "legendPosition",
+                "type" : "literal",
+                "literal" : "bottom-center"
+              }, {
+                "name" : "legendOrient",
+                "type" : "literal",
+                "literal" : "horizontal"
+              }, {
+                "name" : "legendOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "legendOffsetY",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "showTooltip",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "gridTop",
+                "type" : "literal",
+                "literal" : 65
+              }, {
+                "name" : "gridBottom",
+                "type" : "literal",
+                "literal" : 80
+              }, {
+                "name" : "gridLeft",
+                "type" : "literal",
+                "literal" : "15%"
+              }, {
+                "name" : "gridRight",
+                "type" : "literal",
+                "literal" : "10%"
+              }, {
+                "name" : "gridContainLabel",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "xAxisName",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showXAxisLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "xAxisLabelRotate",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "showDataZoom",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "dataZoomOffsetX",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "dataZoomOffsetY",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "yAxisName",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showYAxisLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "yAxisLabelRotate",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "barWidth",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showBarLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "borderRadius",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "customOptions",
+                "type" : "literal",
+                "literal" : "option={}"
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "content"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      }, {
+        "id" : "GY6DNGS4",
+        "name" : "满意度图表卡片",
+        "type" : "card",
+        "pluginName" : "component-ant-design",
+        "styles" : [ {
+          "pseudo" : "none",
+          "target" : "body",
+          "cssProperties" : [ {
+            "name" : "padding",
+            "type" : "literal",
+            "literal" : {
+              "top" : "12px",
+              "right" : "24px",
+              "bottom" : "12px",
+              "left" : "24px"
+            }
+          }, {
+            "name" : "overflow",
+            "type" : "literal",
+            "literal" : "auto"
+          } ]
+        }, {
+          "pseudo" : "none",
+          "target" : "root",
+          "cssProperties" : [ {
+            "name" : "size",
+            "type" : "literal",
+            "literal" : {
+              "width" : "stretch"
+            }
+          } ]
+        } ],
+        "events" : [ ],
+        "properties" : [ {
+          "name" : "type",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "size",
+          "type" : "literal",
+          "literal" : "default"
+        }, {
+          "name" : "showTitle",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "showBorder",
+          "type" : "literal",
+          "literal" : true
+        }, {
+          "name" : "showDivider",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "hoverable",
+          "type" : "literal",
+          "literal" : false
+        }, {
+          "name" : "loading",
+          "type" : "literal",
+          "literal" : false
+        } ],
+        "children" : [ {
+          "id" : "AM5GX7FM",
+          "name" : "组件插槽7",
+          "type" : "slot",
+          "pluginName" : "component-common",
+          "styles" : [ ],
+          "events" : [ ],
+          "properties" : [ ],
+          "children" : [ {
+            "id" : "G3NGDWEN",
+            "name" : "满意度图表区",
+            "type" : "linear-layout",
+            "pluginName" : "component-common",
+            "styles" : [ {
+              "pseudo" : "none",
+              "target" : "root",
+              "cssProperties" : [ {
+                "name" : "display",
+                "type" : "literal",
+                "literal" : "flex"
+              }, {
+                "name" : "columnGap",
+                "type" : "literal",
+                "literal" : "var(--small-spacing)"
+              }, {
+                "name" : "rowGap",
+                "type" : "literal",
+                "literal" : "8px"
+              }, {
+                "name" : "position",
+                "type" : "literal",
+                "literal" : "relative"
+              }, {
+                "name" : "flexDirection",
+                "type" : "literal",
+                "literal" : "column"
+              } ]
+            } ],
+            "events" : [ ],
+            "properties" : [ {
+              "name" : "loading",
+              "type" : "literal",
+              "literal" : ""
+            }, {
+              "name" : "enableCustomLoading",
+              "type" : "literal",
+              "literal" : ""
+            } ],
+            "children" : [ {
+              "id" : "EEO3PM64",
+              "name" : "满意度图表标题",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                }, {
+                  "name" : "textStyle",
+                  "type" : "literal",
+                  "literal" : {
+                    "bold" : true,
+                    "italic" : false,
+                    "underline" : false
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "满意度评分分布（不受时间范围限制）"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            }, {
+              "id" : "QJGSZADX",
+              "name" : "满意度空数据提示",
+              "type" : "text",
+              "pluginName" : "component-common",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "maxWidth" : "100%"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "text",
+                "type" : "literal",
+                "literal" : "暂无满意度评价数据"
+              }, {
+                "name" : "format",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "wrapping",
+                "type" : "literal",
+                "literal" : "normal"
+              }, {
+                "name" : "ellipsis",
+                "type" : "literal",
+                "literal" : false
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : "List.IsNullOrEmpty(满意度)"
+              }
+            }, {
+              "id" : "EDQL10IR",
+              "name" : "报表满意度柱图",
+              "type" : "echarts-bar",
+              "pluginName" : "component-echarts",
+              "styles" : [ {
+                "pseudo" : "none",
+                "target" : "root",
+                "cssProperties" : [ {
+                  "name" : "size",
+                  "type" : "literal",
+                  "literal" : {
+                    "width" : "100%",
+                    "height" : "320px"
+                  }
+                } ]
+              } ],
+              "events" : [ ],
+              "properties" : [ {
+                "name" : "datasource",
+                "type" : "variable",
+                "variable" : "满意度"
+              }, {
+                "name" : "categoryField",
+                "type" : "literal",
+                "literal" : "item.满意度评分"
+              }, {
+                "name" : "valueFields",
+                "type" : "literal",
+                "literal" : [ "item.评价数量" ]
+              }, {
+                "name" : "seriesField",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "seriesNameMap",
+                "type" : "literal",
+                "literal" : [ ]
+              }, {
+                "name" : "chartType",
+                "type" : "literal",
+                "literal" : "column"
+              }, {
+                "name" : "color",
+                "type" : "literal",
+                "literal" : {
+                  "type" : "preset",
+                  "preset" : "default"
+                }
+              }, {
+                "name" : "useThemeTextColor",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "showTitle",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "titleText",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "titlePosition",
+                "type" : "literal",
+                "literal" : "top-center"
+              }, {
+                "name" : "titleOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "titleOffsetY",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "showLegend",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "legendPosition",
+                "type" : "literal",
+                "literal" : "bottom-center"
+              }, {
+                "name" : "legendOrient",
+                "type" : "literal",
+                "literal" : "horizontal"
+              }, {
+                "name" : "legendOffsetX",
+                "type" : "literal",
+                "literal" : "0"
+              }, {
+                "name" : "legendOffsetY",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "showTooltip",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "gridTop",
+                "type" : "literal",
+                "literal" : 65
+              }, {
+                "name" : "gridBottom",
+                "type" : "literal",
+                "literal" : 80
+              }, {
+                "name" : "gridLeft",
+                "type" : "literal",
+                "literal" : "15%"
+              }, {
+                "name" : "gridRight",
+                "type" : "literal",
+                "literal" : "10%"
+              }, {
+                "name" : "gridContainLabel",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "xAxisName",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showXAxisLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "xAxisLabelRotate",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "showDataZoom",
+                "type" : "literal",
+                "literal" : false
+              }, {
+                "name" : "dataZoomOffsetX",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "dataZoomOffsetY",
+                "type" : "literal",
+                "literal" : "15"
+              }, {
+                "name" : "yAxisName",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showYAxisLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "yAxisLabelRotate",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "barWidth",
+                "type" : "literal",
+                "literal" : ""
+              }, {
+                "name" : "showBarLabel",
+                "type" : "literal",
+                "literal" : true
+              }, {
+                "name" : "borderRadius",
+                "type" : "literal",
+                "literal" : 0
+              }, {
+                "name" : "customOptions",
+                "type" : "literal",
+                "literal" : "option={}"
+              } ],
+              "children" : [ ],
+              "description" : "",
+              "visible" : {
+                "type" : "expression",
+                "expression" : ""
+              }
+            } ],
+            "description" : "",
+            "visible" : {
+              "type" : "expression",
+              "expression" : ""
+            }
+          } ],
+          "description" : "",
+          "visible" : {
+            "type" : "expression",
+            "expression" : ""
+          },
+          "slotTarget" : "content"
+        } ],
+        "description" : "",
+        "visible" : {
+          "type" : "expression",
+          "expression" : ""
+        }
+      } ],
+      "description" : "",
+      "visible" : {
+        "type" : "expression",
+        "expression" : ""
+      }
+    } ],
+    "description" : "",
+    "visible" : {
+      "type" : "expression",
+      "expression" : ""
+    }
+  },
+  "platform" : "pc",
+  "variables" : [ {
+    "id" : "ECFATKXZ",
+    "name" : "开始时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "QDIRAQVG",
+    "name" : "结束时间",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "description" : ""
+  }, {
+    "id" : "WCV48R2H",
+    "name" : "类型统计",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单类型统计行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "DBP91OUF",
+    "name" : "优先级统计",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "优先级统计行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "RBB2VE53",
+    "name" : "工作量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "处理人工作量行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "ZHNIH34O",
+    "name" : "满意度",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "满意度统计行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "MBXXWQF5",
+    "name" : "趋势",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单趋势行"
+      } ]
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    }
+  }, {
+    "id" : "V65WANPJ",
+    "name" : "处理时长",
+    "kind" : "variable",
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "处理时长统计"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "expression",
+      "expression" : "null"
+    }
+  }, {
+    "id" : "G0V0HQIA",
+    "name" : "总数量",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    }
+  }, {
+    "id" : "G3URC6ND",
+    "name" : "加载中",
+    "kind" : "variable",
+    "dataType" : {
+      "typeName" : "Boolean"
+    },
+    "description" : "",
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : false
+    }
+  } ],
+  "events" : [ {
+    "id" : "KPNDEV1O",
+    "name" : "页面加载",
+    "description" : "默认按近 30 天加载统计报表",
+    "moduleType" : "client",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "diagram" : {
+      "nodes" : [ {
+        "id" : "PINJQ0JC",
+        "name" : "开始",
+        "pluginName" : "",
+        "identifier" : "",
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 50
+          }
+        },
+        "isStartPoint" : true
+      }, {
+        "id" : "ZPNQBDJ9",
+        "name" : "设置默认时间范围",
+        "pluginName" : "logic-core",
+        "identifier" : "assignment",
+        "content" : {
+          "assignmentDatas" : {
+            "type" : "literal",
+            "literal" : [ {
+              "id" : "FNZXY2GX",
+              "target" : {
+                "type" : "variable",
+                "variable" : "开始时间"
+              },
+              "value" : {
+                "type" : "expression",
+                "expression" : "Date.Add(Date.CurrentDateTime(), -30, \"Day\")"
+              }
+            }, {
+              "id" : "B3C3TE8H",
+              "target" : {
+                "type" : "variable",
+                "variable" : "结束时间"
+              },
+              "value" : {
+                "type" : "expression",
+                "expression" : "Date.CurrentDateTime()"
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 150
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "LC2PI4LF",
+        "name" : "加载报表数据",
+        "pluginName" : "logic-core",
+        "identifier" : "call-logic",
+        "content" : {
+          "targetLogic" : {
+            "type" : "literal",
+            "literal" : {
+              "itemType" : "externalLogic",
+              "logicName" : "加载报表数据"
+            }
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 250
+          }
+        },
+        "isStartPoint" : false
+      } ],
+      "edges" : [ {
+        "id" : "M76DOS6K",
+        "sourceId" : "PINJQ0JC",
+        "targetId" : "ZPNQBDJ9",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "E4JG61LS",
+        "sourceId" : "ZPNQBDJ9",
+        "targetId" : "LC2PI4LF",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      } ]
+    },
+    "targetEvent" : "entered",
+    "icon" : {
+      "type" : {
+        "compare" : null
+      },
+      "key" : null,
+      "ref" : null,
+      "props" : {
+        "type" : "eventListener"
+      }
+    },
+    "scope" : {
+      "type" : "event",
+      "logicCallPath" : [ "页面事件" ],
+      "documentId" : "ACRHY5EY",
+      "platform" : "pc",
+      "icon" : {
+        "type" : {
+          "compare" : null
+        },
+        "key" : null,
+        "ref" : null,
+        "props" : {
+          "type" : "eventListener"
+        }
+      },
+      "expressionCallScope" : [ {
+        "id" : "CurrentPage",
+        "name" : "CurrentPage"
+      } ],
+      "expressionCallPath" : [ "CurrentPage" ],
+      "recursion" : false
+    }
+  } ],
+  "logics" : [ {
+    "id" : "GLQIAZ2Z",
+    "name" : "加载报表数据",
+    "description" : "按时间范围查询工单统计报表数据",
+    "variables" : [ ],
+    "parameters" : [ ],
+    "returnValues" : [ ],
+    "allowExpressionCall" : false,
+    "moduleType" : "client",
+    "diagram" : {
+      "nodes" : [ {
+        "id" : "YFHA4R33",
+        "name" : "开始",
+        "pluginName" : "",
+        "identifier" : "",
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 50
+          }
+        },
+        "isStartPoint" : true
+      }, {
+        "id" : "HP8IDGQI",
+        "name" : "进入加载状态",
+        "pluginName" : "logic-core",
+        "identifier" : "assignment",
+        "content" : {
+          "assignmentDatas" : {
+            "type" : "literal",
+            "literal" : [ {
+              "id" : "MKH82GF0",
+              "target" : {
+                "type" : "variable",
+                "variable" : "加载中"
+              },
+              "value" : {
+                "type" : "literal",
+                "literal" : true
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 150
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "C4FMT0GR",
+        "name" : "查询工单统计报表",
+        "pluginName" : "logic-core",
+        "identifier" : "call-logic",
+        "content" : {
+          "targetLogic" : {
+            "type" : "literal",
+            "literal" : {
+              "itemType" : "serverLogic",
+              "logicName" : "查询工单统计报表"
+            }
+          },
+          "parameters" : {
+            "type" : "structure",
+            "structure" : [ {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "开始时间"
+                },
+                "value" : {
+                  "type" : "expression",
+                  "expression" : "开始时间"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "结束时间"
+                },
+                "value" : {
+                  "type" : "expression",
+                  "expression" : "结束时间"
+                }
+              }
+            } ]
+          },
+          "returnValues" : {
+            "type" : "structure",
+            "structure" : [ {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "类型统计"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "类型统计"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "优先级统计"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "优先级统计"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "工作量"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "工作量"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "满意度"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "满意度"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "趋势"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "趋势"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "处理时长结构"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "处理时长"
+                }
+              }
+            }, {
+              "type" : "structure",
+              "structure" : {
+                "name" : {
+                  "type" : "literal",
+                  "literal" : "总数量"
+                },
+                "variable" : {
+                  "type" : "variable",
+                  "variable" : "总数量"
+                }
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 250
+          }
+        },
+        "isStartPoint" : false
+      }, {
+        "id" : "QB3R1VSQ",
+        "name" : "结束加载状态",
+        "pluginName" : "logic-core",
+        "identifier" : "assignment",
+        "content" : {
+          "assignmentDatas" : {
+            "type" : "literal",
+            "literal" : [ {
+              "id" : "AR26AFTO",
+              "target" : {
+                "type" : "variable",
+                "variable" : "加载中"
+              },
+              "value" : {
+                "type" : "literal",
+                "literal" : false
+              }
+            } ]
+          }
+        },
+        "attributes" : {
+          "position" : {
+            "x" : 300,
+            "y" : 350
+          }
+        },
+        "isStartPoint" : false
+      } ],
+      "edges" : [ {
+        "id" : "Z6Q4JIMJ",
+        "sourceId" : "YFHA4R33",
+        "targetId" : "HP8IDGQI",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "TAHNJGBH",
+        "sourceId" : "HP8IDGQI",
+        "targetId" : "C4FMT0GR",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      }, {
+        "id" : "R4PMXOLB",
+        "sourceId" : "C4FMT0GR",
+        "targetId" : "QB3R1VSQ",
+        "sourceAnchorId" : null,
+        "targetAnchorId" : null,
+        "sourcePosition" : "right",
+        "targetPosition" : "left"
+      } ]
+    },
+    "scope" : {
+      "type" : "page",
+      "documentId" : "ACRHY5EY",
+      "recursion" : true,
+      "logicCallPath" : [ "页面逻辑" ],
+      "expressionCallScope" : [ {
+        "id" : "CurrentPage",
+        "name" : "CurrentPage"
+      } ],
+      "expressionCallPath" : [ "CurrentPage" ],
+      "platform" : "pc"
+    }
+  } ],
+  "subResourceTree" : {
+    "children" : [ "ECFATKXZ", "QDIRAQVG", "WCV48R2H", "DBP91OUF", "RBB2VE53", "ZHNIH34O", "MBXXWQF5", "V65WANPJ", "G0V0HQIA", "G3URC6ND", "GLQIAZ2Z" ],
+    "groups" : [ ]
+  },
+  "description" : "统计报表：工单趋势、类型/优先级分布、处理人工作量与满意度",
+  "externalCssFiles" : [ ],
+  "externalJsFiles" : [ ],
+  "type" : "page",
+  "title" : "统计报表",
+  "url" : "/ticket-report",
+  "permissions" : {
+    "page" : {
+      "access" : [ "/查看统计报表" ]
+    },
+    "components" : { }
+  },
+  "masterPage" : "/PC/客服工作台母版"
+}

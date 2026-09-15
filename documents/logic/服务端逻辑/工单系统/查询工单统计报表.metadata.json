@@ -1,0 +1,161 @@
+{
+  "id" : "WJI24SN6",
+  "name" : "查询工单统计报表",
+  "description" : "按时间区间统计工单类型、优先级、处理人工作量、满意度、趋势与处理时长",
+  "moduleType" : "server",
+  "enableTransaction" : false,
+  "cacheTtlMinutes" : 0,
+  "allowClientAccess" : true,
+  "allowExpressionCall" : false,
+  "parameters" : [ {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "VOTIBB5N",
+    "name" : "开始时间",
+    "isRequired" : false
+  }, {
+    "dataType" : {
+      "typeName" : "DateTime"
+    },
+    "id" : "PI1VPHFC",
+    "name" : "结束时间",
+    "isRequired" : false
+  } ],
+  "variables" : [ {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "处理时长统计"
+    },
+    "id" : "C94LKGNW",
+    "name" : "处理时长原始"
+  } ],
+  "returnValues" : [ {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单类型统计行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "DJP5LXIC",
+    "name" : "类型统计"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "优先级统计行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "Y0HP91I5",
+    "name" : "优先级统计"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "处理人工作量行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "K1BUJH25",
+    "name" : "工作量"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "满意度统计行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "X7UXIQZV",
+    "name" : "满意度"
+  }, {
+    "dataType" : {
+      "typeName" : "List",
+      "genericTypes" : [ {
+        "declarativeTypeKind" : "Structure",
+        "typeName" : "工单趋势行"
+      } ]
+    },
+    "defaultValue" : {
+      "type" : "structure",
+      "structure" : [ ]
+    },
+    "id" : "PABHLKAJ",
+    "name" : "趋势"
+  }, {
+    "dataType" : {
+      "declarativeTypeKind" : "Structure",
+      "typeName" : "处理时长统计"
+    },
+    "id" : "YLQZ02LQ",
+    "name" : "处理时长结构"
+  }, {
+    "dataType" : {
+      "typeName" : "Integer"
+    },
+    "defaultValue" : {
+      "type" : "literal",
+      "literal" : 0
+    },
+    "id" : "B8R292M9",
+    "name" : "总数量"
+  } ],
+  "$deps" : [ {
+    "documentType" : "dataSource",
+    "refKey" : "/默认数据源"
+  }, {
+    "documentType" : "entity-relation",
+    "refKey" : "/默认数据源/工单处理人"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/成员信息"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单"
+  }, {
+    "documentType" : "entity",
+    "refKey" : "/默认数据源/工单评价"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看全部工单"
+  }, {
+    "documentType" : "permission",
+    "refKey" : "/查看统计报表"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "处理人工作量行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "处理时长统计"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单类型统计行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "工单趋势行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "满意度统计行"
+  }, {
+    "documentType" : "StructureType",
+    "refKey" : "优先级统计行"
+  } ]
+}
